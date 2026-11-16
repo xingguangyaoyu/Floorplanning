@@ -1,0 +1,3533 @@
+{
+  "lesson": "08",
+  "scenes": [
+    {
+      "key": "opening",
+      "title": {
+        "zh": "软模块：哪些量可以改变？",
+        "en": "Soft blocks: what may change?"
+      },
+      "chapter": {
+        "zh": "软模块：哪些量可以改变？",
+        "en": "Soft blocks: what may change?"
+      },
+      "chapterIndex": 1,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "A 的面积固定为六。把它变窄，布局一定更好吗？",
+        "en": "A has fixed area six. Does making it narrower necessarily improve the placement?"
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "先想一个问题",
+          "en": "A question to test"
+        },
+        "lines": [
+          {
+            "zh": "更窄，就一定更好吗？",
+            "en": "Does narrower always mean better?"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "opening-contract",
+      "title": {
+        "zh": "软模块：哪些量可以改变？",
+        "en": "Soft blocks: what may change?"
+      },
+      "chapter": {
+        "zh": "软模块：哪些量可以改变？",
+        "en": "Soft blocks: what may change?"
+      },
+      "chapterIndex": 1,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "早期规划把一些逻辑区域抽象成面积固定、形状可调的矩形，这就是这里的软模块。",
+        "en": "Early planning models some logic regions as rectangles with fixed area and adjustable shape: soft blocks."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "软模块",
+          "en": "Soft block"
+        },
+        "lines": [
+          {
+            "zh": "面积固定",
+            "en": "Fixed area"
+          },
+          {
+            "zh": "宽、高可以在约束内调整",
+            "en": "Dimensions vary within constraints"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "use-hard",
+      "title": {
+        "zh": "软模块：哪些量可以改变？",
+        "en": "Soft blocks: what may change?"
+      },
+      "chapter": {
+        "zh": "软模块：哪些量可以改变？",
+        "en": "Soft blocks: what may change?"
+      },
+      "chapterIndex": 1,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "固定尺寸的存储器宏单元不能随意拉伸；本例只有 A 能改形状。",
+        "en": "Fixed memory macros cannot stretch arbitrarily; only A may reshape in this example."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "硬模块",
+          "en": "Hard block"
+        },
+        "lines": [
+          {
+            "zh": "尺寸由已有实现规定。",
+            "en": "Dimensions come from its implementation."
+          },
+          {
+            "zh": "不能为了排版随意拉伸。",
+            "en": "Do not stretch it just to make room."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "contract-area",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "A 的宽和高必须为正，而且乘积始终为六。",
+        "en": "A’s width and height must be positive, and their product must remain six."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "面积约束",
+          "en": "Area constraint"
+        },
+        "lines": [
+          {
+            "zh": "w 是宽，h 是高。",
+            "en": "w is width; h is height."
+          },
+          {
+            "zh": "改宽时，高必须一起算。",
+            "en": "Changing width requires recalculating height."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "formula": "w × h = 6"
+    },
+    {
+      "key": "contract-ratio",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "宽高比定义为宽除以高，不是高除以宽。",
+        "en": "Aspect ratio means width divided by height, not the reverse."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "宽高比",
+          "en": "Aspect ratio"
+        },
+        "lines": [
+          {
+            "zh": "同一个定义贯穿全课。",
+            "en": "Use this convention throughout."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "formula": "r = w / h"
+    },
+    {
+      "key": "contract-bounds",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "我们要求宽高比在零点五到二之间，边界也允许。",
+        "en": "The allowed aspect ratio is from one half to two, including both endpoints."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "形状范围",
+          "en": "Shape bounds"
+        },
+        "lines": [
+          {
+            "zh": "过高或过宽都不允许。",
+            "en": "Excessively tall or wide shapes fail."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "formula": "0.5 ≤ w / h ≤ 2"
+    },
+    {
+      "key": "contract-three-two",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "原来的三乘二，面积为六，宽高比为一点五，因此是允许的形状。",
+        "en": "The original three-by-two shape has area six and aspect ratio one point five, so it is allowed."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "先检查原形状",
+          "en": "Check the baseline shape"
+        },
+        "lines": [
+          {
+            "zh": "面积和比例都通过。",
+            "en": "Area and ratio both pass."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "formula": "3 × 2 = 6     3 / 2 = 1.5"
+    },
+    {
+      "key": "contract-two-three",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 5,
+      "full": true,
+      "say": {
+        "zh": "二乘三的面积也为六，宽高比约为零点六七，它也通过形状检查。",
+        "en": "Two by three also has area six; its aspect ratio is about zero point six seven, within the bounds."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "只通过形状检查",
+          "en": "Shape check only"
+        },
+        "lines": [
+          {
+            "zh": "还没有检查邻居。",
+            "en": "Neighbors have not been checked yet."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "check": "shape",
+      "formula": "2 × 3 = 6     2 / 3 ≈ 0.67"
+    },
+    {
+      "key": "factors-list",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 6,
+      "full": true,
+      "say": {
+        "zh": "在整数网格上，先列出面积六的正整数因数对。",
+        "en": "On an integer grid, first list every positive integer factor pair of six."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "先保面积",
+          "en": "First preserve area"
+        },
+        "lines": [
+          {
+            "zh": "1×6、2×3、3×2、6×1",
+            "en": "1×6, 2×3, 3×2, 6×1"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "factors": true,
+      "check": "none"
+    },
+    {
+      "key": "factors-tall",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 7,
+      "full": true,
+      "say": {
+        "zh": "一乘六太高，六乘一太宽；两者面积正确，却都超出了宽高比范围。",
+        "en": "One by six is too tall; six by one is too wide, so both fail the aspect-ratio limits."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "面积对，比例错",
+          "en": "Correct area, wrong ratio"
+        },
+        "lines": [
+          {
+            "zh": "不能只检查乘积。",
+            "en": "The product alone is insufficient."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "shapeExamples": {
+        "area": 6,
+        "pairs": [
+          [
+            1,
+            6
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "reveal": true
+      },
+      "cut": true,
+      "check": "none",
+      "formula": "1 / 6 < 0.5; 6 / 1 > 2"
+    },
+    {
+      "key": "factors-survive",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 8,
+      "full": true,
+      "say": {
+        "zh": "筛掉这两个极端形状，整数实验中只剩二乘三和三乘二。",
+        "en": "Removing those extremes leaves two by three and three by two for this integer experiment."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "整数候选",
+          "en": "Integer candidates"
+        },
+        "lines": [
+          {
+            "zh": "2×3：允许",
+            "en": "2×3: allowed"
+          },
+          {
+            "zh": "3×2：允许",
+            "en": "3×2: allowed"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "factors": true,
+      "check": "none"
+    },
+    {
+      "key": "factors-continuous",
+      "title": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapter": {
+        "zh": "先把规则写成算式",
+        "en": "Write the shape contract"
+      },
+      "chapterIndex": 2,
+      "within": 9,
+      "full": true,
+      "say": {
+        "zh": "连续模型不只允许整数；选定正的宽度后，可以用六除以宽度计算高度。",
+        "en": "A continuous model also allows noninteger dimensions; choose a positive width and calculate height as six divided by width."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "连续与整数分开",
+          "en": "Continuous versus integer"
+        },
+        "lines": [
+          {
+            "zh": "动画中间帧也保持面积。",
+            "en": "Intermediate animation frames preserve area."
+          },
+          {
+            "zh": "比例限制仍然需要检查。",
+            "en": "The ratio limits still apply."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "formula": "h = 6 / w"
+    },
+    {
+      "key": "baseline-origin",
+      "title": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapter": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapterIndex": 3,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "坐标原点在外框左下角，向右是横坐标增加，向上是纵坐标增加。",
+        "en": "The origin is the lower-left corner; x increases rightward and y increases upward."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "坐标与尺寸",
+          "en": "Coordinates and dimensions"
+        },
+        "lines": [
+          {
+            "zh": "位置写成 (x,y)。",
+            "en": "A position is written as (x,y)."
+          },
+          {
+            "zh": "尺寸写成 宽×高。",
+            "en": "Dimensions are width×height."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "baseline-D",
+      "title": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapter": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapterIndex": 3,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "A 在原点，尺寸三乘二；D 在零、二，尺寸三乘一，正好贴住 A 上边缘。",
+        "en": "A starts at the origin, three by two; D starts at zero, two, three by one, touching A’s top edge."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "D 与 A 贴边",
+          "en": "D touches A"
+        },
+        "lines": [
+          {
+            "zh": "D：x 0…3，y 2…3",
+            "en": "D: x 0…3, y 2…3"
+          },
+          {
+            "zh": "只有共同边，没有重叠面积。",
+            "en": "Shared boundary, no overlap area."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "baseline-box",
+      "title": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapter": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapterIndex": 3,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "原布局合法，包围盒九乘三等于二十七，减去模块面积和二十三，盒内空余四。",
+        "en": "The legal box is nine by three: area twenty-seven, minus block area twenty-three, leaves four empty units."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "包围盒",
+          "en": "Bounding box"
+        },
+        "lines": [
+          {
+            "zh": "刚好围住所有模块的矩形。",
+            "en": "The smallest enclosing axis-aligned rectangle."
+          },
+          {
+            "zh": "9 × 3 = 27",
+            "en": "9 × 3 = 27"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true,
+      "formula": "27 − 23 = 4"
+    },
+    {
+      "key": "baseline-outline",
+      "title": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapter": {
+        "zh": "算清楚原来的布局",
+        "en": "Measure the baseline placement"
+      },
+      "chapterIndex": 3,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "外框是十乘八，面积八十；它与包围盒不是同一个矩形。",
+        "en": "The fixed outline is ten by eight, with area eighty; it is different from the bounding box."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "两个矩形别混用",
+          "en": "Two different rectangles"
+        },
+        "lines": [
+          {
+            "zh": "外框：固定的容量",
+            "en": "Outline: fixed available capacity"
+          },
+          {
+            "zh": "包围盒：当前摆放占用范围",
+            "en": "Bounding box: current placement extent"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "predict-setup",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "现在只把 A 改成二乘三，其余模块先保持原位。",
+        "en": "Now change only A to two by three, while leaving every other block in place."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "这一步只改形状",
+          "en": "Change shape only"
+        },
+        "lines": [
+          {
+            "zh": "A 保持在 (0,0)。",
+            "en": "Keep A at (0,0)."
+          },
+          {
+            "zh": "D 仍在 (0,2)。",
+            "en": "D stays at (0,2)."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "predict",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "A 变窄之后，布局还合法吗？先看它的顶部会到哪里。",
+        "en": "Will the placement remain legal after A narrows? First predict where its top edge will end."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "暂停预测",
+          "en": "Pause and predict"
+        },
+        "lines": [
+          {
+            "zh": "同时追踪宽与高。",
+            "en": "Track width and height together."
+          }
+        ]
+      },
+      "pause": 3,
+      "animateDuration": 2.2,
+      "question": {
+        "text": {
+          "zh": "A 改为2×3，其余不动，会怎样？",
+          "en": "A becomes 2×3; neighbors stay fixed. What happens?"
+        },
+        "options": [
+          {
+            "zh": "仍然合法，因为变窄了",
+            "en": "Still legal because it is narrower"
+          },
+          {
+            "zh": "与 D 出现正面积重叠",
+            "en": "Positive-area overlap with D"
+          },
+          {
+            "zh": "面积从6变成5",
+            "en": "Its area changes from 6 to 5"
+          }
+        ],
+        "answer": 1,
+        "explain": {
+          "zh": "新占用区间x=0…2、y=2…3与D相交，面积2。",
+          "en": "The new x=0…2, y=2…3 strip intersects D with area 2."
+        }
+      }
+    },
+    {
+      "key": "reshape",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "看 A 的右边缘向左退，同时顶部从二升到三。",
+        "en": "Watch A’s right edge retreat while its top rises from two to three."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "面积保持六",
+          "en": "Area stays six"
+        },
+        "lines": [
+          {
+            "zh": "宽度少一，高度多一。",
+            "en": "One less width unit, one more height unit."
+          },
+          {
+            "zh": "邻居还没有移动。",
+            "en": "Neighbors have not moved."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 3,
+      "anchor": "Watch",
+      "overlapRegion": {
+        "x": 0,
+        "y": 2,
+        "w": 2,
+        "h": 1
+      }
+    },
+    {
+      "key": "reshape-x",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "新的 A 占横坐标零到二，D 占零到三，两者在横向相交。",
+        "en": "The new A spans x from zero to two; D spans zero to three, so their horizontal intervals overlap."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "先看横向",
+          "en": "Check the horizontal overlap"
+        },
+        "lines": [
+          {
+            "zh": "共同部分：x 0…2",
+            "en": "Shared interval: x 0…2"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "overlapRegion": {
+        "x": 0,
+        "y": 2,
+        "w": 2,
+        "h": 1
+      },
+      "formula": "overlap width = 2 − 0 = 2"
+    },
+    {
+      "key": "reshape-y",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 5,
+      "full": true,
+      "say": {
+        "zh": "纵向共同部分是二到三，因此交叠高度为一，重叠面积为二。",
+        "en": "Their shared vertical interval is two to three, giving overlap height one and overlap area two."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "再看纵向",
+          "en": "Then check the vertical overlap"
+        },
+        "lines": [
+          {
+            "zh": "正面积重叠，布局非法。",
+            "en": "Positive-area overlap makes placement illegal."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "overlapRegion": {
+        "x": 0,
+        "y": 2,
+        "w": 2,
+        "h": 1
+      },
+      "formula": "overlap area = 2 × 1 = 2"
+    },
+    {
+      "key": "check-touch",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 6,
+      "full": true,
+      "say": {
+        "zh": "两个矩形只共用边界时，交叠宽度或高度为零，因此允许贴边。",
+        "en": "When rectangles only share a boundary, an overlap dimension is zero, so touching is allowed."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "贴边与重叠不同",
+          "en": "Contact versus overlap"
+        },
+        "lines": [
+          {
+            "zh": "面积为0的接触可以通过。",
+            "en": "Zero-area contact is allowed."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "cut": true,
+      "stateLabel": {
+        "zh": "贴边对照",
+        "en": "Boundary-contact comparison"
+      }
+    },
+    {
+      "key": "check-order",
+      "title": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapter": {
+        "zh": "变形、碰撞与贴边",
+        "en": "Reshaping, overlap, and boundary contact"
+      },
+      "chapterIndex": 4,
+      "within": 7,
+      "full": true,
+      "say": {
+        "zh": "因此先修复冲突，确认合法之后，再比较包围盒。",
+        "en": "Repair the conflict first; compare bounding boxes only after confirming legality."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "检查的顺序",
+          "en": "Order of evaluation"
+        },
+        "lines": [
+          {
+            "zh": "形状 → 完整 → 边界 → 重叠",
+            "en": "Shape → completeness → boundary → overlap"
+          },
+          {
+            "zh": "全部通过后，比较目标。",
+            "en": "Then compare the objective."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "cut": true,
+      "stateLabel": {
+        "zh": "回到待修复布局",
+        "en": "Return to the collision"
+      }
+    },
+    {
+      "key": "repair-choice",
+      "title": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapter": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapterIndex": 5,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "先试一个局部修法：把 D 向右移动两格。",
+        "en": "Try a local repair by moving D two grid units to the right."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "第一次尝试",
+          "en": "First attempt"
+        },
+        "lines": [
+          {
+            "zh": "D：(0,2) → (2,2)",
+            "en": "D: (0,2) → (2,2)"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 3,
+      "overlapRegion": {
+        "x": 3,
+        "y": 2,
+        "w": 2,
+        "h": 1
+      }
+    },
+    {
+      "key": "repair-second-conflict",
+      "title": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapter": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapterIndex": 5,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "D 不再覆盖 A，却进入了 B 的区域，所以还没有修好。",
+        "en": "D no longer covers A, but it now enters B’s space, so the repair is incomplete."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "B",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "不能只复查旧邻居",
+          "en": "Recheck every affected neighbor"
+        },
+        "lines": [
+          {
+            "zh": "A/D 冲突消失。",
+            "en": "A/D conflict is gone."
+          },
+          {
+            "zh": "B/D 新冲突出现。",
+            "en": "A new B/D conflict appears."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "overlapRegion": {
+        "x": 3,
+        "y": 2,
+        "w": 2,
+        "h": 1
+      }
+    },
+    {
+      "key": "repair-up",
+      "title": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapter": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapterIndex": 5,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "再把 D 上移一格，底边到三，与 B 贴边，布局恢复合法。",
+        "en": "Move D up one unit to y equals three, touching B without overlapping A or B."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "B",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "第二次尝试",
+          "en": "Second attempt"
+        },
+        "lines": [
+          {
+            "zh": "D：(2,2) → (2,3)",
+            "en": "D: (2,2) → (2,3)"
+          },
+          {
+            "zh": "B 的顶部也是3。",
+            "en": "B’s top is also 3."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.6
+    },
+    {
+      "key": "repair-worse",
+      "title": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapter": {
+        "zh": "先修碰撞，不急着求最优",
+        "en": "Repair first; optimize afterward"
+      },
+      "chapterIndex": 5,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "但最高处变成四，最右边仍是九，包围盒面积反而增加到三十六。",
+        "en": "However, the top reaches four while the right edge stays nine, so bounding-box area increases to thirty-six."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "合法，但更松散",
+          "en": "Legal, but less compact"
+        },
+        "lines": [
+          {
+            "zh": "修好碰撞，不代表完成优化。",
+            "en": "Repairing a collision is not optimization."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true,
+      "formula": "9 × 4 = 36 > 27"
+    },
+    {
+      "key": "repack-B",
+      "title": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapter": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapterIndex": 6,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "保留 A 的二乘三形状，把 B 左移一格，贴住 A 的右边缘。",
+        "en": "Keep A at two by three and move B left one unit until it touches A’s right edge."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "B"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "先收紧 B",
+          "en": "First bring B closer"
+        },
+        "lines": [
+          {
+            "zh": "B：(3,0) → (2,0)",
+            "en": "B: (3,0) → (2,0)"
+          },
+          {
+            "zh": "与A贴边，不重叠。",
+            "en": "Touch A without overlap."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.6
+    },
+    {
+      "key": "repack-C",
+      "title": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapter": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapterIndex": 6,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "接着把 C 左移一格，贴到 B 右边。",
+        "en": "Next, move C left one unit to touch B’s right edge."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "B",
+        "C"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "再收紧 C",
+          "en": "Then bring C closer"
+        },
+        "lines": [
+          {
+            "zh": "C：(5,0) → (4,0)",
+            "en": "C: (5,0) → (4,0)"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.6
+    },
+    {
+      "key": "repack-D",
+      "title": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapter": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapterIndex": 6,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "把 D 移到四、二，底边贴住 C 的顶部，左边缘贴住 B 的右边缘。",
+        "en": "Move D to four, two: its bottom touches C, and its left edge touches B."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "B",
+        "C",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "为 D 找到较低位置",
+          "en": "Find a lower resting position for D"
+        },
+        "lines": [
+          {
+            "zh": "D：(2,3) → (4,2)",
+            "en": "D: (2,3) → (4,2)"
+          },
+          {
+            "zh": "与C、B、E都重新检查。",
+            "en": "Recheck C, B, and E."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 3
+    },
+    {
+      "key": "repack-same",
+      "title": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapter": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapterIndex": 6,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "新布局再次得到九乘三，面积二十七，和原来一样。",
+        "en": "The new placement again has a nine-by-three box with area twenty-seven, matching the baseline."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "变形本身没有带来收益",
+          "en": "Reshaping alone brought no gain"
+        },
+        "lines": [
+          {
+            "zh": "合法，而且回到了原面积。",
+            "en": "Legal, with baseline box area restored."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true,
+      "formula": "new box 27 = baseline box 27"
+    },
+    {
+      "key": "repack-predict",
+      "title": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapter": {
+        "zh": "逐块重摆，回到原来面积",
+        "en": "Repack one block at a time"
+      },
+      "chapterIndex": 6,
+      "within": 5,
+      "full": true,
+      "say": {
+        "zh": "如果还想压小包围盒，应该关注仍然伸到最右侧的哪一块？",
+        "en": "To shrink the box further, which block still determines the rightmost edge?"
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "E"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "寻找真正的瓶颈",
+          "en": "Find the limiting edge"
+        },
+        "lines": [
+          {
+            "zh": "看边界由谁决定。",
+            "en": "Identify which block sets the boundary."
+          }
+        ]
+      },
+      "pause": 3,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "question": {
+        "text": {
+          "zh": "哪块仍把右边界撑到x=9？",
+          "en": "Which block still extends the right boundary to x=9?"
+        },
+        "options": [
+          {
+            "zh": "A",
+            "en": "A"
+          },
+          {
+            "zh": "D",
+            "en": "D"
+          },
+          {
+            "zh": "E",
+            "en": "E"
+          }
+        ],
+        "answer": 2,
+        "explain": {
+          "zh": "E在(7,0)，宽2，右边缘是9。",
+          "en": "E starts at (7,0) with width 2, so its right edge is 9."
+        }
+      }
+    },
+    {
+      "key": "compact-space",
+      "title": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapter": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapterIndex": 7,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "先把 D 移到零、三，腾出 C 上方的空间。",
+        "en": "First move D to zero, three, freeing the space above C."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "先腾出目标区域",
+          "en": "Free the destination first"
+        },
+        "lines": [
+          {
+            "zh": "D：(4,2) → (0,3)",
+            "en": "D: (4,2) → (0,3)"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 3
+    },
+    {
+      "key": "compact-temporary",
+      "title": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapter": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapterIndex": 7,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "这时包围盒暂时变大，不必把每个中间动作都当成最终结果。",
+        "en": "The box temporarily grows at this intermediate step; do not confuse an intermediate move with the final result."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "中间状态不是最终答案",
+          "en": "An intermediate state is not the answer"
+        },
+        "lines": [
+          {
+            "zh": "E还没移入腾出的空位。",
+            "en": "E has not entered the freed space yet."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "compact-E",
+      "title": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapter": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapterIndex": 7,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "把 E 移到四、二，贴住 C 上方和 B 右侧，同时避开 D。",
+        "en": "Move E to four, two, above C and right of B, without covering D."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "C",
+        "E"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "E 移入空位",
+          "en": "Move E into the free space"
+        },
+        "lines": [
+          {
+            "zh": "E：(7,0) → (4,2)",
+            "en": "E: (7,0) → (4,2)"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 3,
+      "anchor": "Move"
+    },
+    {
+      "key": "compact-box",
+      "title": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapter": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapterIndex": 7,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "最右边现在是六，最高处是四，所以包围盒为六乘四，面积二十四。",
+        "en": "The rightmost edge is now six and the top is four, giving a six-by-four box with area twenty-four."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "改进来自整组重摆",
+          "en": "The gain comes from repacking"
+        },
+        "lines": [
+          {
+            "zh": "不是A单独变窄的功劳。",
+            "en": "Narrowing A alone did not achieve this."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true,
+      "formula": "6 × 4 = 24"
+    },
+    {
+      "key": "compact-empty",
+      "title": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapter": {
+        "zh": "再压紧一次，解释每次移动",
+        "en": "Compact again, explaining each move"
+      },
+      "chapterIndex": 7,
+      "within": 5,
+      "full": true,
+      "say": {
+        "zh": "模块面积和仍为二十三，因此合法包围盒内部只空余一个单位。",
+        "en": "Total block area remains twenty-three, leaving only one unoccupied unit inside this legal bounding box."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "把空余位置指出来",
+          "en": "Locate the empty space"
+        },
+        "lines": [
+          {
+            "zh": "x 3…4，y 3…4",
+            "en": "x 3…4, y 3…4"
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true,
+      "emptyRegion": {
+        "x": 3,
+        "y": 3,
+        "w": 1,
+        "h": 1
+      },
+      "formula": "24 − 23 = 1"
+    },
+    {
+      "key": "metrics-outline",
+      "title": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapter": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapterIndex": 8,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "外框仍为八十，所以固定外框密度仍是二十三除以八十，也就是百分之二十八点七五。",
+        "en": "The outline stays eighty, so fixed-outline density remains twenty-three over eighty, or twenty-eight point seven five percent."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "分母是固定外框",
+          "en": "Denominator: fixed outline"
+        },
+        "lines": [
+          {
+            "zh": "外框没有跟着包围盒缩小。",
+            "en": "The outline does not shrink with the box."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "metrics": true,
+      "formula": "outline density = 23 / 80 = 28.75%"
+    },
+    {
+      "key": "metrics-box",
+      "title": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapter": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapterIndex": 8,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "包围盒密度换了分母，原来是二十三除以二十七，约百分之八十五点二。",
+        "en": "Packing density uses a different denominator; the baseline is twenty-three over twenty-seven, about eighty-five point two percent."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "分母是当前包围盒",
+          "en": "Denominator: current bounding box"
+        },
+        "lines": [
+          {
+            "zh": "先确认布局合法。",
+            "en": "Confirm legality first."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "stateLabel": {
+        "zh": "原始布局",
+        "en": "BASELINE"
+      },
+      "bbox": true,
+      "metrics": true,
+      "formula": "packing density = 23 / 27 ≈ 85.2%"
+    },
+    {
+      "key": "metrics-compact",
+      "title": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapter": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapterIndex": 8,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "压紧后的包围盒密度是二十三除以二十四，约百分之九十五点八。",
+        "en": "After compaction, packing density becomes twenty-three over twenty-four, about ninety-five point eight percent."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "这个比例反映压紧程度",
+          "en": "This ratio reflects compactness"
+        },
+        "lines": [
+          {
+            "zh": "同样的模块，用更小的盒。",
+            "en": "The same blocks occupy a smaller box."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "stateLabel": {
+        "zh": "压紧之后",
+        "en": "AFTER COMPACTION"
+      },
+      "bbox": true,
+      "metrics": true,
+      "formula": "packing density = 23 / 24 ≈ 95.8%"
+    },
+    {
+      "key": "metrics-question",
+      "title": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapter": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapterIndex": 8,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "所以报告密度时，必须同时说清楚分母是哪一个矩形。",
+        "en": "Whenever you report a density, state which rectangle supplies the denominator."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "用分母解释结果",
+          "en": "Explain the denominator"
+        },
+        "lines": [
+          {
+            "zh": "不只背百分数。",
+            "en": "Do not just memorize percentages."
+          }
+        ]
+      },
+      "pause": 3,
+      "animateDuration": 2.2,
+      "question": {
+        "text": {
+          "zh": "这次压紧后，哪个比例提高了？",
+          "en": "Which density increased after compaction?"
+        },
+        "options": [
+          {
+            "zh": "固定外框密度",
+            "en": "Fixed-outline density"
+          },
+          {
+            "zh": "包围盒密度",
+            "en": "Packing density"
+          },
+          {
+            "zh": "两个都提高",
+            "en": "Both densities"
+          }
+        ],
+        "answer": 1,
+        "explain": {
+          "zh": "面积和23、外框80不变；包围盒从27缩到24。",
+          "en": "Block area 23 and outline 80 stay fixed; the box shrinks from 27 to 24."
+        }
+      }
+    },
+    {
+      "key": "metrics-limit",
+      "title": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapter": {
+        "zh": "两个密度，回答两个问题",
+        "en": "Two densities, two questions"
+      },
+      "chapterIndex": 8,
+      "within": 5,
+      "full": true,
+      "say": {
+        "zh": "二十四是这里给出的一份合法见证，不代表所有软模块问题都能达到这个结果。",
+        "en": "Twenty-four is a verified legal witness here, not a universal result for soft-block problems."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "不超出证据的结论",
+          "en": "Keep conclusions within the evidence"
+        },
+        "lines": [
+          {
+            "zh": "特定算例、特定目标。",
+            "en": "A particular instance and objective."
+          },
+          {
+            "zh": "没有证明连续全局最优。",
+            "en": "No continuous global-optimum claim."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "transfer-eight",
+      "title": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapter": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapterIndex": 9,
+      "within": 1,
+      "full": true,
+      "say": {
+        "zh": "换一个面积为八的模块，宽高比范围仍为零点五到二。",
+        "en": "Consider a new block of area eight, with the same aspect-ratio bounds from one half to two."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "迁移练习，不改公共算例",
+          "en": "Transfer exercise; a separate block"
+        },
+        "lines": [
+          {
+            "zh": "面积8，比例0.5…2。",
+            "en": "Area 8, ratio 0.5…2."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "check": "none",
+      "shapeExamples": {
+        "area": 8,
+        "pairs": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "reveal": false
+      }
+    },
+    {
+      "key": "transfer-question",
+      "title": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapter": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapterIndex": 9,
+      "within": 2,
+      "full": true,
+      "say": {
+        "zh": "二乘四和四乘二，哪些能通过形状检查？先分别算面积与宽高比。",
+        "en": "Do two by four and four by two pass the shape check? Calculate both area and aspect ratio."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "边界也要检查",
+          "en": "Check the endpoints too"
+        },
+        "lines": [
+          {
+            "zh": "不要把小于等于写成小于。",
+            "en": "Do not replace inclusive bounds with strict ones."
+          }
+        ]
+      },
+      "pause": 3,
+      "animateDuration": 2.2,
+      "check": "none",
+      "shapeExamples": {
+        "area": 8,
+        "pairs": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "reveal": false
+      },
+      "question": {
+        "text": {
+          "zh": "面积8、比例范围含端点，哪个形状允许？",
+          "en": "For area 8 with inclusive ratio bounds, which shapes are allowed?"
+        },
+        "options": [
+          {
+            "zh": "只有2×4",
+            "en": "Only 2×4"
+          },
+          {
+            "zh": "只有4×2",
+            "en": "Only 4×2"
+          },
+          {
+            "zh": "2×4和4×2都允许",
+            "en": "Both 2×4 and 4×2"
+          }
+        ],
+        "answer": 2,
+        "explain": {
+          "zh": "两者面积都是8，宽高比分别0.5与2，正好位于允许边界。",
+          "en": "Both have area 8; their ratios 0.5 and 2 are the included endpoints."
+        }
+      }
+    },
+    {
+      "key": "transfer-answer",
+      "title": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapter": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapterIndex": 9,
+      "within": 3,
+      "full": true,
+      "say": {
+        "zh": "两种形状都允许，因为面积都为八，宽高比分别落在允许范围的两个端点。",
+        "en": "Both shapes are allowed: each has area eight, and their aspect ratios equal the two permitted endpoints."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "形状通过之后",
+          "en": "After the shape passes"
+        },
+        "lines": [
+          {
+            "zh": "仍然必须检查放置位置。",
+            "en": "The placement still requires checking."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "check": "none",
+      "shapeExamples": {
+        "area": 8,
+        "pairs": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "reveal": true
+      },
+      "formula": "2×4: r=0.5     4×2: r=2"
+    },
+    {
+      "key": "transfer-lab",
+      "title": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapter": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapterIndex": 9,
+      "within": 4,
+      "full": true,
+      "say": {
+        "zh": "回到五模块实验，保持 A 为二乘三，先消除重叠，再尝试把包围盒压到二十四。",
+        "en": "Return to the five-block lab: keep A at two by three, repair overlaps, then try reaching box area twenty-four."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "panel": {
+        "heading": {
+          "zh": "由你完成的两级目标",
+          "en": "Your two-stage task"
+        },
+        "lines": [
+          {
+            "zh": "第一关：合法。",
+            "en": "Stage one: make it legal."
+          },
+          {
+            "zh": "第二关：合法且包围盒≤24。",
+            "en": "Stage two: legal with box area ≤24."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "transfer-code",
+      "title": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapter": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapterIndex": 9,
+      "within": 5,
+      "full": true,
+      "say": {
+        "zh": "代码先检查正尺寸，再检查面积误差和宽高比，最后调用布局检查。",
+        "en": "In code, check positive dimensions, area tolerance, and aspect ratio before running the placement checks."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "把推理变成检查顺序",
+          "en": "Translate reasoning into checks"
+        },
+        "lines": [
+          {
+            "zh": "形状检查不读取邻居坐标。",
+            "en": "Shape checks do not inspect neighbors."
+          },
+          {
+            "zh": "布局检查必须读取坐标。",
+            "en": "Placement checks require coordinates."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2
+    },
+    {
+      "key": "transfer-summary",
+      "title": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapter": {
+        "zh": "换个数字，自己检验",
+        "en": "Transfer the method to a new case"
+      },
+      "chapterIndex": 9,
+      "within": 6,
+      "full": true,
+      "say": {
+        "zh": "记住完整过程：选形状、重摆邻居、检查合法性，最后比较明确的目标。",
+        "en": "Keep the complete process: choose a shape, repack neighbors, check legality, and then compare the stated objective."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "panel": {
+        "heading": {
+          "zh": "你应当能复述",
+          "en": "You should be able to explain"
+        },
+        "lines": [
+          {
+            "zh": "为什么撞、怎样修、是否变好。",
+            "en": "Why it collided, how to repair it, and whether it improved."
+          }
+        ]
+      },
+      "pause": 0.45,
+      "animateDuration": 2.2,
+      "bbox": true,
+      "metrics": true
+    }
+  ]
+}

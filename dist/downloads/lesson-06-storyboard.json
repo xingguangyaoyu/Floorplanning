@@ -1,0 +1,361 @@
+{
+  "lesson": "06",
+  "scenes": [
+    {
+      "key": "two",
+      "title": {
+        "zh": "两个排列，一套关系",
+        "en": "Two permutations encode relationships"
+      },
+      "say": {
+        "zh": "序列对用两行字母记录每一对模块的相对位置。",
+        "en": "A sequence pair uses two rows of letters to encode every pair of blocks."
+      },
+      "pack": {},
+      "focus": [],
+      "pair": [
+        "ABCED",
+        "DABCE"
+      ]
+    },
+    {
+      "key": "same",
+      "title": {
+        "zh": "同顺序 → 左右",
+        "en": "Same order → horizontal"
+      },
+      "say": {
+        "zh": "A 和 B 在两个排列中顺序相同，所以 A 在 B 左边。",
+        "en": "A comes before B in both permutations, so A must be left of B."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        }
+      },
+      "focus": [
+        "A",
+        "B"
+      ],
+      "pair": [
+        "ABCED",
+        "DABCE"
+      ]
+    },
+    {
+      "key": "reverse",
+      "title": {
+        "zh": "反顺序 → 上下",
+        "en": "Reversed order → vertical"
+      },
+      "say": {
+        "zh": "A 在第一行先于 D，在第二行后于 D；按本课约定，A 在 D 下方。",
+        "en": "A precedes D in the first row but follows D in the second; here that means A is below D."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "pair": [
+        "ABCED",
+        "DABCE"
+      ]
+    },
+    {
+      "key": "maximum",
+      "title": {
+        "zh": "所有下界，都要满足",
+        "en": "Every lower bound must hold"
+      },
+      "say": {
+        "zh": "D 必须越过下方所有模块，而不只是 A，所以坐标要对所有前驱取最大。",
+        "en": "D must clear every block below it, not only A, so take the maximum over all predecessor bounds."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [
+        "B",
+        "D"
+      ],
+      "pair": [
+        "ABCED",
+        "DABCE"
+      ],
+      "metrics": true
+    },
+    {
+      "key": "predict",
+      "title": {
+        "zh": "先预测：D 到底有多高？",
+        "en": "Predict: how high is D?"
+      },
+      "say": {
+        "zh": "其中 B 的顶部比 A 高一格；现在预测 D 的最终高度。",
+        "en": "B’s top is one unit higher than A’s; predict the final height of D."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [
+        "B",
+        "D"
+      ],
+      "question": {
+        "text": {
+          "zh": "D 的最小可行 y？",
+          "en": "Minimum feasible y for D?"
+        },
+        "options": [
+          {
+            "zh": "2",
+            "en": "2"
+          },
+          {
+            "zh": "3",
+            "en": "3"
+          },
+          {
+            "zh": "5",
+            "en": "5"
+          }
+        ],
+        "answer": 1,
+        "explain": {
+          "zh": "所有竖直前驱的顶部取最大值，max(2,3,2,2)=3。",
+          "en": "Take the maximum top among vertical predecessors: max(2,3,2,2)=3."
+        }
+      }
+    },
+    {
+      "key": "result",
+      "title": {
+        "zh": "九乘四，不是九乘三",
+        "en": "Nine by four, not nine by three"
+      },
+      "say": {
+        "zh": "标准序列对得到九乘四的包围盒；它与前一课的标准树不是同一份编码。",
+        "en": "The reference pair produces a nine-by-four box; it is a different encoding from the previous lesson’s reference tree."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [],
+      "bbox": true,
+      "metrics": true,
+      "pair": [
+        "ABCED",
+        "DABCE"
+      ]
+    },
+    {
+      "key": "row",
+      "title": {
+        "zh": "不重叠，不保证装得下",
+        "en": "Non-overlap does not guarantee fit"
+      },
+      "say": {
+        "zh": "让两个排列完全相同，所有模块从左到右排开，仍然会超过外框。",
+        "en": "Make both permutations identical; the blocks line up without overlap but extend beyond the outline."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 7,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 10,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "pair": [
+        "ABCDE",
+        "ABCDE"
+      ],
+      "metrics": true,
+      "anchor": "Make"
+    },
+    {
+      "key": "code",
+      "title": {
+        "zh": "把不等式写成程序",
+        "en": "Turn the inequalities into code"
+      },
+      "say": {
+        "zh": "在实验里更改两个排列，再用 Python 写出最长路径更新。",
+        "en": "Change the permutations in the lab, then implement the longest-path updates in Python."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [],
+      "pair": [
+        "ABCED",
+        "DABCE"
+      ],
+      "bbox": true
+    }
+  ]
+}

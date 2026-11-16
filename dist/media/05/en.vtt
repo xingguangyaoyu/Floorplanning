@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:06.840
+The tree describes placement relationships, while the skyline determines the height where each block lands.
+
+2
+00:00:07.930 --> 00:00:13.722
+First place root A at the origin, then process its entire left subtree.
+
+3
+00:00:14.812 --> 00:00:22.188
+A left child starts at its parent’s right edge; B, C, and E land before D is processed.
+
+4
+00:00:23.278 --> 00:00:29.982
+In the reference tree, the highest skyline under D is A’s top, so D lands at height two.
+
+5
+00:00:31.072 --> 00:00:35.496
+If we swap the names A and C, will D still land at height two?
+
+6
+00:00:37.236 --> 00:00:42.836
+Watch the swapped layout; D reaches over taller B, which lifts it to height three.
+
+7
+00:00:43.926 --> 00:00:51.446
+The box grows from twenty-seven to thirty-six; legality alone does not say whether the swap improved it.
+
+8
+00:00:52.536 --> 00:00:59.216
+Edit the tree in the lab, and explain heights using the skyline rather than memorizing child labels.

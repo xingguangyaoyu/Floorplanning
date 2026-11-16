@@ -1,0 +1,390 @@
+{
+  "lesson": "03",
+  "scenes": [
+    {
+      "key": "invariant",
+      "title": {
+        "zh": "挪动模块，面积不变",
+        "en": "Move the blocks. Keep their areas."
+      },
+      "say": {
+        "zh": "先看五块模块，它们的面积和为二十三，挪动位置不会改变这个总数。",
+        "en": "The five block areas sum to twenty-three, and moving them does not change that total."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 6,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 4,
+          "y": 5,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 8,
+          "y": 1,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 3,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 6,
+          "y": 5,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    },
+    {
+      "key": "outline",
+      "title": {
+        "zh": "同一个外框，同一个分母",
+        "en": "Same outline. Same denominator."
+      },
+      "say": {
+        "zh": "固定外框的面积是八十，所以外框密度始终是二十三除以八十。",
+        "en": "The fixed outline has area eighty, so outline density remains twenty-three divided by eighty."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    },
+    {
+      "key": "bbox",
+      "title": {
+        "zh": "只围住实际摆放的模块",
+        "en": "Enclose the actual placement"
+      },
+      "say": {
+        "zh": "现在把注意力转向包围盒，也就是刚好围住所有模块的最小矩形。",
+        "en": "Now look at the bounding box, the smallest rectangle that encloses all the placed blocks."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "twentyseven",
+      "title": {
+        "zh": "九乘三，是二十七",
+        "en": "Nine by three is twenty-seven"
+      },
+      "say": {
+        "zh": "这组摆法的包围盒是九乘三，内部只有四个单位没有被模块占用。",
+        "en": "This layout has a nine-by-three box, with just four units inside it left unoccupied."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "predict",
+      "title": {
+        "zh": "先预测：压紧后谁会变？",
+        "en": "Predict: what changes after compaction?"
+      },
+      "say": {
+        "zh": "如果换一种摆法，把包围盒变小，外框密度会一起提高吗？",
+        "en": "If another layout makes the bounding box smaller, does outline density also increase?"
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "question": {
+        "text": {
+          "zh": "压紧后，外框密度会提高吗？",
+          "en": "Does compaction increase outline density?"
+        },
+        "options": [
+          {
+            "zh": "会",
+            "en": "Yes"
+          },
+          {
+            "zh": "不会，分母仍为 80",
+            "en": "No, the denominator is still 80"
+          }
+        ],
+        "answer": 1,
+        "explain": {
+          "zh": "模块面积和和固定外框面积都没变。改变的是包围盒面积。",
+          "en": "Neither total block area nor fixed outline area changes. Bounding-box area changes."
+        }
+      }
+    },
+    {
+      "key": "twentyfour",
+      "title": {
+        "zh": "更紧凑，但外框密度不变",
+        "en": "Tighter, with the same outline density"
+      },
+      "say": {
+        "zh": "看模块重新摆放，包围盒变成六乘四，面积二十四，内部只空一个单位。",
+        "en": "Watch the blocks repack into a six-by-four box, area twenty-four, leaving one empty unit inside."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 4,
+          "y": 1,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 3,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "bbox": true,
+      "metrics": true,
+      "anchor": "Watch"
+    },
+    {
+      "key": "denominator",
+      "title": {
+        "zh": "先说分母，再报密度",
+        "en": "Name the denominator first"
+      },
+      "say": {
+        "zh": "外框密度不变，而包围盒密度提高了；两个比例回答的是不同问题。",
+        "en": "Outline density stays fixed while packing density increases; the two ratios answer different questions."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 4,
+          "y": 1,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 3,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "limits",
+      "title": {
+        "zh": "面积之外，还要留出空间",
+        "en": "Area is not the whole design"
+      },
+      "say": {
+        "zh": "真实芯片还要考虑连线和布线空间，所以本课只比较明确写出的面积目标。",
+        "en": "Real chips also need connections and routing space, so this lesson compares only its stated area objective."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 4,
+          "y": 1,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 3,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    }
+  ]
+}

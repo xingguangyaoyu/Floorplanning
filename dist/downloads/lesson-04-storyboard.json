@@ -1,0 +1,324 @@
+{
+  "lesson": "04",
+  "scenes": [
+    {
+      "key": "encoding",
+      "title": {
+        "zh": "把布局写成一串符号",
+        "en": "Write a layout as symbols"
+      },
+      "say": {
+        "zh": "我们用字母表示模块，用 H 和 V 表示两个区域如何组合。",
+        "en": "Letters name blocks, while H and V describe how two regions combine."
+      },
+      "pack": {},
+      "focus": [],
+      "tokens": []
+    },
+    {
+      "key": "push",
+      "title": {
+        "zh": "先压 A，再压 D",
+        "en": "Push A, then D"
+      },
+      "say": {
+        "zh": "先把 A 压入栈，再把 D 压入栈；D 就在栈顶。",
+        "en": "Push A, then push D; D is now on top of the stack."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "stack": [
+        "A 3×2",
+        "D 3×1"
+      ]
+    },
+    {
+      "key": "guess",
+      "title": {
+        "zh": "预测 A D H",
+        "en": "Predict A D H"
+      },
+      "say": {
+        "zh": "H 是水平切线，让第一个区域在下，第二个区域在上。",
+        "en": "H names a horizontal cut, placing the first region below the second."
+      },
+      "pack": {},
+      "focus": [],
+      "question": {
+        "text": {
+          "zh": "A D H 组合后的宽×高？",
+          "en": "Width × height after A D H?"
+        },
+        "options": [
+          {
+            "zh": "3×3",
+            "en": "3×3"
+          },
+          {
+            "zh": "6×2",
+            "en": "6×2"
+          }
+        ],
+        "answer": 0,
+        "explain": {
+          "zh": "宽取最大值 3，高为 2+1=3。",
+          "en": "Maximum width is 3; heights add to 2+1=3."
+        }
+      }
+    },
+    {
+      "key": "combine",
+      "title": {
+        "zh": "宽取最大，高度相加",
+        "en": "Maximum width. Summed height."
+      },
+      "say": {
+        "zh": "组合时先弹出 D，再弹出 A；D 放在 A 上面，得到三乘三。",
+        "en": "Pop D first, then A; place D above A to obtain a three-by-three region."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [
+        "A",
+        "D"
+      ],
+      "stack": [
+        "AD 3×3"
+      ],
+      "anchor": "place"
+    },
+    {
+      "key": "full",
+      "title": {
+        "zh": "继续组合，得到九乘三",
+        "en": "Keep combining to get nine by three"
+      },
+      "say": {
+        "zh": "再用 V 依次接上 B、C 和 E，最终得到九乘三的包围盒。",
+        "en": "Use V to add B, C, and E in order, producing a nine-by-three bounding box."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "tokens": [
+        "A",
+        "D",
+        "H",
+        "B",
+        "V",
+        "C",
+        "V",
+        "E",
+        "V"
+      ],
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "overflow",
+      "title": {
+        "zh": "语法正确，几何仍可能失败",
+        "en": "Valid syntax can still overflow"
+      },
+      "say": {
+        "zh": "把第一个 H 改成 V，模块排成一行，总宽度变成十二。",
+        "en": "Change the first H to V; the blocks form a row whose total width is twelve."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 7,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 10,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "tokens": [
+        "A",
+        "D",
+        "V",
+        "B",
+        "V",
+        "C",
+        "V",
+        "E",
+        "V"
+      ],
+      "bbox": true,
+      "metrics": true,
+      "anchor": "Change"
+    },
+    {
+      "key": "checks",
+      "title": {
+        "zh": "结构、完整性、几何分开检查",
+        "en": "Check structure, completeness and geometry"
+      },
+      "say": {
+        "zh": "所以一个栈元素只是结构检查通过，不能替代名称检查和外框检查。",
+        "en": "One stack item only passes the structural check; it cannot replace ID checks or outline checks."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "bbox": true
+    },
+    {
+      "key": "try",
+      "title": {
+        "zh": "写一串自己的表达式",
+        "en": "Build your own expression"
+      },
+      "say": {
+        "zh": "在实验里逐个读取符号，观察栈，再试着构造另一种合法摆法。",
+        "en": "Read the tokens one at a time in the lab, inspect the stack, and construct another legal layout."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    }
+  ]
+}

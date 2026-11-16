@@ -1,0 +1,396 @@
+{
+  "lesson": "02",
+  "scenes": [
+    {
+      "key": "box",
+      "title": {
+        "zh": "外框不会替你变大",
+        "en": "The boundary does not grow"
+      },
+      "say": {
+        "zh": "把外框想成一个不能伸缩的盒子，模块必须完整地放进去。",
+        "en": "Think of the outline as a box that cannot stretch; every block has to fit inside."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": []
+    },
+    {
+      "key": "right",
+      "title": {
+        "zh": "盯住 E 的右边缘",
+        "en": "Watch E’s right edge"
+      },
+      "say": {
+        "zh": "现在把 E 向右移动；它从九开始，宽为二，右边缘到达十一。",
+        "en": "Move E to the right; starting at nine with width two puts its right edge at eleven."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 9,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "E"
+      ],
+      "anchor": "Move"
+    },
+    {
+      "key": "outside",
+      "title": {
+        "zh": "十一，超过十",
+        "en": "Eleven is beyond ten"
+      },
+      "say": {
+        "zh": "外框只到十，所以即使模块的大部分仍在里面，这个布局也越界了。",
+        "en": "The outline ends at ten, so the layout fails even though most of E remains inside."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 9,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "E"
+      ],
+      "metrics": true
+    },
+    {
+      "key": "touch",
+      "title": {
+        "zh": "贴边，仍然合法",
+        "en": "Touching is legal"
+      },
+      "say": {
+        "zh": "让 E 回到七，恰好贴住 C；共同边界没有面积，不算重叠。",
+        "en": "Return E to seven, touching C; their shared boundary has no area and is not an overlap."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "C",
+        "E"
+      ],
+      "anchor": "Return"
+    },
+    {
+      "key": "guess",
+      "title": {
+        "zh": "先预测：再向左一格？",
+        "en": "Predict: one more step left?"
+      },
+      "say": {
+        "zh": "如果再向左移动一格，C 和 E 的内部会不会共享一片面积？",
+        "en": "If E moves one more unit left, will its interior share positive area with C?"
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "C",
+        "E"
+      ],
+      "question": {
+        "text": {
+          "zh": "E 从 x=7 移到 x=6，会发生什么？",
+          "en": "Move E from x=7 to x=6. What happens?"
+        },
+        "options": [
+          {
+            "zh": "仍然只是贴边",
+            "en": "Still only contact"
+          },
+          {
+            "zh": "内部重叠",
+            "en": "Interior overlap"
+          }
+        ],
+        "answer": 1,
+        "explain": {
+          "zh": "C 占 x=5…7，E 改占 x=6…8；内部交叠宽 1、高 2。",
+          "en": "C spans x=5…7 and E spans x=6…8; the overlap is 1 wide and 2 high."
+        }
+      }
+    },
+    {
+      "key": "overlap",
+      "title": {
+        "zh": "共享内部，就不合法",
+        "en": "Shared interior is a conflict"
+      },
+      "say": {
+        "zh": "现在看移动后的结果；两块共享一条有宽度的区域，所以必须修复。",
+        "en": "Now watch the move; the blocks share a region with positive width, so the layout needs repair."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 6,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "C",
+        "E"
+      ],
+      "anchor": "watch"
+    },
+    {
+      "key": "complete",
+      "title": {
+        "zh": "完整性，也要检查",
+        "en": "Check completeness too"
+      },
+      "say": {
+        "zh": "最后别忘了名称；五个矩形并不代表五个正确的模块。",
+        "en": "Finally, check the names; five rectangles do not necessarily mean the five required blocks."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": []
+    },
+    {
+      "key": "turn",
+      "title": {
+        "zh": "轮到你：制造并修复错误",
+        "en": "Your turn: break it, then repair it"
+      },
+      "say": {
+        "zh": "进入实验，自己制造越界和重叠，再根据检查器指出的原因修复。",
+        "en": "In the lab, create overflow and overlap yourself, then use the checker’s reasons to repair them."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    }
+  ]
+}

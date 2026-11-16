@@ -1,0 +1,31 @@
+1
+00:00:00,040 --> 00:00:05,928
+Letters name blocks, while H and V describe how two regions combine.
+
+2
+00:00:07,018 --> 00:00:12,066
+Push A, then push D; D is now on top of the stack.
+
+3
+00:00:13,156 --> 00:00:18,540
+H names a horizontal cut, placing the first region below the second.
+
+4
+00:00:20,280 --> 00:00:26,864
+Pop D first, then A; place D above A to obtain a three-by-three region.
+
+5
+00:00:27,954 --> 00:00:34,298
+Use V to add B, C, and E in order, producing a nine-by-three bounding box.
+
+6
+00:00:35,388 --> 00:00:41,180
+Change the first H to V; the blocks form a row whose total width is twelve.
+
+7
+00:00:42,270 --> 00:00:49,670
+One stack item only passes the structural check; it cannot replace ID checks or outline checks.
+
+8
+00:00:50,760 --> 00:00:57,272
+Read the tokens one at a time in the lab, inspect the stack, and construct another legal layout.

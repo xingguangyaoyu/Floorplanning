@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:07.008
+The five block areas sum to twenty-three, and moving them does not change that total.
+
+2
+00:00:08.098 --> 00:00:15.570
+The fixed outline has area eighty, so outline density remains twenty-three divided by eighty.
+
+3
+00:00:16.660 --> 00:00:23.004
+Now look at the bounding box, the smallest rectangle that encloses all the placed blocks.
+
+4
+00:00:24.094 --> 00:00:30.870
+This layout has a nine-by-three box, with just four units inside it left unoccupied.
+
+5
+00:00:31.960 --> 00:00:37.752
+If another layout makes the bounding box smaller, does outline density also increase?
+
+6
+00:00:39.492 --> 00:00:46.748
+Watch the blocks repack into a six-by-four box, area twenty-four, leaving one empty unit inside.
+
+7
+00:00:47.838 --> 00:00:54.446
+Outline density stays fixed while packing density increases; the two ratios answer different questions.
+
+8
+00:00:55.536 --> 00:01:03.392
+Real chips also need connections and routing space, so this lesson compares only its stated area objective.

@@ -1,0 +1,191 @@
+1
+00:00:00,040 --> 00:00:06,144
+A has fixed area six. Does making it narrower necessarily improve the placement?
+
+2
+00:00:06,634 --> 00:00:14,490
+Early planning models some logic regions as rectangles with fixed area and adjustable shape: soft blocks.
+
+3
+00:00:14,980 --> 00:00:21,972
+Fixed memory macros cannot stretch arbitrarily; only A may reshape in this example.
+
+4
+00:00:22,462 --> 00:00:27,510
+A’s width and height must be positive, and their product must remain six.
+
+5
+00:00:28,000 --> 00:00:32,736
+Aspect ratio means width divided by height, not the reverse.
+
+6
+00:00:33,226 --> 00:00:39,018
+The allowed aspect ratio is from one half to two, including both endpoints.
+
+7
+00:00:39,508 --> 00:00:47,244
+The original three-by-two shape has area six and aspect ratio one point five, so it is allowed.
+
+8
+00:00:47,734 --> 00:00:55,974
+Two by three also has area six; its aspect ratio is about zero point six seven, within the bounds.
+
+9
+00:00:56,464 --> 00:01:02,040
+On an integer grid, first list every positive integer factor pair of six.
+
+10
+00:01:02,530 --> 00:01:09,162
+One by six is too tall; six by one is too wide, so both fail the aspect-ratio limits.
+
+11
+00:01:09,652 --> 00:01:16,908
+Removing those extremes leaves two by three and three by two for this integer experiment.
+
+12
+00:01:17,398 --> 00:01:25,974
+A continuous model also allows noninteger dimensions; choose a positive width and calculate height as six divided by width.
+
+13
+00:01:26,464 --> 00:01:32,736
+The origin is the lower-left corner; x increases rightward and y increases upward.
+
+14
+00:01:33,226 --> 00:01:41,202
+A starts at the origin, three by two; D starts at zero, two, three by one, touching A’s top edge.
+
+15
+00:01:41,692 --> 00:01:50,148
+The legal box is nine by three: area twenty-seven, minus block area twenty-three, leaves four empty units.
+
+16
+00:01:50,638 --> 00:01:56,838
+The fixed outline is ten by eight, with area eighty; it is different from the bounding box.
+
+17
+00:01:57,328 --> 00:02:02,856
+Now change only A to two by three, while leaving every other block in place.
+
+18
+00:02:03,346 --> 00:02:09,954
+Will the placement remain legal after A narrows? First predict where its top edge will end.
+
+19
+00:02:12,994 --> 00:02:17,442
+Watch A’s right edge retreat while its top rises from two to three.
+
+20
+00:02:17,932 --> 00:02:26,004
+The new A spans x from zero to two; D spans zero to three, so their horizontal intervals overlap.
+
+21
+00:02:26,494 --> 00:02:33,462
+Their shared vertical interval is two to three, giving overlap height one and overlap area two.
+
+22
+00:02:33,952 --> 00:02:41,520
+When rectangles only share a boundary, an overlap dimension is zero, so touching is allowed.
+
+23
+00:02:42,010 --> 00:02:48,498
+Repair the conflict first; compare bounding boxes only after confirming legality.
+
+24
+00:02:48,988 --> 00:02:53,460
+Try a local repair by moving D two grid units to the right.
+
+25
+00:02:53,950 --> 00:03:00,582
+D no longer covers A, but it now enters B’s space, so the repair is incomplete.
+
+26
+00:03:01,072 --> 00:03:08,088
+Move D up one unit to y equals three, touching B without overlapping A or B.
+
+27
+00:03:08,578 --> 00:03:16,434
+However, the top reaches four while the right edge stays nine, so bounding-box area increases to thirty-six.
+
+28
+00:03:16,924 --> 00:03:22,716
+Keep A at two by three and move B left one unit until it touches A’s right edge.
+
+29
+00:03:23,206 --> 00:03:27,390
+Next, move C left one unit to touch B’s right edge.
+
+30
+00:03:27,880 --> 00:03:34,272
+Move D to four, two: its bottom touches C, and its left edge touches B.
+
+31
+00:03:34,762 --> 00:03:41,130
+The new placement again has a nine-by-three box with area twenty-seven, matching the baseline.
+
+32
+00:03:41,620 --> 00:03:46,284
+To shrink the box further, which block still determines the rightmost edge?
+
+33
+00:03:49,324 --> 00:03:54,108
+First move D to zero, three, freeing the space above C.
+
+34
+00:03:54,598 --> 00:04:02,046
+The box temporarily grows at this intermediate step; do not confuse an intermediate move with the final result.
+
+35
+00:04:02,536 --> 00:04:08,544
+Move E to four, two, above C and right of B, without covering D.
+
+36
+00:04:09,034 --> 00:04:16,578
+The rightmost edge is now six and the top is four, giving a six-by-four box with area twenty-four.
+
+37
+00:04:17,068 --> 00:04:25,452
+Total block area remains twenty-three, leaving only one unoccupied unit inside this legal bounding box.
+
+38
+00:04:25,942 --> 00:04:34,302
+The outline stays eighty, so fixed-outline density remains twenty-three over eighty, or twenty-eight point seven five percent.
+
+39
+00:04:34,792 --> 00:04:43,728
+Packing density uses a different denominator; the baseline is twenty-three over twenty-seven, about eighty-five point two percent.
+
+40
+00:04:44,218 --> 00:04:51,978
+After compaction, packing density becomes twenty-three over twenty-four, about ninety-five point eight percent.
+
+41
+00:04:52,468 --> 00:04:57,516
+Whenever you report a density, state which rectangle supplies the denominator.
+
+42
+00:05:00,556 --> 00:05:07,380
+Twenty-four is a verified legal witness here, not a universal result for soft-block problems.
+
+43
+00:05:07,870 --> 00:05:14,382
+Consider a new block of area eight, with the same aspect-ratio bounds from one half to two.
+
+44
+00:05:14,872 --> 00:05:22,128
+Do two by four and four by two pass the shape check? Calculate both area and aspect ratio.
+
+45
+00:05:25,168 --> 00:05:32,160
+Both shapes are allowed: each has area eight, and their aspect ratios equal the two permitted endpoints.
+
+46
+00:05:32,650 --> 00:05:40,674
+Return to the five-block lab: keep A at two by three, repair overlaps, then try reaching box area twenty-four.
+
+47
+00:05:41,164 --> 00:05:48,564
+In code, check positive dimensions, area tolerance, and aspect ratio before running the placement checks.
+
+48
+00:05:49,054 --> 00:05:57,102
+Keep the complete process: choose a shape, repack neighbors, check legality, and then compare the stated objective.

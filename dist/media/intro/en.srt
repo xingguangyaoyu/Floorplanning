@@ -1,0 +1,23 @@
+1
+00:00:00,040 --> 00:00:06,648
+A chip brings processors, memories, and interfaces together inside one fixed boundary.
+
+2
+00:00:07,738 --> 00:00:14,442
+Every block must appear once, stay inside the outline, and avoid sharing interior space.
+
+3
+00:00:15,532 --> 00:00:21,492
+Legality is only the beginning; the same blocks can be scattered or packed tightly.
+
+4
+00:00:22,582 --> 00:00:30,822
+Slicing trees, binary trees, and sequence pairs turn geometric layouts into encodings we can manipulate.
+
+5
+00:00:31,912 --> 00:00:38,232
+Annealing explores new encodings, while soft blocks change shape without changing their area.
+
+6
+00:00:39,322 --> 00:00:45,282
+Next, predict the result, try the experiment, and use your own code to explain why.

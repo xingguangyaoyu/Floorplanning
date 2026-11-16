@@ -1,0 +1,31 @@
+1
+00:00:00,040 --> 00:00:05,928
+Think of the outline as a box that cannot stretch; every block has to fit inside.
+
+2
+00:00:07,018 --> 00:00:12,786
+Move E to the right; starting at nine with width two puts its right edge at eleven.
+
+3
+00:00:13,876 --> 00:00:19,908
+The outline ends at ten, so the layout fails even though most of E remains inside.
+
+4
+00:00:20,998 --> 00:00:28,110
+Return E to seven, touching C; their shared boundary has no area and is not an overlap.
+
+5
+00:00:29,200 --> 00:00:35,136
+If E moves one more unit left, will its interior share positive area with C?
+
+6
+00:00:36,876 --> 00:00:43,436
+Now watch the move; the blocks share a region with positive width, so the layout needs repair.
+
+7
+00:00:44,526 --> 00:00:51,470
+Finally, check the names; five rectangles do not necessarily mean the five required blocks.
+
+8
+00:00:52,560 --> 00:00:59,240
+In the lab, create overflow and overlap yourself, then use the checker’s reasons to repair them.

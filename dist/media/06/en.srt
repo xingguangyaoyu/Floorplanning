@@ -1,0 +1,31 @@
+1
+00:00:00,040 --> 00:00:05,544
+A sequence pair uses two rows of letters to encode every pair of blocks.
+
+2
+00:00:06,634 --> 00:00:11,514
+A comes before B in both permutations, so A must be left of B.
+
+3
+00:00:12,604 --> 00:00:20,100
+A precedes D in the first row but follows D in the second; here that means A is below D.
+
+4
+00:00:21,190 --> 00:00:28,950
+D must clear every block below it, not only A, so take the maximum over all predecessor bounds.
+
+5
+00:00:30,040 --> 00:00:35,472
+B’s top is one unit higher than A’s; predict the final height of D.
+
+6
+00:00:37,212 --> 00:00:44,684
+The reference pair produces a nine-by-four box; it is a different encoding from the previous lesson’s reference tree.
+
+7
+00:00:45,774 --> 00:00:52,310
+Make both permutations identical; the blocks line up without overlap but extend beyond the outline.
+
+8
+00:00:53,400 --> 00:00:59,480
+Change the permutations in the lab, then implement the longest-path updates in Python.

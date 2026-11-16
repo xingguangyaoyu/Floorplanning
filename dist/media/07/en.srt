@@ -1,0 +1,31 @@
+1
+00:00:00,040 --> 00:00:06,624
+A representation generates layouts; simulated annealing searches among their encodings.
+
+2
+00:00:07,714 --> 00:00:15,786
+Here each proposal swaps two names in one permutation, then decodes and scores the new layout.
+
+3
+00:00:16,876 --> 00:00:22,644
+Accept a decrease in energy; an increase does not have to be rejected immediately.
+
+4
+00:00:23,734 --> 00:00:31,854
+For an uphill proposal, acceptance probability is the exponential of negative energy change divided by temperature.
+
+5
+00:00:32,944 --> 00:00:38,376
+For the same uphill change, does a higher temperature make acceptance more likely?
+
+6
+00:00:40,116 --> 00:00:47,660
+Watch an uphill proposal that this run accepts; current changes, but a better legal incumbent is not overwritten.
+
+7
+00:00:48,750 --> 00:00:57,038
+Another proposal is rejected, leaving current unchanged; the random draw and probability determine this decision.
+
+8
+00:00:58,128 --> 00:01:05,960
+Finally inspect the best legal layout for this fixed seed; one successful run is not an optimality guarantee.

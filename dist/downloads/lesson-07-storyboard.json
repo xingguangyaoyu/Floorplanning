@@ -1,0 +1,846 @@
+{
+  "lesson": "07",
+  "scenes": [
+    {
+      "key": "start",
+      "title": {
+        "zh": "先定义，什么算更好",
+        "en": "Define what better means"
+      },
+      "say": {
+        "zh": "表示法生成布局，模拟退火则在不同编码之间搜索。",
+        "en": "A representation generates layouts; simulated annealing searches among their encodings."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 7,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 10,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    },
+    {
+      "key": "neighbor",
+      "title": {
+        "zh": "交换一次，产生候选",
+        "en": "One swap proposes a neighbor"
+      },
+      "say": {
+        "zh": "这里每次交换某一个排列里的两个名称，再重新解码并计算能量。",
+        "en": "Here each proposal swaps two names in one permutation, then decodes and scores the new layout."
+      },
+      "pack": {
+        "E": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "A": {
+          "x": 0,
+          "y": 5,
+          "w": 3,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    },
+    {
+      "key": "delta",
+      "title": {
+        "zh": "候选能量，减去当前能量",
+        "en": "Candidate energy minus current energy"
+      },
+      "say": {
+        "zh": "能量下降就接受，能量上升则不必立即拒绝。",
+        "en": "Accept a decrease in energy; an increase does not have to be rejected immediately."
+      },
+      "pack": {
+        "E": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 3
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "A": {
+          "x": 4,
+          "y": 3,
+          "w": 3,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true
+    },
+    {
+      "key": "probability",
+      "title": {
+        "zh": "温度，控制后退的意愿",
+        "en": "Temperature controls uphill tolerance"
+      },
+      "say": {
+        "zh": "对于变差的候选，接受概率是负的能量差除以温度，再取指数。",
+        "en": "For an uphill proposal, acceptance probability is the exponential of negative energy change divided by temperature."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 3
+        },
+        "D": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "metrics": true,
+      "anneal": {
+        "step": 6,
+        "T": 10.304808308399998,
+        "delta": 10,
+        "probability": 0.378923565377111,
+        "u": 0.14365738607011735,
+        "accepted": true,
+        "energy": 45,
+        "candidateEnergy": 45,
+        "pack": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "E": {
+            "x": 7,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "previous": {
+          "E": {
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 2,
+            "w": 3,
+            "h": 1
+          },
+          "A": {
+            "x": 4,
+            "y": 3,
+            "w": 3,
+            "h": 2
+          }
+        },
+        "candidate": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "E": {
+            "x": 7,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "best": {
+          "E": {
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "C": {
+            "x": 0,
+            "y": 5,
+            "w": 2,
+            "h": 2
+          },
+          "D": {
+            "x": 2,
+            "y": 2,
+            "w": 3,
+            "h": 1
+          },
+          "A": {
+            "x": 2,
+            "y": 3,
+            "w": 3,
+            "h": 2
+          }
+        },
+        "bestEnergy": 35,
+        "pos": [
+          "A",
+          "C",
+          "B",
+          "D",
+          "E"
+        ],
+        "neg": [
+          "C",
+          "B",
+          "A",
+          "D",
+          "E"
+        ]
+      }
+    },
+    {
+      "key": "predict",
+      "title": {
+        "zh": "先预测：升温会怎样？",
+        "en": "Predict: what does higher temperature do?"
+      },
+      "say": {
+        "zh": "同样一次变差，如果温度更高，它会更容易被接受吗？",
+        "en": "For the same uphill change, does a higher temperature make acceptance more likely?"
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 3
+        },
+        "D": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "question": {
+        "text": {
+          "zh": "相同 ΔE>0，温度越高，接受概率？",
+          "en": "For the same ΔE>0, at higher T acceptance is…"
+        },
+        "options": [
+          {
+            "zh": "更高",
+            "en": "more likely"
+          },
+          {
+            "zh": "更低",
+            "en": "less likely"
+          }
+        ],
+        "answer": 0,
+        "explain": {
+          "zh": "−ΔE/T 更接近零，所以 exp(−ΔE/T) 更大。",
+          "en": "−ΔE/T is closer to zero, so exp(−ΔE/T) is larger."
+        }
+      }
+    },
+    {
+      "key": "accept",
+      "title": {
+        "zh": "当前解可以暂时变差",
+        "en": "The current solution can get worse"
+      },
+      "say": {
+        "zh": "看这次实际接受的变差候选；当前解改变，但历史最好合法解不会被覆盖。",
+        "en": "Watch an uphill proposal that this run accepts; current changes, but a better legal incumbent is not overwritten."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 3
+        },
+        "D": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "anneal": {
+        "step": 6,
+        "T": 10.304808308399998,
+        "delta": 10,
+        "probability": 0.378923565377111,
+        "u": 0.14365738607011735,
+        "accepted": true,
+        "energy": 45,
+        "candidateEnergy": 45,
+        "pack": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "E": {
+            "x": 7,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "previous": {
+          "E": {
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 2,
+            "w": 3,
+            "h": 1
+          },
+          "A": {
+            "x": 4,
+            "y": 3,
+            "w": 3,
+            "h": 2
+          }
+        },
+        "candidate": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "E": {
+            "x": 7,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "best": {
+          "E": {
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "C": {
+            "x": 0,
+            "y": 5,
+            "w": 2,
+            "h": 2
+          },
+          "D": {
+            "x": 2,
+            "y": 2,
+            "w": 3,
+            "h": 1
+          },
+          "A": {
+            "x": 2,
+            "y": 3,
+            "w": 3,
+            "h": 2
+          }
+        },
+        "bestEnergy": 35,
+        "pos": [
+          "A",
+          "C",
+          "B",
+          "D",
+          "E"
+        ],
+        "neg": [
+          "C",
+          "B",
+          "A",
+          "D",
+          "E"
+        ]
+      },
+      "metrics": true,
+      "anchor": "Watch"
+    },
+    {
+      "key": "reject",
+      "title": {
+        "zh": "拒绝时，当前解不动",
+        "en": "On rejection, keep the current layout"
+      },
+      "say": {
+        "zh": "另一份候选被拒绝，当前布局保持原样；随机数和概率共同决定这一步。",
+        "en": "Another proposal is rejected, leaving current unchanged; the random draw and probability determine this decision."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "C": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 2,
+          "w": 2,
+          "h": 3
+        },
+        "D": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "anneal": {
+        "step": 7,
+        "T": 9.995664059147998,
+        "delta": 11,
+        "probability": 0.3327122886911038,
+        "u": 0.7618736950680614,
+        "accepted": false,
+        "energy": 45,
+        "candidateEnergy": 56,
+        "pack": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "E": {
+            "x": 7,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "previous": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "C": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 2,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "D": {
+            "x": 4,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "E": {
+            "x": 7,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "candidate": {
+          "A": {
+            "x": 0,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          },
+          "D": {
+            "x": 3,
+            "y": 0,
+            "w": 3,
+            "h": 1
+          },
+          "B": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "C": {
+            "x": 0,
+            "y": 5,
+            "w": 2,
+            "h": 2
+          },
+          "E": {
+            "x": 6,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          }
+        },
+        "best": {
+          "E": {
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 2
+          },
+          "B": {
+            "x": 0,
+            "y": 2,
+            "w": 2,
+            "h": 3
+          },
+          "C": {
+            "x": 0,
+            "y": 5,
+            "w": 2,
+            "h": 2
+          },
+          "D": {
+            "x": 2,
+            "y": 2,
+            "w": 3,
+            "h": 1
+          },
+          "A": {
+            "x": 2,
+            "y": 3,
+            "w": 3,
+            "h": 2
+          }
+        },
+        "bestEnergy": 35,
+        "pos": [
+          "A",
+          "C",
+          "B",
+          "D",
+          "E"
+        ],
+        "neg": [
+          "C",
+          "B",
+          "A",
+          "D",
+          "E"
+        ]
+      },
+      "metrics": true
+    },
+    {
+      "key": "best",
+      "title": {
+        "zh": "保存历史最好合法解",
+        "en": "Keep the best legal result"
+      },
+      "say": {
+        "zh": "最后查看这次固定种子的最好合法解；一次成功不代表每次都能得到最优。",
+        "en": "Finally inspect the best legal layout for this fixed seed; one successful run is not an optimality guarantee."
+      },
+      "pack": {
+        "D": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 1
+        },
+        "A": {
+          "x": 0,
+          "y": 1,
+          "w": 3,
+          "h": 2
+        },
+        "C": {
+          "x": 0,
+          "y": 3,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "E": {
+          "x": 2,
+          "y": 3,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "bbox": true,
+      "metrics": true
+    }
+  ]
+}

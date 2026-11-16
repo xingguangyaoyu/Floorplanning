@@ -1,0 +1,346 @@
+{
+  "lesson": "05",
+  "scenes": [
+    {
+      "key": "recipe",
+      "title": {
+        "zh": "一棵树，一份摆放配方",
+        "en": "A tree is a packing recipe"
+      },
+      "say": {
+        "zh": "树给出摆放关系，轮廓线决定每块模块最终落下的高度。",
+        "en": "The tree describes placement relationships, while the skyline determines the height where each block lands."
+      },
+      "pack": {},
+      "focus": [],
+      "tree": "A(B(C(E,-),-),D)"
+    },
+    {
+      "key": "root",
+      "title": {
+        "zh": "根模块落在原点",
+        "en": "The root lands at the origin"
+      },
+      "say": {
+        "zh": "先让根模块 A 落在原点，然后处理它的整个左子树。",
+        "en": "First place root A at the origin, then process its entire left subtree."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        }
+      },
+      "focus": [
+        "A"
+      ],
+      "tree": "A(B(C(E,-),-),D)",
+      "anchor": "root"
+    },
+    {
+      "key": "walk",
+      "title": {
+        "zh": "A → B → C → E → D",
+        "en": "A → B → C → E → D"
+      },
+      "say": {
+        "zh": "左孩子从父模块的右边缘开始，B、C、E 依次落位，D 最后处理。",
+        "en": "A left child starts at its parent’s right edge; B, C, and E land before D is processed."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "B",
+        "C",
+        "E"
+      ],
+      "tree": "A(B(C(E,-),-),D)",
+      "skyline": true
+    },
+    {
+      "key": "D",
+      "title": {
+        "zh": "D 恰好落在 A 上",
+        "en": "D happens to rest on A"
+      },
+      "say": {
+        "zh": "标准树里，D 的宽度下方最高处是 A 的顶部，所以高度是二。",
+        "en": "In the reference tree, the highest skyline under D is A’s top, so D lands at height two."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [
+        "D"
+      ],
+      "tree": "A(B(C(E,-),-),D)",
+      "skyline": true,
+      "anchor": "D"
+    },
+    {
+      "key": "predict",
+      "title": {
+        "zh": "交换 A 与 C，先猜 D",
+        "en": "Swap A and C. Predict D."
+      },
+      "say": {
+        "zh": "如果交换 A 和 C 的名称，D 还会停在高度二吗？",
+        "en": "If we swap the names A and C, will D still land at height two?"
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "tree": "A(B(C(E,-),-),D)",
+      "question": {
+        "text": {
+          "zh": "交换后 D 的 y 是多少？",
+          "en": "D’s y after swapping A and C?"
+        },
+        "options": [
+          {
+            "zh": "2",
+            "en": "2"
+          },
+          {
+            "zh": "3",
+            "en": "3"
+          }
+        ],
+        "answer": 1,
+        "explain": {
+          "zh": "D 的宽度跨过 B；B 的顶部为 3，会把 D 托高。",
+          "en": "D spans part of B, whose top at 3 lifts D."
+        }
+      }
+    },
+    {
+      "key": "lift",
+      "title": {
+        "zh": "不是父块，是整个覆盖区间",
+        "en": "Inspect the full footprint"
+      },
+      "say": {
+        "zh": "看交换后的布局；D 覆盖到了更高的 B，所以它被托到高度三。",
+        "en": "Watch the swapped layout; D reaches over taller B, which lifts it to height three."
+      },
+      "pack": {
+        "C": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "A": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [
+        "B",
+        "D"
+      ],
+      "tree": "C(B(A(E,-),-),D)",
+      "skyline": true,
+      "metrics": true,
+      "anchor": "Watch"
+    },
+    {
+      "key": "score",
+      "title": {
+        "zh": "同样合法，面积变大",
+        "en": "Still legal, but a larger box"
+      },
+      "say": {
+        "zh": "包围盒从二十七变成三十六；合法性没有告诉我们这次交换是否更好。",
+        "en": "The box grows from twenty-seven to thirty-six; legality alone does not say whether the swap improved it."
+      },
+      "pack": {
+        "C": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "A": {
+          "x": 4,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        }
+      },
+      "focus": [],
+      "tree": "C(B(A(E,-),-),D)",
+      "bbox": true,
+      "metrics": true
+    },
+    {
+      "key": "counterexample",
+      "title": {
+        "zh": "用反例检查自己的实现",
+        "en": "Test your code with counterexamples"
+      },
+      "say": {
+        "zh": "进入实验修改树，用轮廓线解释高度，而不是只背左孩子和右孩子。",
+        "en": "Edit the tree in the lab, and explain heights using the skyline rather than memorizing child labels."
+      },
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "focus": [],
+      "tree": "A(B(C(E,-),-),D)",
+      "skyline": true
+    }
+  ]
+}

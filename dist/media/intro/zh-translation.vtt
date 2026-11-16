@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.040 --> 00:00:07.392
+A chip brings processors, memories, and interfaces together inside one fixed boundary.
+
+2
+00:00:08.482 --> 00:00:14.586
+Every block must appear once, stay inside the outline, and avoid sharing interior space.
+
+3
+00:00:15.676 --> 00:00:21.996
+Legality is only the beginning; the same blocks can be scattered or packed tightly.
+
+4
+00:00:23.086 --> 00:00:29.910
+Slicing trees, binary trees, and sequence pairs turn geometric layouts into encodings we can manipulate.
+
+5
+00:00:31.000 --> 00:00:37.680
+Annealing explores new encodings, while soft blocks change shape without changing their area.
+
+6
+00:00:38.770 --> 00:00:45.042
+Next, predict the result, try the experiment, and use your own code to explain why.
