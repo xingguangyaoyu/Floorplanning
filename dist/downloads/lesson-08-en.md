@@ -99,7 +99,22 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: B. 1/6 is below the lower aspect bound of 0.5.
 
-4. A=(0,0,2,3), D=(0,2,3,1). What is their overlap area?
+4. Outline 10×8, block area 23. What are deadspace and outline density?
+
+   A. 57，28.75%
+   B. 57，23%
+   C. 53，28.75%
+
+   Answer: A. 80−23=57; 23/80=0.2875.
+
+5. E starts at x=9 and is 2 wide; all other checks pass. Is the layout legal?
+
+   A. Legal
+   B. Illegal: E crosses the boundary
+
+   Answer: B. 9+2=11>10. Legality requires both containment and non-overlap.
+
+6. A=(0,0,2,3), D=(0,2,3,1). What is their overlap area?
 
    A. 0
    B. 1
@@ -108,7 +123,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: C. Shared width is 2 and height is 1, giving 2. Zero confuses overlap with contact; 6 is A’s full area.
 
-5. After A becomes 2×3, why does moving D only to (2,2) still fail?
+7. After A becomes 2×3, why does moving D only to (2,2) still fail?
 
    A. It overlaps B
    B. A’s area increased
@@ -117,7 +132,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: A. B and D share x=3…5 and y=2…3, area 2. A still has area 6; D’s right edge 5 is inside the outline.
 
-6. D at (2,3) restores legality but gives box area 36. How should it be judged?
+8. D at (2,3) restores legality but gives box area 36. How should it be judged?
 
    A. Legal always beats area 27
    B. Successful repair, worse area objective
@@ -126,7 +141,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: B. Legality asks whether placement is allowed. Since 36>27, the box objective worsened. Fixed-outline density does not prove optimality.
 
-7. Compacting the box from 27 to 24 increases which density?
+9. Compacting the box from 27 to 24 increases which density?
 
    A. Fixed-outline density
    B. Packing density
@@ -135,7 +150,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: B. 23/80 stays fixed, while 23/27 increases to 23/24. The denominator determines what the ratio measures.
 
-8. For a separate area-8 block with 0.5≤w/h≤2, which integer shapes are allowed?
+10. For a separate area-8 block with 0.5≤w/h≤2, which integer shapes are allowed?
 
    A. Only 2×4
    B. Only 4×2

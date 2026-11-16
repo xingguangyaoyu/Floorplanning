@@ -56,6 +56,22 @@ The current solution may get worse. Do not label current energy as best-so-far. 
 
    Answer: B. The seed controls the random trajectory, not an optimality guarantee.
 
+4. ΔE stays positive. Lower the temperature. The chance of accepting the worse candidate…
+
+   A. increases
+   B. decreases
+   C. stays the same
+
+   Answer: B. p=exp(−ΔE/T); a smaller T makes the exponent more negative, so p falls.
+
+5. When is the best legal solution updated?
+
+   A. On every acceptance
+   B. When the current solution is legal and better
+   C. When the current solution gets worse
+
+   Answer: B. Acceptance changes the current solution. The incumbent changes only for a better legal layout.
+
 ## Python exercise
 
 Implement the generic annealing state machine anneal(initial, neighbor, decode, score, feasible, rng, schedule, budget): current/candidate/best-legal are stored separately; accept downhill always and uphill when u < exp(-delta/T); a rejected candidate must not touch current; the best legal solution only improves; the log records T, candidate energy, delta, u, acceptance, current and best energy per step; exactly budget evaluations. The Lab6 decoder and score/feasible/neighbor/rng/schedule builders are provided - the state machine is yours.

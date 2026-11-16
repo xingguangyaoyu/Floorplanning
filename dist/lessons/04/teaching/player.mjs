@@ -1,2 +1,2 @@
-import data from'./lesson-data.mjs';import{renderScene,reportTrial}from'./visuals.mjs';import{mountInteractive}from'../../../assets/interactive-player.mjs';
-mountInteractive({data,renderScene,reportTrial,audioUrl:new URL('./narration.m4a',import.meta.url).href});
+import{lessonSuffix}from'../../../assets/teaching-language.mjs';const{default:data}=await import('./lesson-data'+lessonSuffix+'.mjs?v=voice-20261116');import{renderScene,reportTrial}from'./visuals.mjs?v=voice-20261116';import{mountInteractive}from'../../../assets/interactive-player.mjs?v=voice-20261116';
+mountInteractive({data,renderScene,reportTrial,audioUrl:new URL('./narration'+lessonSuffix+'.m4a?v='+data.audioSha256.slice(0,12),import.meta.url).href});

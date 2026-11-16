@@ -19,14 +19,16 @@ python scripts/check_site.py
 
 ## 教学时间轴
 
-Lab2–7 的分镜在 `content/interactiveNN.mjs`，任务在对应 `advancedNN-python.mjs`。例如 Lab4：
+2026-11-16新配音流程：双语讲稿在 `content/narration-bilingual.tsv`，最终实际提交文本在 `build/voice-repair-2026-11-16/plan.json`。分镜/几何仍在 `content/interactiveNN.mjs`，任务在对应 `advancedNN-python.mjs`。保持缓存时可以离线重建：
 
 ```powershell
-node scripts/prepare_lab04.mjs
-python scripts/build_lab04_audio.py
+python scripts/voice_pipeline.py build
+python scripts/build_teaching_labels.py
 node scripts/build.mjs
-python scripts/package_python.py
+python scripts/voice_checks.py
 ```
+
+改稿时先运行 `python scripts/voice_pipeline.py prepare`，再按需要运行 `python scripts/voice_pipeline.py synthesize`。synthesize会把课程讲稿发送到Microsoft语音服务；只在明确允许在线配音时执行。缓存按文本/音色/语速摘要复用。旧 `build_labNN_audio.py` 与 `build_complete_interactive.py` 会拒绝覆盖新配音。不要清空dist或拿旧时间戳搭配新声音。完整说明见 `docs/voice-repair-2026-11-16/HANDOFF.md`。
 
 时间轴生成器只拼接既有本地音频和阅读停留，不生成新旁白。修改了来源摘要覆盖的讲稿或内核后，按依赖重建时间轴再运行课别检查。只改网站提示文字无需重做音轨。
 

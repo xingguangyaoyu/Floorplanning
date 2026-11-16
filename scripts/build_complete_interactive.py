@@ -3,6 +3,8 @@ import hashlib,json,shutil,subprocess
 from pathlib import Path
 import imageio_ffmpeg
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'dist/lessons/08/teaching';OUT.mkdir(parents=True,exist_ok=True)
+from voice_checks import protect_measured_narration
+protect_measured_narration(ROOT,'08')
 source=json.loads((ROOT/'build/v3/full-stories.json').read_text(encoding='utf-8'))['08v3'];states=json.loads((ROOT/'build/v3/states.json').read_text(encoding='utf-8'))
 old=json.loads((ROOT/'dist/data/stories.json').read_text(encoding='utf-8'))['08'];time=json.loads((ROOT/'dist/media/08/zh.json').read_text(encoding='utf-8'))['scenes'];bykey={s['key']:(s,t)for s,t in zip(old,time)}
 mapping={'scope':['opening-contract','use-hard'],'couple-height':['contract-area'],'couple-bound':['contract-ratio','contract-bounds'],'couple-filter':['factors-tall','factors-survive'],'couple-model':['factors-continuous'],'baseline-read':['baseline-D','baseline-box'],'overlap-change':['reshape'],'overlap-area':['reshape-x','reshape-y'],'overlap-contact':['check-touch'],'repair-side':['repair-choice','repair-second-conflict'],'repair-up':['repair-up'],'repair-score':['repair-worse'],'repack-B':['repack-B'],'repack-C':['repack-C'],'repack-D':['repack-D'],'bottle-edge':['repack-same'],'space-D':['compact-space','compact-temporary'],'space-E':['compact-E','compact-box','compact-empty'],'metric-fixed':['metrics-outline'],'metric-box':['metrics-box','metrics-compact'],'transfer':['transfer-eight','transfer-answer'],'finish':['transfer-summary']}

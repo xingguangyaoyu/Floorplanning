@@ -14,7 +14,7 @@ for path in sorted(DIST.rglob('*')):
    results.append({'path':path.relative_to(DIST).as_posix(),'status':response.status})
  except Exception as error:raise RuntimeError(f'{url}: {error}')from error
 ranges=[]
-for name in ['media/08/en.m4a','lessons/08/teaching/narration.m4a','lessons/02/teaching/narration.m4a','lessons/03/teaching/narration.m4a','lessons/04/teaching/narration.m4a','lessons/05/teaching/narration.m4a','lessons/06/teaching/narration.m4a','lessons/07/teaching/narration.m4a']:
+for name in ['media/08/en.m4a']+[f'lessons/{n:02}/teaching/narration{suffix}.m4a' for n in range(2,9) for suffix in ('','-en')]:
  if not (DIST/name).is_file():continue
  size=(DIST/name).stat().st_size
  probes=[('head',0,127),(('mid',size//2,min(size//2+127,size-1))),(('tail',max(0,size-128),size-1))]

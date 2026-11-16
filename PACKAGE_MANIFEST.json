@@ -12,108 +12,108 @@
   },
   {
    "path": "build/complete-interactive-checks.json",
-   "bytes": 392,
-   "sha256": "e78906a91904529c84d30438d7607a70bec60fbb6c59d31d060e7319999227ae"
+   "bytes": 389,
+   "sha256": "da80612b4f98dfe20cf1d649d15fe8061bc47e1c3a06b19b9aadb12925a48a92"
   },
   {
    "path": "build/complete-interactive-manifest.json",
-   "bytes": 157976,
-   "sha256": "fdd453d0fc947e380e3578d9a11e0564df8c596046be7dbb6d3dfc997d0ba5a2"
+   "bytes": 319166,
+   "sha256": "0504de2db9037038c7e77f0ce564fdbd3ab0ef7a420c8bdd75b2f2470a75f272"
   },
   {
    "path": "build/http-checks.json",
-   "bytes": 22902,
-   "sha256": "172b765d127f4ac098d4ad264e1f47236550271a50e740442d83c7c33fe0fb19"
+   "bytes": 28061,
+   "sha256": "83e384213df5766a399a9c734484a09d0e2afa0b689e13f3630ed7bf69c1910b"
   },
   {
    "path": "build/lab02/authoring.json",
-   "bytes": 25683,
-   "sha256": "1d2b7d62e0f946dd3456519ad4f5f740939df739500d3503440915a6b2450e8e"
+   "bytes": 29337,
+   "sha256": "1a30cc8d9f43fc422a84ba697f46808811600e87f9a905c4e7f2aebd4755b521"
   },
   {
    "path": "build/lab02/checks.json",
-   "bytes": 736,
-   "sha256": "8163d1ab92f94e4421f1a31c9f58a77743dbe71c718fcd6d95ee697fdb0ac825"
+   "bytes": 729,
+   "sha256": "3e17d0a0ac4c21ee29774e9f8329a601d53aa9946e07373dfe411a458107282a"
   },
   {
    "path": "build/lab02/provenance.json",
-   "bytes": 62138,
-   "sha256": "7036b7a26c6ec4b332ba9e7a4a37db746a7e8b85f6c08e3632b2dcac6153ce76"
+   "bytes": 274180,
+   "sha256": "586ea5181f794073a9b992276e121f53160ccd2c29cd213a8dc3ff52d1745423"
   },
   {
    "path": "build/lab03/authoring.json",
-   "bytes": 24438,
-   "sha256": "eae9f00f9459a45fbf7fbd10cbe281d750d334feb7a0a75b127645f05456dfcb"
+   "bytes": 25282,
+   "sha256": "6d61092f9f8fbb6e5d02cc07d1fc08b0b2a58d93e0ff8f51b5541db45da80f1e"
   },
   {
    "path": "build/lab03/checks.json",
-   "bytes": 967,
-   "sha256": "189ff9cb3b7582cb59e14906e187676b959ff85874f1af3707cb30e13792ccac"
+   "bytes": 962,
+   "sha256": "e8a155ece468cf92284538929cbbed273924cbc4c784cb6338289d6758944724"
   },
   {
    "path": "build/lab03/provenance.json",
-   "bytes": 59408,
-   "sha256": "c5fd00bba783993e3255f0b53ba57f3d486ef094a453dbd096f140e21ebad91a"
+   "bytes": 257387,
+   "sha256": "bd0cc988307983a46b4fa1d9a744c0777da5d40df01da3b275c448cd870a61cf"
   },
   {
    "path": "build/lab04/authoring.json",
-   "bytes": 24404,
-   "sha256": "15021170a9b89926f19e1e0cf2646a1054a99b41fa90a1319cfb15653f2faa7d"
+   "bytes": 25269,
+   "sha256": "13bc29a8b42d6b1fe3bd647a7c0aa43e65dbc4e3979a47d8a431136bb3e89a0a"
   },
   {
    "path": "build/lab04/checks.json",
-   "bytes": 942,
-   "sha256": "b6ac5395835587e444f405b502c84976b2bf785722801c0087e4298c5cf2aca8"
+   "bytes": 935,
+   "sha256": "349fd078fdc67d4d2072ea193f9b7fee9c25cf3bccf613ce2e588bca666f6193"
   },
   {
    "path": "build/lab04/provenance.json",
-   "bytes": 59898,
-   "sha256": "f95dbcfa16416c643543eadc6022cfcd2c87a0f313d447b7870f16ad040e74a5"
+   "bytes": 284948,
+   "sha256": "29a60fa96797f47dca74f916b0c3df53a0f7c97aa9536e41e08e2eb49560eeb3"
   },
   {
    "path": "build/lab05/authoring.json",
-   "bytes": 19008,
-   "sha256": "bda6b884daee75c3e656d0e8b1a64fd0abcf0052b1036cca477531c376e4dde9"
+   "bytes": 19989,
+   "sha256": "86191d5691dc2d5736ae9f27ea8a3751e57540b1680b24020fd6f7213c6030f2"
   },
   {
    "path": "build/lab05/checks.json",
-   "bytes": 985,
-   "sha256": "eb1909de7dd433a976baa159ffc5c41e90f19b5e09f377f6b93b221983e273c7"
+   "bytes": 980,
+   "sha256": "b651a2bdda06c46bab5eeddb084a019fb24a687da7d77a51a2eced43498629ac"
   },
   {
    "path": "build/lab05/provenance.json",
-   "bytes": 49926,
-   "sha256": "62b9950b3906119992696721ada6f33bac16857222561bdd40652877474629c6"
+   "bytes": 222993,
+   "sha256": "b8c66d1201e09125c804ba60902788a8f4276603f266bf6e07ef994f67d0c824"
   },
   {
    "path": "build/lab06/authoring.json",
-   "bytes": 18407,
-   "sha256": "fd96937c591077a2ee102efde91122401212fd832eaba968dcea3b3c17ed9349"
+   "bytes": 19405,
+   "sha256": "fab227552e0992f9e934f986a0d8292f089d96bc97fcdf412585e377faf3064d"
   },
   {
    "path": "build/lab06/checks.json",
-   "bytes": 992,
-   "sha256": "5432889bbce314bac69b146356e5481dac627a23197ccede6793b65ef1832d53"
+   "bytes": 987,
+   "sha256": "ddceb960659cdb0276df1a2c697e9c4c481e4b9aff5a440a2ff0ac51583361b0"
   },
   {
    "path": "build/lab06/provenance.json",
-   "bytes": 48057,
-   "sha256": "61ddfcb8b167a75d58813df0001725b995f7b8640475c6e6d029dd9017197bcc"
+   "bytes": 220299,
+   "sha256": "b8ae0b8b3eff34ca16debd21c740186eb4a90b34fbf93e8c16a07d3b96d47347"
   },
   {
    "path": "build/lab07/authoring.json",
-   "bytes": 18114,
-   "sha256": "c563a74b02a0b0648a6dd30addeaf2a3f5aa699028149949f086caa3854f8e53"
+   "bytes": 19164,
+   "sha256": "68dde58064e157465cdd7124c3c51efaeb20f85ea86b747da6c797694edd0109"
   },
   {
    "path": "build/lab07/checks.json",
-   "bytes": 954,
-   "sha256": "34ce9ebfa0e33523830f0e80a6c985d8e1a908b39ffc100a6fa5588be014c611"
+   "bytes": 952,
+   "sha256": "119d0c4a142c80ba829ef95cbe35157390c4adcdb1babe9adcefb9a98bd1fc4d"
   },
   {
    "path": "build/lab07/provenance.json",
-   "bytes": 46117,
-   "sha256": "96a090f564d976d02f4f12df8d8a991af929c9c420ff2fb3db62545d5065846a"
+   "bytes": 227167,
+   "sha256": "de6f99397cc80fe18a01e51d50ef479890055cf02566520087df6e1a5d14d970"
   },
   {
    "path": "build/python.json",
@@ -124,6 +124,3711 @@
    "path": "build/site-checks.json",
    "bytes": 56,
    "sha256": "42a707a8aabece510a7b228e5a6252f08169ffd0f76a44792e672b1e259feace"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/browser-seek.json",
+   "bytes": 4214,
+   "sha256": "c2d01a50438dba7225a54b7dc60bcae1b72ecb02c8bcd7d2f12abea7b8828172"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/checks.json",
+   "bytes": 2604,
+   "sha256": "233613ca1b21c512db484d97e8d458f8e35c12cb4c5a40467ce00cc9083f8713"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/bounds-230eb9e86c00946e.json",
+   "bytes": 4138,
+   "sha256": "b3de7a33ccf7740d9884bb6582f1b2984267de904c5855e4f61fcaf28a4ea0ef"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/bounds-230eb9e86c00946e.mp3",
+   "bytes": 58464,
+   "sha256": "1cbf60a01881650eca7ae03b0914eef1f283a3af2d55d7f9fd39f27f94c357c8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/box-3d5bc5315639db32.json",
+   "bytes": 5013,
+   "sha256": "c6cb2e23c48b6cab1d6f81d7d9014c60e5d883f7bab064077c1fb11e60be2f6a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/box-3d5bc5315639db32.mp3",
+   "bytes": 89424,
+   "sha256": "b68a2c5f83b571153947b1e0762924f4dbecd0ff25fe2d274c2a0f4dd7d7d6cb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/complete-7d63bf5aa6384c6d.json",
+   "bytes": 3938,
+   "sha256": "cdfe17777dc0d601cbc5efe3e8b59f29fdf46085f537ebbac1a2b1521d8e16b1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/complete-7d63bf5aa6384c6d.mp3",
+   "bytes": 66240,
+   "sha256": "09159477ffa392414397dca2cef25fd3ab5a0ea7f6f249099f7310c04f243e45"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/contacts-12abb9147b28cdf7.json",
+   "bytes": 4075,
+   "sha256": "dbb32e9cec5e7807a99ca5620eaea6cec7ba3374f7c2d168e52e55e96f07ed14"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/contacts-12abb9147b28cdf7.mp3",
+   "bytes": 72288,
+   "sha256": "cfeb364c10543d7dfb54be3aef480586e1385a016e800ea13d82d1df70b9786c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/contained-1b797cb0323bcc06.json",
+   "bytes": 3566,
+   "sha256": "240075cb534ba78588485f6bd96a4ace870aed18613064b2084717d8d80f33a7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/contained-1b797cb0323bcc06.mp3",
+   "bytes": 64368,
+   "sha256": "63a6486c469202115db8aa2953432873953665ecfc3fb4eb060baf7ed0f00e18"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/contract-426a34047d4848e5.json",
+   "bytes": 5779,
+   "sha256": "0d2745e713cf00307b02be2f98b1b3a647743f138911cd787ff335d3e049f6df"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/contract-426a34047d4848e5.mp3",
+   "bytes": 104976,
+   "sha256": "3b78024fab09803872c18f97dbfe2eeae5ec6d386390d172ae2a7bf8c6556bff"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/cross-7a2a420dbcadc7cc.json",
+   "bytes": 4356,
+   "sha256": "2916f59262ad67494d14966e41e6298c686adf8d0415928bc0674ec6eb9f459d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/cross-7a2a420dbcadc7cc.mp3",
+   "bytes": 80496,
+   "sha256": "bc7d66aa21e1ffc31ff2a5836c1d225e05d4af69af42fd53e6dd83dcdf2faacb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/formula-f8918386a66f652c.json",
+   "bytes": 5486,
+   "sha256": "a2c16a667378679be6eb5b8c65dd14df6d522e2cf7b478675c43cfd28c25c86e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/formula-f8918386a66f652c.mp3",
+   "bytes": 88272,
+   "sha256": "7ef2b2362daa252da7c87e5f6e9f169ae143b2a38c377a2b8c68309db5c30492"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/intro-flow-691934c2fddf3d25.json",
+   "bytes": 6681,
+   "sha256": "fbb5e589a99db81bc70b11988cff0d7ba0fb23856c5344d5de4827ef7c25675a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/intro-flow-691934c2fddf3d25.mp3",
+   "bytes": 111456,
+   "sha256": "9af1167421944c1d7774c562cec42a08380e9ba6aae011d374e346b750caedf5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/intro-goal-17e956d50518f7f0.json",
+   "bytes": 6272,
+   "sha256": "a93f66d61b70e68f3558b68b6dac5f887d190fdc280d7cf1ff9a7beeb3ce137c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/intro-goal-17e956d50518f7f0.mp3",
+   "bytes": 101232,
+   "sha256": "f7fe7734add73c110af32abeb6666603f39c74afa92a4f7dddaae5bdbe66ab84"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/intro-overflow-0bf2bcf08eb9fa3d.json",
+   "bytes": 5069,
+   "sha256": "1a0530b6563fac389b753bfb0c26c1c089f7a9ba05eafab6287e03c0fc543865"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/intro-overflow-0bf2bcf08eb9fa3d.mp3",
+   "bytes": 83376,
+   "sha256": "d1375ee572361388afa114342294e6423b2f2ba132b4d6931649577ec4a23d14"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/multiple-0e208aab25e81fca.json",
+   "bytes": 4292,
+   "sha256": "d8f4493e73e065a967513dde222a82cd44afc1df3a29025bf4fbf2f5f307d0ad"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/multiple-0e208aab25e81fca.mp3",
+   "bytes": 68832,
+   "sha256": "084df85f60fd3fa7ff3910b3136931c43f48616e6b7c5da34152e091db3a81ab"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/necessary-a3ba4a00d639d260.json",
+   "bytes": 4495,
+   "sha256": "33c7c6813be64dfb390cad23e119c1f4700a653d9dbf1b8dc91e4f90bcfced2b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/necessary-a3ba4a00d639d260.mp3",
+   "bytes": 82224,
+   "sha256": "38d42a8870bcfbf27fdf2d243880339b076b0b898b08951d7ffb8f1845148614"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/new-conflict-e086e78b9ea3b2c5.json",
+   "bytes": 4652,
+   "sha256": "94389a41ee89b9fe125103e47b1082c6c3b1487f6dd09692b9ad98636be38866"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/new-conflict-e086e78b9ea3b2c5.mp3",
+   "bytes": 68976,
+   "sha256": "cd0f0e0a6035e3e203aa9d5a73fdea5c6473e1aa2f86bbbb6bdd801689d29528"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/numbers-64c880759e9b8eb3.json",
+   "bytes": 5047,
+   "sha256": "d7f767865df333af2774dfc384d7202fd4b1d92fb619d4cb98e6da1645cfb6dc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/numbers-64c880759e9b8eb3.mp3",
+   "bytes": 97920,
+   "sha256": "fbaf93f4dd673d0fb35a9908208097df7b90fbf9c1c46131a5e0d11ec207abf0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/outside-170dc724e2ae6d5a.json",
+   "bytes": 3239,
+   "sha256": "83f9d883dcc5c6f43058eae308237a685d2065c0a9c7310ee8a125b524925f34"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/outside-170dc724e2ae6d5a.mp3",
+   "bytes": 51120,
+   "sha256": "9c0d5ec1a907dc52355c87fd16a671c21254aece9dae2d0080a15aa5973ea0bf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/overlap-a6ef42996b0f6a4d.json",
+   "bytes": 3118,
+   "sha256": "8cbfe170b1f787daca249d0840a62f82ad5d7db2f84bf0d3f2f06c98edb09ebb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/overlap-a6ef42996b0f6a4d.mp3",
+   "bytes": 50832,
+   "sha256": "71274a8e95d8674588d65ddd49add3b7d8c77cfda1577e30f1d603d3f6b53030"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/predict-d6af8e3c9d554054.json",
+   "bytes": 2845,
+   "sha256": "a35dedaaad649f9f6ec9cd0aae8e4bd61a4455db12b81e5237f506ff2a925094"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/predict-d6af8e3c9d554054.mp3",
+   "bytes": 39888,
+   "sha256": "0f98cae20b44aa9683b3251d371dd4b4f75f723229611326b525c5e2ddd6dc59"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/project-x-99a9a09f0fb80518.json",
+   "bytes": 5180,
+   "sha256": "352dd5ff41a6b749636fc69659acb3a95dfdf5f1fbebf2e66c7777baea576531"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/project-x-99a9a09f0fb80518.mp3",
+   "bytes": 79776,
+   "sha256": "7da369be07c33340990285579dbbf2a911feec9834b0b11bbc006fb7c7316f5e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/project-y-d67babf7c411f754.json",
+   "bytes": 4797,
+   "sha256": "c5ed664a82b99309b4a0e701b270e45afb290689a72f4d22a9a528e052213bd2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/project-y-d67babf7c411f754.mp3",
+   "bytes": 74448,
+   "sha256": "4723dadaf41509163c39e626ee7ba53dce0d83a854e79c02255db8f2d0c18afc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/recheck-6f38a25d91e5d2cb.json",
+   "bytes": 4502,
+   "sha256": "6f14f451a85c3f3af6bd9123b1efe25c4e99486fa4f25180fbd8681d72c1e506"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/recheck-6f38a25d91e5d2cb.mp3",
+   "bytes": 86256,
+   "sha256": "d2b6cd507e8e63ef9a1e705639218ac0ce7a9975379c2e406111a1b76785f7e9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/right-520f13b9bdd11d00.json",
+   "bytes": 2839,
+   "sha256": "15aa6ea63fdbf4c02ec64b84243f1fff5244ad03d8ccc4d141eb1cf7b1c1776c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/right-520f13b9bdd11d00.mp3",
+   "bytes": 39744,
+   "sha256": "69ab8fbecb8697f25ff6e7a55ebd3645c0840a6b33cf631993ee96d524acf129"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/separation-a8a2726b7f11aaf0.json",
+   "bytes": 5803,
+   "sha256": "e4bd2bb031400c4ba4fd40a1e0be210304b87a6e6caad567d9891854383d1086"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/separation-a8a2726b7f11aaf0.mp3",
+   "bytes": 113904,
+   "sha256": "c4fa967d1653f416dcc1c20b093bc11273a9c4ed562ba61173f495e8cf46dc1d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/touch-bf44917e1dbd99cd.json",
+   "bytes": 2984,
+   "sha256": "8a216d641532757c19081598ef827c9f8965bbb76279288ebdb929e0cb2c7cfe"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/touch-bf44917e1dbd99cd.mp3",
+   "bytes": 49680,
+   "sha256": "1184c6a37e70b83002be95694a05ccca06b5849d4915a5c39e513a99e9da9f34"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/transfer-016f916738ab0de4.json",
+   "bytes": 3694,
+   "sha256": "8de2d10d5c03e9af52a8d703dcf2c0754691337d17782aa2edd677e271c5604b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/transfer-016f916738ab0de4.mp3",
+   "bytes": 67824,
+   "sha256": "2fd554bf6d5d612fa1079e6443d608cf07b5a1249bc5ad22ff480cd0a4e77d41"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/turn-f361f1ad0d9db8c2.json",
+   "bytes": 2517,
+   "sha256": "7f352816507f4a624735081552b8d0143a92d60bbd4e11d9003e20154e4bad32"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/en/turn-f361f1ad0d9db8c2.mp3",
+   "bytes": 41904,
+   "sha256": "5054445e59db3b5e9c5a0b6c7b486d9b740a5e3236b80c647133282b48728cad"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/bounds-f0d427dcda922143.json",
+   "bytes": 3781,
+   "sha256": "5f5e4fafc378af438aa2bdb3ab7e4514c5043139069461e68fce7f06e86592ce"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/bounds-f0d427dcda922143.mp3",
+   "bytes": 69408,
+   "sha256": "76dd47f8afd498ac0f33fe266addf090d9386ac33eb30da9fb3d22859cdf9209"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/box-aa9f8d1072875d1c.json",
+   "bytes": 4679,
+   "sha256": "1b13386c9e1a0c5f12c9c1ec87cf23539aa7ffaf9e96b6889d7f1289b5c0b919"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/box-aa9f8d1072875d1c.mp3",
+   "bytes": 74016,
+   "sha256": "5d28af35017e06187db1f0a520d8b9a3cd031da0bb35aabc6fb17e946bbde3b6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/complete-7828a224059f27fc.json",
+   "bytes": 3504,
+   "sha256": "70abe6e9386c34482fdadd182c2b5221f198cf1566c133056187ed81e01c33c7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/complete-7828a224059f27fc.mp3",
+   "bytes": 60480,
+   "sha256": "10ebf03b3db22d332dfa556c1d08e28f67431bbf2203663d49b5d2c7ad1c499e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/contacts-0dcaeaf4c904854e.json",
+   "bytes": 3939,
+   "sha256": "ae6d0a6d8a51e3859631edf7f638c455dfabff8548ed14819deddf3bc6029cf0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/contacts-0dcaeaf4c904854e.mp3",
+   "bytes": 71424,
+   "sha256": "efde9c1291e643b1a89e845d4e6d50f123d2c671ca0aa32c7e00c024aae2332e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/contained-8474be5f95aba07b.json",
+   "bytes": 4175,
+   "sha256": "fb30c765a1f102a2457bbf2cca4c2ecb8163c0c2ff23a3b89e25b54b6d94e103"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/contained-8474be5f95aba07b.mp3",
+   "bytes": 67680,
+   "sha256": "73b5741dbad8a89f323f3a58526d6bdd881a59a219e728faf8d2112612730677"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/contract-f826540b44f65053.json",
+   "bytes": 5217,
+   "sha256": "d28b9c8dd4ec0db03f41924cc7238995d2b04b8fd6ff64981f47dcc43d450d85"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/contract-f826540b44f65053.mp3",
+   "bytes": 90000,
+   "sha256": "c063caa5f0fcf57878ea58275cc67da8b91483ae80486ba22963fee5451ae1a4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/cross-6b5b068210227e08.json",
+   "bytes": 4305,
+   "sha256": "1be393f4fd49d63875613d1c789bb71a2d9a6fa6e1842e637f0c9e2ca5199688"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/cross-6b5b068210227e08.mp3",
+   "bytes": 77616,
+   "sha256": "bb560d0e2262978e8084dbef7d6867052d01dcc0c5ba5687b95ac7c145b8d285"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/formula-977c6e379b876f88.json",
+   "bytes": 5197,
+   "sha256": "55e5ab64ced048d957b47c0472698c0c1a1f3d1d0fc37734026545d1c714c378"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/formula-977c6e379b876f88.mp3",
+   "bytes": 84096,
+   "sha256": "9d1cfa4fcbf6a50081e2cc5e1d337cd6012d442d19da3e0cb82bfc72a9c312a0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/intro-flow-1e752a3cdd55ee81.json",
+   "bytes": 7644,
+   "sha256": "22db7f3d4be955c3591ff6c52750bddd41e95df423116ebd2d925af78b3dcdc7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/intro-flow-1e752a3cdd55ee81.mp3",
+   "bytes": 118944,
+   "sha256": "dfb12efddf213e6a29d1dc7892acfa5e5dd50edc3cc7d885172964174cde6e97"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/intro-goal-ed5de85e89927824.json",
+   "bytes": 6962,
+   "sha256": "26a45c27fadf5cb8833fb217780cc555b1e463404882516c01fd9479cc4d4524"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/intro-goal-ed5de85e89927824.mp3",
+   "bytes": 96192,
+   "sha256": "4fd41bc0ba96ef0c8e4eb65f82df46ecb12fd1a2c8b068223421e3e82c31be60"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/intro-overflow-9fb39cc9bff7dc10.json",
+   "bytes": 5678,
+   "sha256": "7d3c34751095ff50b1d124c04efa2eb6e2c7000d29f3fd0c38f24e1ac592be7b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/intro-overflow-9fb39cc9bff7dc10.mp3",
+   "bytes": 89712,
+   "sha256": "ba319a14dfc4108b619c65408991978ff70fe9b882f105613f7f9cc964961a96"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/multiple-8280d5f65b4fa28b.json",
+   "bytes": 4413,
+   "sha256": "ee4757af65e76a5c91b0b10daa7aeee092004e47944a5f6f69c29bef17e8f99a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/multiple-8280d5f65b4fa28b.mp3",
+   "bytes": 71424,
+   "sha256": "73d8e29f294819c6f1a2b57fdc8cf31985813bd07c014646a39197c523e9e544"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/necessary-4af7fb09d30e6d1c.json",
+   "bytes": 4560,
+   "sha256": "dd675e8b8856d4d2afaa62d488c3d52b1687a8395ace7bbd12e068bb215d02ad"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/necessary-4af7fb09d30e6d1c.mp3",
+   "bytes": 78336,
+   "sha256": "c23042a40ed25cb3e8dfc9df220e23f5cf9a071a345b9b3a6e67fe6d76d300f7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/new-conflict-d0f0d9a85c357826.json",
+   "bytes": 4992,
+   "sha256": "d2706f5257920215e59fce78dfa8a37b638bae26fa2dfc43e155410d86b46b0f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/new-conflict-d0f0d9a85c357826.mp3",
+   "bytes": 74448,
+   "sha256": "a0887a1c23b048b36aff42f6ce678e87dddb65e89645a5ca4d81712297eb58c7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/numbers-e6fc5ea5f711958d.json",
+   "bytes": 5071,
+   "sha256": "18269f7f82405f33c62fa906c166998f6c95628ec7b80c0b97f72db0345bf2d0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/numbers-e6fc5ea5f711958d.mp3",
+   "bytes": 88416,
+   "sha256": "7d274e72a96c4a36c96682c3ca7590210395d83b934afa4e19921a3663e43ba0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/outside-e402b21971c2790f.json",
+   "bytes": 2626,
+   "sha256": "b59f5df6973e399822e95b4349d9467795510930f3d1b20555926f2773cf499c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/outside-e402b21971c2790f.mp3",
+   "bytes": 44352,
+   "sha256": "474eada6b6015d4c22eb4a19ef7673826d2c1e8d19b33ad4cde06471e0219a46"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/overlap-3e1265b51e562212.json",
+   "bytes": 3497,
+   "sha256": "175a0dd7d095fcc6dadbff1f52ac277967134eefda4062456d3bb66e61ecba57"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/overlap-3e1265b51e562212.mp3",
+   "bytes": 52272,
+   "sha256": "c339bd842b90af4dbc58a22e4e639eacc2d3cf40b666961ce9f94f2120d7e565"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/predict-453c93aa21804f92.json",
+   "bytes": 2961,
+   "sha256": "e7fae3ef446c67055fdcd7a26d385923e135dec9b9f37026edd7cfc70cc5a243"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/predict-453c93aa21804f92.mp3",
+   "bytes": 42624,
+   "sha256": "ae2155556a667d2dc7cf7f9aa839c7b65c6ebc09b07525a0d9bcb8ab2df5d6e8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/project-x-a3eda0adfd622f9a.json",
+   "bytes": 4634,
+   "sha256": "73f3ff66e67a0e16f424fc5d44dda4b1532e5e41b43e02a62d7dc72cbe15c820"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/project-x-a3eda0adfd622f9a.mp3",
+   "bytes": 72864,
+   "sha256": "4803672ea770e6bf51edc5a9cf2de6be9bfb424793ac26656a12616073cfc5d5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/project-y-af104b00ed9c2c47.json",
+   "bytes": 5036,
+   "sha256": "1c342b07e2c660042e5cc4a0280635441aad7058053d2824e14d273b0ccef2cb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/project-y-af104b00ed9c2c47.mp3",
+   "bytes": 80064,
+   "sha256": "0ae8234f628161a5f8d8426c7c12c04c03f254f76c8da5cf1ea713d3d7dc4c4c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/recheck-be64bd840d2dc0ca.json",
+   "bytes": 5299,
+   "sha256": "45fa8a367a92ce4f453acdae875f8bf0c85e06332f15f5a93a32f761d2ebdd28"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/recheck-be64bd840d2dc0ca.mp3",
+   "bytes": 81360,
+   "sha256": "d035b78f6b4a0405049a3a59141d6a8e778d481fc40fff39482523ed65d45255"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/right-fa9e18be05b88606.json",
+   "bytes": 2453,
+   "sha256": "ae99acc9973e2eff61bbe3f86f0e8542ef50d9f992da65178fb15018d28434cf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/right-fa9e18be05b88606.mp3",
+   "bytes": 38016,
+   "sha256": "45fdeda22bb62a7c64d4905013d22957a700e8c21719b96d81d59491e2bc0c50"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/separation-0e5bb1b185aef1d5.json",
+   "bytes": 6099,
+   "sha256": "5abc739c02853a7ac9197a508b15adfe764c24cf545d5f48cd5cd7c563bc8d57"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/separation-0e5bb1b185aef1d5.mp3",
+   "bytes": 105408,
+   "sha256": "e3decc39695290af9f17571a30343a81e076e075b0cfb6f9746591c6e9c1f484"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/touch-3b275aa74b66ce79.json",
+   "bytes": 3126,
+   "sha256": "2b3e19fba72394022780a6757c90d323e1e0bff12c80788520212fb2e31cf906"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/touch-3b275aa74b66ce79.mp3",
+   "bytes": 51696,
+   "sha256": "e10b713a1c0c96c6ba735ff97da728938931553522d26beb787a152242ca9981"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/transfer-564fd443927eeb7e.json",
+   "bytes": 4281,
+   "sha256": "55aa2f60a8fa657a8bb2402acb5800122404796d9632aa20af22bdb4d8074df9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/transfer-564fd443927eeb7e.mp3",
+   "bytes": 70272,
+   "sha256": "0007863174aba4547cdcacf24b47f1afd07dd58305451ba7eb3262eba948e81e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/turn-e06d347d0f1e424e.json",
+   "bytes": 2512,
+   "sha256": "4046aca4b208e57932fed53cf918f5c42ccc7d44fe47b3e7c5f3183a5b19f4da"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/02/zh/turn-e06d347d0f1e424e.mp3",
+   "bytes": 46800,
+   "sha256": "6c6c65c887d5341da286dd045418d0ef3e885c237987b811275992c00766efbc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/accounting-efd2f4de084680a4.json",
+   "bytes": 4400,
+   "sha256": "4ed436f1d5424d7f1678982faa8603d159a121b6100146f1c3359f7fe1a0e4a6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/accounting-efd2f4de084680a4.mp3",
+   "bytes": 85968,
+   "sha256": "101076b9daefa65877ebc98d5be3b604fadae72c0fb9f2d2b7ad11dc6e73fc59"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/bbox-3de605e534e8ab0c.json",
+   "bytes": 1996,
+   "sha256": "353ef17d4aa7a4bcb8d40d25434ea30a740e02a6c18f5f5924d7a9d517d03749"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/bbox-3de605e534e8ab0c.mp3",
+   "bytes": 34992,
+   "sha256": "5de8a437c8339753543518594a281a0ae0c9b8490045c3662b306fe034ba06d3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/budget-denominators-579c8e231d95e715.json",
+   "bytes": 5470,
+   "sha256": "a65a7c6c328cade6a56b6e95202911f0862045695ae60a7cc4e3344d63e54ddf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/budget-denominators-579c8e231d95e715.mp3",
+   "bytes": 86256,
+   "sha256": "71db20642d42c614af2ed58f20ea6edd69e24f99f41a2df072d93c01955f5b0c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/budget-values-e44c069afa2d074d.json",
+   "bytes": 4894,
+   "sha256": "f7993ccb184917e1a279fc89bacafca021d17f7669fde6010c8ba9efd37f3842"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/budget-values-e44c069afa2d074d.mp3",
+   "bytes": 85824,
+   "sha256": "e529e4b5d2cc58484a018a582ce0af9754a39344f548c09fc8703abfb6d4ecca"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/constant-50df7fb8b6bfc1fd.json",
+   "bytes": 5034,
+   "sha256": "0f6829d67eb7123c5225a13dd8ef5f8b33b7fb39861ddcef6801fcd93b10de82"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/constant-50df7fb8b6bfc1fd.mp3",
+   "bytes": 91152,
+   "sha256": "321e1d12e88495712c083fa71602408a4901f1e1715b8cfc7eb24386b8a6e842"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/denominator-2a3d5384edd56b26.json",
+   "bytes": 2457,
+   "sha256": "87cf7412bf78637fe81ff893f74b7f9e89ea61f5e16f3baafe4118b5e4fc141f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/denominator-2a3d5384edd56b26.mp3",
+   "bytes": 53568,
+   "sha256": "23b0983ec40b1e9cba70aa1028a7a524f6c839d80266ba9d6144892b03b5f9f0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/extents-79c78326d954b86d.json",
+   "bytes": 5159,
+   "sha256": "4cc94977cdf0ef174fa5a114fc39c9aab690f0c3046dd10a683f292b9293cb43"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/extents-79c78326d954b86d.mp3",
+   "bytes": 79200,
+   "sha256": "884b4ba83b1bc242edb1ceffb4a36537b3c2c1d5a4a03847622c7636d64f17d3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/fit-filter-795590b47659be19.json",
+   "bytes": 5213,
+   "sha256": "485aaa701da2875eeade0b7a43a192f75c2c8c332e111b78c54f91d1ebcf2388"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/fit-filter-795590b47659be19.mp3",
+   "bytes": 85680,
+   "sha256": "dd88800af0752053a84e5166f26374fba69965e4176f9d207a7427c7d1f2218f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/illegal-53bf5c3f6ad0b9d3.json",
+   "bytes": 4829,
+   "sha256": "7cfe169c5205edcfe1466ae4d965972fc687cb99b5bcb19e8d9f7ba3700bc704"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/illegal-53bf5c3f6ad0b9d3.mp3",
+   "bytes": 83232,
+   "sha256": "8e0ef185ef4c7d720f3f7867d2e3688eb8c333893f247c637c1bc18a73514091"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/intro-goal-3ef817f99c64c7ea.json",
+   "bytes": 5387,
+   "sha256": "84f63cd824f8d3e914e269deefb5c02ec94e0178b4bad9634775ed842a026a95"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/intro-goal-3ef817f99c64c7ea.mp3",
+   "bytes": 90000,
+   "sha256": "914cd34fce3403541eb1e6d70b4f9243d0caa00aaf5ec1f89f57171953ab138d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/intro-select-cc270d6e7965f379.json",
+   "bytes": 6121,
+   "sha256": "958a54014b0997aada9c9d0f7a51f191d83cf115ce77e3a290e676e8af10de06"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/intro-select-cc270d6e7965f379.mp3",
+   "bytes": 98640,
+   "sha256": "f8d92a7af78bacf7c2a9bc04cc76c3d8e35f0462af7977ccca06eee6fd9d158a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/intro-trap-35657ec7ec5cf904.json",
+   "bytes": 5587,
+   "sha256": "3695ce4527a1e55b8695d6e37dd643c0a7f1a7de133ff56dc8718ee295d74d0c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/intro-trap-35657ec7ec5cf904.mp3",
+   "bytes": 106848,
+   "sha256": "3e1a0900b52abd8debaae2bfcc9defd1917dd83f3edd3adcbf45beffca235c49"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/invariant-126fe863bd4d28f8.json",
+   "bytes": 2260,
+   "sha256": "fee00522c96e7ef20185fd904d13a30db93e2380809521c79db908bf91eaaef4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/invariant-126fe863bd4d28f8.mp3",
+   "bytes": 41328,
+   "sha256": "7d424d389683f63f5319b697d2b6597d893409a429d2618cc4286ee0857b7616"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/limits-80cb02848c69483e.json",
+   "bytes": 2409,
+   "sha256": "ed4a30f6266b7fcf505cc19635107797a19e0ca0b83a06d443098874be4cda9c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/limits-80cb02848c69483e.mp3",
+   "bytes": 48816,
+   "sha256": "845348cd46f7a16380943f377b06c878bdf6ffb443f65997b721e5b33ba7f37c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/missing-5ced3e40e6dbc0eb.json",
+   "bytes": 4952,
+   "sha256": "a39a6d2e3d11ef963e01ba23b00602b475efb99dd45ed4d306e5a2dbcef1b6c6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/missing-5ced3e40e6dbc0eb.mp3",
+   "bytes": 78624,
+   "sha256": "4c8ffe2f9575ae2ab4efe3018ebfb2ace5f758ffe36578f5671f1283df7a71bd"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/order-f50f7520a8e65de7.json",
+   "bytes": 4930,
+   "sha256": "40fe01b4426c0535be334a972f881dfb37358940b13ab00922f21d5eb6c3a413"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/order-f50f7520a8e65de7.mp3",
+   "bytes": 97920,
+   "sha256": "56ef091d5705b661bfa58876cb8fe7cbaad3ad5a0aae62bdc918b237570980a9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/outline-de83eaa87e8f14dc.json",
+   "bytes": 2008,
+   "sha256": "6a1a125be88730a00fbb7cd7a495a635f8ac9befe4506c9dd33ba69d97ab488e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/outline-de83eaa87e8f14dc.mp3",
+   "bytes": 39744,
+   "sha256": "d0425125958b771e2c064ab933d6a949b1c0093745899fbdd44b1ae1a3c262f5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/predict-6b65013de13b50da.json",
+   "bytes": 2371,
+   "sha256": "2f9cf52df7a8414bc11441890a80227ab3a7d5e5dd63dc6f37db553431d59a3c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/predict-6b65013de13b50da.mp3",
+   "bytes": 36720,
+   "sha256": "2d13f2b6b85c6509bc6f6e8a282e88a8da66cc738e7b496ca894e42be088ebb6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/report-72a39c7f584a450d.json",
+   "bytes": 4316,
+   "sha256": "8f592bd7e6d5ecdebdda880f23a16c6a2c84c6a8a0668a9e0848ce6df7410c0e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/report-72a39c7f584a450d.mp3",
+   "bytes": 96192,
+   "sha256": "9294f8c2d444af63b75ec2a0be94f4eb66eeda0d21bc670f886ba0422d22014d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/transfer-255b6d1c430e53bc.json",
+   "bytes": 4690,
+   "sha256": "76d7f76f265bc10bba12426f8550b9ac55fdb9c0e5142867811007158f737255"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/transfer-255b6d1c430e53bc.mp3",
+   "bytes": 92736,
+   "sha256": "1c2f0cd17d0b97901161b0e7d2a97471fb642c3a021f5f14aa446ed5b909f2b8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/translation-bug-ea5db3be748bff25.json",
+   "bytes": 4632,
+   "sha256": "a44cacbbd63b9ed148d54aaaf9ad586fb27b692c673fde1091f4ff82eb0dd6e4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/translation-bug-ea5db3be748bff25.mp3",
+   "bytes": 83088,
+   "sha256": "63bb2076c6e4e0304b1dd2df8b89496db4215583a8d2b8708a82528ca47bb8cb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/twentyfour-5afd4bd2977b4c86.json",
+   "bytes": 2501,
+   "sha256": "e0f900aae7e2294e9a0b1383812ca7400383e7f446ea6d2fca68d4c3675c7060"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/twentyfour-5afd4bd2977b4c86.mp3",
+   "bytes": 45648,
+   "sha256": "c10ae37f1bdb514e86d66b72dc3e6218bdf63ae8d7a656c552eed26794902cf8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/twentyseven-be5ce85c03a23361.json",
+   "bytes": 2116,
+   "sha256": "c88d797d130afe1a64dc2b85c929b868c6575e8d6bb580957ed8ceb75509227e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/twentyseven-be5ce85c03a23361.mp3",
+   "bytes": 34128,
+   "sha256": "27a50c37244f56266f8f807af65e42f2256d4c60702d8509bd48f1cf9e3c1c6b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/width-tradeoff-cc60b401c1b8be0c.json",
+   "bytes": 5506,
+   "sha256": "aa0f929a1df7b2eee1e4c6da9645cd307b074854a03b82fa8afa31eb4d425ed4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/en/width-tradeoff-cc60b401c1b8be0c.mp3",
+   "bytes": 93024,
+   "sha256": "0e5ee56d1ad7522cdcd3cf58fcabeef6bcf22da2761a333c8b8cd6300951c0e8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/accounting-34a6b1e26647731f.json",
+   "bytes": 5881,
+   "sha256": "6d9fb054dd519e5750ffc91ff90433433639698a6f4db1dea708f0b3e9093af6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/accounting-34a6b1e26647731f.mp3",
+   "bytes": 98928,
+   "sha256": "f9ce9ed6780ffa2e756ac0bb0d14d5272595821a31296922ba0f107035fd201e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/bbox-25b1249ad0d7fa80.json",
+   "bytes": 2239,
+   "sha256": "02375699e4cd6479066f8a670984632efc391fa0b1dc9286bd0133b927031bb2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/bbox-25b1249ad0d7fa80.mp3",
+   "bytes": 35280,
+   "sha256": "0c3f5ac10828027a07462f8985e20044a9ee8f88f318569776debb6da2bc3044"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/budget-denominators-05d5d99d8ebcc475.json",
+   "bytes": 4663,
+   "sha256": "421cf4996b25e514645fa871eea51f8e8624d7c714b5399df4f684f1b36ec676"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/budget-denominators-05d5d99d8ebcc475.mp3",
+   "bytes": 92736,
+   "sha256": "b5e296a9f8b6fa0e02ddcabede132831273a5141306b66ad7bee50d8927a8232"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/budget-values-5af72675223900f0.json",
+   "bytes": 5286,
+   "sha256": "408f25987fbc994395d008b71df01c5920675bc24827380a4134ef983fa1a700"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/budget-values-5af72675223900f0.mp3",
+   "bytes": 95616,
+   "sha256": "e7eb77a2cc905888c9d0048541c78930c196d5214788ed421697fe7cc3c176d8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/constant-a1d16de9c2b23a20.json",
+   "bytes": 5997,
+   "sha256": "c32911b837b35998b26d0771c929f98efdce4ac2a2fb3b1aa9a44906077c36b9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/constant-a1d16de9c2b23a20.mp3",
+   "bytes": 99504,
+   "sha256": "5ac87e4d41338c566332e5db8788b04973186ea9edc9fe191a3c68ed51f5a0a9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/denominator-be257068feb65ded.json",
+   "bytes": 2477,
+   "sha256": "806d5477e856c28fd20dffebcfda93c564980b9c7fe8330a804acc59f3f5d10a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/denominator-be257068feb65ded.mp3",
+   "bytes": 37008,
+   "sha256": "71f7f0ea9c905099c0db33cce3c38e592bd8457ec8a3600d636a5d005edffee7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/extents-80aabd61d78c1c1c.json",
+   "bytes": 5172,
+   "sha256": "c3adad66b76c8c1ec055e0256324d169282129399c15f102b0f573c040aaf77f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/extents-80aabd61d78c1c1c.mp3",
+   "bytes": 82224,
+   "sha256": "3147202232fd479e83e311c89c47d37c34c33c39bd769f78702a08771da76710"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/fit-filter-51c705e73ac6c424.json",
+   "bytes": 5977,
+   "sha256": "ffa0099896e71cc563d5c45ce2d589b251554721c4fa86216aacd9be513b72b5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/fit-filter-51c705e73ac6c424.mp3",
+   "bytes": 103824,
+   "sha256": "30d51f266986a41a0f3e7ab9877f8033510930e24059a720fd26d02db30eebf7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/illegal-f4839fd84fa32f54.json",
+   "bytes": 5879,
+   "sha256": "60a2908e77376c412d50accba68dec8a405f6735ca50f51ac4d5b4ae84333034"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/illegal-f4839fd84fa32f54.mp3",
+   "bytes": 99792,
+   "sha256": "028922953bd6a30b84f3abee886f45eca7ff66dc9a1f87a5b335ef4afb386eb3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/illegal-fb87bb1ad454eadd.json",
+   "bytes": 5889,
+   "sha256": "200a75a12951d932c7758f1d4db851ee9fa7d9fa51202e6440ca4f67e9a87b24"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/illegal-fb87bb1ad454eadd.mp3",
+   "bytes": 100224,
+   "sha256": "835fc1eb548b4bc6208a6e5fe547ce502a7f1169d174355ff798c5b6ec85e84a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/intro-goal-651b9e88a0492025.json",
+   "bytes": 5702,
+   "sha256": "02f888ac83b6e12dc3882049b674a75511c7911248523d2c3c3cd8b8e45626b7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/intro-goal-651b9e88a0492025.mp3",
+   "bytes": 88272,
+   "sha256": "0a4f830e31f7a1ffe8ae247341168fe1f4d73d1beb38073a1a95343e3f9c6c6d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/intro-select-bfaaf85a6939509f.json",
+   "bytes": 5947,
+   "sha256": "a9d2e22251cee4c7374241ea83191bb72ac10ff99384a4c0c370d12889754389"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/intro-select-bfaaf85a6939509f.mp3",
+   "bytes": 91728,
+   "sha256": "7de42ef89817ece5f4d8f59d259501fd3ba365fe794a339bf164e6d12faf4f80"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/intro-trap-5c78c7abb838b079.json",
+   "bytes": 7761,
+   "sha256": "40f7e459501ad183ae20a5f0e4af9748272ba0c1d545e6056304a256f44117f6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/intro-trap-5c78c7abb838b079.mp3",
+   "bytes": 117072,
+   "sha256": "5e37363112ce8d869991c22458340cbbaa1a500bac13d13e73ba07886126ae5b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/invariant-065972899f851201.json",
+   "bytes": 2244,
+   "sha256": "aebdf93054220605a7980612d277521242d2f2073f5b96d1d363558678e79678"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/invariant-065972899f851201.mp3",
+   "bytes": 37296,
+   "sha256": "ca75d3fb30361f2522726ade08858e24e3e2ccf0159e5ddc6cbef185626ad765"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/limits-44fd896b50b4aa1d.json",
+   "bytes": 2383,
+   "sha256": "014d52d1f50558393a18cdb8e38b3ed521424cfcd54eebabb763df6c890b7578"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/limits-44fd896b50b4aa1d.mp3",
+   "bytes": 42912,
+   "sha256": "780f18e4b954afbe2b7d53e9665623459d6c7a4775ad64cf58fbd8bd5f0db86d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/missing-b4eb6ef3800ae6f7.json",
+   "bytes": 6082,
+   "sha256": "37812a91b31368b91f3c47c1bea9acada0f95bc25a2f6b5424a6a22b945c1137"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/missing-b4eb6ef3800ae6f7.mp3",
+   "bytes": 93888,
+   "sha256": "7ce3ad540f959d24809bedfd3c17e7a5b644f8549dde83ca60410ce37aa26665"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/order-47ecf622a56af360.json",
+   "bytes": 5743,
+   "sha256": "cdf88f3da84368608ad19de3cc8c1ba35b97e3ff1b32c32b89f2e45c4f33d05a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/order-47ecf622a56af360.mp3",
+   "bytes": 99360,
+   "sha256": "28df018f1d05c0a0df03cc0e6beaf14862cbabbdce52155c0bf7c0ddff763163"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/outline-e770a6a2ceb21bf4.json",
+   "bytes": 2112,
+   "sha256": "62fd52ddf5942803e2c19d3b5f5a353b4b2e81b7f21585faa7d8b3a16de4106e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/outline-e770a6a2ceb21bf4.mp3",
+   "bytes": 37872,
+   "sha256": "871113e3c7894e31a88a7e2386fc51d5786dc4541fb333b9e828eaedcb16a99d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/predict-ab0a302544974b39.json",
+   "bytes": 2098,
+   "sha256": "97801884e0fc252e047706c54e8d15bb507a37aaf34c6410ce589a6ec0e7d334"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/predict-ab0a302544974b39.mp3",
+   "bytes": 32832,
+   "sha256": "e47a0704ad1e123476567175239279ab00adf1bb3e5c00016de3bb9551eeb6d8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/report-b62dd1927a2cb2aa.json",
+   "bytes": 5775,
+   "sha256": "95ab3b86fa2e889fe5ff364c2f84e7bc98a477ff4806d95c098c5d119a67a3f3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/report-b62dd1927a2cb2aa.mp3",
+   "bytes": 105696,
+   "sha256": "e98c1ad9e1299e21fcae4a9fbbb203d14b0e91f2bbcc767e905c842fd45c4158"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/transfer-bc7f000d14ea13cd.json",
+   "bytes": 5568,
+   "sha256": "0014936ea22024340837594f743be9432bbfdb1b6035bf82e674d345f2e0aa72"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/transfer-bc7f000d14ea13cd.mp3",
+   "bytes": 86544,
+   "sha256": "f8c87fbde80837c92f8dc028b0b15e24caf06c7bdfcd030e299de6beaf98e406"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/translation-bug-135faac6fae6087e.json",
+   "bytes": 5838,
+   "sha256": "c9803ec8f82dff1bdcefc9c281d522b13e83df6752754e903cc508f47c0e5082"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/translation-bug-135faac6fae6087e.mp3",
+   "bytes": 91008,
+   "sha256": "f2f8a884d722721588f5abaacfb0dbbe0377753bb07bd7a6296b1cbc1164ef86"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/twentyfour-11bcbbfc9e0edc64.json",
+   "bytes": 2132,
+   "sha256": "d74cbeec5eea89348edc8d8135c467e8271c132d0872c257c1b987c93354a181"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/twentyfour-11bcbbfc9e0edc64.mp3",
+   "bytes": 43488,
+   "sha256": "4e37c8b6f93f828401997c48f0efe0a6dfb1e3a964079c2392222e950bb3b187"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/twentyseven-ef7badef45511352.json",
+   "bytes": 2472,
+   "sha256": "47322d1ff992a4136bb76ac66bc5d88cc5a6cce6aceabc4a35c6c34bf8764fc2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/twentyseven-ef7badef45511352.mp3",
+   "bytes": 36864,
+   "sha256": "9c93bfd72adadf32e6bbc465c6a7240f0d3968e879d92f5df7242e675bb49d11"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/width-tradeoff-b72c7bbb88d61bd0.json",
+   "bytes": 7086,
+   "sha256": "0fd0878deed1bf29006109b81eb9507c721b7b02fb30699f8a70fa483b131c91"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/03/zh/width-tradeoff-b72c7bbb88d61bd0.mp3",
+   "bytes": 106128,
+   "sha256": "26c1585b6792eeacd981c464bfe17917562ced1c1dac8c9e7a544217947064f8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/coords-down-7a663d83f3276988.json",
+   "bytes": 5480,
+   "sha256": "4d0912d8169dc0c4ece11f0cac880e483d4a9c8230ba978de0328468d26606bf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/coords-down-7a663d83f3276988.mp3",
+   "bytes": 95616,
+   "sha256": "d5c263dd3ca04918176a7f7e3dc0d83f27a875e6a448aa2815ccdcc84e641979"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/coords-result-8381e83364f8f880.json",
+   "bytes": 5179,
+   "sha256": "2fd105ad2c544cbfb9c09b01b209dda6181726d4b066ee7b16ea199f138eac0c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/coords-result-8381e83364f8f880.mp3",
+   "bytes": 86832,
+   "sha256": "a2184917328c68e038b4f46621021535306218e4a104ff01b15597397215293d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/decode-steps-fadc13d4f997f018.json",
+   "bytes": 5456,
+   "sha256": "84a18266fb2bceb239173dc51dacaa11e4ec4559195e3e464927813c5e5b4e50"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/decode-steps-fadc13d4f997f018.mp3",
+   "bytes": 96480,
+   "sha256": "d7aae164a01f72d6c29d3538bc45528103d73eb3aa7ae10c1886a185cc4cd46c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/edit-neighborhood-2169e742edbc34f5.json",
+   "bytes": 5133,
+   "sha256": "79f815f4384e8b71e16e20474154e356621c615c3224f3075096a101986e2731"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/edit-neighborhood-2169e742edbc34f5.mp3",
+   "bytes": 95184,
+   "sha256": "3c97a4977bce1fc6e1921759cf5eef86b012ea4e4eed3eae24c67122653284ac"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/final-one-773c447b1729cd84.json",
+   "bytes": 4251,
+   "sha256": "5574ce5042fb2aa515c3ae658f781dbb31e941f0aab286eef19d2b90e78be57d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/final-one-773c447b1729cd84.mp3",
+   "bytes": 78336,
+   "sha256": "b469119daed4f6f13e486e7652ec02938618156c4d7fdcadba2bbd86a3c35c7c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/first-cut-0f243baa33aa40ec.json",
+   "bytes": 5711,
+   "sha256": "7b960121816e6cbf97c0cba4c86620c93b87907686636c006b83c855e2ab505e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/first-cut-0f243baa33aa40ec.mp3",
+   "bytes": 91584,
+   "sha256": "5126bf8015902be27db9fded44c92a300bdda144e2a9ddc76308c707fce8807e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/full-decode-27ab435d2ba68aa1.json",
+   "bytes": 2440,
+   "sha256": "ca5af5abd8ccc8ce75e51e80f216ed7726de7986488b669f93e6c0e753c62ac7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/full-decode-27ab435d2ba68aa1.mp3",
+   "bytes": 38304,
+   "sha256": "4013adf3d3fb5910f292216564ba1fce3d1e4fd9fa4cbe672e89d1c584bbb4f0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/h-convention-6daafe7efa20a371.json",
+   "bytes": 2098,
+   "sha256": "65085043075ecd3870658d289b5c94033ce2b915ec0042152f7bbb4be2b36ff2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/h-convention-6daafe7efa20a371.mp3",
+   "bytes": 36576,
+   "sha256": "bce75bb777180582f98b5bd9d10ca61a85aa8c33c5fa4f4da496663c5f8b5510"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/intro-context-f218a5562de81f8a.json",
+   "bytes": 5525,
+   "sha256": "e1d078f5df88f5bb799fcb95c1f1021ee2e6db57e4059c2fbc8e4075e00898db"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/intro-context-f218a5562de81f8a.mp3",
+   "bytes": 100512,
+   "sha256": "495aad257ec19b19b64a545838ee25d49b33964095dbac27715941ec19861ada"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/intro-preview-06a18ad20d1256ce.json",
+   "bytes": 4805,
+   "sha256": "c162454eb7e6054fad48f3fca6da5c3f5704b8c661e090be5a9b33a6c1f345fb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/intro-preview-06a18ad20d1256ce.mp3",
+   "bytes": 86688,
+   "sha256": "36ad1cc544a3f7969e8a8c1cc076d4a06aa75d8c7f8fe0a2134a97da846b8dd7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/intro-task-3281b897fff80190.json",
+   "bytes": 5399,
+   "sha256": "1d07697bad30ede10d6435a78a067e4ca6f2dd3df24157f49a3fb8376a644088"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/intro-task-3281b897fff80190.mp3",
+   "bytes": 95904,
+   "sha256": "2e2eaba0458371aa4c439c6b7950ebee1d19229964c0603e14ce7592968c2e06"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/max-add-2f9787c6095962eb.json",
+   "bytes": 2327,
+   "sha256": "4ec79ad630cf136fc83c0c73bfa2db018c8b708b7ccde06c508481f435cb79d1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/max-add-2f9787c6095962eb.mp3",
+   "bytes": 39024,
+   "sha256": "be53fcdcfe41c3bda70c8e28d975731279140eac665e239c6a64438c3584bc4b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/notation-28341f1658f2a3db.json",
+   "bytes": 1726,
+   "sha256": "46bce76400dcd26d3c5034468d33388f45093e4059e10ca15278eb0eb08f194c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/notation-28341f1658f2a3db.mp3",
+   "bytes": 32688,
+   "sha256": "afb801ca0c0d7e62e88c2c00a7f6c020b98fcd63eb23d80e636e8b6111e79c4a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/order-matters-c65ebf610203da68.json",
+   "bytes": 3639,
+   "sha256": "fcb0091ef0a8fd2ba44c4458d02e241136909cb730227cfc794968b68223698f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/order-matters-c65ebf610203da68.mp3",
+   "bytes": 79344,
+   "sha256": "be2095743b60cef8dcce0fdaf67a9964329ea501409c71f7d688cafc016155de"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/overflow-520735e46c5856df.json",
+   "bytes": 2358,
+   "sha256": "fbab73df59b4394a90b34008138d240d6dc6177b18e6a7235f993fe4ed1438da"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/overflow-520735e46c5856df.mp3",
+   "bytes": 40608,
+   "sha256": "df4a5e5455ec7d4ba8e387ebea93e39df1976e733ee1086a01e216f16e986d59"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/pinwheel-e9014747b22dedb3.json",
+   "bytes": 5271,
+   "sha256": "8fc21513980c5e120e324b2044e2f179584c218aca9d90511ad1bd0bfc50c442"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/pinwheel-e9014747b22dedb3.mp3",
+   "bytes": 94608,
+   "sha256": "7f5f7b3df6aa885bb87823d77a85624113da697adfa34d18c016b9e18ee5a211"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/pinwheel-proof-94c327846b0e39a8.json",
+   "bytes": 7842,
+   "sha256": "2288bc945de91a72d511d4c3cbd63c6aaa38805f9bb9beff3c87568e0513d49a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/pinwheel-proof-94c327846b0e39a8.mp3",
+   "bytes": 149472,
+   "sha256": "31f5b0f5d720f4acdef8c0da0c6e5f0845bd632da3e2f62dbb915bedb397776d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/prefix-condition-58af49a5b488ba76.json",
+   "bytes": 5529,
+   "sha256": "69d606dc3dc56539235711414e644e0f2df6b4b525eff1c8be6a4dc3fea6b529"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/prefix-condition-58af49a5b488ba76.mp3",
+   "bytes": 101232,
+   "sha256": "06e8a4492038a98b7db0b1767b538bd55305ecf7410b95ee3909ae285a6f764d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/sizes-up-c0c2080a5e42dcd7.json",
+   "bytes": 4187,
+   "sha256": "afa0592b73d4412d196f6c19a3343087299921337d9e41a808bf477839c13363"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/sizes-up-c0c2080a5e42dcd7.mp3",
+   "bytes": 77328,
+   "sha256": "e90f68d31cabb267bcf3fbab5cc80cac5ca94ffa698a196b9bf7a894a38e956a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/stack-combine-d135bb39e7249704.json",
+   "bytes": 4555,
+   "sha256": "9780cb517b02fba6673341023230d9c050297f328e40a3cfa21920822b8ad71d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/stack-combine-d135bb39e7249704.mp3",
+   "bytes": 78768,
+   "sha256": "15b20166e7162dc3e3f39fcfaaaab0bef991b18e312071dc07e63bbf849a2306"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/stack-start-a7033f6604a1dec0.json",
+   "bytes": 1793,
+   "sha256": "3e672b54e8689f7fc02c485d6a7561e921d47f2a6aa53094908de94e322c4fab"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/stack-start-a7033f6604a1dec0.mp3",
+   "bytes": 21312,
+   "sha256": "608509d2bdad81a938202a4ead6f6bef3af0778f00577ad8e7107c4004f02723"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/swap-operands-9c4ac1ba19103a92.json",
+   "bytes": 5197,
+   "sha256": "20160a63bccf857cce4bb662934c7fcae7d46628704cec9a2c150c587e6b8a73"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/swap-operands-9c4ac1ba19103a92.mp3",
+   "bytes": 85824,
+   "sha256": "6db65ff6ca69c0c23850be9edaadf39eb2c59e0a0336c8e0911b795c33ee3048"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/three-checks-e09fa09df79bcd8d.json",
+   "bytes": 2505,
+   "sha256": "ea92996829f220d679e59a8cd9f64b922561e08668e6a9fde879320c3177be84"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/three-checks-e09fa09df79bcd8d.mp3",
+   "bytes": 43056,
+   "sha256": "24efc7cbd75258ed5b22efce59ccd20787a46b8b2de8f46b643f4aecd3d31431"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/transfer-a001fb3aef8704d8.json",
+   "bytes": 2736,
+   "sha256": "754d08189b87982ec1d005b956e0db82728b6683a69e04e2faa72d4117b14790"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/transfer-a001fb3aef8704d8.mp3",
+   "bytes": 40032,
+   "sha256": "f93b78fc8de69242a9ee4fd08484daa73cccfd4365cc49909c639f03ca2794a9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/v-convention-47a31475a085a083.json",
+   "bytes": 4607,
+   "sha256": "17425dc658e63c7e501bf3e9543d2316a9b05e30db729e30353a1bab38b4ec51"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/en/v-convention-47a31475a085a083.mp3",
+   "bytes": 86112,
+   "sha256": "868596f2a5d26d67e82187b40e6d98dc1b48e3e2a1ba76e18687e5a001ad0241"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/coords-down-b2faa92cac0fceae.json",
+   "bytes": 6867,
+   "sha256": "400d2cc98d0569b5f7bac93ee9d519e33cb091f2eb932a589074f2596d90fe62"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/coords-down-b2faa92cac0fceae.mp3",
+   "bytes": 102384,
+   "sha256": "74ec023ee4d9b3e189a8e2ec274d633c4118992a82524fbdd9f3fe371c0a4f23"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/coords-result-6164efbb2b6deeee.json",
+   "bytes": 5574,
+   "sha256": "38fb6d8ab8769b8f69c4df2cb7acad530c4fb3beea0b78387c8afcb1720703a8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/coords-result-6164efbb2b6deeee.mp3",
+   "bytes": 113616,
+   "sha256": "7c1846c134ade1c050e38ad82ea9ce16d0b7d5bab4c8780ab62defdf4b3966a0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/decode-steps-7e9dce5a4cfe83fd.json",
+   "bytes": 7068,
+   "sha256": "4ed859b5ed1354a4eace1257187d782d74964645e67285056e3e5c440bc8fa69"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/decode-steps-7e9dce5a4cfe83fd.mp3",
+   "bytes": 124848,
+   "sha256": "fd0f7838e6f5cb32220e42b9f132baa409c60d6dce5e806649cfab67a00b9b20"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/edit-neighborhood-ab2c5264329ac035.json",
+   "bytes": 7927,
+   "sha256": "fbd459fcdb4de4ce116edf6e4fd034521943616edd04a2bb2eb2ecb60b77170a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/edit-neighborhood-ab2c5264329ac035.mp3",
+   "bytes": 127296,
+   "sha256": "4efb703f26f9ebc7579edb89239d8fab13dbc3c59a0566063bea0e6118c073d2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/edit-neighborhood-ff6af9211040c763.json",
+   "bytes": 7957,
+   "sha256": "f07e34eeb084bc7936de85e5d37bfc007217387b6a2094c09a4c5a614eac44f0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/edit-neighborhood-ff6af9211040c763.mp3",
+   "bytes": 124704,
+   "sha256": "ba88c10eebf503ec45a16ac10b9015a61a51e7e85ec9ca9382c178ab74759aaa"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/final-one-2aaf53d1a6bf7b68.json",
+   "bytes": 6337,
+   "sha256": "10c80fb4984f771e5d7b126d3d69b83915e3901ad888ef7bd8a74094a12e3270"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/final-one-2aaf53d1a6bf7b68.mp3",
+   "bytes": 94464,
+   "sha256": "eef9be8703e9ae18872f12a8b187f54ff058960306c74cc25f2aac10c4435b20"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/final-one-54fe80abdc2bdd84.json",
+   "bytes": 6346,
+   "sha256": "6278347e90641d8302233b6e1180d3e68a2d54d6975a504f2a4bce8ac44ec320"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/final-one-54fe80abdc2bdd84.mp3",
+   "bytes": 93168,
+   "sha256": "997d47069c7cabd9c83a06f35e8a5cde0d54c5b80b743a7bd21c1e16d04c5ada"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/first-cut-24824961c3fb3606.json",
+   "bytes": 7640,
+   "sha256": "576671444bd9a108b451e8cf98c9911c52e6d6802bf01d98af668f1c06868552"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/first-cut-24824961c3fb3606.mp3",
+   "bytes": 140832,
+   "sha256": "f7497e56ac4765dda6f7eb8a20a5d700f147f3de5d1a81537be810ce780baaa4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/full-decode-a021231235624b8a.json",
+   "bytes": 2080,
+   "sha256": "d7fd0a8488c3af8943a2d7a3e2f30c24c560279fef4a7b8c0c4b44ad689fb1a4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/full-decode-a021231235624b8a.mp3",
+   "bytes": 34416,
+   "sha256": "8557ca265374665310816d06f436f7896fb46323672ce3db43a128a091945fa7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/h-convention-ee1cc0ca63bd94a6.json",
+   "bytes": 1727,
+   "sha256": "657aed7c132975f72af412183b82d339ec76263eddfc6e12ca9942c8c23403ca"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/h-convention-ee1cc0ca63bd94a6.mp3",
+   "bytes": 30816,
+   "sha256": "ac1d727d227457287777f1ea0c5abcb51981b8511bec5d93fd371450d4f95412"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/intro-context-30fbb901a22c5d6a.json",
+   "bytes": 6222,
+   "sha256": "5147f893ae53818cde4dd4a6fcb58c848bf61bf146d624c38040e7595259dc8f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/intro-context-30fbb901a22c5d6a.mp3",
+   "bytes": 95616,
+   "sha256": "6c5d77674cd358f0730341c5995d0c76846a0f06816a77a6e72a62eb8ce24769"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/intro-preview-3f8f16aec2ccf4c5.json",
+   "bytes": 5375,
+   "sha256": "614083c89ebf00368fb153e3fb2b74314d30b246cd52419320a4c20a2921c5ea"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/intro-preview-3f8f16aec2ccf4c5.mp3",
+   "bytes": 90864,
+   "sha256": "644b8d35bbab3abe3cd5d3d1b698a6f28c0f5c98edaa2d3b988a82bd9447d4a4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/intro-task-b42e74921ca2189f.json",
+   "bytes": 5473,
+   "sha256": "4f68ce41013d692a79e57c14314d367477c18182061bdfeffadf959afd040c26"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/intro-task-b42e74921ca2189f.mp3",
+   "bytes": 93744,
+   "sha256": "ee0306213901e1b8f7dd6019b3e9b5adffedd217f4bfd69e622e027b7cb4b3fe"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/max-add-808ee950c58db417.json",
+   "bytes": 2083,
+   "sha256": "b5d3cff0938d62487fda3ff17170e56353bb4c284c844173bcc2d3a1d89ce9f5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/max-add-808ee950c58db417.mp3",
+   "bytes": 34992,
+   "sha256": "67ef7f155f1925283934aab91c7c052dfcaa5d553dbe60692aa7a1ab82579895"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/notation-0778c6dba9a52d6e.json",
+   "bytes": 1972,
+   "sha256": "e64b962fbb28a418fe772551d1594b04d9ba9e329d356c9df1d12856fedf0c19"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/notation-0778c6dba9a52d6e.mp3",
+   "bytes": 33552,
+   "sha256": "fa5c2d918f7e4b8c817098ae5827920f7cbe78ba8f263a285cdd04a3d723960b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/order-matters-d837ec9b33bd653d.json",
+   "bytes": 5856,
+   "sha256": "9a3348d0c87df0176dc23424a0b91d182a9400b402325353867ff7c72ccb2bd6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/order-matters-d837ec9b33bd653d.mp3",
+   "bytes": 98640,
+   "sha256": "2d96897100ad4139ed16fc2b4aeb4eba7f9060c65e77d94faf491ca4903e7a93"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/overflow-da66c6e8465efdfd.json",
+   "bytes": 1725,
+   "sha256": "23c1a1b891516ce1ecfdef85e2db50333af82d29442cc5c8e411919fc22fdcae"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/overflow-da66c6e8465efdfd.mp3",
+   "bytes": 33264,
+   "sha256": "912169c3bf3415176bf86cc6bee3ff00461ca51988c781561f46430c5d2e8c56"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/pinwheel-a059fa86235446e2.json",
+   "bytes": 7125,
+   "sha256": "cb0c6abc87b91ac65630a71260c2997966b74d9d5bac24ca1f706a4966bc2061"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/pinwheel-a059fa86235446e2.mp3",
+   "bytes": 120816,
+   "sha256": "824bfa236d5c49842a1eabe64dc979652d30752cb87f347b0afd6b6a2d0ade6a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/pinwheel-proof-ecc8c0590ba2f454.json",
+   "bytes": 8147,
+   "sha256": "02f58acc61d33e26b81487d6bd905f8865e31ad41e31e570be19ad408c9a3086"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/pinwheel-proof-ecc8c0590ba2f454.mp3",
+   "bytes": 142992,
+   "sha256": "989803c84910470041db650888b876f86b97497e810410bfa589ac323669734b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/prefix-condition-ba121d1aef34b38c.json",
+   "bytes": 6604,
+   "sha256": "cba916f4fe1b2207ac70845a0d7b537fd6ee2a668630db8ca4641b02a3ad3ad1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/prefix-condition-ba121d1aef34b38c.mp3",
+   "bytes": 111168,
+   "sha256": "dd36f38c5b6614df87c0ad1de15a9523c6d5d92d9c4f8ea7bde173c8fa28805e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/sizes-up-35285169bb427dbc.json",
+   "bytes": 5826,
+   "sha256": "fe6908342d69d808f470451545a74c9eb7babb640d82e2c4febf25c754370140"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/sizes-up-35285169bb427dbc.mp3",
+   "bytes": 90144,
+   "sha256": "d8f2f23314f1909d21030d14aa9406ba7d0139d5d3c82f531739bb2b06f23146"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/stack-combine-d28124569ed25ea7.json",
+   "bytes": 5716,
+   "sha256": "c0d365cc948d05e8d38cc4252867d484cb6fc226994a8b38d70a90a41da5ca6a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/stack-combine-d28124569ed25ea7.mp3",
+   "bytes": 101088,
+   "sha256": "a9f379a8f7d5f55b7c5fb1e72b7c6a2fd4b3e04ef7ff1eb4710ae45c09f45a78"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/stack-start-0c0e710fcda84ecb.json",
+   "bytes": 2173,
+   "sha256": "89ff5723e10615823431f25b75dd788d70615baf762d3fff61be216c66828be0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/stack-start-0c0e710fcda84ecb.mp3",
+   "bytes": 28368,
+   "sha256": "88ec4e26aa45ca0f506421451835e974b87b82b4b84751622c44a5554dfe39a8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/swap-operands-23c8d24d6424dc54.json",
+   "bytes": 6443,
+   "sha256": "616c035233c0d7bbbb9808bf837a438e317958e0b477426c39e5578136dd62d7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/swap-operands-23c8d24d6424dc54.mp3",
+   "bytes": 105264,
+   "sha256": "a9dfad3ff2d2a861e55f7017b5054911c5eb88fadff386633bd00ff41e173241"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/three-checks-9b0cbef39e980a48.json",
+   "bytes": 2007,
+   "sha256": "d63e6518a005993101485d3948dc5c7266591c64ac4bf128d883a76ba12fb831"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/three-checks-9b0cbef39e980a48.mp3",
+   "bytes": 40608,
+   "sha256": "0bc4911c01a9991eaac3511a152ec335e9482ddf2c418ad5b5311778c64070a5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/transfer-5b86a9cefe5954fd.json",
+   "bytes": 2110,
+   "sha256": "04caaebb0c920a08968de0f33a07915bc6b12a712ebd1dc1c79ce2dcd7c45395"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/transfer-5b86a9cefe5954fd.mp3",
+   "bytes": 34992,
+   "sha256": "01b3b02cb31ad73b141e6cf37772a2c16ee28405bff4b981cffa2d8c7732ded8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/v-convention-5f29f4defc320751.json",
+   "bytes": 7258,
+   "sha256": "16c3ae5014a43fdaaae9f187ede9cf8ba4d84ec4531de4cb0fc2ec2fa2c6e365"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/04/zh/v-convention-5f29f4defc320751.mp3",
+   "bytes": 116064,
+   "sha256": "5c4503af32ded6a41affeabf1361747b934d1a85d3173fed15df490f0986b943"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/contour-update-d2c82652436d90eb.json",
+   "bytes": 5810,
+   "sha256": "6128f6431b166fb5b2c02fb258eb6cb5277e2353570358edbe5dd0aae4f349e7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/contour-update-d2c82652436d90eb.mp3",
+   "bytes": 93744,
+   "sha256": "2ecce896f7593b2b46ea2dd78ffa7206db34d7493f3e150cebe56b1c5ef8e43f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/convention-3e31dbe782affaf3.json",
+   "bytes": 2277,
+   "sha256": "7dafae799c43c9696bc1589f62ea65e10e8a2ccdad4e160c7efe9eaecd682ab5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/convention-3e31dbe782affaf3.mp3",
+   "bytes": 43776,
+   "sha256": "bb3aebc8215af237695db2f6fd489f9f86769cce5325259cdff8fd8ad16ed546"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/d-landing-09ed059a2737e290.json",
+   "bytes": 2602,
+   "sha256": "890a74a39543b23f2daf5a58ca9c7266f04eb9a972fc91f4a5ffdff8cddae477"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/d-landing-09ed059a2737e290.mp3",
+   "bytes": 40464,
+   "sha256": "6b699ca38d044fe9a4d589be8943b5af019898fb5fad039d1dd427193e684485"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/enum-bound-7f57e47807a015e6.json",
+   "bytes": 4909,
+   "sha256": "195aa4d780a770f56e5999984567f05280ffd162dac6f93c2bfbdfcfbb8fce37"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/enum-bound-7f57e47807a015e6.mp3",
+   "bytes": 94464,
+   "sha256": "8b6f9dd08e71dec477842399216783b08a0f1bd3f5e33ec1b6add18d3e5b8318"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/enum-facts-50e66babd2269f7d.json",
+   "bytes": 5979,
+   "sha256": "109550ffc2773c73a36b1d0b626301bf2ecd3d85b2f18347cc360797ecef52e4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/enum-facts-50e66babd2269f7d.mp3",
+   "bytes": 111888,
+   "sha256": "670a3218699350d8fd0caedaf9d74e96c1b364b0834693aa0f61d888c7ea2a8c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/golden-walk-d8da64050555a06d.json",
+   "bytes": 2593,
+   "sha256": "bee5590e2537cd093256eb652a83afc4b70b77759fcf01076bb15be5901e4534"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/golden-walk-d8da64050555a06d.mp3",
+   "bytes": 43776,
+   "sha256": "9e4063fc825798e04a6f7031e064f403e7ae400c10a91bdd1573e84695e50a8b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/intro-preview-676691f4ab0453cb.json",
+   "bytes": 4790,
+   "sha256": "b6dc561e44208e8287133a982557e868f0e6f8880dbe482e406a819e21d42330"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/intro-preview-676691f4ab0453cb.mp3",
+   "bytes": 77616,
+   "sha256": "1c202a51dfcf62bc0752dc1f174f755b112459ded03dfc9636b1cf3dbd37f13c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/intro-task-240d139b912d025b.json",
+   "bytes": 6788,
+   "sha256": "1164a42d6c27eb3dfee113e70a371647214a8d3275f69a8092a5346466db0556"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/intro-task-240d139b912d025b.mp3",
+   "bytes": 105984,
+   "sha256": "661240a2c823d2dcfc308e9bfe8fb88d99f69e284020fa480bee8452b70395ad"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/intro-why-6e0d41a7ba13360c.json",
+   "bytes": 5179,
+   "sha256": "aeb4041d418f8536ccaf6b7478f9ae7c3ece8066dfd49f4650942d62ed330e48"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/intro-why-6e0d41a7ba13360c.mp3",
+   "bytes": 100512,
+   "sha256": "27f297e3583145c5e702b42d7fce1fd008f6bb8f2ff9344a0bffd854749343aa"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/lift-anatomy-6d7f0f036c180d51.json",
+   "bytes": 5967,
+   "sha256": "c9de76952380b54fa7bd7091e7b789f5dded5ac85cb7bc2db386b0cafcf1f8a7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/lift-anatomy-6d7f0f036c180d51.mp3",
+   "bytes": 89856,
+   "sha256": "5637a9c6c354a5991dbe7c9156aa73277befc0b82522fd3779b6fef494917683"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/lift-result-3b79e64b2eb99c2f.json",
+   "bytes": 1968,
+   "sha256": "324fe485590f3fc97a4f4c3e87e92814a815d9e03dfc4d47598b454e933fedaf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/lift-result-3b79e64b2eb99c2f.mp3",
+   "bytes": 34272,
+   "sha256": "0ee19ae9bf9c859c9e293c5b59976b1d41b65adc49394e661890883c6750bea4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/neighborhoods-f3ca7dcdb911bff3.json",
+   "bytes": 5141,
+   "sha256": "06972b6319e807dfd60a43552da227565e4eb9006dcccf8a0987a727cf41c23b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/neighborhoods-f3ca7dcdb911bff3.mp3",
+   "bytes": 87552,
+   "sha256": "9887f15dabaf8442ff2dcb2c588b271ef8397e2632349769cd502ae29cca5fd3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/order-matters-6f64f3437cddc7f2.json",
+   "bytes": 6153,
+   "sha256": "e4b5a66858c6ba4b9076def1578f5ce52304c5da57067aa1e95daea2b1c98cbd"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/order-matters-6f64f3437cddc7f2.mp3",
+   "bytes": 106128,
+   "sha256": "9a6eac7e232ed302eef0f5e99d3df736d1a8d7d09f50a5582771fe29c3268f56"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/order-matters-bf0259172456b6ce.json",
+   "bytes": 6206,
+   "sha256": "c7a09ba8905f85ac877ff5581f19b9b1da7744be4d19ddacb9283cfd7e8f6345"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/order-matters-bf0259172456b6ce.mp3",
+   "bytes": 112752,
+   "sha256": "4a72e9af6932b88104fb7702962a9d6df3081ecce04b079aef4255d988d81551"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/pre-checks-78465fb81a1e767d.json",
+   "bytes": 5160,
+   "sha256": "f2bc71eefe621c8a7cd069f7df2c43a6c1c95dd3f63c38214a8fe605ce5beb54"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/pre-checks-78465fb81a1e767d.mp3",
+   "bytes": 96624,
+   "sha256": "32b5cfb338e6241a8aa92264f8cf4a82edc111d165b954bb31574e704b70e336"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/preorder-e2aa409f973b79eb.json",
+   "bytes": 1709,
+   "sha256": "0bf2f156167231d53056304c482b72c71da325aeb295da08f9b4333f4f6c7811"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/preorder-e2aa409f973b79eb.mp3",
+   "bytes": 27648,
+   "sha256": "70d5772961c1553809fecc26e212aadfb220380022fe46dade26da0806f95cb6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/residual-detail-476d0265023c7038.json",
+   "bytes": 6757,
+   "sha256": "c674a29a5d070b829eee85a5fc534a12ac570810a6973085fb7fcdadd1f22296"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/residual-detail-476d0265023c7038.mp3",
+   "bytes": 111600,
+   "sha256": "8cca67eb6c90a5f710de92dad9bade49edc5de86f82b50b321720ceeb6e947d2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/score-compare-2f8492986158bc8c.json",
+   "bytes": 2897,
+   "sha256": "072271606a522b82352ec2f7a947a1555183f7f60452054981662cc280000d4b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/score-compare-2f8492986158bc8c.mp3",
+   "bytes": 49536,
+   "sha256": "8f6536f1e21079ffaf15acec3226bc45f94bd51834f7f0e0d0caf064eedfff07"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/segments-290d659dd0893448.json",
+   "bytes": 5151,
+   "sha256": "20a49e8ea7592cf16302b5e05a0fd0b30065d77ff74ab1f2580df84ce2c67014"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/segments-290d659dd0893448.mp3",
+   "bytes": 91008,
+   "sha256": "dc281473391a0bc2ab0052d7a937f03c65fdb0a5543e8a72c347914544696c64"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/swap-predict-c669ba6cf40c22b3.json",
+   "bytes": 2191,
+   "sha256": "9b98426a983043a8a8e70756bc8503f7f5a8858f1883287f339049c6d08595d8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/swap-predict-c669ba6cf40c22b3.mp3",
+   "bytes": 28080,
+   "sha256": "74134bb2e94d4dfa6cda3ff27f61ff813398fa33229e8c35f70c45ef4483980d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/transfer-3da9327cda6c818b.json",
+   "bytes": 2876,
+   "sha256": "8354684686d514e7bbad1d461685a840a4e70192816ad2806d8aa0f884ab14f6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/en/transfer-3da9327cda6c818b.mp3",
+   "bytes": 47232,
+   "sha256": "b9d6655bde16cb9bc686656e0e072ddc12b72dd4a1242bfa5bb02bcd28070f46"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/contour-update-ec5ff3e279fbc963.json",
+   "bytes": 6924,
+   "sha256": "bb59bae4c3be5de1342a57e8bf41692079fd144951206942997ee6b779177671"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/contour-update-ec5ff3e279fbc963.mp3",
+   "bytes": 123408,
+   "sha256": "aa12cc034930d0d713d7105ff97a69a048db4f6481a3d29dd6ae862f977b50c7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/convention-688d4f3498e33961.json",
+   "bytes": 1857,
+   "sha256": "308b47871136525a109d113f2185559e3dc95135c1b286c4bbe030aea2d55e25"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/convention-688d4f3498e33961.mp3",
+   "bytes": 33264,
+   "sha256": "67e160a20881e40ba941af35a99b8e5f4dbc93c977751ee03afd92de6dd1ab13"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/d-landing-7bb43f812cd21131.json",
+   "bytes": 2336,
+   "sha256": "c6e42c240e94026f3f0c296464182154ec9f0ba89503c22a1dd568527cdb762e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/d-landing-7bb43f812cd21131.mp3",
+   "bytes": 36000,
+   "sha256": "91f7c7a28b5e1d8491c548055eebb932685d133d9edd7a7209ad5fa636ea8380"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/enum-bound-4c22cc6aee61bc83.json",
+   "bytes": 5138,
+   "sha256": "49a66d23433d4a4f1fed4b9d6964b6da69d4f456a28ec204f217ab9c431a2c02"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/enum-bound-4c22cc6aee61bc83.mp3",
+   "bytes": 117360,
+   "sha256": "e4dbc380153a610f5e7f133094b46918c82b9257ccf5d0d4890fc2773868598f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/enum-facts-20779803603a4515.json",
+   "bytes": 6394,
+   "sha256": "7d6e487ba358175a04a2f02fdd4b981ac231ba195dba514a0b4e670aba015f2f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/enum-facts-20779803603a4515.mp3",
+   "bytes": 130320,
+   "sha256": "d43ec7ca9a07d50e00ab4f8ebf90463e9aab9b956f9d9ad421d63b4e558dd0ea"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/golden-walk-39d683bebea41083.json",
+   "bytes": 2339,
+   "sha256": "4d4bc5039071e53489bb5e79043da277ade31d0cd98e127fc38da627f15894f4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/golden-walk-39d683bebea41083.mp3",
+   "bytes": 41184,
+   "sha256": "38cef2486c793898d9cbcc357d066b0a3ff86f084f43587f7ddf9ebebb7bb581"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/intro-preview-b9943d8aebd11461.json",
+   "bytes": 5890,
+   "sha256": "0f4f633e34f0fa33b3e480a6057c0c10d599a5440de066bbd9cb56b9aed0488b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/intro-preview-b9943d8aebd11461.mp3",
+   "bytes": 99072,
+   "sha256": "ef207b1d24faadeaa366cffb2a21902a08e3ec3ec10d33a103a79373af4bd73c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/intro-task-62e2ed6cd2544001.json",
+   "bytes": 6927,
+   "sha256": "0b1b379f4de2984fe5849479449aedc28c6e6208ce1817d9bea44856883b0611"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/intro-task-62e2ed6cd2544001.mp3",
+   "bytes": 112176,
+   "sha256": "cc846d131151c46deac514be4dba3bb2382f2df60ff6f0445746411c5f5ef5af"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/intro-why-1e7694821683fa63.json",
+   "bytes": 6462,
+   "sha256": "6bf00a6eec9331bcebb78381933cb366348dd1717c90372bca62c3cc262bea28"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/intro-why-1e7694821683fa63.mp3",
+   "bytes": 96912,
+   "sha256": "394327086f28200e34cee959f91a14f6a66f67f90800cdc78b4b2c2362744fe7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/lift-anatomy-4775088ffc724f34.json",
+   "bytes": 7577,
+   "sha256": "0ee213bf534a2bde46f7886bf3cff594d094a13fea03c65275ea034d60847d3c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/lift-anatomy-4775088ffc724f34.mp3",
+   "bytes": 114480,
+   "sha256": "add9183bf230e44595f8d7ce8bbe1253d404c8c1885d65409ca5492bdba8add4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/lift-result-899eac25d37dd59e.json",
+   "bytes": 2696,
+   "sha256": "c93a16049bca1e586e721e390cc0ff9af3d01415ca37db3df6cb27e0f914b488"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/lift-result-899eac25d37dd59e.mp3",
+   "bytes": 36576,
+   "sha256": "fe21f98ffb677b251275abdf5b1baafd8a884d014aea7af42baa3ef1ea50d704"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/neighborhoods-0d675d775ecbb0ca.json",
+   "bytes": 7763,
+   "sha256": "23306d87cd5b144fdfa6f2f9ad2b0cdda7966894cee2e9fb7b6dbba3b227d1cb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/neighborhoods-0d675d775ecbb0ca.mp3",
+   "bytes": 117936,
+   "sha256": "f17e6197342a17139ff3aceea2d5d899c5e2ac996691ecf67e625c407adaceab"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/order-matters-24bc0a77ae19afff.json",
+   "bytes": 8330,
+   "sha256": "8294e8531e9fcdf3f31450c82fee82da6032cf7efe9274e25e85670803669967"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/order-matters-24bc0a77ae19afff.mp3",
+   "bytes": 133920,
+   "sha256": "485e59667e207d5f8d769a259e1690469f39f2d9cc839faef5db6e51278c65b8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/order-matters-7d196759f27b4a3e.json",
+   "bytes": 7282,
+   "sha256": "9be512c0e8d17f651ad06a47b076c31d70f1b0172bdb2cc33e9ad3f1575f4edd"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/order-matters-7d196759f27b4a3e.mp3",
+   "bytes": 115200,
+   "sha256": "d4fd272d01652b54c591a1e8497800ae9ab2be142172f1336e0787ab23e76238"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/pre-checks-07b3865c3bbb0dda.json",
+   "bytes": 6742,
+   "sha256": "ed20e9bcceed09a380f9b2fffa197c51b1fd022e88a2c0cadca606e73b7cf7f5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/pre-checks-07b3865c3bbb0dda.mp3",
+   "bytes": 113472,
+   "sha256": "300b01fd363eb2115df6561789e404db18c8a63ebdced2e6821f8faeed176972"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/pre-checks-8d904e514cd72fd9.json",
+   "bytes": 6732,
+   "sha256": "f9bdbb80474629c9af590e02a505ddc513ccbf9a7c18c986754e702eb4ea4c10"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/pre-checks-8d904e514cd72fd9.mp3",
+   "bytes": 113760,
+   "sha256": "b2dae774d150e9d932b694037bd561ac3692011123471dc10e5ec81e84245576"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/preorder-e5b4763fa88703dd.json",
+   "bytes": 2080,
+   "sha256": "bbb94674bbe65ec97447b7dd43fcfa5b8b6d7b8485ac3b3605e3b759f308df46"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/preorder-e5b4763fa88703dd.mp3",
+   "bytes": 30240,
+   "sha256": "3d38ec2c55e933beaac95980739eb729006762ca3901c02b94ac4ef35f0afde4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/residual-detail-26b79d3e429f97de.json",
+   "bytes": 8739,
+   "sha256": "fb982fb8f70643daa0e3714271fbaca3c6b9da531ed7795fabf172ddaf50ee7d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/residual-detail-26b79d3e429f97de.mp3",
+   "bytes": 184320,
+   "sha256": "2240f7200491cf33eacd0cf9f42e70be58f1d02451a944d8cd42624e41420538"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/score-compare-8d0308aeba1552c8.json",
+   "bytes": 2131,
+   "sha256": "ade781702c8b209fba161421dd407c5022d79ead6bbee7e3b99d86ef407777ce"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/score-compare-8d0308aeba1552c8.mp3",
+   "bytes": 38448,
+   "sha256": "fa2cd9ec7b76c3d01c8cf674ee368724eab61d055d93cfec5157d0e1b7f04859"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/segments-0b6d6390b7f9ce78.json",
+   "bytes": 6170,
+   "sha256": "5b0b41f54c0c3e64e280dc483b738e548ac25d4c3bd25a44d8ee7fc061119049"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/segments-0b6d6390b7f9ce78.mp3",
+   "bytes": 96768,
+   "sha256": "8f43d7d3ed6d449cb4c90435e7c1ed610b294d29e08ef3d961235ee569ca0532"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/swap-predict-a4dd13166c198d1b.json",
+   "bytes": 2064,
+   "sha256": "88836ba417d1c6352dce5ce59ec9a9a61216d3e7f7adf738ab659cc5efc888b0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/swap-predict-a4dd13166c198d1b.mp3",
+   "bytes": 27936,
+   "sha256": "72455bd7e371d238be54fe66147d427c7500e88d8e253d69b066c192437d541d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/transfer-6612d98fdab0a8ca.json",
+   "bytes": 2242,
+   "sha256": "1c9ea0bef3e86f33c97ec54b4e7dd6d6efa9e56d9db407764c30df55af8acce1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/05/zh/transfer-6612d98fdab0a8ca.mp3",
+   "bytes": 39312,
+   "sha256": "91512bd62bc4717ca303f9580ea2c31c44e0c48603870f844074d1f976ada3e9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/acyclic-a289cf745a9d48bc.json",
+   "bytes": 6066,
+   "sha256": "037aac549e039abcbe7ebc8702f2ff60827e3d55e4e45acd48574c7dcafd3719"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/acyclic-a289cf745a9d48bc.mp3",
+   "bytes": 108432,
+   "sha256": "f5c567bcb1611c92abe980dc4b2866c641ef72d201987baf3272b108f6a18f63"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/all-pairs-534bc28d1ac55950.json",
+   "bytes": 3858,
+   "sha256": "de34a8e35f92152f6e43e2cb030b8e7795d496969afcc8ec49af0ae8833ad245"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/all-pairs-534bc28d1ac55950.mp3",
+   "bytes": 75600,
+   "sha256": "52c26469fe890c71ce42b81cd439aeb401774e9147ed724524e32d0b787e1ed4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/compare-reps-c9a54ae5a6c9f4cc.json",
+   "bytes": 7627,
+   "sha256": "71c8b53541cf2498fd57a10783b0690e90a77decc0cc141fe3e375c22d7f95f2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/compare-reps-c9a54ae5a6c9f4cc.mp3",
+   "bytes": 147600,
+   "sha256": "11d6e22c6795ccfc8895f10f963a8f95033cbf14a4626637e32b9dfe5fcc38f1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/critical-chain-fb460bc13343940b.json",
+   "bytes": 4496,
+   "sha256": "bd3e999454425b0850b8ba7dc61dd572439d46384ded683de032b664f346ac40"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/critical-chain-fb460bc13343940b.mp3",
+   "bytes": 89712,
+   "sha256": "08c0ccd30e83f5760888f2a45079399898d03fcd34c2820223195f54eab29831"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/fit-check-be3a41f30d36a05c.json",
+   "bytes": 4177,
+   "sha256": "0f8bee8f78e5332ca0c6612e52137c1d169ad85894a905fa035e213f1a913083"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/fit-check-be3a41f30d36a05c.mp3",
+   "bytes": 87264,
+   "sha256": "5f8a53850c9eb0514e5bf2501283efb2ea648307c0156973d6cabfb4df00bd91"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/intro-preview-20c2d986d435a6fa.json",
+   "bytes": 5643,
+   "sha256": "ab8945c1d79857ab438a28c73e0ccd67efcc2e1a4ac1329e9e3423c3cf0effac"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/intro-preview-20c2d986d435a6fa.mp3",
+   "bytes": 80640,
+   "sha256": "6519e934d23da70d4ee9ded81a968049a53c76d9e742757b652e66c8b09181cb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/intro-task-f883330922865bc4.json",
+   "bytes": 5741,
+   "sha256": "b15ebf506b44a09e33bbd8b8e771b860eb2083db3875c283e70660e47d922816"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/intro-task-f883330922865bc4.mp3",
+   "bytes": 109872,
+   "sha256": "01c692c98da7dd23b14f8dbef5795ac793d31896bd671f4591be524ef226065c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/intro-why-f2412dee14ec19f4.json",
+   "bytes": 5456,
+   "sha256": "133156e0f798805effba44cca3827f7b1e0fba60ef4146b91448162a8f6ef606"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/intro-why-f2412dee14ec19f4.mp3",
+   "bytes": 106704,
+   "sha256": "b0963140e0a9f6c966229be549edbf3e3828c63a3c4a850b0270212e455e63cf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/longest-path-72206195def2b985.json",
+   "bytes": 5825,
+   "sha256": "48c5ac9118cbb72b86bbec3530d74d09e6660d4f3a23ca4969f92c08817b33a8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/longest-path-72206195def2b985.mp3",
+   "bytes": 98784,
+   "sha256": "6db0cd9a23868c109efd584eb99fdaa6764afef842bcb6ab09a04fbd08550bd1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/multi-encoding-671437d1de8db880.json",
+   "bytes": 5612,
+   "sha256": "5b3d07d764bfae1b738138295586b1a0d1c78773326cd1968cffbc94458da24f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/multi-encoding-671437d1de8db880.mp3",
+   "bytes": 106560,
+   "sha256": "00fc1e4c18726f0e8ca2f8cd8a293615472f7669dca7b7579455e2fbec81d342"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/notation-a3f3e99838767faa.json",
+   "bytes": 1987,
+   "sha256": "b7f02e10b0caa3c8b0b7450b362cf909a850499f19e9c87de2da272eff380a7e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/notation-a3f3e99838767faa.mp3",
+   "bytes": 31536,
+   "sha256": "984b280ddb88fa891666c8b843c12b79f1fef4e32fee9e550e7d24a3f7a09d0c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/predict-height-33d2c674aafcd39c.json",
+   "bytes": 1975,
+   "sha256": "8a53b7ed4a1423376d06072cd46987a23c9c98c6024df28995039d8eb9323790"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/predict-height-33d2c674aafcd39c.mp3",
+   "bytes": 36144,
+   "sha256": "a4454a77a5277ca11a4dd3799c0a8a64f75fe1967027b88adf9762b31a71de0d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/reverse-order-a758bd622ea2ed50.json",
+   "bytes": 2730,
+   "sha256": "6c133fbf5a80d8c1b478349b50cc062ff87db076475b52842affd29bbc8ad00e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/reverse-order-a758bd622ea2ed50.mp3",
+   "bytes": 44496,
+   "sha256": "c95730223f0527fe5f8882b4e165c3cbbef4ca9b4ab0c1327e9c6deb11ce358a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/row-overflow-867b351c5f17cf8f.json",
+   "bytes": 4927,
+   "sha256": "ca740380b261cd53fd1436ab01ff1d694568c14e99cd00e34c0d6af9447bb95c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/row-overflow-867b351c5f17cf8f.mp3",
+   "bytes": 100800,
+   "sha256": "87579d096e750d509493a4e49b8d135ae0345ff63c218e13dc2025fd94165abc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/same-order-b3c626c92c752282.json",
+   "bytes": 2339,
+   "sha256": "577e36ec67b0586d702a5e1bc59407861f41ec3db7266408e3a9be3840b56c33"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/same-order-b3c626c92c752282.mp3",
+   "bytes": 37728,
+   "sha256": "1529fe8b15b5982eb0cd164ed7e7a59eb512e849d0db33304689b64934495484"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/std-result-64d00464e03aff30.json",
+   "bytes": 5006,
+   "sha256": "42394519576b3619aa3f2d3699ee875cefdeeda44114cb50fba258dcf207487e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/std-result-64d00464e03aff30.mp3",
+   "bytes": 90576,
+   "sha256": "fbe4099c9fee269e5838243a77624e5a1730772e6a7911f6e1db90e8e5d813d4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/transfer-48cf1c977a303bf8.json",
+   "bytes": 2409,
+   "sha256": "3bc3e077a5f36d93887c353b1bed823084b915f5fa81c4e953d850709796a29a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/transfer-48cf1c977a303bf8.mp3",
+   "bytes": 41616,
+   "sha256": "b9e66d3ab7dec0adfd87000b24018336d724d8d089021db06db18846e798d987"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/transfer-preview-cf1287fa7dfcf225.json",
+   "bytes": 4587,
+   "sha256": "33e1efa695ee4e778b132f9e5c15a662c6b138fd8f711a62031af0662bc23e6c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/en/transfer-preview-cf1287fa7dfcf225.mp3",
+   "bytes": 86400,
+   "sha256": "3d4efe92a5534675d80404fffd6807779b028efab63d3ca6b2f4470116de5083"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/acyclic-14d406b1a3a36a1a.json",
+   "bytes": 6388,
+   "sha256": "fac07e250bd9a72ad32eabdb110c9679da163d232e54317485dbbd0aae8271b5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/acyclic-14d406b1a3a36a1a.mp3",
+   "bytes": 107136,
+   "sha256": "c7da97c23c2630b118ff587e75f557b130ce5210cbe80ae330a5139da2015645"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/all-pairs-73fb7a60ff195583.json",
+   "bytes": 5986,
+   "sha256": "faa0bc01a6ace0ce51963788e71337ed32dd9baf271a90c31edbde45ef538f32"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/all-pairs-73fb7a60ff195583.mp3",
+   "bytes": 97200,
+   "sha256": "f9a7198a86d01c058f73ee6df3f07ce1ab6a0a38019e52e5a0a3b59a34322e69"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/compare-reps-0963b6991f177629.json",
+   "bytes": 8533,
+   "sha256": "5f54ba598bbf4f535d96d2c77dee10cfe55e98f40d5e2e64d7da0bd3855d9d59"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/compare-reps-0963b6991f177629.mp3",
+   "bytes": 151776,
+   "sha256": "aa25685e905d00908fe490934c4e14d4d2b0bc453002f72a1159dc3e75293099"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/critical-chain-d0e82d16eb751f78.json",
+   "bytes": 7221,
+   "sha256": "36cd48c6f8c55cbb274eb3499ede24d2a4864c8e4687e788e22d1c6cf7b6b4c7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/critical-chain-d0e82d16eb751f78.mp3",
+   "bytes": 104256,
+   "sha256": "05cf649101c00a6ff0263dab05184ebed6ad57892487c893d0b9de89f029a9b6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/fit-check-670799638b23badb.json",
+   "bytes": 6355,
+   "sha256": "bc5b5542450ee8fca03fd66a59d0c4665a4d2e5274e9a219fcebd25515a9950d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/fit-check-670799638b23badb.mp3",
+   "bytes": 109152,
+   "sha256": "e450b070af5eeaadd8d038c9a5f10145dbfc65123ebd20f0e01072e237616499"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/fit-check-9391c4fe95108dad.json",
+   "bytes": 6365,
+   "sha256": "c0f48f25caf6a56688675c2f1df7a0285b7c13814adc3c0e34e15d06b55f2ce8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/fit-check-9391c4fe95108dad.mp3",
+   "bytes": 108432,
+   "sha256": "8083b1cb9090ea728b8ce91ba125988a3a0bc4b5f25a7ed5927dceb1d485aeeb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-preview-c00390b795584222.json",
+   "bytes": 5275,
+   "sha256": "3c90e2cea5ac3f8549cb7596f6ea1e9308ba7d86fefd3fccc96f87e1d804a4e2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-preview-c00390b795584222.mp3",
+   "bytes": 83232,
+   "sha256": "b89f7f5b5e92841e3af974cb042220f4abbcf21599ff9e2eaefdafb0f37b52fa"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-task-cbfdd802640f5471.json",
+   "bytes": 7559,
+   "sha256": "66a96b10953735c5bcdee2dde28cdd50a72b3d9cb41396d2a44c501a66f7583d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-task-cbfdd802640f5471.mp3",
+   "bytes": 122256,
+   "sha256": "16bef84a522dbe9eae92b4624a4b75bec48cc199ffcde20ab7acdb98be357782"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-why-0b17c488038460b3.json",
+   "bytes": 7231,
+   "sha256": "6243a37db1ec149ec0f208ecd9b3d4bd7165b9313efe03e3700efd0d251b3485"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-why-0b17c488038460b3.mp3",
+   "bytes": 112608,
+   "sha256": "3640e18b3eb48d7f8d0b22d9ff6ad765ea7756cee3d71a1550cbc20dde811fec"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-why-cd8cf04c0ffdc1f5.json",
+   "bytes": 7349,
+   "sha256": "805b3dce44a70692a20b41fb48c7834cfaf4e0e3ed192caec98a62df76716f8d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/intro-why-cd8cf04c0ffdc1f5.mp3",
+   "bytes": 115200,
+   "sha256": "c08b0ef0e4e27b5213bc9544597db7b175c976ea2b8f7085999a72549fe9227a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/longest-path-3b9a9074eb2c007d.json",
+   "bytes": 6912,
+   "sha256": "e6b93c27c6bb9b06be393e13586a4ffd0e9ee04d65769619f7e231e6c77fd744"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/longest-path-3b9a9074eb2c007d.mp3",
+   "bytes": 105120,
+   "sha256": "a11e48779f04926d771e71b3d56c03f790bc65ce073a180070db9111cb73576f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/multi-encoding-df24d2d38a8ca92f.json",
+   "bytes": 7587,
+   "sha256": "a49b126e5be00c7c46b1631fb88e0c9e0c6d76320de52e445bfa55ff66b0589c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/multi-encoding-df24d2d38a8ca92f.mp3",
+   "bytes": 148752,
+   "sha256": "6cb3bd951290a5b68c86ab2890c8b4177c3652048898d01ed0ac0519a88ccce4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/notation-95e70dd2817b931f.json",
+   "bytes": 1598,
+   "sha256": "8cdde7a19e8d259c5d0c0aa58dd16dc367a2cf990b1081fa219174becf983e9c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/notation-95e70dd2817b931f.mp3",
+   "bytes": 26784,
+   "sha256": "2a31b11af5d83c2d2eb10b26ce857baa41e5d3e7be101091c483399ec0b53876"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/predict-height-7e55c7b3ca578fbd.json",
+   "bytes": 1838,
+   "sha256": "5a118aae8ebea9e82ea488237610cc453cd80c62873f7b4aabb1733241faa15c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/predict-height-7e55c7b3ca578fbd.mp3",
+   "bytes": 30816,
+   "sha256": "877f2b7a879cc019c21ad8bbfb73b5c6076955ef3bc371e03d8852a4404c29ae"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/reverse-order-971d3191ffe50a4e.json",
+   "bytes": 2694,
+   "sha256": "b1c507bfaa39cb1dbf455cd0e8cc602a8cf251850b82ec5391a92a30f6c73d29"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/reverse-order-971d3191ffe50a4e.mp3",
+   "bytes": 39168,
+   "sha256": "7e3adb9f56a2ed03e00a374c680427b25ad286ff03e519511751483d2487478c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/row-overflow-eaa928e024ac9fbe.json",
+   "bytes": 6964,
+   "sha256": "2fc5a320e92c5485da0da56d0b4e7b23bd3e9e56e55b1ee5cf57a42903ab0246"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/row-overflow-eaa928e024ac9fbe.mp3",
+   "bytes": 106704,
+   "sha256": "d1873450a443de35a36dfe6a36e989db60b24ce5cb28700b43a49bccde993eb8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/same-order-f6800d71fc42adde.json",
+   "bytes": 2067,
+   "sha256": "929829bcf60ff3e9b85d881bf222a6ed8d0ab0bf98f2d5c2ce3ca90665debf2e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/same-order-f6800d71fc42adde.mp3",
+   "bytes": 31968,
+   "sha256": "15388811b462cb13151d29302b74644c25e180afc3012ae9d0ba656aacb4a574"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/std-result-cf09ec55671ef9b6.json",
+   "bytes": 5711,
+   "sha256": "a3795f2df9d81a15787d067291a5e796da5c5f722e937d2710d2b623ffde8aea"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/std-result-cf09ec55671ef9b6.mp3",
+   "bytes": 104544,
+   "sha256": "0dc850379a5a4cdb6c83b3aa94d48020600eee9139d5d5646393454b3870e85f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/transfer-6327712cab4d1be9.json",
+   "bytes": 1972,
+   "sha256": "c8bd815e5357c9e549c2431e6fdc1503e7c3047ac43a87d12063ba21ff11aac8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/transfer-6327712cab4d1be9.mp3",
+   "bytes": 33696,
+   "sha256": "831043e9143cc7469a1149057e2ec48b87ec4ff3a2ad079bf245e7d3e9405370"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/transfer-preview-e838404e2417a2b2.json",
+   "bytes": 7428,
+   "sha256": "5ee230af4e5bba5f03165f3030cac64ca544434a58bc7a699b6ee413784a83cf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/06/zh/transfer-preview-e838404e2417a2b2.mp3",
+   "bytes": 118800,
+   "sha256": "5a373d8c4773b03e6abec8359bf319aab16c2efe66d771a8838d251722befd17"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/best-monotonic-2668586f4364d134.json",
+   "bytes": 5779,
+   "sha256": "f711cf07d75985459f41eb2fbd77339dc0aaa99c036c25af41cfa36f0d7e381c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/best-monotonic-2668586f4364d134.mp3",
+   "bytes": 102384,
+   "sha256": "98f601f5a4fa46292c4d8a2bd8da0f5f0f5bc533b7d7647aa62aae0a325243e0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/budget-design-3b4d307c8b34bb7b.json",
+   "bytes": 4926,
+   "sha256": "9bf24f8d9ca0fcbd7193e5beb046685bd89ea13e7f24662c786beefbb3fe7e38"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/budget-design-3b4d307c8b34bb7b.mp3",
+   "bytes": 102240,
+   "sha256": "54ce06a14c5d04c523022ea3422e6dfbc3016a62310aa965981f74c2ce12df50"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/components-18ea3be90bc7f18b.json",
+   "bytes": 3102,
+   "sha256": "8aa72acc84740cdb0340debe776350adc316e9f3116d863dab22f22c7051dd34"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/components-18ea3be90bc7f18b.mp3",
+   "bytes": 63360,
+   "sha256": "f37ad8685202d5305dac40586d20896a51c6225bb511091b7267febd328b9aa5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/delta-d056162441f9d36e.json",
+   "bytes": 5417,
+   "sha256": "7443be2af431f0bbdb066fb3050aca68a090d69763358ac0e464aab7aedf908f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/delta-d056162441f9d36e.mp3",
+   "bytes": 98928,
+   "sha256": "096ee5ffd90f1e7de01f400a0d5c245b773234bcf021d6fde02ca89056e19885"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/equal-budget-913d9d5cbc8332b3.json",
+   "bytes": 6345,
+   "sha256": "ef0ea95fd94f22f63cc04e8ac0a3800d34c2a379314dc020028919b41d95ed0e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/equal-budget-913d9d5cbc8332b3.mp3",
+   "bytes": 118224,
+   "sha256": "c021d764b495140688a4ca8a8a794f8f3e5473c4fe13daf745691137f97249ec"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/equal-budget-91d501700487111d.json",
+   "bytes": 6075,
+   "sha256": "f758620b20e0c2c9d3f350098b79b74005b5fb3ddfd3879654428269c838a5d1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/equal-budget-91d501700487111d.mp3",
+   "bytes": 113760,
+   "sha256": "6274b2741327b89ebe4d6f5fec9456298b2fb088f3194490314ade3a510bdf76"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/intro-preview-5ea1be2f717b5abb.json",
+   "bytes": 4392,
+   "sha256": "1f0e42a9eff3b88569f2c31a206f42772c4954894b36879b29ee068d6f91f46d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/intro-preview-5ea1be2f717b5abb.mp3",
+   "bytes": 85104,
+   "sha256": "6b3b2dfeed6ad5cdf104a74ef7308c95269d4b1250263f1a3f27b20a6a773d3f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/intro-task-ea50084d522f3bf4.json",
+   "bytes": 5022,
+   "sha256": "4027e038d4c0db1bf0d679011e5f3327cd4593d1ccf6c809378c98ed3bba4ba8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/intro-task-ea50084d522f3bf4.mp3",
+   "bytes": 85248,
+   "sha256": "63e911285d9d7bfdd642c746fe9c1f8a658e440e33dfcffb3f2fa0b17d413eed"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/intro-why-01c22e84a0e67d01.json",
+   "bytes": 6579,
+   "sha256": "1bcc655f26d412c7895a1b7cbdeeb806f5c00701fb2712afa592ecb2a8d284a5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/intro-why-01c22e84a0e67d01.mp3",
+   "bytes": 113472,
+   "sha256": "e7f019e750550db949c72150abf47481dc9b0cf04013337af85b5f31e6696529"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/log-fields-c658fcc485fa4d54.json",
+   "bytes": 4414,
+   "sha256": "07597dc1fb6ae21fa3e270e163248ba831fda7f869657428a9a019f777a12e09"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/log-fields-c658fcc485fa4d54.mp3",
+   "bytes": 89856,
+   "sha256": "8ac7b2612b10edbe5b21d468d9cacacd065987658945a8ec2d61340bd81447d8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/neighbor-swap-a074049a5ef545e1.json",
+   "bytes": 4957,
+   "sha256": "78c6b555cb944f82a481a5b6aaa93acfaaab83c5287513354d6c0b616434aa23"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/neighbor-swap-a074049a5ef545e1.mp3",
+   "bytes": 76032,
+   "sha256": "0942aeccb69484b6fcaf6674c7c369d3e847fb134be391f40de41e21b95d8bb9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/penalty-64a132a079f37ce8.json",
+   "bytes": 6595,
+   "sha256": "8c44b0e63df8a7d240f666aad8a9f382a31a528dd72021053f3279e52a25e179"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/penalty-64a132a079f37ce8.mp3",
+   "bytes": 120096,
+   "sha256": "51c07a1fd612cda24c9e9f4666f511069f3114573539356c5ab74354d6aa0915"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/probability-a238b3d527186aa7.json",
+   "bytes": 5925,
+   "sha256": "29be10a792703f836d8d1f00dba4d6b11978dcb1794f42df414e8ee004c39ed4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/probability-a238b3d527186aa7.mp3",
+   "bytes": 100800,
+   "sha256": "f32a7fadd3cf393d707f2a61e8b573c0aaceaf75c89f45d29565b76ca2d284ca"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/reachability-accf8323bc6e1265.json",
+   "bytes": 5374,
+   "sha256": "6c91053e2a03d1e47684c19eb39536fc385cde67552971512676d245b118b808"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/reachability-accf8323bc6e1265.mp3",
+   "bytes": 106272,
+   "sha256": "02c85b995f77cb2bf59e8b5cccb77b77afc13c98646d021565470e94e6ba473f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/real-accept-0c9cc75dec5a5ae8.json",
+   "bytes": 5901,
+   "sha256": "3d077ff5e3d78afc4d2357ffdde72aebaa2b5b4813616c5b3b474303848e2bbe"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/real-accept-0c9cc75dec5a5ae8.mp3",
+   "bytes": 106992,
+   "sha256": "230ae0e9c9bed51de2e4fc840aa12560ad3ae06b6d7f9a7d5982e86e24920273"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/real-accept-ffc559fe03d7a7d0.json",
+   "bytes": 6558,
+   "sha256": "06729d1b37de9159319e3765b44f9291482256ed30603dc41a9ea653968c8a99"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/real-accept-ffc559fe03d7a7d0.mp3",
+   "bytes": 114624,
+   "sha256": "f2f808c4f9737d2314d784b4a61ab7015c54c41617baf8c61f320c1ba731a6b5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/real-reject-34a08e3ad14cdd68.json",
+   "bytes": 6308,
+   "sha256": "81c916878e6b0c26bd7fde6b4276fa29242fdf1a8aa6653ed43e3964abc66c14"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/real-reject-34a08e3ad14cdd68.mp3",
+   "bytes": 118656,
+   "sha256": "132a62c28be5d59a691d0601b4b7a3925b4cffab15b274963cd310fc574d0d6a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/reproducibility-b04e2bff5b3dfa4b.json",
+   "bytes": 5718,
+   "sha256": "a2452c57658578bad656ad51204f066304fbba83b1fcf2cac5a21703ac69b824"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/reproducibility-b04e2bff5b3dfa4b.mp3",
+   "bytes": 113328,
+   "sha256": "9248bfaaabe6a92b0d1145d434d78c98131ddb46617ae825e1e36ab2ee0c5230"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/reproducibility-d7222b17096fb689.json",
+   "bytes": 5583,
+   "sha256": "1054519ca7cf1d27e7b24deccf55dee6a1a40084ab6a8a2c13e1b4f58d8260f1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/reproducibility-d7222b17096fb689.mp3",
+   "bytes": 110448,
+   "sha256": "0afbadbe2b71e1dfb61cf52c0e46bc2c871efd9c42be2e2b06738905e6464549"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/temp-predict-8d1cf8567796031c.json",
+   "bytes": 2119,
+   "sha256": "c1716586d06124f87738469126130f1eaa6291394ede958c5823f8cec416dd94"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/temp-predict-8d1cf8567796031c.mp3",
+   "bytes": 32112,
+   "sha256": "aa8426e9999e598548558000893258963f06e88f9040996bd03d14b15ec08586"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/transfer-cbdfdf7d2fd8351d.json",
+   "bytes": 3305,
+   "sha256": "99dbdd4b249259e55ed38b93ac7ce24cce6d8882ad76065c5b3d588c94aa2e93"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/en/transfer-cbdfdf7d2fd8351d.mp3",
+   "bytes": 58752,
+   "sha256": "f57a862dcd6ff9f7e5f368c5dff24cb42067b3a9dd067ce4d149a08f78fc1e5e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/best-monotonic-575f089a85781578.json",
+   "bytes": 6274,
+   "sha256": "b721080f69c1a2a0fc18d4bf11909c56d42347473e4c867cec74d98415e26f00"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/best-monotonic-575f089a85781578.mp3",
+   "bytes": 110448,
+   "sha256": "432ad004bee2d224bd0f39de6c65ccec955ac4e94c6ff84c0417a3a4a9aef6f7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/best-monotonic-6a82e2c9b99b8a01.json",
+   "bytes": 5617,
+   "sha256": "33c09a4b4b8fb60bf4bc9bddd559cb4587e2cf0314cb53dca7bc3d9191342b8b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/best-monotonic-6a82e2c9b99b8a01.mp3",
+   "bytes": 103104,
+   "sha256": "7fa5c159b7dc04566c56a54fb0cd39a6310d6a04fe84b15b064e7a214544d967"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/budget-design-37d53923a6a7e00b.json",
+   "bytes": 5496,
+   "sha256": "d8ed562b35228fd43742230a3c545599d4eda2a8372f72b093e0ee63a3a87b6c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/budget-design-37d53923a6a7e00b.mp3",
+   "bytes": 99504,
+   "sha256": "bab5a28c1b094a349534407ffe76ea155533e36c3d92a92089e7d590caae490b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/components-952331cb4b9f0f31.json",
+   "bytes": 1727,
+   "sha256": "ac80bcf516976652c46f04dac7720c440eb8857a4502137f97196e26b8da3849"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/components-952331cb4b9f0f31.mp3",
+   "bytes": 31104,
+   "sha256": "8bccb65ae0db2972e0650ce31f7f3082320cb6c178c607c17bb29e8af1e63589"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/delta-6a6ae98fd68db7a2.json",
+   "bytes": 5764,
+   "sha256": "bcad8f39ec16ea525b3b4b79fd48baf03da2e3861d6942b7019ba3e95c30bdb7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/delta-6a6ae98fd68db7a2.mp3",
+   "bytes": 99648,
+   "sha256": "eda01a82f0ef5398e9ceb97dfb7bbd8c2194e56702e0c774f5aadaa3c4b54233"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/equal-budget-529b0e7bf3b5b79a.json",
+   "bytes": 7613,
+   "sha256": "ea84cc21348c273ded664c49ddcf3f98ffeaafe5cbcd1870640ff8fa546cf389"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/equal-budget-529b0e7bf3b5b79a.mp3",
+   "bytes": 151632,
+   "sha256": "e3cdbefb7810db52dd622f4cb3b7085da6163ed276bc665e263164ba11020ee6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/equal-budget-81f0b366acee1925.json",
+   "bytes": 6568,
+   "sha256": "c572a97e54cbd511b4944543873b303932efb40b9e7ddd7af2175b7914a47feb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/equal-budget-81f0b366acee1925.mp3",
+   "bytes": 126864,
+   "sha256": "c2b96e5e74f2320f97ecf26f20aba7b66a4c59afb2a063c58a5d5645065b6804"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/intro-preview-3708e6206eb21248.json",
+   "bytes": 5496,
+   "sha256": "6d2a9d64d2309673aa2778dd852eac478bb6acaa71eeec5cffd9cedb4a1d1ec8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/intro-preview-3708e6206eb21248.mp3",
+   "bytes": 97632,
+   "sha256": "4f3cdeb566f8a735006e3dce8701a17821a8e7a0b57bb489877e9d86578e3aa3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/intro-task-b9045c574722f964.json",
+   "bytes": 5579,
+   "sha256": "3ed5c83d481239944f4519410307631e078b652ed22c8f13f63565789aa1bb64"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/intro-task-b9045c574722f964.mp3",
+   "bytes": 85536,
+   "sha256": "487b2c095c10980e1e901001fcac4b6b0e7d07c4e2b80ea23e826496a3b30712"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/intro-why-180aa63391e44844.json",
+   "bytes": 7163,
+   "sha256": "18e34d5c834be51688b476f927bb1f6860a10e06349dd9f2be74cbb8cd40644c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/intro-why-180aa63391e44844.mp3",
+   "bytes": 114336,
+   "sha256": "1eb7edb4df7df05bb6ab7afeca3133bae0b2e2818667ee73a3b6fc074f5db8b4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/log-fields-30bf11bf4f00334e.json",
+   "bytes": 6245,
+   "sha256": "b3c134727f33b4ea301033950dab79e34eee2b2859c7cdd517a5694172a42a2e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/log-fields-30bf11bf4f00334e.mp3",
+   "bytes": 108288,
+   "sha256": "275decfd9fc3d27a3c9b5265fbac571d94f9bb2415cb10d6caf0673db1745014"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/log-fields-58cb8b55f92397b8.json",
+   "bytes": 6257,
+   "sha256": "5d272a2de7d7d9d8f61f2d8638ff4a99e79874b5ddfb42f9cb85396c95768a48"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/log-fields-58cb8b55f92397b8.mp3",
+   "bytes": 107136,
+   "sha256": "5f63810187fc23d8130ea8d894f4922f99941d56d66877c817aca5c9d9e02c71"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/neighbor-swap-74d80255328ffe24.json",
+   "bytes": 6125,
+   "sha256": "fd8a68135ad994f8eb128dd789c7326c31a99947aade59bb9709bc0a03932e1d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/neighbor-swap-74d80255328ffe24.mp3",
+   "bytes": 99936,
+   "sha256": "2d4fe459acdf6e2010c03d74d3c635e20a9641ee8747cb17ef3b0a41a4a9c786"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/penalty-12f12dcadeacf893.json",
+   "bytes": 7044,
+   "sha256": "3844c6846eec2926b33f3b632e59ad741862a26f24b17aee96d85f549c1db2e0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/penalty-12f12dcadeacf893.mp3",
+   "bytes": 134352,
+   "sha256": "734f747b271c36667eb897b17dcc683ffcf92b37b496a9bb9428534a72d9c221"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/probability-82732fd0afc54428.json",
+   "bytes": 5857,
+   "sha256": "ed424a192ccad7e91b06eb711689607fe92efcebcb35b48b65fcad038ac9d97f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/probability-82732fd0afc54428.mp3",
+   "bytes": 99072,
+   "sha256": "24ec108ebd3dab948f32093a7ebf245aafb7a5a6efaffe473ed4004c45872d50"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/reachability-e17581906f809941.json",
+   "bytes": 6773,
+   "sha256": "ad219b4935f4db07a569d84822d6f294fdbb66c4f4af99c85e23e24cb96f962e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/reachability-e17581906f809941.mp3",
+   "bytes": 107568,
+   "sha256": "75b1e07454618fa9a1514abd4ecf65c5c4a6596fda56bd5938123f8b64648cc1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-accept-184a57b5f1a8c4be.json",
+   "bytes": 5589,
+   "sha256": "ca1895374de12a21cb3edc8fa6d343c3f03a551aef76b61c91cf85b79b4f96f3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-accept-184a57b5f1a8c4be.mp3",
+   "bytes": 106128,
+   "sha256": "c48b723daee3f98d29d58273e4d22e1d1236edfe2a785435aebae12242ea74bd"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-accept-446af0ee9819f3b8.json",
+   "bytes": 6070,
+   "sha256": "fd34b3fbc2aa852cba27693c37e254193e776bd4756704f36db681761a502cb3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-accept-446af0ee9819f3b8.mp3",
+   "bytes": 117072,
+   "sha256": "33592c8e25290ac2ac819200e968661f45d2ff0ee25d3f4aed607fc14c5c1311"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-reject-0c42db7d5888b1e3.json",
+   "bytes": 6736,
+   "sha256": "6ac7842cbf4706bb743278bacfeed14cfe83b540177a2c701ea2e886ae424df8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-reject-0c42db7d5888b1e3.mp3",
+   "bytes": 120240,
+   "sha256": "3737d2cb30c3b7f36da359cb3a1c5b7c7f6a273ca1db55f2c5ce6bfc8900d18b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-reject-f22195ed2897d2a3.json",
+   "bytes": 5540,
+   "sha256": "f9dc7cdf1035e16b45b3a14dfa6e981fced9eb261a3c535b916d26a77ff20602"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/real-reject-f22195ed2897d2a3.mp3",
+   "bytes": 105984,
+   "sha256": "f9f15844505c83ff200e12e47a0c5e575ea3ca8567961de79e300b9bdcf124ee"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/reproducibility-7816de97621d1137.json",
+   "bytes": 6396,
+   "sha256": "92354824b92d557b93bdc9b432710b81415c20a2a4dfe6cf74f4a6a8707ebfa7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/reproducibility-7816de97621d1137.mp3",
+   "bytes": 121248,
+   "sha256": "53eb04c5936eecdbfff577e2ceb9ed3986497a92dc62d047a347414edc86b1b1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/reproducibility-cad1ee58078439ee.json",
+   "bytes": 7066,
+   "sha256": "1b9140b2c0d808a1c4787ff7f3e2f2f93eec163a13d1120831485233fb6fb62f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/reproducibility-cad1ee58078439ee.mp3",
+   "bytes": 120960,
+   "sha256": "87204362dd32252efd4d11d03e157e9c462a4e1edab244b719fefa63e07badd0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/temp-predict-f57dbc82834842b0.json",
+   "bytes": 1968,
+   "sha256": "b140f95300a187502af8e68f0cd07ff242c50964c4f0ae9113a2c2248f2544e7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/temp-predict-f57dbc82834842b0.mp3",
+   "bytes": 32256,
+   "sha256": "6c3bd762d8a44fd1f6310748af2eccd25eaf8d6cb01b5a60291e446f12429042"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/transfer-446202dd088c3b25.json",
+   "bytes": 4416,
+   "sha256": "3a1016552447e28c6723fbb2a8e781f6d1e15b246a85369423dc0515b78c1147"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/07/zh/transfer-446202dd088c3b25.mp3",
+   "bytes": 68256,
+   "sha256": "16dcafb3b28ba97b33682d82be8893d443f59d042cdb78462d60b6c4764d4931"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/backtrace-877f78b3d369281a.json",
+   "bytes": 3605,
+   "sha256": "db52f60ca27eea21f1e648c81e0c620b9ddee390aa6ed8620dcfcc4ea04be272"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/backtrace-877f78b3d369281a.mp3",
+   "bytes": 65808,
+   "sha256": "03527f8677c11d3e692e93a2fb20099fb8c65ab02cfb0b8a64cc8ba98532055d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/baseline-read-2aac8e0c2e8f3a86.json",
+   "bytes": 3672,
+   "sha256": "411f7dd9b84d5ec56a56a3d5ff237fe94446db3a077b2cf660808cfb9fe3a801"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/baseline-read-2aac8e0c2e8f3a86.mp3",
+   "bytes": 66096,
+   "sha256": "0e06e3f657a49b275778d6ed1855a2d8e24590ae08275735c132b43768688a99"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/bottle-edge-a9454eab7bcaafd2.json",
+   "bytes": 3257,
+   "sha256": "6f559af5a400616702c07046fefc8bdab43d0378351bb2f9544487c354741b90"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/bottle-edge-a9454eab7bcaafd2.mp3",
+   "bytes": 48960,
+   "sha256": "d3aa6dc7804b475b5c118e76a2fddd2c85cb353bee0326d264c5f62b8e5f2cd3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/bottle-predict-7005c5a332d84941.json",
+   "bytes": 1591,
+   "sha256": "5cc1200d11285a419bed48d8fd7c5bb32750b21835adbce114a31705b31429eb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/bottle-predict-7005c5a332d84941.mp3",
+   "bytes": 23760,
+   "sha256": "bcd240ca0b08b034a456d688798004a1809c125b3ee97592569013c222f95416"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-bound-4addbb355c1a9583.json",
+   "bytes": 3177,
+   "sha256": "f0846ddc624d2692f7dae7457093c0b5531e60b44ee98588a168afee9ecc160f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-bound-4addbb355c1a9583.mp3",
+   "bytes": 54288,
+   "sha256": "2ec909781a6895c88545e0f51478c21ee5c4e983812715dd830068be646b589a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-filter-7db27816bc1ac650.json",
+   "bytes": 3125,
+   "sha256": "6b61670cb1b84ed93d7ddb009d6b5b23b2102df4b01121d841f5f3ab9e7db615"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-filter-7db27816bc1ac650.mp3",
+   "bytes": 50832,
+   "sha256": "d8291a4a3453d74df0e73485e6e392ff0cd4e0eee4a438e5298487269ab35e7d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-height-0b9dabfa3c7d6409.json",
+   "bytes": 3148,
+   "sha256": "709c9c7c3ea8fc639d9686ea11c93c610ee269f07d384daf091da968d1d2ed5d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-height-0b9dabfa3c7d6409.mp3",
+   "bytes": 58320,
+   "sha256": "9f0be7357911c21e33f56cc93d8ca41d80f582eac56893414b5c5db8b730f919"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-model-1d0cc487507fd212.json",
+   "bytes": 3578,
+   "sha256": "3f9d58e479dff4e116d1fc962e04e2d4616bc35b558b004eddcf1111874ae68a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/couple-model-1d0cc487507fd212.mp3",
+   "bytes": 61056,
+   "sha256": "d0d30a9b144d77f62daa230bb9e09d96cece80cfb691d6261cb1a027829911fe"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/finish-0897556b1a8d2bfe.json",
+   "bytes": 3196,
+   "sha256": "d7a3e7ba504bda79747ac1f0187e8ba2d7d03dc8789cbe0591d64de6dd50f90c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/finish-0897556b1a8d2bfe.mp3",
+   "bytes": 53856,
+   "sha256": "b1909c73196b6fe61cbfd939092c4b229e5c0c36f4943bf96c7031e03b726181"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/frontier-keep-58411c5a987abaf7.json",
+   "bytes": 6958,
+   "sha256": "f88652ede1e90c3da92ee5b879b69a5d32175b3517dc7706dce54c4304c11c3c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/frontier-keep-58411c5a987abaf7.mp3",
+   "bytes": 108000,
+   "sha256": "03c43718e5fa781672a4cd249b982af0a9b2b183c8c1dddde815725daa562e59"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/grid-f869695bb0774814.json",
+   "bytes": 2424,
+   "sha256": "38932d3e0d42387229f67a40de4b8e2c9f44ed5368372b6ee474d17a13bf10e9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/grid-f869695bb0774814.mp3",
+   "bytes": 51408,
+   "sha256": "14f8afeeb57266c11c5552fe9f7cc64dadd6798613d25d56d06e537ff97e80e9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-course-a4b0e0bb0334bea1.json",
+   "bytes": 2012,
+   "sha256": "e50f4fafd885e0d3b4756a405c9e990f6a54eafc4565d55bc841d2afdb1e9305"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-course-a4b0e0bb0334bea1.mp3",
+   "bytes": 38448,
+   "sha256": "2ebb3d6487b87caf1fd0ad300b1364e51a38a5fb13eea2dbe030903c41f46f57"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-preview-3f58d64cd60adc4e.json",
+   "bytes": 4770,
+   "sha256": "ff6bc480228d65ebfbb38e52614b06c53b2c407d0ea335fa803f9512f90a1ea0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-preview-3f58d64cd60adc4e.mp3",
+   "bytes": 68976,
+   "sha256": "1d0c4f1ca18ba5428e7ed4530dc7e5542af62bcc7bc8a969ed71336f170e0715"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-task-c52f81720330cff3.json",
+   "bytes": 2678,
+   "sha256": "752a2b1ff9b1b1623339d3f2b76a3ad0bdba11a8ac2ebef78add290a914f3656"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-task-c52f81720330cff3.mp3",
+   "bytes": 47520,
+   "sha256": "6720e494d634602eb9744b31fb341958aefab05d6d5ef0decef3c1221e77ddc0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-why-7dbc886486325747.json",
+   "bytes": 3573,
+   "sha256": "0b4e73b354ac6692cd591d5d3b3b7b7d801d6b9ccb0d74ba633f501a2b7f8d2e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/intro-why-7dbc886486325747.mp3",
+   "bytes": 62352,
+   "sha256": "9beeede56e765981478e209b9117e28d91589eb63a58d0405ace46cb9beedbce"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/joint-search-2b675469e80a4d79.json",
+   "bytes": 3665,
+   "sha256": "342311b3e70bb66af99c3d2a9e1a5c040df7c78270c7a0ad45c9fd17f26b8d7b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/joint-search-2b675469e80a4d79.mp3",
+   "bytes": 59040,
+   "sha256": "af413a58bf67440a49225714a31d9c440a50d3b48751be71ffc8ac158b3b68d6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/metric-box-946c68206437305b.json",
+   "bytes": 3079,
+   "sha256": "206d05cf2c93255d7e09df8410180c37528dbae2720b4ffed5abd790b9f6fe7a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/metric-box-946c68206437305b.mp3",
+   "bytes": 51840,
+   "sha256": "33d2ece1dc11f7a6404f88b35ec27095d015aa2b5e37a340e290ae969951c95a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/metric-fixed-a9675ef06638def0.json",
+   "bytes": 3065,
+   "sha256": "d87ff250152efd6f6ad0627c7f8199ba16b21b01bf015637b80ad2bdd69a719c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/metric-fixed-a9675ef06638def0.mp3",
+   "bytes": 58896,
+   "sha256": "693c110db74545be14158f5ce5c84c4cc679a4865cc81fcdc4d1a0862f0968f6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/multi-shapes-4190e753495888ad.json",
+   "bytes": 3740,
+   "sha256": "ee6be0ca2d07d0ae870d15850fec251a124b18cf3da0105a3fbedc921efd88f4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/multi-shapes-4190e753495888ad.mp3",
+   "bytes": 57744,
+   "sha256": "0c82b3f595ef982289974e463c87eb12d41cbd46780752a6a6ba50e9dc9ba919"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/outline-filter-288248128e6db2c4.json",
+   "bytes": 3493,
+   "sha256": "b3ad9c6a8f09cd0a647fb322b046675612a4b2c5bd5cf77aab33907172b33a19"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/outline-filter-288248128e6db2c4.mp3",
+   "bytes": 73584,
+   "sha256": "de83c1a0aeb1c2e74749397e89df07be4754c1520dd9e5f237df86ad10bc9675"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-area-949d63a7f1d29a1d.json",
+   "bytes": 2356,
+   "sha256": "ecdd2da83af59011373dc2e107742ea313a0ba76518dc3477783b913e95d0b93"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-area-949d63a7f1d29a1d.mp3",
+   "bytes": 39456,
+   "sha256": "d061098a46e7627c9cfd528d2e4e414b41950e491aaf3db8089e309d3a01170b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-change-3b98b20ae17e353d.json",
+   "bytes": 4108,
+   "sha256": "bf2967ac4771e1f0ae0adfa39f3b037dc6f9ee847ac25d4d79aecbfa39f47c22"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-change-3b98b20ae17e353d.mp3",
+   "bytes": 61632,
+   "sha256": "70cd443a3112673704a236fd4d00375fa9141d1f44a73d5216f49a320d09b677"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-contact-e3f0ff04e7fda180.json",
+   "bytes": 3308,
+   "sha256": "30b500adccfdf5ba2cf6eefe6090f53607261f6d0086df60d97937c4c64ffc7f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-contact-e3f0ff04e7fda180.mp3",
+   "bytes": 56736,
+   "sha256": "cc6d262f520566e15fe2bc596ff424e31a9889eac68cfafa0880eec324e069b9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-predict-487cc58849e60122.json",
+   "bytes": 1987,
+   "sha256": "73a91850673b8ec20f998a39a66f17f04bf7a46a8e4f564d51138fc63eb4c1b2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/overlap-predict-487cc58849e60122.mp3",
+   "bytes": 34416,
+   "sha256": "b36412b747fa20b1bceb6febfb88b3e65f1e9435fd63d978e22fd622bd341a36"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-area-881f81f41397177f.json",
+   "bytes": 2508,
+   "sha256": "97bd426ae1e29636c17afd48ff34bd263f99e68857e053033988a42dc55e8787"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-area-881f81f41397177f.mp3",
+   "bytes": 42912,
+   "sha256": "b66b2e6b29c442e36b5908f6b4fcaef26624329c36009e42fed5ffe36b169217"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-continuous-6e660047c5e14a3c.json",
+   "bytes": 3460,
+   "sha256": "2867e977a32d1d6631ed8d8cb7e8193b51c84b14312e827c6dfcd0a4bec330dd"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-continuous-6e660047c5e14a3c.mp3",
+   "bytes": 64368,
+   "sha256": "d51f3a3d28f66a6352a77394c50081c95fe19a821de4ec68e65b9c0adc499518"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-exclude-c17b71df22e69e5a.json",
+   "bytes": 3052,
+   "sha256": "da4ed583bc03ae05469872ef4c32ad71e8f8b6e1ba332c462abcb393bf9eeefb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-exclude-c17b71df22e69e5a.mp3",
+   "bytes": 51552,
+   "sha256": "6a7424f9a75c9e527812c10bdc594f532af2993a28b4e3c943467e4cde0bc169"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-integer-ea2fb483d729888e.json",
+   "bytes": 3298,
+   "sha256": "4c2e9603ad9325995b9a47d9b388d652dc4e95d6b0fef9b49a15c796c2ff6bff"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-integer-ea2fb483d729888e.mp3",
+   "bytes": 57024,
+   "sha256": "e4490bfff8e10ecbec58c306e25cad0ba1dca720c4f0ac375109b6affe9b49e6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-limit-af5dd84e8ec19d71.json",
+   "bytes": 3176,
+   "sha256": "24badd67e4417ef09765b5c2dd7e3c8bc8839430ffd4f56fa06e50b9185f88d9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-limit-af5dd84e8ec19d71.mp3",
+   "bytes": 56016,
+   "sha256": "330fd01243eb579edb3a6a460979f793b0b2161000e998db4d34913fcd2b8673"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-prime-92ee99b8d5da6d27.json",
+   "bytes": 3554,
+   "sha256": "b2a8ee29ba1c3dbff1596702df060a2432d22b116032a416f0d4e92427f8eb2f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-prime-92ee99b8d5da6d27.mp3",
+   "bytes": 57168,
+   "sha256": "02b22809d95d35eb6b028f1ff0cffd126340efa3a770cfadc8bb1372126efe44"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-witness-c96b8f00068b9f0b.json",
+   "bytes": 2915,
+   "sha256": "0d018c1e085bc7998c5ebe253ed2b41516287065e21ccc733b4076ca9a6eed2d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/proof-witness-c96b8f00068b9f0b.mp3",
+   "bytes": 51840,
+   "sha256": "3a3a40f6fcdac3c4fb766d4929f1dc0742cb778d367bd6874319e7efb2c08598"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repack-B-4be4bd7cc3357c9e.json",
+   "bytes": 1845,
+   "sha256": "15dc4fbf9a8c5d177b99b29ea68e1681d72742654a690cc47067e730af3993e4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repack-B-4be4bd7cc3357c9e.mp3",
+   "bytes": 28944,
+   "sha256": "70a63fafe2518a67cf8b290ee1e94441fe5c893f68e5c33a4cd809016b92b6d1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repack-C-fd39dc6a6aed2164.json",
+   "bytes": 1828,
+   "sha256": "0ee5d88b9cf41d944e131dcf13a4ceba44c552a40e8827660e63f1942550df57"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repack-C-fd39dc6a6aed2164.mp3",
+   "bytes": 27216,
+   "sha256": "122203b675521c32ccd66a5d3c1bfa45910f6519831a913a9883c5e036e8fdca"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repack-D-141cf1852e85f90c.json",
+   "bytes": 2603,
+   "sha256": "48a337e7278ea1afddb10ab59987bed6367d7b74ba4cb2abbb6efcb8b84717df"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repack-D-141cf1852e85f90c.mp3",
+   "bytes": 45216,
+   "sha256": "63dd6e028dd661022ddc5680d7e35c901b5ac7803f6c1d6cd0a7ad5c054b5080"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repair-score-2aa64e40792874b6.json",
+   "bytes": 2799,
+   "sha256": "93d16d8af0e979466c593c2817ce4e0430d20ab30a76d47eb1702dc7b09c9ce9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repair-score-2aa64e40792874b6.mp3",
+   "bytes": 55440,
+   "sha256": "2b57adfdbd9529f2d3b53d691c9dcf2775530bdf7b020e4521ad431c0ff254c3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repair-side-9ff20f693af37910.json",
+   "bytes": 2626,
+   "sha256": "cbcb3265b67ff6e5ee5bb19258331ebd89307dc4e71acda79648632db8615bf4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repair-side-9ff20f693af37910.mp3",
+   "bytes": 45504,
+   "sha256": "6e8b615b96ee70fbb4a9793fa0d27d02a8c80873083276446eb6c3bafe39cb2a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repair-up-064b666eeb339bb8.json",
+   "bytes": 3005,
+   "sha256": "168b21b27eb9d8d5cb481645ffac32a8515e6b4aee3659671c8b6f45a7d8ebf1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/repair-up-064b666eeb339bb8.mp3",
+   "bytes": 54000,
+   "sha256": "988fae4d976cf81aef34af31dff197ae97f54b20bc07b26a9ac3743814a1ec14"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/scope-d0ae2f07e4715823.json",
+   "bytes": 3558,
+   "sha256": "cbae81b4d84c1cf54bec86ba4067744a30a8e6855b4f9fe4a4c6f697500cd5ef"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/scope-d0ae2f07e4715823.mp3",
+   "bytes": 63216,
+   "sha256": "17a5b0e2cf3553be4459da6f7dbdf3cf7cf3814968efb346301af7864c800f3c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-D-8468cd9958021870.json",
+   "bytes": 1579,
+   "sha256": "e4673970ef5b651983eed8c8242626eb7a2247df7a45d6adb4ee5f8d2e82a391"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-D-8468cd9958021870.mp3",
+   "bytes": 27936,
+   "sha256": "05b4ea0b04230f16cadcdd7bb6304b871b5f43fe000dc668499001a0a959c89a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-E-fbe68b99bc6f701b.json",
+   "bytes": 2867,
+   "sha256": "fb09ce855f089d5cfe8668313e9ca6ae87ae1b47869a30ef8eff1a17871d445b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-E-fbe68b99bc6f701b.mp3",
+   "bytes": 47376,
+   "sha256": "50ded652b8d26d00c248ab0e17f17746630370438eac24188293292dc782b457"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-path-85764bbd461980f9.json",
+   "bytes": 2532,
+   "sha256": "4e5369b8bb8572d6a8330f682f60fd5c75a8390a03420bd78c1e76032fa1e71a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-path-85764bbd461980f9.mp3",
+   "bytes": 46512,
+   "sha256": "a7e0dfb13520f35ec22f6458179bcb141c73ccf9b5edf861255cc4ef5955346a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-swap-873973a9fd1c236b.json",
+   "bytes": 2966,
+   "sha256": "9a6086c381aadff61eb9a89975ba987ba5d3f800c1831321b5abaa9989f41995"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/space-swap-873973a9fd1c236b.mp3",
+   "bytes": 64656,
+   "sha256": "8a68f8ea80264bcf8a43c7014ab78c0b0872270368d342d7d5ef5276d8e715d3"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/three-config-ff706eda980a165b.json",
+   "bytes": 3799,
+   "sha256": "8c40101b2236bb70b4a6aeb83aefd27f15e5feea670a41aa33e7df219b78a763"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/three-config-ff706eda980a165b.mp3",
+   "bytes": 82944,
+   "sha256": "0a550e9b5d2b0996847a3369c124f24a44b7ba67d8c03bfa3b577e46f4ebb916"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/transfer-85d0f2c7a304deeb.json",
+   "bytes": 4809,
+   "sha256": "05e286fd902703e24062d672290e20a33ee493c768323b670d09acb108466a97"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/en/transfer-85d0f2c7a304deeb.mp3",
+   "bytes": 72432,
+   "sha256": "9de866b9e8e0d7277cf99a4bac2cdbac284d1fd734cc2b04f07b7c27308e92de"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/backtrace-a90713b1d9f73425.json",
+   "bytes": 2859,
+   "sha256": "40e91cb02bd2c093eef07abbe3ee0772404218c2f6732258c03dc3d56eeece37"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/backtrace-a90713b1d9f73425.mp3",
+   "bytes": 44208,
+   "sha256": "21989496015f7d4d57df06c7272bc05d1a15fec447d141fd8891eeaafca92735"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/backtrace-e82c84f22a83a971.json",
+   "bytes": 2869,
+   "sha256": "364965d39023a0ba48abba92231464cf407a4de52b818e7bc627fb9f56ab87ee"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/backtrace-e82c84f22a83a971.mp3",
+   "bytes": 43344,
+   "sha256": "a0f18d925c07640bc658818cc40c973170c96de9aa8553285a51c5c950fac871"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/baseline-read-af72b2a36197e087.json",
+   "bytes": 2269,
+   "sha256": "22ee4c1db4a9b9c7d6c6dbfe7f9eacc01cdb7e06ff98d886b9a494c19d155a8e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/baseline-read-af72b2a36197e087.mp3",
+   "bytes": 46656,
+   "sha256": "e406ba3190dd2f396b62b0389fa5bf97f5511f89cb7f66a5a8ffde6e5b462630"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/bottle-edge-606bf1cc12d8c201.json",
+   "bytes": 2716,
+   "sha256": "44fc55fdfc947fdf69713a6f0c2a065f606e136f3c65833baea08cb473893fa5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/bottle-edge-606bf1cc12d8c201.mp3",
+   "bytes": 43344,
+   "sha256": "62006caaa95196240715a31c4217e9d0f2af681c126ec0b989776e373069bcdc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/bottle-predict-94f3844c5dd82840.json",
+   "bytes": 1199,
+   "sha256": "089804870677bc02e241322dae6319a5ebead521d682e584e74783a3f2ef9c73"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/bottle-predict-94f3844c5dd82840.mp3",
+   "bytes": 19152,
+   "sha256": "8851df15582dd4670a467ecb4d24c27dfce4642e0454740dc1bc95ee3a924018"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-bound-329b47a3fa35c4a5.json",
+   "bytes": 2740,
+   "sha256": "9d58009fab37cf0a34819beeab7f125220a0773f270be045a1b00a5265e52608"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-bound-329b47a3fa35c4a5.mp3",
+   "bytes": 40176,
+   "sha256": "4ffc48d945a34cabd0445f1e1877947dabc5d4729605061dd59d7b3112303fd8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-filter-d57de37b85f18e12.json",
+   "bytes": 2600,
+   "sha256": "250d30a512793e1cda30d696215bd5b14ba317458d490aeb605c15a3c1812133"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-filter-d57de37b85f18e12.mp3",
+   "bytes": 41904,
+   "sha256": "901a1023e2410940dea84ab9e25a8c08919f0bc104797cf1e1a148f93d6d493e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-height-668f1ce34d59e2d7.json",
+   "bytes": 2372,
+   "sha256": "4cdf15aa56f7cee209dc12cfee9961f2c57da5d4a3fd29be5c2036c92360a186"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-height-668f1ce34d59e2d7.mp3",
+   "bytes": 42912,
+   "sha256": "62244ab8ce3810e2779f104d767d55d8288e159b7d5c84a052e0b9f1c2fc6c19"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-model-f0fd3a4d33de1dbe.json",
+   "bytes": 2767,
+   "sha256": "cb41d13330b0becc5632a245be8cc953ffa77e0f567ccb2a2c0d240a0fff6c62"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/couple-model-f0fd3a4d33de1dbe.mp3",
+   "bytes": 48384,
+   "sha256": "6f7b2472a62504e95aac7cab6e4cff1cf0ae00e1012dd7dd31c40b4b2eaf046a"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/finish-7ac6a622f9d45eb0.json",
+   "bytes": 3494,
+   "sha256": "2b45510667e7c663e4988db8356a118f544b0b3cd23210066d6a1bccae1a2b90"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/finish-7ac6a622f9d45eb0.mp3",
+   "bytes": 50400,
+   "sha256": "24f79b6fd3a192c9047e93348ced1e58c9cc25f41e6a1fa5cc0d6c32ede8e892"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/frontier-keep-1cfdd252e148906a.json",
+   "bytes": 6604,
+   "sha256": "222cf630e76bbd37cad04bb991ba672535c897a5e8723ec2445038b6b35da26b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/frontier-keep-1cfdd252e148906a.mp3",
+   "bytes": 115056,
+   "sha256": "96e820c04a7ec437e29df9f0fb5acef33077d5d05b38cc3e356ca5ad7c558d39"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/grid-3b7db01c0a0e18d1.json",
+   "bytes": 2853,
+   "sha256": "998390cf5b57bdf46c0d418f21614f4e3637b7c30babe1e2c07bd4bbb31089c5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/grid-3b7db01c0a0e18d1.mp3",
+   "bytes": 42192,
+   "sha256": "ac8aceecb55f01eab090b915859cfcab5e9ec18efe7bc184bc8a71d4403e1996"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-course-d5132a0cdd924de6.json",
+   "bytes": 3227,
+   "sha256": "66d5d588b62d512f93db8f220f7db4af2cdee33c99555a5eaefc803236a4a04e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-course-d5132a0cdd924de6.mp3",
+   "bytes": 48240,
+   "sha256": "c314f23e47642666c214374550e1aab950f00bbd035395ea21cc0172985123d1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-preview-d25880e454620e60.json",
+   "bytes": 3501,
+   "sha256": "bc5946d4f630d93e6d1b4d91c6933396044577b21282e6d2e27ca6876ea509e1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-preview-d25880e454620e60.mp3",
+   "bytes": 56160,
+   "sha256": "0ea6ebfb1efea4d6bd6337e272fbe4ffae8455911f2311ba233011a12d625e15"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-task-d14c91ac2678ffcb.json",
+   "bytes": 2893,
+   "sha256": "8ee3fb64adfbc8f23379bff23c72cd6a7b7831f3ef8ddbd623bad9a03c919f06"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-task-d14c91ac2678ffcb.mp3",
+   "bytes": 52560,
+   "sha256": "3b2714ab2b740cc2d5c6cb468017df53dd64d259ad28f72b3c8b3c6d6cf7fb3d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-why-53a0f562f00bc0cd.json",
+   "bytes": 3153,
+   "sha256": "4b80a1fed8fd0d548911656c210b966ce5c74bbb0fb76136b0f0675e1f5bf130"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/intro-why-53a0f562f00bc0cd.mp3",
+   "bytes": 57168,
+   "sha256": "e4d22bc40716d76622f6e4e43fa36b02f2276a99d8047062272bf583ae240f20"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/joint-search-013f2b8f26708d4f.json",
+   "bytes": 3001,
+   "sha256": "b8c60545b76e22f14b3ea117c69b6a3e34e47e330ca54661ca40e089cf8f28ec"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/joint-search-013f2b8f26708d4f.mp3",
+   "bytes": 48960,
+   "sha256": "a87516a817897174c64517c20717c3353d15ddf64c08d5e60836f7a8b746d336"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/metric-box-ed107313d3b47910.json",
+   "bytes": 2303,
+   "sha256": "7517d4247aa6f9a38138185532b45ab09b8669581e0a4be477a0dbcb0e229f9e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/metric-box-ed107313d3b47910.mp3",
+   "bytes": 49536,
+   "sha256": "04958375f202ac53c762bd5e86885b5729dc5ca662119b5cb4c83e18ed0f766d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/metric-fixed-a1555263d91e2665.json",
+   "bytes": 3268,
+   "sha256": "90683c5062d0fe9547e6cc4e3726e88c5ed3d727fc830d2e0663a67f2435482f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/metric-fixed-a1555263d91e2665.mp3",
+   "bytes": 55152,
+   "sha256": "d3988feae4fa6860adf08a6041c927836a9faae5c6ad2a0fb005f53a2b57f63e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/multi-shapes-6d27274209baf40c.json",
+   "bytes": 3097,
+   "sha256": "13218603015d27d08dcb97976d0c60adfb15848d21eb2d3a615c740ecf267c91"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/multi-shapes-6d27274209baf40c.mp3",
+   "bytes": 49248,
+   "sha256": "002150b28b5c702c00939bb5528b3f9890d4dca823cffacff9d85a2ef228fc9b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/outline-filter-8b25cc7e3806832a.json",
+   "bytes": 3239,
+   "sha256": "891a107a709b171816eb2d388bedbc380ee4119d8c1f41a364074509a00c3bad"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/outline-filter-8b25cc7e3806832a.mp3",
+   "bytes": 60192,
+   "sha256": "17586d42c9f886cfc9c6f8b98e49b8652fe9164379ddc73d6b652436f7d81bf5"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-area-270097c56917a3f5.json",
+   "bytes": 2113,
+   "sha256": "cee909afff4e3a4d4f26ba8ab8d0063907c6de0129c205fdd9264affb795dae9"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-area-270097c56917a3f5.mp3",
+   "bytes": 40896,
+   "sha256": "db7e12494ce1e9af01f5e4c49290c8e209cb3362975bd9fc51c998393b8a7f9e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-change-c3c91995f97c0675.json",
+   "bytes": 3734,
+   "sha256": "ec9361b468aa5f5f037b6fccc632a0eaeab99428b5f391c2fbe8354ce658c3cf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-change-c3c91995f97c0675.mp3",
+   "bytes": 58608,
+   "sha256": "3561af4a91c2cbf2b494eab85f26daa737e4b175fcd65fdcbb6d79f35eee61fc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-contact-500462950bc7e0c0.json",
+   "bytes": 2748,
+   "sha256": "0df4947163bbe64c84ba58af3f451aedc482de5e32ad2ba0baece40778cf4cae"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-contact-500462950bc7e0c0.mp3",
+   "bytes": 47520,
+   "sha256": "7097525339a020e67d60fceabaa3d4ab78c5ba4d3acde7a8c59cea6d8e05bc1d"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-predict-3d029d66288aa5bf.json",
+   "bytes": 1849,
+   "sha256": "a0c52dc4ed86a4542289d27562e0b73cd3b5d2792f92af484f824a4e3a7685c7"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/overlap-predict-3d029d66288aa5bf.mp3",
+   "bytes": 34128,
+   "sha256": "f30c0e4795e06d33e30d13268f87d602d8488267f6e2299c30891ba55ad70d45"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-area-6e68d996890f9886.json",
+   "bytes": 2757,
+   "sha256": "1c17a9c01846a54ac3e4efa771b0f46f3b4b5859a9b46c8a704d0e503d6b3590"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-area-6e68d996890f9886.mp3",
+   "bytes": 45648,
+   "sha256": "ace0fad8ab202879fa2a364107847f96b94f048ff44506f933bd241aa2fc7937"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-continuous-bb4c30eb7a37c2d0.json",
+   "bytes": 2396,
+   "sha256": "436ad1b1694374a1d9a5fe18e31a8ecb86aac4e67dad78c5e9a15df3f34b1709"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-continuous-bb4c30eb7a37c2d0.mp3",
+   "bytes": 43920,
+   "sha256": "60704bf42f2b9a3b9056423ac23cb5b63c12615c40f1acb33dba0cfa1da869bc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-exclude-65d982a2a50dfe42.json",
+   "bytes": 2498,
+   "sha256": "9acacc66e966f70508835b7b185e17259d26d120bbe9c086a7d9a40fcea8881b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-exclude-65d982a2a50dfe42.mp3",
+   "bytes": 42336,
+   "sha256": "56e82b0ac834112c4a6fd42b2397014d4174a8ddc6ee0d50d820792a46396f2f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-integer-2f543ead08873f99.json",
+   "bytes": 2386,
+   "sha256": "e05a05c89a4f6b5275839cece23c72a0d90e6fef686e51481d568141680289a2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-integer-2f543ead08873f99.mp3",
+   "bytes": 47520,
+   "sha256": "8c1176b8bc67b30bf0bdd1183e7aad1f1ea457ae204d5c0f339b202861bee715"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-limit-b6fa3595cb14a9d0.json",
+   "bytes": 2995,
+   "sha256": "d316090439d998ce2ed6338aed54dadc7173a2f856759a978fa4316f113dd0d1"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-limit-b6fa3595cb14a9d0.mp3",
+   "bytes": 45936,
+   "sha256": "4f422b0e16f1078017b6b85bde4ca78c2c45b3886ee5befd67857de117ea4034"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-prime-a5805229f8dfb77e.json",
+   "bytes": 2521,
+   "sha256": "ad333f009c26f046dea7e6468f1bc595adc8df4eef9076a479d862a923cdd15e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-prime-a5805229f8dfb77e.mp3",
+   "bytes": 44064,
+   "sha256": "4f0bf13e387894579a5c36460eda846143dfbd389d4e76be6799e9eb0f6361cb"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-witness-e53b417db05b660c.json",
+   "bytes": 3149,
+   "sha256": "5817f7a355b1d2cd959adc534cbe63ca92907e0e537eb64e465cef84ceedd128"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/proof-witness-e53b417db05b660c.mp3",
+   "bytes": 54432,
+   "sha256": "56fc533b6a775210fa1ac232ec2dbfd747289eed57969570d1c6993c6a4c4f03"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repack-B-b69d60009d588dd0.json",
+   "bytes": 1457,
+   "sha256": "d414d71374cdc46250cc24cf15c768d149c44ee6aea291bbdafb94f17bcad58f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repack-B-b69d60009d588dd0.mp3",
+   "bytes": 24624,
+   "sha256": "38637f2362376183d32edbee0ecb066a3b28badf01237641cef4caeb41436d17"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repack-C-8b5e6391a489c29a.json",
+   "bytes": 1806,
+   "sha256": "e2fa6179a8f4aebdf9225852f1fb976490e82b9f7d726439a68b591a225a4b2f"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repack-C-8b5e6391a489c29a.mp3",
+   "bytes": 25776,
+   "sha256": "3a82d827abfc8c6583870b0af03482e3f61c7fa4bd210af85e8252ae6bbb47ba"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repack-D-48516b54897593ca.json",
+   "bytes": 2580,
+   "sha256": "7fce5da83c67f561f0fc6aac73d81dad27a81e75fcbf0d955b3481ea0b9f7e93"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repack-D-48516b54897593ca.mp3",
+   "bytes": 39168,
+   "sha256": "ff2e0bd535c8714a3f9655d101321782cd7ebce19d18eee7c2f5407f0231e064"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repair-score-6693ba79eaa25c22.json",
+   "bytes": 2516,
+   "sha256": "9657dfc0582fdb226b102fa72959ca366fde7d2b64a9b9e53251a43807cae6bf"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repair-score-6693ba79eaa25c22.mp3",
+   "bytes": 48672,
+   "sha256": "513457b781ae48131fb1dc6b32d340cf3fd99c31b87d4342d430c4e5dc6cd3a6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repair-side-66c1b7f828561e5e.json",
+   "bytes": 2490,
+   "sha256": "069e86ed5ec37bb8d23ffb73d9270386094f223d7bc1d4326f82a047e3991b14"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repair-side-66c1b7f828561e5e.mp3",
+   "bytes": 48384,
+   "sha256": "54f6a7016894792b415647281056076221f87f6f024d27143530bf74df591513"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repair-up-cc246ba10c6f000f.json",
+   "bytes": 2587,
+   "sha256": "a54e898bed00e559ff0dbd0b70c0552c15587ce88fc9284c046c0bb8632983ad"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/repair-up-cc246ba10c6f000f.mp3",
+   "bytes": 39168,
+   "sha256": "8bf8720978fd81943aff406e190de2a7c641cc2e2203aea7b4158f752998ebfc"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/scope-53df96963d698641.json",
+   "bytes": 3004,
+   "sha256": "dc54eb735cef0424f00232bbca5dc7eedef3757f00cb762dcef1a953b0b7c4d4"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/scope-53df96963d698641.mp3",
+   "bytes": 50976,
+   "sha256": "5f2ca6a6b1813d2094b5d3f5f8c8686308000983494ba3381c753e4e6984a935"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-D-162bb09eaa08bfea.json",
+   "bytes": 1943,
+   "sha256": "483a075fd93004ded2b65361205c9e3141456076f4d81b2ab4b93c4f9cc467ef"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-D-162bb09eaa08bfea.mp3",
+   "bytes": 29808,
+   "sha256": "08ab3dc2cb04a2b4ba7108b1ebf89426e43c768b5b05c9d77615b700990143e2"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-E-00151754ce166a55.json",
+   "bytes": 2117,
+   "sha256": "bca96aa12c9e6403ee15fc867fc71a29e524a2aac8ce9671b03a2ccd5c097e3c"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-E-00151754ce166a55.mp3",
+   "bytes": 38880,
+   "sha256": "d12cdebd51b7be423a2adacff582753d27f736dedf7a90b58e472a7b7ba6720b"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-path-f82d2acb98865dcc.json",
+   "bytes": 2607,
+   "sha256": "6876c40de55cb16ea024842aad44656ee1e6f8410e2b71a199319c1f1de7a5f0"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-path-f82d2acb98865dcc.mp3",
+   "bytes": 38592,
+   "sha256": "d58c88d79aa8e97a329187f5970ad99333b8e83f5992750e95e2aa42d72883ea"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-swap-a346cd46d5f02495.json",
+   "bytes": 2750,
+   "sha256": "b20453c765c7f0f4b51da1d38170c9cac1c85bd6deed28eb7c5264fdb5db4623"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/space-swap-a346cd46d5f02495.mp3",
+   "bytes": 46944,
+   "sha256": "66514208e0844c8eeb83d3701b0f16ce612e0bae5f52222db31cb313bd4c549e"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/three-config-a9e07c822cad137e.json",
+   "bytes": 3122,
+   "sha256": "583331a875bd3a84c820c436e81ff3b587331561302a68461d6ef9aa75bbc0c8"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/three-config-a9e07c822cad137e.mp3",
+   "bytes": 57312,
+   "sha256": "e297b3bef4667226cd49acb566eb7a0fba259d42a28c890f51554f511c9d22bd"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/transfer-137f47bfcac0664e.json",
+   "bytes": 3003,
+   "sha256": "5bf33c90b104db1d98d68b9d053e54dbc1168df084a992d3b642dfae277e2712"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/clips/08/zh/transfer-137f47bfcac0664e.mp3",
+   "bytes": 49680,
+   "sha256": "c095b12fa4f9ffe4837de30041cb1540d8c2ddd60c272fb62258ccdba3217253"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/lab08-geometry-browser.json",
+   "bytes": 3476,
+   "sha256": "00329a878c2d088c4bb7ec4798e94fc067b194005b0b014e7a122b98c72b9622"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/plan.json",
+   "bytes": 434584,
+   "sha256": "7c2ab6adb576268fbcbc332066e0a8a735454db205101b08646630cf65754cf6"
+  },
+  {
+   "path": "build/voice-repair-2026-11-16/remaining-teaching-labels.json",
+   "bytes": 2,
+   "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
   },
   {
    "path": "content/advanced02-python.mjs",
@@ -167,8 +3872,8 @@
   },
   {
    "path": "content/course.mjs",
-   "bytes": 37490,
-   "sha256": "db0a75c36d78df0437cee2395dcf93917a65f9f3bc99ffd45b7ff9b4fe0d839e"
+   "bytes": 42826,
+   "sha256": "341584cbd1c48f3a3c2cf73e74d45fb56cc678c6483a59022a5cd13c8899a4a0"
   },
   {
    "path": "content/full-08-notes.mjs",
@@ -182,38 +3887,43 @@
   },
   {
    "path": "content/interactive02.mjs",
-   "bytes": 10643,
-   "sha256": "1057da4ceb2e2740a21f6b20ede1a80dad14053c8baa2a8c4d50a060b181239b"
+   "bytes": 13156,
+   "sha256": "cbad0ba273b50a75891aa27721e51f01f14231ed94c6af41f478a6dc54aa8476"
   },
   {
    "path": "content/interactive03.mjs",
-   "bytes": 10280,
-   "sha256": "f3e84748f1082e4f1ee04aa51ecdfaa5deed64146da3346136594ffcd7079403"
+   "bytes": 10826,
+   "sha256": "f7a303858dbed1bcbe15005585307e66e73377b798f49f22838bff3af97323e2"
   },
   {
    "path": "content/interactive04.mjs",
-   "bytes": 11411,
-   "sha256": "cac8b5cbd0fa887f1c61600bc82bd0df02896904d7430db58cebfcf66469ae13"
+   "bytes": 11978,
+   "sha256": "7962121ff7cc8df31b328030628f8b239291b134ba16cba16526f14468351ae7"
   },
   {
    "path": "content/interactive05.mjs",
-   "bytes": 8209,
-   "sha256": "af3d9b5f193cd7ce43bfff4f8c2254c8d9f96f525d555ba05307e7434743bdbe"
+   "bytes": 8892,
+   "sha256": "c503915851626d7b3cfb5ddc4d6dcabd35ab8085f604605849a636fccda7931d"
   },
   {
    "path": "content/interactive06.mjs",
-   "bytes": 8785,
-   "sha256": "c7f6972e6438b2e5684ec9332aced32a6a3b77a6fc28601385c2127753f758cf"
+   "bytes": 9485,
+   "sha256": "28b0577233a7e0611a04814d3104493968fba4c3e254ae577ce883368a44a4a5"
   },
   {
    "path": "content/interactive07.mjs",
-   "bytes": 8547,
-   "sha256": "9f1cb5833ec395bea836ca7de9ab6f61f2f1291d7177d935e9a677d7f3ba9b6a"
+   "bytes": 9301,
+   "sha256": "ed9773ce4e20fe62d5bcafebac020be72b113339f0767d3065fc1255f1bed8c4"
   },
   {
    "path": "content/micro-storyboards.mjs",
    "bytes": 22144,
    "sha256": "61679b571b211ba31aef2f1c6d9e8cd73a2e5e6fbee949cf24235d624606dce6"
+  },
+  {
+   "path": "content/narration-bilingual.tsv",
+   "bytes": 46300,
+   "sha256": "b32c9af16be19784df8140eeb86a05dd3c95f11457dee3daa7d3a2e5fb72f929"
   },
   {
    "path": "content/narration08-natural-draft.mjs",
@@ -231,9 +3941,29 @@
    "sha256": "9020ab5ce88e3a6795f206ce207161a56cf0f4b8e96940f50af24cd336912bea"
   },
   {
+   "path": "content/teaching-labels-en.tsv",
+   "bytes": 33064,
+   "sha256": "d434efbdbb6d6d08e04377554405857ad97bf33165deb13204f0a126f39b31ba"
+  },
+  {
+   "path": "content/teaching-questions-en.tsv",
+   "bytes": 8948,
+   "sha256": "8a476d051cf83f02f41699d24ce89c426505623c2b173fe524f65ecc09b788f3"
+  },
+  {
+   "path": "content/teaching-titles-en.json",
+   "bytes": 9720,
+   "sha256": "9c98915074054d80be1e35cb54a8947ee9cb6d3050c06412273d4e78c9114e2c"
+  },
+  {
    "path": "content/v3-08-draft.mjs",
    "bytes": 13904,
    "sha256": "bfe130eb53f8601965a0e7cb248b270cdb2ab88fef25a8b3cf4f3799193c8fa9"
+  },
+  {
+   "path": "content/voice-cues.json",
+   "bytes": 2173,
+   "sha256": "005370fcb7717395cfec6f1015260a3bc47f7cb0ddc06dd82b92bec02f3898c7"
   },
   {
    "path": "dist/.nojekyll",
@@ -243,7 +3973,7 @@
   {
    "path": "dist/404.html",
    "bytes": 1079,
-   "sha256": "43f98ace94a4bafdd5677450d7e6eef2740f1feb58812fccb77ff89c3b65f524"
+   "sha256": "947d509e238ad9b7fe859feeac1c5d31b83bc8d7a32e9d42bdd586302d084ded"
   },
   {
    "path": "dist/assets/advanced08.mjs",
@@ -257,8 +3987,8 @@
   },
   {
    "path": "dist/assets/app.mjs",
-   "bytes": 88300,
-   "sha256": "769634ae8aafe40b58fc5622646bc6ebb3e554e9fa4f9f792429fa462a33ea7e"
+   "bytes": 89248,
+   "sha256": "192c4537332fe80becf829175d7a8e14a2a6d1c4f3c0eb431975593b23a2f3ee"
   },
   {
    "path": "dist/assets/bstar05.mjs",
@@ -377,13 +4107,13 @@
   },
   {
    "path": "dist/assets/interactive-player.css",
-   "bytes": 5356,
-   "sha256": "e5cff7b566e2700975427c84f4a7f81194dff463cc3b81b41fa4dd60738e486a"
+   "bytes": 5492,
+   "sha256": "ffa5a61cdde68958be0c1cc4d35571b2f7c6df3e5aa6dcf8b76a5e06b132e298"
   },
   {
    "path": "dist/assets/interactive-player.mjs",
-   "bytes": 11028,
-   "sha256": "03a412008cf6266cf3b1872486bc346df1ab9eb425c7e9d5510b44fbe70ce893"
+   "bytes": 12318,
+   "sha256": "305c1be873a4e409d2fe03940fab21c13ae080ae650372e2b8f7ef9c9a0e282a"
   },
   {
    "path": "dist/assets/interactive-state.mjs",
@@ -392,33 +4122,33 @@
   },
   {
    "path": "dist/assets/lab02-page.mjs",
-   "bytes": 12577,
-   "sha256": "88a66145746a4b17c64662e58e587b6daf8cddc46d3f2d9203e3a30492f10775"
+   "bytes": 12602,
+   "sha256": "4c3ad96dd5da45d5d2631b1d9de0d25dae3364e7092e0c5aa148e512d31a25f5"
   },
   {
    "path": "dist/assets/lab03-page.mjs",
-   "bytes": 13586,
-   "sha256": "30d1e87220adff7dbbfd388c69e19c5f9b76ca03b2197f5edaf9bfb36f3839aa"
+   "bytes": 13610,
+   "sha256": "07367d54e9214c9dd0cf199d37e5a0142b9ccef71af8f607245ab82b59bfaf18"
   },
   {
    "path": "dist/assets/lab04-page.mjs",
-   "bytes": 22294,
-   "sha256": "c38ec64517a9d8c3b3ceb6595ef64ffed53b128b8b37e804b534dd0b71c9cb48"
+   "bytes": 22319,
+   "sha256": "b3c9923c1e43c06415c1896c5e9974b1d6c1dc787bb996dfb86aa03295801bc1"
   },
   {
    "path": "dist/assets/lab05-page.mjs",
-   "bytes": 12016,
-   "sha256": "ca4dca5025093a6af749366b4071b2d81bb765784ea26d222294ee719a4f9be9"
+   "bytes": 12041,
+   "sha256": "91c7ddf6b0f7afbf5be26a140ecb47e0b596a4d7e29a97b01f274add539ee7a0"
   },
   {
    "path": "dist/assets/lab06-page.mjs",
-   "bytes": 10587,
-   "sha256": "87b0890d8d0e9392c1d7c136665347a95b5e48255d94b575d3dc7ed2829fc320"
+   "bytes": 10612,
+   "sha256": "ba670aad54a6980c3bb4c39b96252987b940f06e0a05385c0406254045c2dd01"
   },
   {
    "path": "dist/assets/lab07-page.mjs",
-   "bytes": 11729,
-   "sha256": "9633521a8b068b0e58fba2c6f41edbdab060644d8fe2e54ebac813926a44d9c7"
+   "bytes": 11754,
+   "sha256": "c0b488db2a91c16136ac06928f7052f82efca1dd4b7652376c1c90db39edeaa8"
   },
   {
    "path": "dist/assets/legality02.mjs",
@@ -446,6 +4176,16 @@
    "sha256": "2883f10a8e8588a6b9437916c690bf6a8fb47ebcf59acba32b25e2e296a14dc1"
   },
   {
+   "path": "dist/assets/quiz-panel.mjs",
+   "bytes": 2677,
+   "sha256": "ba798552db814b47362bc6bbdc95170b6385cacbe20cdb7d860c6e4d9b7edb12"
+  },
+  {
+   "path": "dist/assets/seek-controller.mjs",
+   "bytes": 1183,
+   "sha256": "87b6e8fa80407f170d49cdb4c19f718d189881ce59e4989c7fa0c4a95d5490bb"
+  },
+  {
    "path": "dist/assets/slicing04.mjs",
    "bytes": 14976,
    "sha256": "be573c22855f71c306a39a19a3d9d320c706c66828afb9f76d442c5d6d1b9d1f"
@@ -466,19 +4206,39 @@
    "sha256": "d285c21e7b9aeb1396022751352b6e46b9cacb118f20584349955f9cc579f6cc"
   },
   {
+   "path": "dist/assets/teaching-labels-en.mjs",
+   "bytes": 36628,
+   "sha256": "8ab812181dfe26d48d7a0fbbb864c558beba26d5ad8980cdfb2755b659e6946e"
+  },
+  {
+   "path": "dist/assets/teaching-language.mjs",
+   "bytes": 1472,
+   "sha256": "827e3b7dad0f31ad264ba77490ef7be858b64fd712cbd0b06bf91ec65b46eb2e"
+  },
+  {
+   "path": "dist/assets/teaching-ui.mjs",
+   "bytes": 6131,
+   "sha256": "dc29e9637fc481e8990af569c8602e9767241b7153f34267dbf4ef65f065365c"
+  },
+  {
    "path": "dist/assets/video-display.mjs",
    "bytes": 4791,
    "sha256": "264efdb5e01ee2cd7e88ea49ec97b9bf5372c04620a0a1e66d490a7bb92e0aed"
   },
   {
+   "path": "dist/assets/voice-timing.mjs",
+   "bytes": 614,
+   "sha256": "54e44bb38f5f0b6a790c6e99cbbad46a64d4d50ffa0fc4dafa493c66a68e9f83"
+  },
+  {
    "path": "dist/compare/index.html",
    "bytes": 1082,
-   "sha256": "58d49216e892df30daa8e3888d78bafed3c12fe1cbf3c8926b3e3489df2a581b"
+   "sha256": "dead08d0260b6817158b201544156ea4aa477546d49cddcd70dbc90b8e9d6ed3"
   },
   {
    "path": "dist/data/course.json",
-   "bytes": 63554,
-   "sha256": "bfac50f372475096ec66baa17facafce8604cf332df2b4eb4b54450b3762149e"
+   "bytes": 70219,
+   "sha256": "5c773932d3661f2a0aaf4527842529018afe4073703b2979fd42dd847f1e0151"
   },
   {
    "path": "dist/data/python.json",
@@ -492,13 +4252,13 @@
   },
   {
    "path": "dist/downloads/course-notes-en.md",
-   "bytes": 44377,
-   "sha256": "cf02a88f88c1c4db141c3f098b6643bdd6bbd78e27856a316002b22a261cb8e0"
+   "bytes": 47420,
+   "sha256": "75114f91f9549822965fca940aad8f15c1fd4a352fc00d9eff1f9f4f9b2d3841"
   },
   {
    "path": "dist/downloads/course-notes-zh.md",
-   "bytes": 41927,
-   "sha256": "7a340034f80b8d18c66fffaa32a28d3bb76d25406a8cae9a6d809a19c6075467"
+   "bytes": 44928,
+   "sha256": "00ef98a845c32a90cce2c79e54529491be9010a02ea1a91b43cde33816cf5b9c"
   },
   {
    "path": "dist/downloads/lab7-source-review.md",
@@ -507,8 +4267,8 @@
   },
   {
    "path": "dist/downloads/lesson-02-en.md",
-   "bytes": 2750,
-   "sha256": "f558c539b74e0a9143475f3625f206705494c9f12345235406505c9251e26f44"
+   "bytes": 3249,
+   "sha256": "725ba4fb7426c009032e94def76c7da12265eb14eb8ecbb9a76696d8dd0ce0c6"
   },
   {
    "path": "dist/downloads/lesson-02-storyboard.json",
@@ -517,13 +4277,13 @@
   },
   {
    "path": "dist/downloads/lesson-02-zh.md",
-   "bytes": 2921,
-   "sha256": "cdad13d2d08cf5465e33ad2b5c78db74a0a9e991ee2f0d292f2b40f1790eeffc"
+   "bytes": 3443,
+   "sha256": "8a4a45a1920af25816640184f03634f0d771597343ff1625397b53b7a5a15cd3"
   },
   {
    "path": "dist/downloads/lesson-03-en.md",
-   "bytes": 4161,
-   "sha256": "e972b7a875d5a8d5192aac6cdce4e042df499dc75adee4c234d2f13bde7915da"
+   "bytes": 4541,
+   "sha256": "a5ae4b43ef5a1c9dd5189749c4ef7eedeba4582274e3e7ae3919a9e33a391fad"
   },
   {
    "path": "dist/downloads/lesson-03-storyboard.json",
@@ -532,13 +4292,13 @@
   },
   {
    "path": "dist/downloads/lesson-03-zh.md",
-   "bytes": 4256,
-   "sha256": "50cb6f62c26ec6fa5ddc69968f133435456a59c262f9a728aa4bc0d331958ba5"
+   "bytes": 4619,
+   "sha256": "eddd3e51d31ab0a0b1fd63fd390d4a123c9f04e88fecbc5d086165ac6d5e94b5"
   },
   {
    "path": "dist/downloads/lesson-04-en.md",
-   "bytes": 4582,
-   "sha256": "3d2509041fd4c91517d06e8bc34b7cbdfa93cf96e3d39584ae2322c7d967d8cb"
+   "bytes": 5017,
+   "sha256": "05f2bf95babe78437c57e931b29a54249971b8b6344247d26c1939d4d638bb83"
   },
   {
    "path": "dist/downloads/lesson-04-storyboard.json",
@@ -547,13 +4307,13 @@
   },
   {
    "path": "dist/downloads/lesson-04-zh.md",
-   "bytes": 4661,
-   "sha256": "43496f145afe4afaf3c66191951640b549bbb700c411ee37e3f9e112ce943f52"
+   "bytes": 5111,
+   "sha256": "dd893d49d10ce546e52f8ede52f9e6060cfdcef84b4c883491e2b18a066884c8"
   },
   {
    "path": "dist/downloads/lesson-05-en.md",
-   "bytes": 4336,
-   "sha256": "0e187a60ce462189c78155241410f199c8fb23d55afc2099f1ba6d43ebf3476d"
+   "bytes": 4741,
+   "sha256": "43cb53de25d7afaf27379ff43d1b4f4e5f2c5cbe19b6f3a14e3bc3ad47ba7c21"
   },
   {
    "path": "dist/downloads/lesson-05-storyboard.json",
@@ -562,13 +4322,13 @@
   },
   {
    "path": "dist/downloads/lesson-05-zh.md",
-   "bytes": 4413,
-   "sha256": "48cb788ebe05964b26c1a8fbf367ba7512ed7da1c7a400751f33ac01e286daba"
+   "bytes": 4820,
+   "sha256": "c4929a3214aa26853c8dbbfb05ad4278ace0df1e867ae476e99a65d0c2316bda"
   },
   {
    "path": "dist/downloads/lesson-06-en.md",
-   "bytes": 5245,
-   "sha256": "df6cb9f69266444e7a5785eae0b96628308c89a27fdd88c112c13658d78370d8"
+   "bytes": 5678,
+   "sha256": "3f9fab42cd460af57016b3d95f48a7f1c57cf30f19354ffcdd89b4b60474b241"
   },
   {
    "path": "dist/downloads/lesson-06-storyboard.json",
@@ -577,13 +4337,13 @@
   },
   {
    "path": "dist/downloads/lesson-06-zh.md",
-   "bytes": 5218,
-   "sha256": "3a428025a863db66c26d060e6a244997768b6a57d76cdf097531e9c7249c1072"
+   "bytes": 5637,
+   "sha256": "4bc90ae02937f286e82d2a94f2d05dbbdf4a5dba942de9a7e3b124a779fcf31c"
   },
   {
    "path": "dist/downloads/lesson-07-en.md",
-   "bytes": 7490,
-   "sha256": "ad9bccaa03a00a5e17117059af529b3f9212668e7be2829f36bb11293e651fe8"
+   "bytes": 8005,
+   "sha256": "336c5181d0b8b0fc076fb029f1f71fb925ae322d3cb11dd5cef0162c63a473f4"
   },
   {
    "path": "dist/downloads/lesson-07-storyboard.json",
@@ -592,13 +4352,13 @@
   },
   {
    "path": "dist/downloads/lesson-07-zh.md",
-   "bytes": 7458,
-   "sha256": "597d6f94e0031892be2fde6e5b1efd61bec351e151ac80524a476e619febbe02"
+   "bytes": 7901,
+   "sha256": "fd81993297b1d4d207d4ba59a22f174a4276483ad10c0d1a0f1632e66e3f1056"
   },
   {
    "path": "dist/downloads/lesson-08-en.md",
-   "bytes": 15637,
-   "sha256": "da31f1beb08924581dfadfbfc22ac4a513273805f9cbfeda56b122024811547e"
+   "bytes": 16013,
+   "sha256": "2cf906fdc6261bc9148e8a762facd696c7f7d381d967f78a9747b3361c54471f"
   },
   {
    "path": "dist/downloads/lesson-08-storyboard.json",
@@ -617,8 +4377,8 @@
   },
   {
    "path": "dist/downloads/lesson-08-zh.md",
-   "bytes": 12837,
-   "sha256": "d591c6cf3fb706cd4a71b829eb638b75b7fef9a32766a1888b242b6dfb07c571"
+   "bytes": 13234,
+   "sha256": "c0a30b8e93c713b24d4a040e131a82899f8876a1a8e72a18dcbe28d7bfb5bb7f"
   },
   {
    "path": "dist/downloads/python-exercises.zip",
@@ -638,202 +4398,262 @@
   {
    "path": "dist/glossary/index.html",
    "bytes": 1089,
-   "sha256": "5dfb5747da08df58fbe9b6d2520ec538e0eea2ca3d6e774d75d2f113bc43e331"
+   "sha256": "c8611a1196de981b3c6b1f57a351d840b87ed1dd32820b4e727a0259ad9f6901"
   },
   {
    "path": "dist/index.html",
    "bytes": 1041,
-   "sha256": "4cdacab58d7e3caab799b6067a551d5dbb98a744b556608a98be33ae71983c2a"
+   "sha256": "f3ce5c4af502605b184d93f4fe4eddf0e53adb8d1f5ebd9df2abd500e5ce6e85"
   },
   {
    "path": "dist/lessons/02/index.html",
    "bytes": 1137,
-   "sha256": "3250e57e41bf25648fdb6529863bb15ea939499a44b5bd2c81893b0178a7b6fb"
+   "sha256": "7d740548f08587156756eb25c917d78b6df67371b9c92ee1f9484de17ec78b6f"
   },
   {
    "path": "dist/lessons/02/teaching/index.html",
-   "bytes": 3213,
-   "sha256": "138a5a31baca15d11cbe80790bfc3efc0f23de414cad187ae8bbfd0f4014b2c4"
+   "bytes": 3278,
+   "sha256": "72c0e50464914b7b60f42f0b30b1bc1427a1c6f4b29b41e9ad8f1cbd54d9879e"
+  },
+  {
+   "path": "dist/lessons/02/teaching/lesson-data-en.mjs",
+   "bytes": 157268,
+   "sha256": "a3a872cef1d810d1b0ce24a04502f1bf3655a62293888808c619bd1860aef1c7"
   },
   {
    "path": "dist/lessons/02/teaching/lesson-data.mjs",
-   "bytes": 37298,
-   "sha256": "faee5c1e7bea16e2ef57da1af988c528c270be9420fc233cddb0d25ec94f37d4"
+   "bytes": 156944,
+   "sha256": "6f30b6f9962237478cfbcb98b01f1725ffec3add5ac9d0f07d89a27abc14e836"
+  },
+  {
+   "path": "dist/lessons/02/teaching/narration-en.m4a",
+   "bytes": 4212069,
+   "sha256": "0463dcbb258b6a6d132102e02f460d8442acbeb4bed62fa68ceff909744b2462"
   },
   {
    "path": "dist/lessons/02/teaching/narration.m4a",
-   "bytes": 580839,
-   "sha256": "8ff683b8d98473116fec0b0bae175e4db67aaf533db96186626b21b7ea74aaaf"
+   "bytes": 3774232,
+   "sha256": "7ba63606509378faa8de253ce0247895c6531a0c40bd13f061fea5cefcdc79d6"
   },
   {
    "path": "dist/lessons/02/teaching/player.mjs",
-   "bytes": 265,
-   "sha256": "d0858b54dd62584e226991c86a8467e2cedadb090faabff1ceab12624d104a22"
+   "bytes": 463,
+   "sha256": "5da391fea287e12122277d33b11972a0e5e017dada83f62f65c234b2b40c603a"
   },
   {
    "path": "dist/lessons/02/teaching/visuals.mjs",
-   "bytes": 9323,
-   "sha256": "6c85ccdea12f2cff5cb2c3bb9a7539c93175af5c3a2a024bf58cc277d45886db"
+   "bytes": 19457,
+   "sha256": "e46f10d9e1ebfc381273785f35e0c3a8e9c35d67744d713a270d6193c0c2dce6"
   },
   {
    "path": "dist/lessons/03/index.html",
    "bytes": 1137,
-   "sha256": "ebd89f67e1e08c6ba8817ae9f087b994bdc2fcb6209febc01356ebb8de991315"
+   "sha256": "79901b596213ae8f6cd1ef4a9ce25870e44668349219263882b426a6be12a56f"
   },
   {
    "path": "dist/lessons/03/teaching/index.html",
-   "bytes": 3216,
-   "sha256": "c201d326dfbd1f3d40e2694a01bff0811d2246ec4e960a40c925ddef41be56a3"
+   "bytes": 3281,
+   "sha256": "7abd877cd52d2adf671afcc00a0a6e1f452f843690730061d3c8713369626c6f"
+  },
+  {
+   "path": "dist/lessons/03/teaching/lesson-data-en.mjs",
+   "bytes": 137673,
+   "sha256": "9fc0e879250e43b853d935a2ebde92eb9dd7cc46d4980f3443b74ccb26060b59"
   },
   {
    "path": "dist/lessons/03/teaching/lesson-data.mjs",
-   "bytes": 35886,
-   "sha256": "35eba0d45b25315c52b23c1775091277053418da8afc28d80b741190e326ab23"
+   "bytes": 148001,
+   "sha256": "7b79a97d4e374638885bc905273bca173d0faf12d21de8a3ef660fc36b84dbd7"
+  },
+  {
+   "path": "dist/lessons/03/teaching/narration-en.m4a",
+   "bytes": 3878333,
+   "sha256": "a6e915850df16c242af12e5fca05182d302239e796248f6d2a5c58b31559e8da"
   },
   {
    "path": "dist/lessons/03/teaching/narration.m4a",
-   "bytes": 650658,
-   "sha256": "fb88a6e782eaeda496d7b5cf300e95135498a9078fbbb743047e06e36aedb932"
+   "bytes": 3766584,
+   "sha256": "b60bf9d33a6901026f002555af3203da4c3eebc47c33bbeff0edf3975139abab"
   },
   {
    "path": "dist/lessons/03/teaching/player.mjs",
-   "bytes": 266,
-   "sha256": "1d745f0176b88046361ec45ceb7081170fd701253c560dcc24304507e1a3b8fb"
+   "bytes": 463,
+   "sha256": "5da391fea287e12122277d33b11972a0e5e017dada83f62f65c234b2b40c603a"
   },
   {
    "path": "dist/lessons/03/teaching/visuals.mjs",
-   "bytes": 9380,
-   "sha256": "4f87c56b7fb2c9282a814a6c5adc3d15d3b978e986603aeb8f4f4fe78bbe51e7"
+   "bytes": 10184,
+   "sha256": "29dbc763f62d73376029a3bb274dc49d79cf251d8d809f2fd1877b6d5e7c2658"
   },
   {
    "path": "dist/lessons/04/index.html",
    "bytes": 1143,
-   "sha256": "47660ac2d4f1fd203ac2ff60ff756217eae05d94afb3ac8d941e24933ad37ba1"
+   "sha256": "882bf02d8fc3b09aaebd81aff3fc32e37453e36f500e5fd4f5cb4a862535e9c1"
   },
   {
    "path": "dist/lessons/04/teaching/index.html",
-   "bytes": 3228,
-   "sha256": "04dfb57a62f287f93b569074c9eefc0422298882c5be6fe42c0454372cc6f264"
+   "bytes": 3293,
+   "sha256": "633aa0da6569fa85a16afdc5aaa67e44e748c9531eb461bd65137affbff548c5"
+  },
+  {
+   "path": "dist/lessons/04/teaching/lesson-data-en.mjs",
+   "bytes": 144352,
+   "sha256": "3c2a0591a696c2d5cce67e261e1c3ad77d36ff9bc2aa7d80ad92aa9c7bea875d"
   },
   {
    "path": "dist/lessons/04/teaching/lesson-data.mjs",
-   "bytes": 37503,
-   "sha256": "e6bb3165bde8d13840a15fa833056bf4517c8465399c8a2cf8fdd8af2a2eb017"
+   "bytes": 163495,
+   "sha256": "5c165d106009ac5d2fba4225a03d53746b3d80ae3f5a2ee007d31caf762ed12b"
+  },
+  {
+   "path": "dist/lessons/04/teaching/narration-en.m4a",
+   "bytes": 4080737,
+   "sha256": "9e7aa24e84a83e88b410d5b9ffd02bcd3e52fa10352633e6333dc1bce24f1697"
   },
   {
    "path": "dist/lessons/04/teaching/narration.m4a",
-   "bytes": 600551,
-   "sha256": "a09c7a11e804ee62e00977b275395725b4d48e1073af77c6c8b93ddee8fc55d8"
+   "bytes": 4393615,
+   "sha256": "9eda00901cb3732cb377383d9c5bb569563326fc202814bd7321f7475953a16c"
   },
   {
    "path": "dist/lessons/04/teaching/player.mjs",
-   "bytes": 266,
-   "sha256": "1d745f0176b88046361ec45ceb7081170fd701253c560dcc24304507e1a3b8fb"
+   "bytes": 463,
+   "sha256": "5da391fea287e12122277d33b11972a0e5e017dada83f62f65c234b2b40c603a"
   },
   {
    "path": "dist/lessons/04/teaching/visuals.mjs",
-   "bytes": 20648,
-   "sha256": "33cb2a6a3528c49c588e3c4641368acd8b6151e17b1e9b7f493cec1d5e72a69b"
+   "bytes": 20783,
+   "sha256": "66c87e37a4351563b6ec37004c41aa359261d06453e890e862499ecb610ad591"
   },
   {
    "path": "dist/lessons/05/index.html",
    "bytes": 1129,
-   "sha256": "58281ac742fbc77def9e6a624600324c0e50c7ca4e5b7e0267d762b76c3a7663"
+   "sha256": "d11e5285de33f26a2c35b9a6ae234766c673cebd6cc1b5e39a52ef0d393c32d5"
   },
   {
    "path": "dist/lessons/05/teaching/index.html",
-   "bytes": 3221,
-   "sha256": "b07b3a36c42f53d55897ef07bf6d150f6a39ca139b24f8ad6e9f47ddead8f544"
+   "bytes": 3286,
+   "sha256": "80140d622ab79bf5e5392604d00eeaf2610f86c59cc5a8ca0e4b026aacb23b9a"
+  },
+  {
+   "path": "dist/lessons/05/teaching/lesson-data-en.mjs",
+   "bytes": 117840,
+   "sha256": "60d4ba97d1688b55443d32cc53560bcf03e731c4152f15495f4f39a06184e2d4"
   },
   {
    "path": "dist/lessons/05/teaching/lesson-data.mjs",
-   "bytes": 30000,
-   "sha256": "1873f42904dfd17990bd9a0b05688999e0c15e8efc6c3496cfeaff62434f6f96"
+   "bytes": 127398,
+   "sha256": "6b9c4fbd179c9942e8c584b69e38674d6d4744a2843db4e8f306819c8be306c7"
+  },
+  {
+   "path": "dist/lessons/05/teaching/narration-en.m4a",
+   "bytes": 3259631,
+   "sha256": "cb6fb5cddc8f08f135801dde571acfc0c511cde18c5410446cd2a872a1e3b6c1"
   },
   {
    "path": "dist/lessons/05/teaching/narration.m4a",
-   "bytes": 603601,
-   "sha256": "d4402f78a08c8b7ae4ec6b2f63063ccfb468beb71532d0e3b232e0f3ff35496b"
+   "bytes": 3518050,
+   "sha256": "f82f959988279c56615f767e38ba85f28573d818037b2c898000651088dc1646"
   },
   {
    "path": "dist/lessons/05/teaching/player.mjs",
-   "bytes": 266,
-   "sha256": "1d745f0176b88046361ec45ceb7081170fd701253c560dcc24304507e1a3b8fb"
+   "bytes": 463,
+   "sha256": "5da391fea287e12122277d33b11972a0e5e017dada83f62f65c234b2b40c603a"
   },
   {
    "path": "dist/lessons/05/teaching/visuals.mjs",
-   "bytes": 10824,
-   "sha256": "177944a699b3044802ba82f3830775603606f645ab5367bdd17671f3768b01b6"
+   "bytes": 11741,
+   "sha256": "cfa07e7abed41183a27d2ff6296f4f0ad1b25fd9430c132c833866875e9ad7b0"
   },
   {
    "path": "dist/lessons/06/index.html",
    "bytes": 1131,
-   "sha256": "46cc1fb8eb980a3a62a5ea638db19ab2b23981f7fd4a51c5a7f3a24c0f18a788"
+   "sha256": "c774beb38c6a1d4b6ccbd51385f641fdc2eaf5ab9981d6e89d81fe7bf38d8240"
   },
   {
    "path": "dist/lessons/06/teaching/index.html",
-   "bytes": 3222,
-   "sha256": "e30433ddcb9d61867c9f8ff7ca20c4658b8aabfb9d3ff0e84960df49504951cd"
+   "bytes": 3287,
+   "sha256": "bb18d2ad2634b35f588529f6ce29b2890336d91d00449693d70680344e7cf8d3"
+  },
+  {
+   "path": "dist/lessons/06/teaching/lesson-data-en.mjs",
+   "bytes": 110737,
+   "sha256": "1e90f9c31e6c643b55f86e8b0775ed3de883e6ce4c665cdb44306e3281f9b19f"
   },
   {
    "path": "dist/lessons/06/teaching/lesson-data.mjs",
-   "bytes": 29564,
-   "sha256": "28c088203e8d43781120b721fd2938b71966ffdd6848e3e4c2b779553dfdb9dd"
+   "bytes": 126420,
+   "sha256": "3674f5c998f1ea59e623e5eae64cddb45c224323791a83a73f0833472c70b2df"
+  },
+  {
+   "path": "dist/lessons/06/teaching/narration-en.m4a",
+   "bytes": 3242218,
+   "sha256": "87e35a6cba97631e7604c0c1718abb9133a6ce1b5fd1bb6e7ea191d92fe210fe"
   },
   {
    "path": "dist/lessons/06/teaching/narration.m4a",
-   "bytes": 606264,
-   "sha256": "0b7e448f229afa302161c4bdb713700c08da06ac9a5b83b11442bc5901ccb04f"
+   "bytes": 3375235,
+   "sha256": "8cbac7f6f913b9d9becc8c22def070ca9ea672622d9eda817edd1011fae3e943"
   },
   {
    "path": "dist/lessons/06/teaching/player.mjs",
-   "bytes": 266,
-   "sha256": "1d745f0176b88046361ec45ceb7081170fd701253c560dcc24304507e1a3b8fb"
+   "bytes": 463,
+   "sha256": "5da391fea287e12122277d33b11972a0e5e017dada83f62f65c234b2b40c603a"
   },
   {
    "path": "dist/lessons/06/teaching/visuals.mjs",
-   "bytes": 9195,
-   "sha256": "fec2e474c5a28a61cd8eb58bc9d5a4bab165bd2c2e5733343ee362e95cfdd9f2"
+   "bytes": 9663,
+   "sha256": "532229b23f6d7e5ee164dad1f5694994634170b196cfa8895b9c1186acbb1c33"
   },
   {
    "path": "dist/lessons/07/index.html",
    "bytes": 1125,
-   "sha256": "fc0b7ec81811e7f2d9065735f8fef8568f0fb9d3a5076d271008d9db85ce6f6e"
+   "sha256": "b8db9b2e611954ec6b26c9e2bd1d9fab5c771e071539a57e4a240ed33ef3b4b7"
   },
   {
    "path": "dist/lessons/07/teaching/index.html",
-   "bytes": 3219,
-   "sha256": "7a81959461bbdfff8ed48b7d1f6aedd56cb77becfb70d7896cc826c6d42a1e26"
+   "bytes": 3283,
+   "sha256": "47ea69ee8c9bc8c5fbd8b720f391114af9954fda124883e9ce56d85784f221bc"
+  },
+  {
+   "path": "dist/lessons/07/teaching/lesson-data-en.mjs",
+   "bytes": 125039,
+   "sha256": "c4558cfa51bc57c59e856ddd9006fcf76e84cceb6209c04cbba2d8879e206034"
   },
   {
    "path": "dist/lessons/07/teaching/lesson-data.mjs",
-   "bytes": 28184,
-   "sha256": "4946973d7135c0a2c6abc5547005f68b782d99f46b98951a93d0a3f96aa1c6a0"
+   "bytes": 131732,
+   "sha256": "001fbfae3c953b37994d6f99005d9b33420866f708dd248d63b75bacbbef5607"
+  },
+  {
+   "path": "dist/lessons/07/teaching/narration-en.m4a",
+   "bytes": 3729795,
+   "sha256": "12f7e3b2d9ae346d0f80104b9c5f19d4638952d51df4356790f5b56b96015cb7"
   },
   {
    "path": "dist/lessons/07/teaching/narration.m4a",
-   "bytes": 596864,
-   "sha256": "6fb9c22d5a63b428c6670579cd7571edd7369ac2bd584c9dade609bf0fc61717"
+   "bytes": 3596802,
+   "sha256": "b747112477ad8edd1c9f6e4ed107ed94ca928a776324bdf8067673e6c0ca8f31"
   },
   {
    "path": "dist/lessons/07/teaching/player.mjs",
-   "bytes": 266,
-   "sha256": "1d745f0176b88046361ec45ceb7081170fd701253c560dcc24304507e1a3b8fb"
+   "bytes": 463,
+   "sha256": "5da391fea287e12122277d33b11972a0e5e017dada83f62f65c234b2b40c603a"
   },
   {
    "path": "dist/lessons/07/teaching/visuals.mjs",
-   "bytes": 9885,
-   "sha256": "eb89be12200eed9dfdfec97dc09736bfffcd29d8cfd0947bb53a42528e70c298"
+   "bytes": 10374,
+   "sha256": "551599d3dcffac1a9bc303b1007f451cf2596d981e5b519d1c7cc09f51089a80"
   },
   {
    "path": "dist/lessons/08/index.html",
    "bytes": 1131,
-   "sha256": "cfbc29bd3701b5a9f7f475f17b15934ce92a69cb6072c7f4ee18f2ecb2786613"
+   "sha256": "f508c19755451e412c0c3f390d531b9c552a40e12255f0cf641adb239a4c45db"
   },
   {
    "path": "dist/lessons/08/teaching/index.html",
-   "bytes": 4091,
-   "sha256": "e41fe01bf502a98520ddf43afcb36e0a5bee84ca548419961de0a04aa8cc8dcd"
+   "bytes": 4108,
+   "sha256": "9e2755b3f3da1a7ce81157a6f1d3e5a94b76a7df8df5b69405a3fc1c5b6d6775"
   },
   {
    "path": "dist/lessons/08/teaching/learner-copy.mjs",
@@ -841,19 +4661,29 @@
    "sha256": "02d619e3ea431dd743cfb8f2c376ec24019d5561039866e9ca1dd5c26d55397b"
   },
   {
+   "path": "dist/lessons/08/teaching/lesson-data-en.mjs",
+   "bytes": 215150,
+   "sha256": "6db5c76ee9df1a59b26b4e896be1840f77dba1a36e367a0904325f52a6e327f0"
+  },
+  {
    "path": "dist/lessons/08/teaching/lesson-data.mjs",
-   "bytes": 97532,
-   "sha256": "d9ffe93cb25b4a89567e867eb3a6aa2d7b2cd41cb097869f0721e195f3d978ff"
+   "bytes": 189100,
+   "sha256": "8a2beb03c2241d61213198ac28de1625a77e0cb3c13f13c802c77a9034878c29"
+  },
+  {
+   "path": "dist/lessons/08/teaching/narration-en.m4a",
+   "bytes": 5230423,
+   "sha256": "6f45c3006aa0b5dc08500e6fe86f5893d56b5fb8adfc956386e2b711f204071b"
   },
   {
    "path": "dist/lessons/08/teaching/narration.m4a",
-   "bytes": 2767955,
-   "sha256": "f0cca02868a989ccf17a3b15a2c26e1f6e56e08a59a1d5ae29345fc5b9e0cc2c"
+   "bytes": 4087705,
+   "sha256": "7595fb8e02b9274de34c302427d0dad7fadb4457df0b34d8966d3f78577899e2"
   },
   {
    "path": "dist/lessons/08/teaching/pilot-model.mjs",
-   "bytes": 6891,
-   "sha256": "75701923743bb838422eccc6ad0c8f6e4783e045327d4cbd192ea606f8fa49eb"
+   "bytes": 6738,
+   "sha256": "10289434dec4a874ab793135b08f0af58ad31d773cd00114aca1d1aefdb6c7e6"
   },
   {
    "path": "dist/lessons/08/teaching/pilot.css",
@@ -862,8 +4692,8 @@
   },
   {
    "path": "dist/lessons/08/teaching/pilot.mjs",
-   "bytes": 19294,
-   "sha256": "5e30089407575a1f3c770fa163b97ccf03643ffed89812accb0fb6adee4a66df"
+   "bytes": 20379,
+   "sha256": "3076eec63fcf60be6643b28273077dba3bbd47b4f2460f1f9e291c335ac2d314"
   },
   {
    "path": "dist/lessons/08/teaching/question-clock.mjs",
@@ -872,8 +4702,8 @@
   },
   {
    "path": "dist/lessons/08/teaching/visuals.mjs",
-   "bytes": 13329,
-   "sha256": "913375f38970d45730a6d9b54584d0b1e64f4bc4d3b4b336daffb3f5674aa3a0"
+   "bytes": 13355,
+   "sha256": "40959a8f9d2a8b57612dc89fce0ca6dfc979765c1fc82cc6a6c5c9c5f27e1e1d"
   },
   {
    "path": "dist/media/02/en-translation.srt",
@@ -1373,7 +5203,7 @@
   {
    "path": "dist/notes/index.html",
    "bytes": 1086,
-   "sha256": "3b99b5980798c5b9bfa683350a5d4613285200ba4968723a1b9c9368c04fac25"
+   "sha256": "521f0f82c3e7abbc7ddff0c953e4089dabba3fced74fc7a71cdae2b82f938712"
   },
   {
    "path": "dist/previews/interactive-lab08/index.html",
@@ -1393,12 +5223,12 @@
   {
    "path": "dist/progress/index.html",
    "bytes": 1083,
-   "sha256": "31b3906a515d3ea721f726bc06606f2254813e91bcdadae09dd9dd314419073b"
+   "sha256": "3923c0ef196ce04b7438e99cfc5fbd968af9e6ca2a4396d5ab69dadd6fd79a51"
   },
   {
    "path": "dist/sources/index.html",
    "bytes": 1088,
-   "sha256": "20ee1a08e37e699562259b57f58c5bf82544351bce85f6bd1775b788805aa95b"
+   "sha256": "630f56db57cbfc643868373ae0eccd31cb5758993d6357e185c8144b13f70529"
   },
   {
    "path": "dist/vendor/pyodide/LICENSE",
@@ -1442,13 +5272,13 @@
   },
   {
    "path": "docs/DEVELOPMENT.md",
-   "bytes": 2486,
-   "sha256": "56ca9d87db1c75d5af29c07237876ff23182aa2f64817916586ddd564505fd5a"
+   "bytes": 3150,
+   "sha256": "7d3c53f501b4a42ddad1fd9c40937a1c755f7b9ae5bc1309470fab1363028d5e"
   },
   {
    "path": "docs/lab02/transcript.md",
-   "bytes": 10007,
-   "sha256": "cc0e93d9e2d4baafc1e82b348e237b704db7b64d095e06fcfc2199b9a4b947b4"
+   "bytes": 10889,
+   "sha256": "4aefbe04c01cedb9cbaa013e23c1c2097066dfd2c5e61cd5d35427282fc8dd5d"
   },
   {
    "path": "docs/lab03/transcript.md",
@@ -1472,8 +5302,8 @@
   },
   {
    "path": "docs/lab07/transcript.md",
-   "bytes": 8726,
-   "sha256": "1d9f608c9bdc64c3f99afbe1746630cf37578b36af087ed3f8ac70e12562952f"
+   "bytes": 8730,
+   "sha256": "33325315f79a1d9310d2767ef6363d30f51fb6bc22eac0e294474456ae01775b"
   },
   {
    "path": "docs/source-audit.md",
@@ -1502,8 +5332,13 @@
   },
   {
    "path": "docs/VERIFICATION.md",
-   "bytes": 2764,
-   "sha256": "09fa50e8eb581cc93245f9f36ce423d3fb9f8f20990d993a1feba9dd3717931f"
+   "bytes": 3358,
+   "sha256": "28d99a15035bf3d7a37edbdab88d9f5c141df702190a99f670cdef274740b778"
+  },
+  {
+   "path": "docs/voice-repair-2026-11-16/HANDOFF.md",
+   "bytes": 7324,
+   "sha256": "677a607ca98abfde740bf12b15cd7dcfa96a82880b67dc316f391e5c8714b60e"
   },
   {
    "path": "GITHUB_UPLOAD.md",
@@ -1522,13 +5357,13 @@
   },
   {
    "path": "README.md",
-   "bytes": 3246,
-   "sha256": "a198ae58230c1d0dc9453b17db11f00a57ad7dff5deb4778b54adc21e0af3941"
+   "bytes": 3364,
+   "sha256": "e4ca59a0d5fb9bb14e4e0870224c3e9564dcdef8dd2a8775662eb37d5dfa7c0e"
   },
   {
    "path": "requirements-dev.txt",
-   "bytes": 22,
-   "sha256": "0ba4322636924d18b08903cf82a1eccfb219dcd991cbd8be9baa6bdc0d71843c"
+   "bytes": 38,
+   "sha256": "ab334e3a844a7d2703b77b8813cbdb3ab5a8e6afe9eb03e5b4174a7a35ffdff2"
   },
   {
    "path": "scripts/build.mjs",
@@ -1537,78 +5372,83 @@
   },
   {
    "path": "scripts/build_complete_interactive.py",
-   "bytes": 5947,
-   "sha256": "6ff56ca55c2617a2b21e3aac40730c29022767610a16fc7ea656eda285182bc3"
+   "bytes": 6039,
+   "sha256": "0a8a21fbd554222cc6f9b97ce19d37a932db973cb0335ae1b18e067e915d833d"
   },
   {
    "path": "scripts/build_lab02_audio.py",
-   "bytes": 2789,
-   "sha256": "d3f2d59b65548a02e62bf0619e80fe89f0a0f8607eaa97515a16d330bf0a3bcb"
+   "bytes": 2900,
+   "sha256": "dd57b3980e0bb73b460db91d16ff2aa222c8b4ae3dca839d745422da89e3eb18"
   },
   {
    "path": "scripts/build_lab03_audio.py",
-   "bytes": 2811,
-   "sha256": "3c7e4f334905cadb2e9dcae41be101b0ad7196f007cfdfc7e05d28a60f6a04a9"
+   "bytes": 2900,
+   "sha256": "73f95a04dfde020bc62e5d2d2418fc421ffc508fc3cb292e62d011cde98cc5f4"
   },
   {
    "path": "scripts/build_lab04_audio.py",
-   "bytes": 2816,
-   "sha256": "ef58871bceb8a325685e283c7fee402fa0dd980cc71fdcbcaef25cdbe9c8d6a3"
+   "bytes": 2928,
+   "sha256": "8a83b669ac280195ae61f593c9f8f834cfe3e3c48400211269dff6e1629ef27c"
   },
   {
    "path": "scripts/build_lab05_audio.py",
-   "bytes": 2837,
-   "sha256": "f7644b0279572fcee3b6fab2df168c51dbd0ec50fb69609f8d4c7e615edaea34"
+   "bytes": 2926,
+   "sha256": "408891e4c98138917b59b3e003622616cfb8389840b55fb2a766e2b728cb0050"
   },
   {
    "path": "scripts/build_lab06_audio.py",
-   "bytes": 2834,
-   "sha256": "f8f02c22a1f71875ad91b54745cf567673f4de3baebad83767fbcd97fb1c115d"
+   "bytes": 2923,
+   "sha256": "d3598a0d14b269e7cb47fe8a054e52e93188af36279ebac3322ce170070431ad"
   },
   {
    "path": "scripts/build_lab07_audio.py",
-   "bytes": 2838,
-   "sha256": "d059933ad5d5d611a262413dc23e4d0cb9cfc62883881c2281caaa4c3326c9a5"
+   "bytes": 2927,
+   "sha256": "d39601ca96faf14c59e3dfead8bd202b130996be9b0a2fe6acdd3289e4e15752"
+  },
+  {
+   "path": "scripts/build_teaching_labels.py",
+   "bytes": 646,
+   "sha256": "006edc66740240b243f871bb8936aabcbff6b1dc66bf93629eee38da65f8706a"
   },
   {
    "path": "scripts/check_complete_interactive.py",
-   "bytes": 3112,
-   "sha256": "e600a8d2ae7bef55a257a35e7eb83f2f0ac23b1b8bfdf7bcb5f09f02afa266a5"
+   "bytes": 3297,
+   "sha256": "710539d033b7bd2e927a7444621da3c4ad1e6820d423463216e27e5ce076f02c"
   },
   {
    "path": "scripts/check_http.py",
-   "bytes": 2087,
-   "sha256": "2c054a48deae1c47a1c60e8a8d0a3984abe28f39fb01ab4d71868502f9534208"
+   "bytes": 1931,
+   "sha256": "459d5f36bde94004b291ff5b99b0424c00bf2a88f21508d64f0f108c3b2c8422"
   },
   {
    "path": "scripts/check_lab02.py",
-   "bytes": 3697,
-   "sha256": "77ad3df1ce12ccfb133cf5b1dbafe640c292d00867817d572c8fd5d9db8c0108"
+   "bytes": 3851,
+   "sha256": "8d6f44e233bcce6732e7c68a6781da83ba50973db07e7e7d5621585e93b72f52"
   },
   {
    "path": "scripts/check_lab03.py",
-   "bytes": 4416,
-   "sha256": "10e0e359f6e06365eb276337980e422fd0ad12c3d0dd60d2cd08cd1cd75ac040"
+   "bytes": 4598,
+   "sha256": "3c015725bcb58b7fd3678c53de6ea09ce24ac7446fa9ac67a4f0196f525a3de6"
   },
   {
    "path": "scripts/check_lab04.py",
-   "bytes": 4534,
-   "sha256": "aa51735f09c0844ac94059d993eb885075c69b7723730f852842a2651e616344"
+   "bytes": 4749,
+   "sha256": "4517d298533f3083f71caa7d7fcbc24f3c48eda69c113eb3532878267b1bd8fb"
   },
   {
    "path": "scripts/check_lab05.py",
-   "bytes": 4848,
-   "sha256": "11b3ee88e827530ceda44378c752d76570fe0a632974d68be301c1357e82ce91"
+   "bytes": 5063,
+   "sha256": "d2e2b6108adf4d78c1834759d1e40d41fe94864c3cc026bca312df7ac8fe1ef7"
   },
   {
    "path": "scripts/check_lab06.py",
-   "bytes": 4447,
-   "sha256": "5a0bb174c75b5bb034eeda5415e7253c738f42763b2416c098acf5437f0e0477"
+   "bytes": 4629,
+   "sha256": "14881aaa0f18d1ac65aeeb9048440eee5ee5486441ded4b7652c546a5539475e"
   },
   {
    "path": "scripts/check_lab07.py",
-   "bytes": 4189,
-   "sha256": "eed8f8f3eccb636f614ea3e0d0aad7cc69105fe4ebad9f48ffb5e008cf78b3b1"
+   "bytes": 4371,
+   "sha256": "8c3aeae18dd80a52057d40a2a2175c9d7b2e7af87e77cac2bad824b9b1132fbd"
   },
   {
    "path": "scripts/check_site.py",
@@ -1617,8 +5457,8 @@
   },
   {
    "path": "scripts/package_github.py",
-   "bytes": 3044,
-   "sha256": "23e4a6413fee1e63d5f654bc901b80be80f4ec5dd012e8308c1fce68ed41ab0b"
+   "bytes": 3676,
+   "sha256": "b3279395d934788fcd0fc44a19f893210e46737cf21af1bdfd3c6c9cd64d216a"
   },
   {
    "path": "scripts/package_python.py",
@@ -1666,6 +5506,16 @@
    "sha256": "8c08ef27610560fa060a0d70c39c6a384e819584da07c556cda5f7e5cc506f38"
   },
   {
+   "path": "scripts/voice_checks.py",
+   "bytes": 3621,
+   "sha256": "fd51155ab5ecf8e77c00b35649ba994a770ed5185ef275f3d2839a6c58ba06da"
+  },
+  {
+   "path": "scripts/voice_pipeline.py",
+   "bytes": 11388,
+   "sha256": "827a0692ab028dd225d371ae1389675f12af44784a0c8c63c91318862c42d151"
+  },
+  {
    "path": "start-preview.ps1",
    "bytes": 1526,
    "sha256": "8e86402ff81ca7c0ca35feab9c360fb2b90cc1fcab56e6594cc35f54433483ad"
@@ -1677,38 +5527,38 @@
   },
   {
    "path": "tests/interactive-pilot.test.mjs",
-   "bytes": 3313,
-   "sha256": "a8bb0b9776cfab7b700637f1e6e51979348c4d71d8677793cbf721bc7662ec21"
+   "bytes": 3342,
+   "sha256": "3cea0ddb416d0e1456416b3c9811e90f57a32eb2ec6515f615620c9cf404f2d1"
   },
   {
    "path": "tests/lab02.test.mjs",
-   "bytes": 4656,
-   "sha256": "a34653a0028fa28647e8889d2703787ce528ce62025964b6f4727b8d50845739"
+   "bytes": 5312,
+   "sha256": "d86d24b40cb93c19337f5c581ed35bb95120180384329c2e5746cc5ab95dd980"
   },
   {
    "path": "tests/lab03.test.mjs",
-   "bytes": 4578,
-   "sha256": "4292f037f7a9aca0903e1f68aea90c8e1c9a58c9a93acc25d2bec838afbf951f"
+   "bytes": 4746,
+   "sha256": "dedd88f2c1df55de5fb832ab6e1817cad8153d963cb8950429d0950390b7b105"
   },
   {
    "path": "tests/lab04.test.mjs",
-   "bytes": 6352,
-   "sha256": "af8a899314bc7238487e6acb0a132a0a7311e0dd38f2a963212aead0575d2039"
+   "bytes": 6687,
+   "sha256": "f90703108358545e843154683e3cbe65a6785ef9035113da0ec1e7d37cf25bec"
   },
   {
    "path": "tests/lab05.test.mjs",
-   "bytes": 6325,
-   "sha256": "1a721a585f5dff2fc0479808e1d8d740b078cb4f3307bb16604341804571a77d"
+   "bytes": 6549,
+   "sha256": "9de3092e8635edb6f3bcbb98df1111410e9554d100a0e8329486d1edaf39e8be"
   },
   {
    "path": "tests/lab06.test.mjs",
-   "bytes": 5839,
-   "sha256": "f4fec925459cf5a9fc4bf368a205b11c7826ddfbb754466dbc503d83f22153f0"
+   "bytes": 6063,
+   "sha256": "a70c86d9eb9cfb9c64cb39ccb266da32e39d47f7fc0786b630bc28f5b5e1cfed"
   },
   {
    "path": "tests/lab07.test.mjs",
-   "bytes": 4994,
-   "sha256": "d06eae0fb82b346287d4cd185dca0ada71127782c63a170fece89aa060d7308d"
+   "bytes": 5218,
+   "sha256": "fcafeff3201497c853944d514d07ba6f7900edf41caab54034503a13d07894a5"
   },
   {
    "path": "tests/render.test.mjs",
@@ -1717,8 +5567,13 @@
   },
   {
    "path": "tests/rework.test.mjs",
-   "bytes": 10398,
-   "sha256": "62e50754e900353435e3a6ed236655a5588339fa9bb3c24c7c90539de6eb207c"
+   "bytes": 10869,
+   "sha256": "8f630af98fbdccc961587857fa07357bbc946648b37635be21a8c8833247ad5a"
+  },
+  {
+   "path": "tests/seek-controller.test.mjs",
+   "bytes": 2441,
+   "sha256": "82f5fdaf5621fc71608765772fc51d082ce246d1792c7c3f1818636c71297aa8"
   },
   {
    "path": "THIRD_PARTY_NOTICES.md",

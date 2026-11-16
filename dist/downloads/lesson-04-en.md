@@ -56,6 +56,20 @@ A syntactically valid expression can overflow. Change the reference’s first H 
 
    Answer: B. Structure and geometry are separate checks.
 
+4. One final stack item remains. Does that prove each block appears exactly once?
+
+   A. Yes
+   B. No, completeness still needs checking
+
+   Answer: B. Reduction to one region proves structure, not uniqueness or completeness.
+
+5. Can some layouts have no valid first through-cut?
+
+   A. No
+   B. Yes, a pinwheel is one example
+
+   Answer: B. Without a first through-cut, the layout is non-slicing. That is the limit of slicing trees.
+
 ## Python exercise
 
 Implement the full decoder decode_postfix(tokens, catalog): parse the postfix expression, build the slicing tree, aggregate sizes bottom-up and propagate coordinates top-down. Helpers combine and the Lab2 validate_layout are provided. Convention: H places the first region below the second; V places the first left of the second; the first pop is the second region. Error codes: underflow:X, leftover:N, unknown:X, duplicate:X, missing:list.

@@ -1,3 +1,4 @@
+import{sceneProgress,motionProgress}from'../../../assets/voice-timing.mjs';
 import{COLORS}from'../../../assets/core.mjs';import{board}from'../../02/teaching/visuals.mjs';import{auditRows,describeError02}from'../../../assets/legality02.mjs';import{metricsReport,BEST03}from'../../../assets/metrics03.mjs';import{GOLDEN05,LIFT05,RESIDUAL05,WRONG_ORDER05,ENUM05,GOLDEN_TREE05,packBstar05}from'../../../assets/bstar05.mjs';
 const E=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const T=(x,y,s,size=24,color='#244d40',anchor='middle')=>`<text x="${x}" y="${y}" font-size="${size}" fill="${color}" text-anchor="${anchor}">${E(s)}</text>`;
@@ -5,32 +6,37 @@ const R=(x,y,w,h,fill='#eef4e8',stroke='#b7c9b5',extra='')=>`<rect x="${x}" y="$
 const rowsOf=pack=>Object.entries(pack).map(([id,v])=>[id,v.x,v.y,v.w,v.h]).sort((a,b)=>a[0]<b[0]?-1:1);
 const packRows=rowsOf;
 function miniRows(rows,outline,x,y,w,h,label,opts={}){const u=Math.min(w/outline[0],h/outline[1]),ox=x+(w-outline[0]*u)/2,oy=y+(h-outline[1]*u)/2;let s=R(ox,oy,outline[0]*u,outline[1]*u,'#f6faf0','#658b70');rows.forEach(r=>{const c=COLORS[r[0]]||'#437ba5';s+=R(ox+r[1]*u,oy+(outline[1]-r[2]-r[4])*u,r[3]*u,r[4]*u,c,'#fff');});if(label)s+=T(x+w/2,y+h+26,label,20);return s;}
-function segList(contour,x,y,scale=1,hi=null){let s=T(x+10,y,'轮廓线（[x1,x2)=高）',18,'#355d49','start');contour.forEach((seg,i)=>{const segText=`[${seg.x1},${seg.x2})=${seg.h}`;const isHi=hi&&seg.x1===hi[0]&&seg.x2===hi[1];s+=R(x+10,y+18+i*30*Math.max(.7,scale),210*scale,24,isHi?'#f6ead9':'#f2f6ee',isHi?'#c9a06d':'#c8d4c6')+T(x+12+105*scale,y+35+i*30*Math.max(.7,scale),segText,16,isHi?'#8a5a26':'#5e7565');});return s;}
+function segList(contour,x,y,scale=1,hi=null,reveal=1){let s=T(x+10,y,'轮廓线（[x1,x2)=高）',18,'#355d49','start');contour.forEach((seg,i)=>{if(i>=Math.ceil(reveal*contour.length))return;const segText=`[${seg.x1},${seg.x2})=${seg.h}`;const isHi=hi&&seg.x1===hi[0]&&seg.x2===hi[1];s+=R(x+10,y+18+i*30*Math.max(.7,scale),210*scale,24,isHi?'#f6ead9':'#f2f6ee',isHi?'#c9a06d':'#c8d4c6')+T(x+12+105*scale,y+35+i*30*Math.max(.7,scale),segText,16,isHi?'#8a5a26':'#5e7565');});return s;}
 function treeLayout05(treeText,cur){let s='';const G=packBstar05(GOLDEN_TREE05);const pos={A:[70,110],B:[210,185],C:[350,260],E:[470,335],D:[70,185]};const parent={B:'A',C:'B',E:'C',D:'A'};
  for(const[id,p]of Object.entries(pos)){const isCur=id===cur;s+=R(p[0]-38,p[1]-22,76,44,isCur?'#f6ead9':'#eef4e8',isCur?'#c9a06d':'#b7c9b5')+T(p[0],p[1]+5,id,24,isCur?'#8a5a26':'#355d49');if(parent[id]){const q=pos[parent[id]];s+=`<path d="M${q[0]} ${q[1]+22}L${p[0]} ${p[1]-22}" stroke="#9db3a0" fill="none"/>`;}}
  return s;}
-function walkView(scene){const step=scene.step??1,ev=GOLDEN05.events[Math.min(step,GOLDEN05.events.length)-1],cur=ev.id;let s=T(60,64,'先序：'+GOLDEN05.order.join(' → '),20,'#5e7565','start');
+function walkView(scene,p=1){const step=scene.step??1,ev=GOLDEN05.events[Math.min(step,GOLDEN05.events.length)-1],cur=ev.id;let s=T(60,64,'先序：'+GOLDEN05.order.join(' → '),20,'#5e7565','start');
  s+=treeLayout05(GOLDEN_TREE05,cur);
  s+=board(packRows(ev.pack),[10,8],{x:250,y:120,w:430,h:280,interactive:false,showPairs:false});
  const q=ev.query,u=Math.min(430/10,280/8),ox=250+(430-10*u)/2,oy=120+(280-8*u)/2;
- s+=`<path d="M${ox+q[0]*u} ${oy-8}V${oy+8*u+8}" stroke="#a05f30" stroke-width="2.5" stroke-dasharray="6 4"/>`;
- s+=T(ox+q[0]*u+3,oy+8*u+22,`${ev.id} 查询 [${ev.query[0]},${ev.query[1]})`,17,'#a05f30','start');
+ const sweep=q[0]+(q[1]-q[0])*Math.min(1,p*1.9);
+ s+=`<rect x="${ox+q[0]*u}" y="${oy-6}" width="${(q[1]-q[0])*u}" height="${8*u+12}" fill="#f6ead9" opacity=".35"/>`;
+ s+=`<path d="M${ox+sweep*u} ${oy-8}V${oy+8*u+8}" stroke="#a05f30" stroke-width="2.5" stroke-dasharray="6 4"/>`;
+ s+=`<path d="M${ox+sweep*u} ${oy-8}l-6-11h12z" fill="#a05f30"/>`;
+ s+=T(ox+q[0]*u,oy+8*u+26,'查询 ['+q[0]+','+q[1]+') 覆盖整个宽度的轮廓',16,'#a05f30','start');
  s+=segList(ev.contour,710,120,1,ev.support?[ev.support.x1,ev.support.x2]:null);
+ if(ev.support&&p>.55){const segX=710+10,segW=210;const idx=ev.contour.findIndex(g=>g.x1===ev.support.x1&&g.x2===ev.support.x2);if(idx>=0){const y=120+18+idx*30;s+=`<rect x="${segX}" y="${y}" width="${segW}" height="24" fill="none" stroke="#c9a06d" stroke-width="3" rx="3"/>`;}}
  s+=T(710,418,`${ev.id} → (${ev.x},${ev.y})`,22,'#355d49','start');
  s+=ev.support?T(710,455,'托住它的是 '+JSON.stringify(`[${ev.support.x1},${ev.support.x2})=${ev.support.h}`).replaceAll('"',''),17,'#5e7565','start'):T(710,455,'落在地面 y=0',17,'#5e7565','start');
  return s;}
 function cards(items,p){return items.map(([h,b],i)=>{const x=55+(i%2)*455,y=110+Math.floor(i/2)*155;return R(x,y,415,130,'#edf3e8',p*items.length>=i?'#72997e':'#c8d4c6')+T(x+20,y+38,h,25,'#234e40','start')+T(x+20,y+85,b,19,'#58796a','start');}).join('');}
-export function renderScene(scene,time,trial,reduced){const p=Math.max(0,Math.min(1,(time-scene.start)/(scene.end-scene.start))),o=scene.outline||[10,8];let rows=trial||scene.rows,body='',moving=false;
+export function renderScene(scene,time,trial,reduced){const p=sceneProgress(scene,time),o=scene.outline||[10,8];let rows=trial||scene.rows,body='',moving=false;
  if(!trial&&scene.from){const q=reduced?1:Math.max(0,Math.min(1,(time-scene.start-1)/3)),v=q*q*(3-2*q);moving=q<1;rows=scene.rows.map((r,i)=>r.map((n,j)=>j===1||j===2?scene.from[i][j]+(n-scene.from[i][j])*v:n));}
  const report=metricsReport(rows,o,scene.catalog);
  if(trial){body=board(rows,o,{x:40,y:105,w:570,h:315});body+=T(755,160,report.legal?'当前摆放合法':'先处理摆放错误',27,report.legal?'#326d4d':'#a44f35')+T(755,230,'这是你手动调整后的布局',22,'#5e7565')+T(755,300,'树没有变：想改布局请编辑树',22,'#5e7565');}
+ else if(scene.view==='board'){body=board(rows,o,{x:40,y:105,w:570,h:315});body+=T(755,150,'图里的模块可以直接拖动',22,'#355d49')+T(755,208,'拖动后先检查合法性',22,'#5e7565')+T(755,266,'结构仍由树决定：想改结构请编辑树',21,'#a05f30');}
  else if(scene.view==='intro-why05'){body=miniRows(rowsOf(GOLDEN05.pack),[10,8],45,150,390,215,'切片树能写：9×3')+miniRows(BEST03,[10,8],525,150,390,215,'6×4更紧：切片写不出');body+=T(255,110,'上一课的结论',24)+T(720,110,'没有第一刀',24,'#a04e36');body+=R(280,430,400,60,p>.5?'#f6ead9':'#f3f6ef','#c9a06d')+T(480,468,'B*-tree：树形+轮廓线，表达这批数据的全部5040棵树',19,'#8a5a26');}
  else if(scene.view==='intro-goal05'){const chain=[['先序遍历','整个左子树在前'],['区间查询','最高轮廓决定 y'],['更新轮廓','切段、留残段、合并'],['解释落点','每个模块说清为什么']];chain.forEach(([h1,h2],i)=>{const x=42+i*228;body+=R(x,160,205,130,'#edf3e8',p*4>=i?'#72997e':'#c8d4c6')+T(x+102,205,i+1,30,'#9b6337')+T(x+102,246,h1,21,'#234e40')+T(x+102,272,h2,16,'#58796a');});body+=R(120,340,720,80,'#f6ead9','#c9a06d')+T(480,372,'学完要能回答三个问题',23,'#8a5a26')+T(480,404,'为什么落在这里？谁被连累？树形合法等于装得下吗？',18,'#a04e36');}
  else if(scene.view==='convention-cards')body=cards([['左孩子','从父块右边缘开始：x=父x+父宽'],['右孩子','与父块同一 x：y 看那一带的轮廓'],['y 不写在树上','轮廓线决定高度：查整个覆盖区间'],['树给出关系','轮廓给出落点；两者合起来才是布局']],p);
  else if(scene.view==='preorder-order'){body=T(480,110,'先序 = 根 → 整个左子树 → 右孩子',26);body+=treeLayout05(GOLDEN_TREE05,'A')+T(480,440,'标准树摆放松序：A、B、C、E、D',24,p>.4?'#355d49':'#9db3a0')+T(480,480,'D 虽然挂在 A 下面，却要等左子树全部完成',20,'#a05f30');}
  else if(scene.view==='order-matters'){body=miniRows(rowsOf(LIFT05.pack),[10,8],45,150,390,215,'正确顺序：9×4=36')+miniRows(packRows(WRONG_ORDER05.pack),[10,8],525,150,390,215,'先右后左：9×6=54')+T(480,110,'同一棵树，两种遍历',26);if(p>.4)body+=T(480,455,'D 的 y 从3变成2；后面每一块跟着改变',22,'#a04e36');}
- else if(scene.view==='walk')body=walkView(scene);
- else if(scene.view==='contour-update'){const before=GOLDEN05.events[3].contour,after=GOLDEN05.events[4].contour;body=T(480,110,'D 放下前后的轮廓线',26);body+=segList(before,120,150,1.4)+segList(after,600,150,1.4,[0,3]);body+=T(330,150,'放下 D 前','start')===''?'':T(300,142,'放下 D 前',22)+T(780,142,'放下 D 后',22);body+=T(480,430,'[0,3) 从2抬到3；与 [3,5)=3 相邻等高 → 合并为 [0,5)=3',21,p>.5?'#355d49':'#9db3a0')+T(480,470,'被盖住的部分切开；不在覆盖区间里的残段原样保留',19,'#5e7565');}
+ else if(scene.view==='walk')body=walkView(scene,p);
+ else if(scene.view==='contour-update'){const before=GOLDEN05.events[3].contour,after=GOLDEN05.events[4].contour;body=T(480,110,'D 放下前后的轮廓线',26);body+=T(300,128,'放下 D 前',20)+T(780,128,'放下 D 后',20);body+=segList(before,120,150,1.4,null,Math.min(1,p*2.2))+segList(after,600,150,1.4,[0,3],Math.max(0,Math.min(1,(p-.35)*2.2)));if(p>.55)body+=T(480,430,'[0,3) 从2抬到3；与 [3,5)=3 相邻等高 → 合并为 [0,5)=3',21,'#355d49');if(p>.7)body+=T(480,470,'被盖住的部分切开；不在覆盖区间里的残段原样保留',19,'#5e7565');}
  else if(scene.view==='lift-anatomy'){body=board(rowsOf(LIFT05.pack),[10,8],{x:45,y:110,w:430,h:330,interactive:false,showPairs:false});const u=Math.min(430/10,330/8),ox=45+(430-10*u)/2,oy=110+(330-8*u)/2;body+=R(ox+0*u,oy-26,3*u,18,'#f6ead9','#c9a06d')+T(ox+1.5*u,oy-13,'D 的查询区间 [0,3)',15,'#8a5a26');body+=T(700,170,'区间里两段轮廓：',22,'start'===''?'':'#355d49')+T(700,210,'C 的顶部 2',22)+T(700,250,'B 的顶部 3',22,'#a05f30')+T(700,310,'取最大 → D 落在 y=3',24,'#355d49');if(p>.5)body+=T(700,380,'只看父块顶边（2）就会写错',21,'#a04e36');}
  else if(scene.view==='segments'){body=board(rowsOf(GOLDEN05.pack),[10,8],{x:45,y:110,w:430,h:330,interactive:false,showPairs:false});body+=T(700,160,'B 的查询区间 [3,5)',22)+T(700,205,'覆盖区间 = 整段 footprint',20,'#5e7565')+T(700,260,'宽块可能跨好几段轮廓',20,'#5e7565')+T(700,320,'E 的区间 [7,9) 里',20)+T(700,355,'最高只有 0 → 落地',20,'#355d49');}
  else if(scene.view==='residual-detail'){body=board(rowsOf(RESIDUAL05.pack),[10,8],{x:45,y:110,w:430,h:330,interactive:false,showPairs:false});body+=segList(RESIDUAL05.events[2].contour,700,130,1.05,[5,6]);body+=T(700,300,'残段 [5,6)=1 是 D 留下的',20,'#a05f30','start')+T(700,340,'B 查询 [5,7)：最高就是它',20,'start'===''?'':'#5e7565','start')+T(700,380,'B 落在 y=1，踩着残段',21,'#355d49','start')+T(700,430,'删掉整段重写 → B 落到0 → 与D重叠',19,'#a04e36','start');}

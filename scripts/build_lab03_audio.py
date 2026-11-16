@@ -3,6 +3,8 @@ import hashlib,json,re,subprocess
 from pathlib import Path
 import imageio_ffmpeg
 R=Path(__file__).resolve().parents[1];out=R/'dist/lessons/03/teaching';out.mkdir(parents=True,exist_ok=True)
+from voice_checks import protect_measured_narration
+protect_measured_narration(R,'03')
 d=json.loads((R/'build/lab03/authoring.json').read_text(encoding='utf-8'));old=json.loads((R/'dist/data/stories.json').read_text(encoding='utf-8'))['03'];tim=json.loads((R/'dist/media/03/zh.json').read_text(encoding='utf-8'))['scenes'];lookup={s['key']:(s,t)for s,t in zip(old,tim)}
 filters=[];labels=[];captions=[];cuts=[];cursor=0;reading=0
 for s in d['scenes']:

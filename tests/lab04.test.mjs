@@ -48,14 +48,14 @@ test('exercises check exact numbers with reasons recorded separately',()=>{
 test('Lab4 timeline: intro precedes knowledge scenes; boundaries and reused audio cohere',()=>{
  assert.equal(data.scenes.length,25);assert.equal(data.chapters.length,8);
  assert.deepEqual(data.scenes.slice(0,3).map(s=>s.key),['intro-context','intro-task','intro-preview']);
- assert(data.scenes.slice(0,3).every(s=>s.chapter===1&&s.delivery==='reading'&&!s.question));
+ assert(data.scenes.slice(0,3).every(s=>s.chapter===1&&s.delivery===(data.newSpeech?'voice':'reading')&&!s.question));
  assert.equal(data.scenes[3].key,'notation');assert.equal(data.scenes[3].chapter,2);
- assert.equal(data.scenes.filter(s=>s.question).length,2);assert.equal(data.cuts.length,8);assert.equal(data.newSpeech,false);
+ assert.equal(data.scenes.filter(s=>s.question).length,4);assert.equal(data.cuts.length,data.newSpeech?0:8);if(data.newSpeech){assert.equal(data.readingSeconds,0);assert.equal(data.utterances.length,data.scenes.length);assert(data.scenes.every(s=>s.wordCues?.length));}
  let cursor=0;for(const s of data.scenes){assert(Math.abs(s.start-cursor)<1e-5);assert(s.end>s.start);cursor=s.end;}
  assert(Math.abs(cursor-data.duration)<1e-5);
  for(const c of data.captions)if(c.delivery==='reading')assert.deepEqual(c.words,[]);
- const voiced=data.captions.filter(c=>c.delivery==='voice');assert.equal(voiced.length,8);
- for(const s of data.scenes)if(s.voice)assert(['encoding','guess','combine','push','full','checks','overflow','try'].includes(s.voice),s.key+' voice '+s.voice);
+ const voiced=data.captions.filter(c=>c.delivery==='voice');assert.equal(voiced.length,data.newSpeech?data.captions.length:8);
+ for(const s of data.scenes)if(s.voice)if(data.newSpeech)assert.equal(s.voice,data.voice);else assert(['encoding','guess','combine','push','full','checks','overflow','try'].includes(s.voice),s.key+' voice '+s.voice);
 });
 test('all Lab4 teaching views render finite, non-negative SVG for every authored scene',()=>{
  let checked=0;

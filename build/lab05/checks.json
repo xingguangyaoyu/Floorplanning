@@ -2,10 +2,10 @@
   "verdict": "PASS",
   "scenes": 20,
   "chapters": 8,
-  "duration": 277.104,
-  "voiceSeconds": 60.434,
-  "readingSeconds": 216.67,
-  "newSpeech": false,
+  "duration": 297.464,
+  "voiceSeconds": 297.464,
+  "readingSeconds": 0,
+  "newSpeech": true,
   "pythonChecks": 25,
   "rejectedMutations": [
     {

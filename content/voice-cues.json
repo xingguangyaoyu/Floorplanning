@@ -1,0 +1,20 @@
+{
+ "02.right":{"zh":{"motion":["现在把E","向右移"]},"en":{"motion":["Now move E","to the right"]}},
+ "02.touch":{"zh":{"motion":["让E回到","横坐标七"]},"en":{"motion":["Bring E back","equals seven"]}},
+ "02.overlap":{"zh":{"motion":["移完","再看"]},"en":{"motion":["After","the move"]}},
+ "02.new-conflict":{"zh":{"motion":["把D","往右挪"]},"en":{"motion":["Move D","right"]}},
+ "02.project-x":{"zh":{"visual":[["C从五到七",0.2],["共同的一段",0.46],["宽一",0.72]]},"en":{"visual":[["C spans",0.2],["Their shared interval",0.46],["one unit wide",0.72]]}},
+ "02.project-y":{"zh":{"visual":[["两块都从零到二",0.2],["共同高度是二",0.5],["相乘就是",0.74]]},"en":{"visual":[["both blocks span",0.2],["shared height is two",0.5],["gives an overlap area",0.74]]}},
+ "02.formula":{"zh":{"visual":[["右端",0.2],["左端",0.4],["负数按零算",0.65],["再把宽和高相乘",0.85]]},"en":{"visual":[["smaller right edge",0.2],["larger left edge",0.4],["clamp negative",0.65],["multiply the shared",0.85]]}},
+ "03.extents":{"zh":{"motion":["把整张图","上移两格"]},"en":{"motion":["Shift","up by two"]}},
+ "03.twentyfour":{"zh":{"motion":["看模块","重新摆放"]},"en":{"motion":["After","rearrangement"]}},
+ "03.width-tradeoff":{"zh":{"motion":["只把E","放到C上方"]},"en":{"motion":["Place E","above C"]}},
+ "08.overlap-change":{"zh":{"motion":["现在只把A","二乘三"]},"en":{"motion":["Change only A","two by three"]}},
+ "08.repair-side":{"zh":{"motion":["把D","右移"]},"en":{"motion":["Moving D","to the right"]}},
+ "08.repair-up":{"zh":{"motion":["D放在B","上方"]},"en":{"motion":["Place D","above B"]}},
+ "08.repack-B":{"zh":{"motion":["B左移","贴住A"]},"en":{"motion":["Move B left","touches A"]}},
+ "08.repack-C":{"zh":{"motion":["C再左移","贴住B"]},"en":{"motion":["Move C left","touch B"]}},
+ "08.repack-D":{"zh":{"motion":["D移到","四二"]},"en":{"motion":["Place D","four two"]}},
+ "08.space-D":{"zh":{"motion":["先把D","零三"]},"en":{"motion":["Move D","zero three"]}},
+ "08.space-E":{"zh":{"motion":["再把E","放进空位"]},"en":{"motion":["Place E","in that space"]}}
+}

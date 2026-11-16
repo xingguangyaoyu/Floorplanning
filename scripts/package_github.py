@@ -1,20 +1,27 @@
 """Build a curated GitHub source/runtime archive locally; never upload or deploy."""
-import hashlib,json,zipfile
+import argparse,hashlib,json,zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 TARGET=ROOT/'floorplanning-studio-github-2026-11-16.zip'
+parser=argparse.ArgumentParser();parser.add_argument('--output');args=parser.parse_args()
+if args.output:TARGET=ROOT/args.output
 ROOT_FILES=['README.md','GITHUB_UPLOAD.md','LICENSE','THIRD_PARTY_NOTICES.md','package.json','requirements-dev.txt','.gitignore','start-preview.ps1','打开本地预览.cmd']
 SCRIPTS=['build.mjs','serve.py','package_python.py','package_github.py','check_site.py','check_http.py','check_complete_interactive.py','prepare_v3.mjs','build_complete_interactive.py']
+SCRIPTS+=['voice_pipeline.py','voice_checks.py','build_teaching_labels.py']
 for n in range(2,8):
  SCRIPTS += [f'prepare_lab{n:02}.mjs',f'build_lab{n:02}_audio.py',f'check_lab{n:02}.py']
 DOCS=['DEVELOPMENT.md','VERIFICATION.md','source-audit.md','verification/verify-representation-domains.mjs','verification/representation-domains.json','verification/verify-shape-state.mjs','verification/shape-state-results.json']
 for n in range(2,8):DOCS.append(f'lab{n:02}/transcript.md')
 BUILD=['python.json','complete-interactive-manifest.json','complete-interactive-checks.json','site-checks.json','http-checks.json']
+BUILD+=['voice-repair-2026-11-16/plan.json','voice-repair-2026-11-16/checks.json']
+BUILD+=['voice-repair-2026-11-16/browser-seek.json','voice-repair-2026-11-16/lab08-geometry-browser.json','voice-repair-2026-11-16/remaining-teaching-labels.json']
+DOCS+=['voice-repair-2026-11-16/HANDOFF.md']
 for n in range(2,8):
  for name in ['authoring.json','provenance.json','checks.json']:BUILD.append(f'lab{n:02}/{name}')
 
 files=[ROOT/n for n in ROOT_FILES]+[ROOT/'scripts'/n for n in SCRIPTS]+[ROOT/'docs'/n for n in DOCS]+[ROOT/'build'/n for n in BUILD]
+files += [p for p in (ROOT/'build/voice-repair-2026-11-16/clips').rglob('*') if p.is_file() and p.suffix in ['.mp3','.json']]
 for folder in ['dist','content','tests']:
  files += [p for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ['.pyc','.log']]
 files=sorted(set(files));missing=[str(p.relative_to(ROOT))for p in files if not p.is_file()]

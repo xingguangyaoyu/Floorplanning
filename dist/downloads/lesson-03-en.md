@@ -56,6 +56,22 @@ A whitespace budget γ=empty/module area differs from the empty/outline fraction
 
    Answer: C. The denominator changes; total block area remains 23.
 
+4. Outline 10×8, total block area 23. What is the outline deadspace?
+
+   A. 57
+   B. 23
+   C. 80
+
+   Answer: A. 80−23=57: unused area inside the fixed outline.
+
+5. Move blocks inside the same outline; areas stay fixed. Outline density…
+
+   A. stays the same
+   B. increases
+   C. decreases
+
+   Answer: A. Numerator and denominator are unchanged. Packing density may change.
+
 ## Python exercise
 
 Build a complete metrics report on top of the provided Lab2 validator: true extents, explicit denominators and legal-only scores.

@@ -1,11 +1,13 @@
+import{localizeTeaching}from'../../../assets/teaching-ui.mjs';
+import{bindSeek}from'../../../assets/seek-controller.mjs';
 import {renderVisual}from'./visuals.mjs';
 import {COLORS,clone}from'../../../assets/core.mjs';
-import {BASE,SCENES,DURATION,frameAt,sceneAt,check,overlaps,newSession,enterTrial,leaveTrial,seek,edit}from'./pilot-model.mjs';
-import NARRATION from './lesson-data.mjs';
+import {BASE,SCENES,DURATION,frameAt,sceneAt,check,overlaps,newSession,enterTrial,leaveTrial,seek,edit}from'./pilot-model.mjs?v=voice-20261116';
+import{DATA as NARRATION}from'./pilot-model.mjs?v=voice-20261116';import{lessonSuffix,language,installLanguageChoice,restoreScene}from'../../../assets/teaching-language.mjs';
 import {questionClock,advanceQuestion,revealQuestion}from'./question-clock.mjs';
 const $=s=>document.querySelector(s),NS='http://www.w3.org/2000/svg',session=newSession(),world=$('#world'),stage=$('#stage'),motion=matchMedia('(prefers-reduced-motion: reduce)'),asked=new Set(),answers=new Map();
-let playing=false,raf=0,last=0,lastQuestion=undefined,drag=null,captionOn=true,trialFromMoving=false,questionTimer=0,questionState=null,questionKey=null,questionLast=0,playEpoch=0;
-const narration=new Audio(new URL('./narration.m4a',import.meta.url).href);narration.preload='metadata';narration.volume=1;
+let playing=false,raf=0,last=0,lastQuestion=undefined,drag=null,captionOn=true,trialFromMoving=false,questionTimer=0,questionState=null,questionKey=null,questionLast=0,playEpoch=0,seekController=null;
+const narration=new Audio(new URL('./narration'+lessonSuffix+'.m4a?v='+NARRATION.audioSha256.slice(0,12),import.meta.url).href);narration.preload='metadata';narration.volume=1;
 narration.id='interactive-audio';narration.hidden=true;$('.player').append(narration);
 $('#seek').max=DURATION;const timerText=document.createElement('p');timerText.className='question-countdown';timerText.setAttribute('role','timer');$('#answer').before(timerText);
 const holdButton=document.createElement('button');holdButton.textContent='留在本题';holdButton.onclick=()=>{holdQuestion();pause();};$('#continue').after(holdButton);
@@ -49,9 +51,9 @@ function renderQuestion(scene){
  scene.question.choices.forEach((text,i)=>{const b=document.createElement('button');b.textContent=text;b.setAttribute('aria-pressed','false');b.onclick=()=>{answers.set(scene.key,i);asked.add(scene.key);for(const button of $('#choices').children)button.setAttribute('aria-pressed',String(button===b));$('#answer').textContent=scene.question.replies[i];if(!questionState||questionKey!==scene.key){pause();startQuestion(scene);}if(!questionState.held){revealQuestion(questionState);questionLast=performance.now();}render();};$('#choices').append(b);});
  if(answers.has(key)){const i=answers.get(key);$('#choices').children[i].setAttribute('aria-pressed','true');$('#answer').textContent=scene.question.replies[i];}
 }
-function render(){
+function render(){queueMicrotask(()=>localizeTeaching(document.body));
  const frame=frameAt(session.time,motion.matches),trial=!!session.trial,pack=session.trial||frame.pack,report=trial?check(pack):frame.report,moving=!trial&&frame.moving,scene=frame.scene;
- document.body.dataset.mode=trial?'trial':'lesson';stage.dataset.time=session.time.toFixed(3);stage.dataset.scene=scene.key;world.setAttribute('viewBox',(trial?[-.6,-.4,11.2,9]:frame.camera).join(' '));
+ document.body.dataset.mode=trial?'trial':'lesson';stage.dataset.time=session.time.toFixed(3);stage.dataset.scene=scene.key;stage.dataset.fraction=String((session.time-scene.start)/(scene.end-scene.start));world.setAttribute('viewBox',(trial?[-.6,-.4,11.2,9]:frame.camera).join(' '));
  updateText($('#stage-title'),trial?`自己的尝试：选中 ${session.selected}`:scene.title);updateText($('#stage-label'),trial?'讲解已暂停':`第 ${scene.chapterIndex} / ${new Set(SCENES.map(s=>s.chapterIndex)).size} 章`);updateText($('#stage-note'),trial?'改完后，看看有没有碰撞，包围盒又变了多少':moving?'先看它移到哪里，再检查结果':scene.note);
  const focus=trial?[session.selected]:scene.focus;
  for(const[id,r]of Object.entries(pack)){
@@ -65,15 +67,15 @@ function render(){
   const p=(session.time-scene.start)/(scene.end-scene.start);if(p>.12){dimensions.append(node('path',{d:'M0 4.87H2',stroke:'#a34e32','stroke-width':'.04'}),node('text',{x:1,y:4.7,'text-anchor':'middle','font-size':'.22',fill:'#923b27'},'交集宽 2'));}
   if(p>.38)dimensions.append(node('path',{d:'M-.13 5V6',stroke:'#a34e32','stroke-width':'.04'}),node('text',{x:2.27,y:5.6,'font-size':'.22',fill:'#923b27'},'高 1'));
  }
- const spoken=NARRATION.captions.find(c=>session.time>=c.start&&session.time<c.end);updateText($('#caption'),trial?'讲解暂停。现在修改的是自己的尝试；返回后恢复原来的讲解时间和画面。':spoken?.zh||scene.caption);$('#caption').hidden=!captionOn;
+ const spoken=NARRATION.captions.find(c=>session.time>=c.start&&session.time<c.end);updateText($('#caption'),trial?'讲解暂停。现在修改的是自己的尝试；返回后恢复原来的讲解时间和画面。':spoken?.text||spoken?.[language]||scene.caption);$('#caption').hidden=!captionOn;
  const waiting=!!questionTimer&&!questionState?.held;$('#seek').value=session.time;updateText($('#clock'),`${clock(session.time)} / ${clock(DURATION)}`);updateText($('#play'),playing?'暂停':waiting?'留在本题':trial?'继续讲解':'播放');$('#play').setAttribute('aria-label',playing?'暂停讲解':waiting?'暂停自动继续':trial?'继续讲解':'播放讲解');
  $('#trial-banner').hidden=!trial;updateText($('#trial-description'),`${trialFromMoving?'先从这一步完成后的布局开始试。':''}原讲解停在 ${clock(session.savedTime??session.time)}，返回后可以接着看。`);$('#selected').value=session.selected;$('#undo').disabled=!session.history.length;
  for(const b of document.querySelectorAll('[data-chapter]'))b.setAttribute('aria-current',String(Number(b.dataset.chapterIndex)===scene.chapterIndex));
  renderQuestion(scene);if(!trial&&scene.key==='overlap-predict'){updateText($('#metrics'),answers.has(scene.key)?'当前仍是变形前的原布局。预测针对下一步；点击“继续看解释”，或在图中将 A 换形后验证。':'先作预测，再选择答案或直接点模块验证。这里暂不提前显示检查结论。');$('#metrics').classList.remove('bad');}else if(!trial&&frame.illustration){updateText($('#metrics'),'先看这一步怎样推出来。想试摆时，展开工具，选择一个模块。');$('#metrics').classList.remove('bad');}else if(reveal)status(pack,report,moving);else{updateText($('#metrics'),'先作判断，再选择答案或直接点模块验证。这里暂不提前显示检查结论。');$('#metrics').classList.remove('bad');}
 }
-function pause(){playEpoch++;playing=false;narration.pause();cancelAnimationFrame(raf);raf=0;stopDrag();render();}
-function play(){stopQuestion();stopDrag();if(session.trial)leaveTrial(session);if(session.time>=DURATION){seek(session,0);asked.clear();answers.clear();}narration.currentTime=session.time;narration.playbackRate=Number($('#speed').value);const epoch=++playEpoch;playing=true;render();if(window.parent!==window)window.parent.postMessage({type:'interactive-play'},location.origin);narration.play().then(()=>{if(playing&&epoch===playEpoch){cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);}}).catch(()=>{if(epoch!==playEpoch)return;pause();$('#mode-message').textContent='配音未能开始。请点击播放重试；也可逐章查看。';});}
-function tick(){if(!playing)return;const next=Math.min(DURATION,narration.currentTime);
+function pause(){seekController?.cancel();playEpoch++;playing=false;narration.pause();cancelAnimationFrame(raf);raf=0;stopDrag();render();}
+function play(){seekController?.cancel();stopQuestion();stopDrag();if(session.trial)leaveTrial(session);if(session.time>=DURATION){seek(session,0);asked.clear();answers.clear();}narration.currentTime=session.time;narration.playbackRate=Number($('#speed').value);const epoch=++playEpoch;playing=true;render();if(window.parent!==window)window.parent.postMessage({type:'interactive-play'},location.origin);narration.play().then(()=>{if(playing&&epoch===playEpoch){cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);}}).catch(()=>{if(epoch!==playEpoch)return;pause();$('#mode-message').textContent='配音未能开始。请点击播放重试；也可逐章查看。';});}
+function tick(){if(!playing||seekController?.active)return;const next=Math.min(DURATION,narration.currentTime);
  const stop=SCENES.find(s=>s.question&&!asked.has(s.key)&&session.time<s.end-.02&&next>=s.end-.02);session.time=stop?stop.end-.02:next;
  if(stop){asked.add(stop.key);narration.currentTime=session.time;pause();startQuestion(stop);$('#mode-message').textContent='留出10秒思考；不操作时公布答案，4秒后自动继续。';return;}
  render();if(session.time>=DURATION){pause();$('#mode-message').textContent='本课讲解结束。请继续完成本页综合Lab与课后习题。';}else raf=requestAnimationFrame(tick);
@@ -82,9 +84,10 @@ function begin(id){holdQuestion();pause();tools.open=true;if(!session.trial)tria
 function move(dx,dy){if(!session.trial)begin($('#selected').value);edit(session,p=>{p[session.selected].x+=dx;p[session.selected].y+=dy;});render();}
 function returnToLesson(){stopDrag();if(session.trial)leaveTrial(session);$('#mode-message').textContent='已返回原讲解位置。点击播放继续；自己的尝试没有改变讲解示范。';render();}
 $('#play').onclick=()=>{if(questionTimer){holdQuestion();return;}playing?pause():play();};$('#return').onclick=returnToLesson;
-function jump(t){stopQuestion();questionState=null;questionKey=null;timerText.textContent='播放本题后会留出10秒思考时间。';pause();seek(session,t);narration.currentTime=session.time;for(const s of SCENES)if(t<s.end)asked.delete(s.key);lastQuestion=undefined;$('#mode-message').textContent='已回到讲解，可以从这里接着看。';render();}
-$('#seek').oninput=e=>jump(Number(e.target.value));
-for(const [i,scene]of SCENES.entries()){if(i&&SCENES[i-1].chapterIndex===scene.chapterIndex)continue;const b=document.createElement('button');b.textContent=`${clock(scene.start)}　${scene.chapterIndex}. ${scene.chapter.zh}`;b.dataset.chapter=scene.start;b.dataset.chapterIndex=scene.chapterIndex;b.onclick=()=>jump(scene.start);$('#chapters').append(b);}
+function jump(t){pause();locate(t);}
+function locate(t){stopQuestion();questionState=null;questionKey=null;timerText.textContent='播放本题后会留出10秒思考时间。';seek(session,t);narration.currentTime=session.time;for(const s of SCENES)if(t<s.end){asked.delete(s.key);answers.delete(s.key);}lastQuestion=undefined;$('#mode-message').textContent='已回到讲解，可以从这里接着看。';render();}
+seekController=bindSeek($('#seek'),{isPlaying:()=>playing,pause,seek:locate,play});
+for(const [i,scene]of SCENES.entries()){if(i&&SCENES[i-1].chapterIndex===scene.chapterIndex)continue;const b=document.createElement('button');b.textContent=`${clock(scene.start)}　${scene.chapterIndex}. ${scene.chapter[language]}`;b.dataset.chapter=scene.start;b.dataset.chapterIndex=scene.chapterIndex;b.onclick=()=>jump(scene.start);$('#chapters').append(b);}
 const stepLabel=document.createElement('label');stepLabel.textContent='定位推演步骤 ';const stepSelect=document.createElement('select');stepSelect.setAttribute('aria-label','定位推演步骤');for(const s of SCENES){const o=document.createElement('option');o.value=s.start;o.textContent=clock(s.start)+' '+s.title;stepSelect.append(o);}stepSelect.onchange=()=>jump(Number(stepSelect.value));stepLabel.append(stepSelect);$('#chapters').after(stepLabel);const endStep=document.createElement('button');endStep.textContent='查看本步结尾';endStep.onclick=()=>jump(sceneAt(session.time).end-.05);stepLabel.after(endStep);
 $('#continue').onclick=continueQuestion;$('#speed').onchange=()=>narration.playbackRate=Number($('#speed').value);
 $('#selected').onchange=e=>begin(e.target.value);$('#reshape').onclick=()=>{if(!session.trial)begin('A');edit(session,p=>{p.A.w=p.A.w===2?3:2;p.A.h=6/p.A.w;});render();};
@@ -97,8 +100,8 @@ stage.addEventListener('pointerdown',e=>{const g=e.target.closest('[data-block]'
 stage.addEventListener('pointermove',e=>{if(!drag)return;const point=position(e),dx=Math.round(point.x-drag.x),dy=Math.round(point.y-drag.y);if(dx===0&&dy===0&&!drag.moved)return;if(!drag.moved){session.history.push(clone(drag.original));drag.moved=true;}session.trial=clone(drag.original);session.trial[drag.id].x+=dx;session.trial[drag.id].y+=dy;render();});
 function stopDrag(){const id=drag?.pointerId;drag=null;if(id!=null&&stage.hasPointerCapture(id))stage.releasePointerCapture(id);}stage.addEventListener('pointerup',stopDrag);stage.addEventListener('pointercancel',stopDrag);
 document.addEventListener('keydown',e=>{if(e.code==='Space'&&!e.repeat&&!/INPUT|BUTTON|TEXTAREA|SELECT/.test(e.target.tagName)){e.preventDefault();if(questionTimer)holdQuestion();else playing?pause():play();}});
-narration.addEventListener('ended',()=>{session.time=DURATION;pause();});
-window.addEventListener('pagehide',()=>{playing=false;narration.pause();cancelAnimationFrame(raf);stopQuestion();stopDrag();});document.addEventListener('visibilitychange',()=>{if(document.hidden){holdQuestion();pause();}});motion.addEventListener('change',render);
+narration.addEventListener('ended',()=>{if(!seekController?.active&&Number.isFinite(narration.duration)&&Math.abs(narration.currentTime-narration.duration)<.1){session.time=DURATION;pause();}});
+window.addEventListener('pagehide',()=>{seekController?.dispose();playEpoch++;playing=false;narration.pause();cancelAnimationFrame(raf);stopQuestion();stopDrag();});document.addEventListener('visibilitychange',()=>{if(document.hidden){holdQuestion();pause();}});motion.addEventListener('change',render);
 if(new URLSearchParams(location.search).has('embed')){
  document.body.classList.add('embedded');document.querySelector('main>a').hidden=true;document.querySelector('header').hidden=true;document.querySelector('footer').hidden=true;
  const next=document.createElement('button');next.className='next-practice';next.textContent='继续本页的动手实验 ↓';next.onclick=()=>window.parent.postMessage({type:'interactive-go-lab'},location.origin);tools.after(next);
@@ -106,3 +109,7 @@ if(new URLSearchParams(location.search).has('embed')){
  window.addEventListener('message',e=>{if(e.source===window.parent&&e.origin===location.origin&&e.data?.type==='interactive-pause'){holdQuestion();pause();}});
 }
 render();$('#play').disabled=false;
+
+window.addEventListener('pageshow',e=>{if(e.persisted)location.reload();});
+
+session.time=restoreScene(NARRATION);installLanguageChoice(()=>{const s=sceneAt(session.time);return{key:s.key,fraction:(session.time-s.start)/(s.end-s.start)};});render();

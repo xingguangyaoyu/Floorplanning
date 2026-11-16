@@ -58,6 +58,22 @@ Counting blocks is insufficient. A,A,C,D,E still contains five entries but dupli
 
    Answer: B. Each required ID must occur exactly once.
 
+4. The checker tests containment and overlap. How many must pass together?
+
+   A. 只查包含性
+   B. 两项都通过
+   C. 取决于模块顺序
+
+   Answer: B. Either failure rejects the layout. Legality is a gate, not a score.
+
+5. An overlapping layout still computes 28.75% density. Is that a valid occupancy report?
+
+   A. 能，数值算出来了
+   B. 不能，先修合法性
+   C. 只看密度就够
+
+   Answer: B. Metrics are meaningful only after containment and non-overlap both pass.
+
 ## Python exercise
 
 Implement a complete hard-module layout validator. Check identity, finite positive dimensions, fixed shapes, containment and every module pair; report all errors and actual intersection areas.
@@ -137,6 +153,22 @@ A whitespace budget γ=empty/module area differs from the empty/outline fraction
    C. Packing density
 
    Answer: C. The denominator changes; total block area remains 23.
+
+4. Outline 10×8, total block area 23. What is the outline deadspace?
+
+   A. 57
+   B. 23
+   C. 80
+
+   Answer: A. 80−23=57: unused area inside the fixed outline.
+
+5. Move blocks inside the same outline; areas stay fixed. Outline density…
+
+   A. stays the same
+   B. increases
+   C. decreases
+
+   Answer: A. Numerator and denominator are unchanged. Packing density may change.
 
 ## Python exercise
 
@@ -247,6 +279,20 @@ A syntactically valid expression can overflow. Change the reference’s first H 
    B. No, geometry still needs checking
 
    Answer: B. Structure and geometry are separate checks.
+
+4. One final stack item remains. Does that prove each block appears exactly once?
+
+   A. Yes
+   B. No, completeness still needs checking
+
+   Answer: B. Reduction to one region proves structure, not uniqueness or completeness.
+
+5. Can some layouts have no valid first through-cut?
+
+   A. No
+   B. Yes, a pinwheel is one example
+
+   Answer: B. Without a first through-cut, the layout is non-slicing. That is the limit of slicing trees.
 
 ## Python exercise
 
@@ -361,6 +407,21 @@ The reference alone cannot expose a parent-height shortcut: that example happens
 
    Answer: B. Skyline packing avoids overlap but does not enforce outline fit.
 
+4. Must a left child have the same y as its parent?
+
+   A. Always
+   B. No; y comes from the skyline
+
+   Answer: B. A left child inherits x only. Its y is the highest skyline under its full width.
+
+5. Total block area is 23. Across 5040 labelled trees, what is the smallest box area?
+
+   A. 23
+   B. 24
+   C. 27
+
+   Answer: B. Area 23 would require a 1×23 strip, too thin for B. The minimum is 6×4=24.
+
 ## Python exercise
 
 Implement the full packer pack_bstar(tree, modules): preorder walk, left child at the parent right edge, right child at the parent x; each block lands on the highest skyline under its whole footprint [x,x+w). Split old segments, keep residuals, merge equal neighbours. Return order/coords/rows/contour/trace. Error codes: unknown:X, duplicate:X, missing:list. tree is nested (id,left,right) tuples; leaves may be (id,None,None) or the bare id string.
@@ -470,6 +531,21 @@ Two complete permutations produce consistent, non-overlapping constraints. They 
 
    Answer: B. A,B,C,E precede D vertically; B reaches height 3.
 
+4. A block has several left predecessors. Which xj do you take?
+
+   A. The smallest bound
+   B. The largest bound
+   C. Any one
+
+   Answer: B. Every predecessor must be cleared, so take the maximum xi+wi.
+
+5. Two complete permutations decode without overlap. Do they also guarantee fitting 10×8?
+
+   A. Yes
+   B. No; outline fit is separate
+
+   Answer: B. The pair only fixes relative order; containment is still a separate check.
+
 ## Python exercise
 
 Implement the full decoder decode_sequence_pair(pos, neg, modules): validate both permutations, classify every ordered pair (same order -> horizontal, reversed -> vertical), then walk pos as a topological order taking the maximum of all predecessor bounds. Edge weight is the predecessor size. Return graph, order, coords, key predecessors and rows. Error code: permutation:pos / permutation:neg.
@@ -578,6 +654,22 @@ The current solution may get worse. Do not label current energy as best-so-far. 
    B. No, it helps reproducibility
 
    Answer: B. The seed controls the random trajectory, not an optimality guarantee.
+
+4. ΔE stays positive. Lower the temperature. The chance of accepting the worse candidate…
+
+   A. increases
+   B. decreases
+   C. stays the same
+
+   Answer: B. p=exp(−ΔE/T); a smaller T makes the exponent more negative, so p falls.
+
+5. When is the best legal solution updated?
+
+   A. On every acceptance
+   B. When the current solution is legal and better
+   C. When the current solution gets worse
+
+   Answer: B. Acceptance changes the current solution. The incumbent changes only for a better legal layout.
 
 ## Python exercise
 
@@ -803,7 +895,22 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: B. 1/6 is below the lower aspect bound of 0.5.
 
-4. A=(0,0,2,3), D=(0,2,3,1). What is their overlap area?
+4. Outline 10×8, block area 23. What are deadspace and outline density?
+
+   A. 57，28.75%
+   B. 57，23%
+   C. 53，28.75%
+
+   Answer: A. 80−23=57; 23/80=0.2875.
+
+5. E starts at x=9 and is 2 wide; all other checks pass. Is the layout legal?
+
+   A. Legal
+   B. Illegal: E crosses the boundary
+
+   Answer: B. 9+2=11>10. Legality requires both containment and non-overlap.
+
+6. A=(0,0,2,3), D=(0,2,3,1). What is their overlap area?
 
    A. 0
    B. 1
@@ -812,7 +919,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: C. Shared width is 2 and height is 1, giving 2. Zero confuses overlap with contact; 6 is A’s full area.
 
-5. After A becomes 2×3, why does moving D only to (2,2) still fail?
+7. After A becomes 2×3, why does moving D only to (2,2) still fail?
 
    A. It overlaps B
    B. A’s area increased
@@ -821,7 +928,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: A. B and D share x=3…5 and y=2…3, area 2. A still has area 6; D’s right edge 5 is inside the outline.
 
-6. D at (2,3) restores legality but gives box area 36. How should it be judged?
+8. D at (2,3) restores legality but gives box area 36. How should it be judged?
 
    A. Legal always beats area 27
    B. Successful repair, worse area objective
@@ -830,7 +937,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: B. Legality asks whether placement is allowed. Since 36>27, the box objective worsened. Fixed-outline density does not prove optimality.
 
-7. Compacting the box from 27 to 24 increases which density?
+9. Compacting the box from 27 to 24 increases which density?
 
    A. Fixed-outline density
    B. Packing density
@@ -839,7 +946,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
    Answer: B. 23/80 stays fixed, while 23/27 increases to 23/24. The denominator determines what the ratio measures.
 
-8. For a separate area-8 block with 0.5≤w/h≤2, which integer shapes are allowed?
+10. For a separate area-8 block with 0.5≤w/h≤2, which integer shapes are allowed?
 
    A. Only 2×4
    B. Only 4×2

@@ -56,6 +56,21 @@ The reference alone cannot expose a parent-height shortcut: that example happens
 
    Answer: B. Skyline packing avoids overlap but does not enforce outline fit.
 
+4. Must a left child have the same y as its parent?
+
+   A. Always
+   B. No; y comes from the skyline
+
+   Answer: B. A left child inherits x only. Its y is the highest skyline under its full width.
+
+5. Total block area is 23. Across 5040 labelled trees, what is the smallest box area?
+
+   A. 23
+   B. 24
+   C. 27
+
+   Answer: B. Area 23 would require a 1×23 strip, too thin for B. The minimum is 6×4=24.
+
 ## Python exercise
 
 Implement the full packer pack_bstar(tree, modules): preorder walk, left child at the parent right edge, right child at the parent x; each block lands on the highest skyline under its whole footprint [x,x+w). Split old segments, keep residuals, merge equal neighbours. Return order/coords/rows/contour/trace. Error codes: unknown:X, duplicate:X, missing:list. tree is nested (id,left,right) tuples; leaves may be (id,None,None) or the bare id string.

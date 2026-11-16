@@ -52,12 +52,12 @@ test('exercises check exact numbers with reasons recorded separately',()=>{
 test('Lab6 timeline: intro precedes knowledge scenes; boundaries and reused audio cohere',()=>{
  assert.equal(data.scenes.length,18);assert.equal(data.chapters.length,8);
  assert.deepEqual(data.scenes.slice(0,3).map(s=>s.key),['intro-why','intro-task','intro-preview']);
- assert(data.scenes.slice(0,3).every(s=>s.chapter===1&&s.delivery==='reading'&&!s.question));
- assert.equal(data.scenes.filter(s=>s.question).length,2);assert.equal(data.cuts.length,8);assert.equal(data.newSpeech,false);
+ assert(data.scenes.slice(0,3).every(s=>s.chapter===1&&s.delivery===(data.newSpeech?'voice':'reading')&&!s.question));
+ assert.equal(data.scenes.filter(s=>s.question).length,4);assert.equal(data.cuts.length,data.newSpeech?0:8);if(data.newSpeech){assert.equal(data.readingSeconds,0);assert.equal(data.utterances.length,data.scenes.length);assert(data.scenes.every(s=>s.wordCues?.length));}
  let cursor=0;for(const s of data.scenes){assert(Math.abs(s.start-cursor)<1e-5);assert(s.end>s.start);cursor=s.end;}
  assert(Math.abs(cursor-data.duration)<1e-5);
  for(const c of data.captions)if(c.delivery==='reading')assert.deepEqual(c.words,[]);
- for(const s of data.scenes)if(s.voice)assert(['two','same','reverse','maximum','predict','result','row','code'].includes(s.voice),s.key+' voice '+s.voice);
+ for(const s of data.scenes)if(s.voice)if(data.newSpeech)assert.equal(s.voice,data.voice);else assert(['two','same','reverse','maximum','predict','result','row','code'].includes(s.voice),s.key+' voice '+s.voice);
  const predict=data.scenes.find(s=>s.key==='std-result');
 });
 test('all Lab6 teaching views render finite, non-negative SVG for every authored scene',()=>{

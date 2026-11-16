@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {decodePostfix, decodeRows04, coordinateSteps, EXERCISES04, checkExercise04, TASKS04, assess04, CATALOG02} from '../dist/assets/slicing04.mjs';
+import{renderScene as render06}from'../dist/lessons/06/teaching/visuals.mjs';
 import LESSON06 from '../dist/lessons/06/teaching/lesson-data.mjs';
 import LESSON04 from '../dist/lessons/04/teaching/lesson-data.mjs';
 
@@ -97,16 +98,17 @@ test('R1: Lab6 tells three different capability results instead of one shared op
   const scene = LESSON06.scenes.find(s => s.key === 'compare-reps');
   assert(scene, 'compare-reps must exist');
   assert.doesNotMatch(scene.say, /三种表示法都能/, 'the false shared-capability claim must be gone');
-  assert.match(scene.say, /26880/, 'the slicing enumeration size must be quoted');
-  assert.match(scene.say, /25/, 'the slicing bound must appear');
-  assert.match(scene.say, /14400/);
-  assert.match(scene.say, /5040/);
+  const displayed=scene.say+render06(scene,scene.end-.001,null,true);
+  assert.match(displayed, /26880/, 'the slicing enumeration size must be quoted');
+  assert.match(displayed, /25/, 'the slicing bound must appear');
+  assert.match(displayed, /14400/);
+  assert.match(displayed, /5040/);
 });
 
 test('R1: Lab4 pinwheel scene passes the area-25 bound forward to Lab5/6', () => {
   const scene = LESSON04.scenes.find(s => s.key === 'pinwheel-proof');
-  assert.match(scene.say, /25/, 'Lab4 must state the slicing bound it implies');
-  assert.match(scene.say, /B\*-tree/, 'Lab4 must name the representations that do reach 24');
+  assert.match(scene.say, /25|二十五/, 'Lab4 must state the slicing bound it implies');
+  assert.match(scene.say, /完整搜索空间|完备穷举|全部穷举/, 'the domain-wide bound must use exhaustive evidence');assert.match(scene.say,/单张布局|单个反例/,'distinguish a witness from the domain-wide bound');
 });
 
 test('R5: the lesson bootstrap has one branch per lesson id', () => {

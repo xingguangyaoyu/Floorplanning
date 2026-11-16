@@ -1,3 +1,4 @@
+import{sceneProgress}from'../../../assets/voice-timing.mjs';
 import DATA from'./lesson-data.mjs';import{COLORS,inspect}from'../../../assets/core.mjs';
 const NS='http://www.w3.org/2000/svg',C={ink:'#18362f',muted:'#648475',accent:'#a05f30',paper:'#f9faf5',red:'#ad493a',green:'#2d7865'};
 function node(tag,attrs={},text){const e=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);if(text!=null)e.textContent=text;return e;}
@@ -6,7 +7,7 @@ function rect(g,x,y,w,h,fill,stroke=C.muted){g.append(node('rect',{x,y,width:w,h
 function line(g,x,y,X,Y,color=C.accent){g.append(node('path',{d:`M${x} ${y}L${X} ${Y}`,stroke:color,'stroke-width':2,fill:'none'}));}
 const states=DATA.states;const clamp=x=>Math.max(0,Math.min(1,x));
 function mini(g,pack,x,y,w,h,label,outer=false){const maxx=outer?10:Math.max(...Object.values(pack).map(r=>r.x+r.w)),maxy=outer?8:Math.max(...Object.values(pack).map(r=>r.y+r.h)),u=Math.min(w/maxx,h/maxy),ox=x+(w-maxx*u)/2,oy=y+(h-maxy*u)/2;rect(g,ox,oy,maxx*u,maxy*u,'#f1f4ec');for(const[id,r]of Object.entries(pack)){rect(g,ox+r.x*u,oy+(maxy-r.y-r.h)*u,r.w*u,r.h*u,COLORS[id],'#fff');if(r.w*u>28)text(g,ox+(r.x+r.w/2)*u,oy+(maxy-r.y-r.h/2)*u+5,id,Math.min(25,u*.7),'#fff');}if(label)text(g,x+w/2,y+h+29,label,21,C.green);}
-export function renderVisual(layer,frame,time,trial){layer.replaceChildren();if(trial||!frame.illustration){layer.setAttribute('display','none');return;}layer.removeAttribute('display');const s=frame.scene,k=s.key,p=clamp((time-s.start)/(s.end-s.start));
+export function renderVisual(layer,frame,time,trial){layer.replaceChildren();if(trial||!frame.illustration){layer.setAttribute('display','none');return;}layer.removeAttribute('display');const s=frame.scene,k=s.key,p=sceneProgress(s,time);
  if(k==='intro-why'){
   const u=56;for(const[i,[w,h,lab]]of[[3,2,'3 × 2'],[2,3,'2 × 3']].entries()){const x=170+i*400,y=280-h*u/2;rect(layer,x,y,w*u,h*u,COLORS.A,C.accent);text(layer,x+w*u/2,y+h*u/2+7,lab,26,'#fff');text(layer,x+w*u/2,y-28,lab,24,C.ink);text(layer,x+w*u/2,y+h*u+42,'面积都是 6',22,C.green);}
   line(layer,170+3*u+26,280,570-26,280,C.accent);text(layer,480,140,'同一个模块，两种画法',27,C.ink);text(layer,480,470,'形状一变，邻居的位置就要跟着变',24,C.accent);
@@ -20,17 +21,17 @@ export function renderVisual(layer,frame,time,trial){layer.replaceChildren();if(
   mini(layer,states.baseline,80,140,340,230,'A=3×2：合法，盒27');mini(layer,states.bad,540,140,340,230,'A=2×3：先撞到D');
   text(layer,480,110,'先看现象，再学方法',26,C.ink);text(layer,480,478,'本课回答：为什么会撞？怎么摆回去？还能不能更好？',23,C.accent);
  }else if(k==='multi-shapes'){
-  const u=46;for(let i=0;i<3;i++){const[x,y,lab]=[[240,215,'A：6'],[420,215,'B：12'],[600,215,'C：3×1 固定']];const shapes=i===0?'2×3 / 3×2':i===1?'3×4 / 4×3':'固定';rect(layer,x-60,y-30,150,90,'#edf3e9',C.accent);text(layer,x+15,y,shapes,20,C.ink);text(layer,x+15,y-14,lab,19,C.green);}
+  for(let i=0;i<3;i++){const[x,y,lab]=[[240,215,'A：6'],[420,215,'B：12'],[600,215,'C：3×1 固定']][i];const shapes=i===0?'2×3 / 3×2':i===1?'3×4 / 4×3':'固定';rect(layer,x-60,y-30,150,90,'#edf3e9',C.accent);text(layer,x+15,y+28,shapes,20,C.ink);text(layer,x+15,y-2,lab,19,C.green);}
   text(layer,480,120,'树：A B V C H（后缀表达式）',26,C.ink);text(layer,480,360,'V：A 在左、B 在右；H：整体在下、C 在上',22,C.muted);text(layer,480,430,'四个组合 → 四份 (宽,高)',24,C.accent);
  }else if(k==='frontier-keep'){
   const combos=[['6 × 4 = 24','保留（前沿）','#2d7865'],['5 × 5 = 25','保留（前沿）','#2d7865'],['7 × 4 = 28','被 (6,4) 支配','#ad493a'],['6 × 5 = 30','被 (6,4) 支配','#ad493a']];
   for(let i=0;i<4;i++){const x=60+i*222;rect(layer,x,170,205,120,'#edf3e9',p*4>=i?(combos[i][2]==='#2d7865'?C.green:C.red):'#c6d5c5');text(layer,x+102,215,combos[i][0],24,C.ink);text(layer,x+102,262,combos[i][1],18,combos[i][2]);}
   text(layer,480,130,'支配 = 宽和高都不更大、至少一维严格更小',24,C.ink);text(layer,480,340,'前沿同时保留 (6,4) 与 (5,5)',24,C.accent);text(layer,480,440,'面积 24 不是全部答案：还要看宽高',21,C.muted);
  }else if(k==='outline-filter'){
-  const u=42;rect(layer,150,190,6*u,5*u,'#f1f4ec',C.muted);text(layer,150+6*u/2,180,'外框 5×5',22,C.ink);
-  rect(layer,170,210,6*u*0.85,4*u*0.85,'none',C.red);text(layer,170+6*u*0.85/2,210+4*u*0.85/2,'6×4=24 放不下',21,C.red);
-  rect(layer,170,215,5*u,5*u,'none',C.green);text(layer,170+5*u/2,215+5*u/2+6,'5×5=25 可行',22,C.green);
-  text(layer,480,130,'放进 5×5：面积贪心会失败',26,C.ink);text(layer,480,480,'面积最小 ≠ 能用；先按外框过滤，再谈好坏',22,C.accent);
+  const u=42;for(const x of[130,570]){rect(layer,x,190,5*u,5*u,'#f1f4ec',C.muted);text(layer,x+2.5*u,175,'外框 5×5',22,C.ink);}
+  rect(layer,130,190,6*u,4*u,'none',C.red);text(layer,130+3*u,430,'6×4=24 放不下',21,C.red);
+  rect(layer,570,190,5*u,5*u,'none',C.green);text(layer,570+2.5*u,430,'5×5=25 可行',22,C.green);
+  text(layer,480,110,'放进 5×5：面积贪心会失败',26,C.ink);text(layer,480,480,'面积最小 ≠ 能用；先按外框过滤，再谈好坏',22,C.accent);
  }else if(k==='backtrace'){
   const rows=[['A 取 2×3','来源：候选0','(0,0)'],['B 取 3×4','来源：候选0','(2,0)'],['C 固定 3×1','—','(0,4)']];
   for(let i=0;i<3;i++){const y=170+i*80;rect(layer,90,y,800,60,'#edf3e9',p*3>=i?C.green:'#c6d5c5');text(layer,120,y+38,rows[i][0],24,C.ink,'start');text(layer,420,y+38,rows[i][1],21,C.muted,'start');text(layer,700,y+38,'坐标 '+rows[i][2],22,C.green,'start');}

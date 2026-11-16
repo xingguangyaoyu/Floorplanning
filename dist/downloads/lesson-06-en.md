@@ -58,6 +58,21 @@ Two complete permutations produce consistent, non-overlapping constraints. They 
 
    Answer: B. A,B,C,E precede D vertically; B reaches height 3.
 
+4. A block has several left predecessors. Which xj do you take?
+
+   A. The smallest bound
+   B. The largest bound
+   C. Any one
+
+   Answer: B. Every predecessor must be cleared, so take the maximum xi+wi.
+
+5. Two complete permutations decode without overlap. Do they also guarantee fitting 10×8?
+
+   A. Yes
+   B. No; outline fit is separate
+
+   Answer: B. The pair only fixes relative order; containment is still a separate check.
+
 ## Python exercise
 
 Implement the full decoder decode_sequence_pair(pos, neg, modules): validate both permutations, classify every ordered pair (same order -> horizontal, reversed -> vertical), then walk pos as a topological order taking the maximum of all predecessor bounds. Edge weight is the predecessor size. Return graph, order, coords, key predecessors and rows. Error code: permutation:pos / permutation:neg.

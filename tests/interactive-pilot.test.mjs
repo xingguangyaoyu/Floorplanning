@@ -3,7 +3,7 @@ import {SCENES,DURATION,frameAt,check,newSession,enterTrial,leaveTrial,seek,edit
 import {questionClock,advanceQuestion}from'../dist/lessons/08/teaching/question-clock.mjs';
 import {LAB08_TASKS,assessLab08,REVIEW_WITNESSES,checkExercise08}from'../dist/assets/advanced08.mjs';
 test('complete live lesson covers nine chapters and evaluates settled states only',()=>{
- assert.equal(SCENES.length,44);assert.equal(new Set(SCENES.map(s=>s.chapterIndex)).size,11);assert.equal(SCENES.filter(s=>s.question).length,3);assert.equal(DURATION,408.172);
+ assert.equal(SCENES.length,44);assert.equal(new Set(SCENES.map(s=>s.chapterIndex)).size,11);assert.equal(SCENES.filter(s=>s.question).length,3);assert(DURATION>0);assert.equal(DURATION,SCENES.at(-1).end);
  const intro=SCENES.slice(0,4);assert.deepEqual(intro.map(s=>s.key),['intro-why','intro-course','intro-task','intro-preview']);assert(intro.every(s=>s.chapterIndex===1&&!s.question));assert.equal(SCENES[4].key,'scope');assert.equal(SCENES[4].chapterIndex,2);
  const finale=SCENES.filter(s=>['multi-shapes','frontier-keep','outline-filter','backtrace','joint-search','three-config'].includes(s.key));assert.equal(finale.length,6);assert(finale.every(s=>s.chapterIndex===10&&!s.question));assert.equal(SCENES.find(s=>s.key==='transfer').chapterIndex,11);
  for(let t=0;t<DURATION;t+=.13){const f=frameAt(t);assert(Math.abs(f.pack.A.w*f.pack.A.h-6)<1e-7);if(f.moving||f.illustration)assert.equal(f.report,null);else assert.deepEqual(f.report,check(f.pack));}

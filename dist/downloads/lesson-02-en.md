@@ -54,6 +54,22 @@ Counting blocks is insufficient. A,A,C,D,E still contains five entries but dupli
 
    Answer: B. Each required ID must occur exactly once.
 
+4. The checker tests containment and overlap. How many must pass together?
+
+   A. 只查包含性
+   B. 两项都通过
+   C. 取决于模块顺序
+
+   Answer: B. Either failure rejects the layout. Legality is a gate, not a score.
+
+5. An overlapping layout still computes 28.75% density. Is that a valid occupancy report?
+
+   A. 能，数值算出来了
+   B. 不能，先修合法性
+   C. 只看密度就够
+
+   Answer: B. Metrics are meaningful only after containment and non-overlap both pass.
+
 ## Python exercise
 
 Implement a complete hard-module layout validator. Check identity, finite positive dimensions, fixed shapes, containment and every module pair; report all errors and actual intersection areas.

@@ -1,6 +1,6 @@
 {
   "base": "http://127.0.0.1:8830/",
-  "assetCount": 241,
+  "assetCount": 261,
   "assets": [
     {
       "path": ".nojekyll",
@@ -171,6 +171,14 @@
       "status": 200
     },
     {
+      "path": "assets/quiz-panel.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/seek-controller.mjs",
+      "status": 200
+    },
+    {
       "path": "assets/slicing04.mjs",
       "status": 200
     },
@@ -187,7 +195,23 @@
       "status": 200
     },
     {
+      "path": "assets/teaching-labels-en.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/teaching-language.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/teaching-ui.mjs",
+      "status": 200
+    },
+    {
       "path": "assets/video-display.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/voice-timing.mjs",
       "status": 200
     },
     {
@@ -339,7 +363,15 @@
       "status": 200
     },
     {
+      "path": "lessons/02/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/02/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -363,7 +395,15 @@
       "status": 200
     },
     {
+      "path": "lessons/03/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/03/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -387,7 +427,15 @@
       "status": 200
     },
     {
+      "path": "lessons/04/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/04/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -411,7 +459,15 @@
       "status": 200
     },
     {
+      "path": "lessons/05/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/05/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -435,7 +491,15 @@
       "status": 200
     },
     {
+      "path": "lessons/06/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/06/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -459,7 +523,15 @@
       "status": 200
     },
     {
+      "path": "lessons/07/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/07/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -487,7 +559,15 @@
       "status": 200
     },
     {
+      "path": "lessons/08/teaching/lesson-data-en.mjs",
+      "status": 200
+    },
+    {
       "path": "lessons/08/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/narration-en.m4a",
       "status": 200
     },
     {
@@ -990,151 +1070,298 @@
       "total": 4094159
     },
     {
-      "path": "lessons/08/teaching/narration.m4a",
-      "probe": "head",
-      "status": 206,
-      "bytes": 128,
-      "total": 2767955
-    },
-    {
-      "path": "lessons/08/teaching/narration.m4a",
-      "probe": "mid",
-      "status": 206,
-      "bytes": 128,
-      "total": 2767955
-    },
-    {
-      "path": "lessons/08/teaching/narration.m4a",
-      "probe": "tail",
-      "status": 206,
-      "bytes": 128,
-      "total": 2767955
-    },
-    {
       "path": "lessons/02/teaching/narration.m4a",
       "probe": "head",
       "status": 206,
       "bytes": 128,
-      "total": 580839
+      "total": 3774232
     },
     {
       "path": "lessons/02/teaching/narration.m4a",
       "probe": "mid",
       "status": 206,
       "bytes": 128,
-      "total": 580839
+      "total": 3774232
     },
     {
       "path": "lessons/02/teaching/narration.m4a",
       "probe": "tail",
       "status": 206,
       "bytes": 128,
-      "total": 580839
+      "total": 3774232
+    },
+    {
+      "path": "lessons/02/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 4212069
+    },
+    {
+      "path": "lessons/02/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 4212069
+    },
+    {
+      "path": "lessons/02/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 4212069
     },
     {
       "path": "lessons/03/teaching/narration.m4a",
       "probe": "head",
       "status": 206,
       "bytes": 128,
-      "total": 650658
+      "total": 3766584
     },
     {
       "path": "lessons/03/teaching/narration.m4a",
       "probe": "mid",
       "status": 206,
       "bytes": 128,
-      "total": 650658
+      "total": 3766584
     },
     {
       "path": "lessons/03/teaching/narration.m4a",
       "probe": "tail",
       "status": 206,
       "bytes": 128,
-      "total": 650658
+      "total": 3766584
+    },
+    {
+      "path": "lessons/03/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 3878333
+    },
+    {
+      "path": "lessons/03/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 3878333
+    },
+    {
+      "path": "lessons/03/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 3878333
     },
     {
       "path": "lessons/04/teaching/narration.m4a",
       "probe": "head",
       "status": 206,
       "bytes": 128,
-      "total": 600551
+      "total": 4393615
     },
     {
       "path": "lessons/04/teaching/narration.m4a",
       "probe": "mid",
       "status": 206,
       "bytes": 128,
-      "total": 600551
+      "total": 4393615
     },
     {
       "path": "lessons/04/teaching/narration.m4a",
       "probe": "tail",
       "status": 206,
       "bytes": 128,
-      "total": 600551
+      "total": 4393615
+    },
+    {
+      "path": "lessons/04/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 4080737
+    },
+    {
+      "path": "lessons/04/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 4080737
+    },
+    {
+      "path": "lessons/04/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 4080737
     },
     {
       "path": "lessons/05/teaching/narration.m4a",
       "probe": "head",
       "status": 206,
       "bytes": 128,
-      "total": 603601
+      "total": 3518050
     },
     {
       "path": "lessons/05/teaching/narration.m4a",
       "probe": "mid",
       "status": 206,
       "bytes": 128,
-      "total": 603601
+      "total": 3518050
     },
     {
       "path": "lessons/05/teaching/narration.m4a",
       "probe": "tail",
       "status": 206,
       "bytes": 128,
-      "total": 603601
+      "total": 3518050
+    },
+    {
+      "path": "lessons/05/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 3259631
+    },
+    {
+      "path": "lessons/05/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 3259631
+    },
+    {
+      "path": "lessons/05/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 3259631
     },
     {
       "path": "lessons/06/teaching/narration.m4a",
       "probe": "head",
       "status": 206,
       "bytes": 128,
-      "total": 606264
+      "total": 3375235
     },
     {
       "path": "lessons/06/teaching/narration.m4a",
       "probe": "mid",
       "status": 206,
       "bytes": 128,
-      "total": 606264
+      "total": 3375235
     },
     {
       "path": "lessons/06/teaching/narration.m4a",
       "probe": "tail",
       "status": 206,
       "bytes": 128,
-      "total": 606264
+      "total": 3375235
+    },
+    {
+      "path": "lessons/06/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 3242218
+    },
+    {
+      "path": "lessons/06/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 3242218
+    },
+    {
+      "path": "lessons/06/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 3242218
     },
     {
       "path": "lessons/07/teaching/narration.m4a",
       "probe": "head",
       "status": 206,
       "bytes": 128,
-      "total": 596864
+      "total": 3596802
     },
     {
       "path": "lessons/07/teaching/narration.m4a",
       "probe": "mid",
       "status": 206,
       "bytes": 128,
-      "total": 596864
+      "total": 3596802
     },
     {
       "path": "lessons/07/teaching/narration.m4a",
       "probe": "tail",
       "status": 206,
       "bytes": 128,
-      "total": 596864
+      "total": 3596802
+    },
+    {
+      "path": "lessons/07/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 3729795
+    },
+    {
+      "path": "lessons/07/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 3729795
+    },
+    {
+      "path": "lessons/07/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 3729795
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 4087705
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 4087705
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 4087705
+    },
+    {
+      "path": "lessons/08/teaching/narration-en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 5230423
+    },
+    {
+      "path": "lessons/08/teaching/narration-en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 5230423
+    },
+    {
+      "path": "lessons/08/teaching/narration-en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 5230423
     }
   ]
 }
