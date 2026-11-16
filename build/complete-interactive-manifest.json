@@ -1,0 +1,6377 @@
+{
+  "kind": "complete-live-lesson",
+  "duration": 408.172,
+  "readingSeconds": 172,
+  "scenes": [
+    {
+      "key": "intro-why",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "真实芯片里不少模块面积固定、宽高可选。形状一变，邻居就要跟着挪；摆法也会反过来限制形状。",
+        "en": "Many real modules have fixed area but selectable aspect ratio. Reshaping moves neighbors; placement also constrains shape."
+      },
+      "title": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapter": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapterIndex": 1,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 9,
+      "start": 0,
+      "delivery": "reading",
+      "end": 9
+    },
+    {
+      "key": "intro-course",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "这是本课程的最后一课。前几课的检查、评分、解码和搜索，在这一课要一起用上。",
+        "en": "This is the final lesson. Checking, scoring, decoding and searching from earlier labs come together here."
+      },
+      "title": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapter": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapterIndex": 1,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 9,
+      "delivery": "reading",
+      "end": 17
+    },
+    {
+      "key": "intro-task",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "本课要回答三个问题：形状候选怎么列？哪个组合能进固定外框？结论的适用范围到哪里？",
+        "en": "Three questions: how to list shape candidates, which combination fits the outline, and how far each conclusion holds."
+      },
+      "title": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapter": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapterIndex": 1,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 9,
+      "start": 17,
+      "delivery": "reading",
+      "end": 26
+    },
+    {
+      "key": "intro-preview",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "先看一个贯穿全课的例子：A面积为六。把它变窄，会先碰到谁？怎样重摆，又怎样证明不能更好？",
+        "en": "A running example: A has area six. Narrow it, who collides first? How to repack, and how to prove no better layout?"
+      },
+      "title": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapter": {
+        "zh": "为什么形状与摆放要一起优化",
+        "en": "Why shape and placement are decided together"
+      },
+      "chapterIndex": 1,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 26,
+      "delivery": "reading",
+      "end": 36
+    },
+    {
+      "key": "scope",
+      "view": "scope",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "只让 A 调整形状，其余四块尺寸固定；都要放进十乘八外框，目标是合法且包围盒最小。",
+        "en": "Only A may reshape; other dimensions stay fixed. Require legality within the ten-by-eight outline, then minimize bounding-box area."
+      },
+      "title": {
+        "zh": "先限定问题：形状与摆放一起决定结果",
+        "en": "Define the coupled problem"
+      },
+      "chapter": {
+        "zh": "先限定问题：形状与摆放一起决定结果",
+        "en": "Define the coupled problem"
+      },
+      "chapterIndex": 2,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 36,
+      "delivery": "voice",
+      "end": 51.324
+    },
+    {
+      "key": "grid",
+      "view": "scope",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "本例宽高取正整数，坐标落在整数网格；后面的最优证明同时依赖这两条。",
+        "en": "Dimensions are positive integers; coordinates lie on the integer grid. The optimality proof depends on both conditions."
+      },
+      "title": {
+        "zh": "先限定问题：形状与摆放一起决定结果",
+        "en": "Define the coupled problem"
+      },
+      "chapter": {
+        "zh": "先限定问题：形状与摆放一起决定结果",
+        "en": "Define the coupled problem"
+      },
+      "chapterIndex": 2,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 51.324,
+      "delivery": "reading",
+      "end": 61.324
+    },
+    {
+      "key": "couple-height",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "A 面积固定为六。宽度选定后，高度必须等于六除以宽度，不能独立选择。",
+        "en": "A has fixed area six. Once width is chosen, height must equal six divided by width."
+      },
+      "title": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapter": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapterIndex": 3,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 61.324,
+      "delivery": "voice",
+      "end": 66.238
+    },
+    {
+      "key": "couple-bound",
+      "view": "contract-bound",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "把高度代入宽高比条件，得到图上的宽度区间；再取满足面积的整数因数对。",
+        "en": "Substitute height into the ratio limits to obtain this width interval; then select integer factor pairs."
+      },
+      "title": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapter": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapterIndex": 3,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 9,
+      "start": 66.238,
+      "delivery": "voice",
+      "end": 76.09
+    },
+    {
+      "key": "couple-filter",
+      "view": "factors",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "一乘六和六乘一因比例超界被排除；整数候选只剩二乘三与三乘二。",
+        "en": "The ratio bounds exclude one by six and six by one, leaving two by three and three by two."
+      },
+      "title": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapter": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapterIndex": 3,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 76.09,
+      "delivery": "voice",
+      "end": 89.566
+    },
+    {
+      "key": "couple-model",
+      "view": "contract-bound",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "连续模型还有区间内的非整数宽度。平滑变形可以示意它，却不能增加整数实验选项。",
+        "en": "The continuous model also permits noninteger widths. Smooth motion illustrates those choices without adding integer-lab options."
+      },
+      "title": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapter": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "chapterIndex": 3,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 89.566,
+      "delivery": "voice",
+      "end": 97.24
+    },
+    {
+      "key": "baseline-read",
+      "view": "baseline",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "原布局合法，包围盒九乘三等于二十七；减去模块总面积二十三，盒内空余四。",
+        "en": "The legal baseline box has area twenty-seven. Subtract total block area twenty-three to obtain four empty units."
+      },
+      "title": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapter": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapterIndex": 4,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 97.24,
+      "delivery": "voice",
+      "end": 113.548
+    },
+    {
+      "key": "overlap-predict",
+      "view": "predict",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "chapterIndex": 3,
+      "chapter": {
+        "zh": "形状约束：不是任意拉伸",
+        "en": "Coupled shape constraints"
+      },
+      "say": {
+        "zh": "下一步只改变 A 的形状。先预测整个布局是否仍合法。",
+        "en": "Predict legality after changing only A."
+      },
+      "seconds": 8,
+      "start": 113.548,
+      "delivery": "voice",
+      "end": 127.51,
+      "question": {
+        "prompt": "只改 A 为 2×3，其余不动，会怎样？",
+        "choices": [
+          "仍合法，因为面积未变",
+          "A/D 出现正面积重叠",
+          "面积变为5"
+        ],
+        "answer": 1,
+        "replies": [
+          "面积相等不能替代邻居检查。",
+          "交集为 x=0…2、y=2…3，面积2。",
+          "宽高仍相乘为6，错误来自新增占用。"
+        ]
+      }
+    },
+    {
+      "key": "overlap-change",
+      "view": "reshape",
+      "state": "bad",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "现在只把 A 改成二乘三。右侧空出来了，上方却新增了一条占用区域。",
+        "en": "Change only A to two by three. Space opens on the right, but a new strip is occupied above."
+      },
+      "title": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapter": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapterIndex": 4,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 127.51,
+      "delivery": "voice",
+      "end": 132.928
+    },
+    {
+      "key": "overlap-area",
+      "view": "overlap",
+      "state": "bad",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "新增区域与 D 的交集，横向宽二、纵向高一，因此重叠面积为二。",
+        "en": "The intersection with D has width two and height one, so its overlap area is two."
+      },
+      "title": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapter": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapterIndex": 4,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 132.928,
+      "delivery": "voice",
+      "end": 146.044
+    },
+    {
+      "key": "overlap-contact",
+      "view": "contact",
+      "state": "bad",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "贴边时，共同宽度或高度为零，所以允许；这里两个方向都有正长度，不能通过。",
+        "en": "Boundary contact has a zero overlap dimension. Here both dimensions are positive, so the placement fails."
+      },
+      "title": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapter": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "chapterIndex": 4,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 146.044,
+      "delivery": "voice",
+      "end": 152.95
+    },
+    {
+      "key": "repair-side",
+      "view": "repair-side",
+      "state": "sideways",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "把 D 右移，虽然躲开 A，却进入 B。修复旧冲突后，必须重新检查所有邻居。",
+        "en": "Moving D right clears A but enters B. After repairing one pair, recheck every neighbor."
+      },
+      "title": {
+        "zh": "修复：检查所有邻居，再比较目标",
+        "en": "Repair before comparing objectives"
+      },
+      "chapter": {
+        "zh": "修复：检查所有邻居，再比较目标",
+        "en": "Repair before comparing objectives"
+      },
+      "chapterIndex": 5,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 152.95,
+      "delivery": "voice",
+      "end": 163.162
+    },
+    {
+      "key": "repair-up",
+      "view": "repair-up",
+      "state": "repaired",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "D 放在 B 上方时，底边不能低于三；取最低允许值三，就与 B 贴边。",
+        "en": "Above B, D’s bottom must be at least three. Choosing the lowest allowed value makes their boundaries touch."
+      },
+      "title": {
+        "zh": "修复：检查所有邻居，再比较目标",
+        "en": "Repair before comparing objectives"
+      },
+      "chapter": {
+        "zh": "修复：检查所有邻居，再比较目标",
+        "en": "Repair before comparing objectives"
+      },
+      "chapterIndex": 5,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 163.162,
+      "delivery": "voice",
+      "end": 169.228
+    },
+    {
+      "key": "repair-score",
+      "view": "repair-up",
+      "state": "repaired",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "布局恢复合法，但高度涨到四，包围盒变成三十六。可行性通过，不等于目标改善。",
+        "en": "Legality returns, but height becomes four and box area becomes thirty-six. Feasibility does not imply improvement."
+      },
+      "title": {
+        "zh": "修复：检查所有邻居，再比较目标",
+        "en": "Repair before comparing objectives"
+      },
+      "chapter": {
+        "zh": "修复：检查所有邻居，再比较目标",
+        "en": "Repair before comparing objectives"
+      },
+      "chapterIndex": 5,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 6,
+      "start": 169.228,
+      "delivery": "voice",
+      "end": 176.302
+    },
+    {
+      "key": "repack-B",
+      "view": "repack",
+      "state": "moveB",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "B 左移贴住 A，收紧它们之间的水平空隙。",
+        "en": "Move B left to touch A, closing their horizontal gap."
+      },
+      "title": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapter": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapterIndex": 6,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 6,
+      "start": 176.302,
+      "delivery": "voice",
+      "end": 182.272
+    },
+    {
+      "key": "repack-C",
+      "view": "repack",
+      "state": "moveC",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 2,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "C 再左移贴住 B，为 D 准备较低的落点。",
+        "en": "Then move C left to touch B and prepare a lower resting position for D."
+      },
+      "title": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapter": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapterIndex": 6,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 6,
+      "start": 182.272,
+      "delivery": "voice",
+      "end": 186.178
+    },
+    {
+      "key": "repack-D",
+      "view": "repack",
+      "state": "repacked",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "D 移到四、二，贴住 C 的顶部和 B 的右边缘，包围盒回到二十七。",
+        "en": "Move D to four, two. Its bottom touches C’s top; its left edge touches B’s right edge."
+      },
+      "title": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapter": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapterIndex": 6,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 186.178,
+      "delivery": "voice",
+      "end": 192.94
+    },
+    {
+      "key": "bottle-predict",
+      "view": "predict",
+      "state": "repacked",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "chapterIndex": 5,
+      "chapter": {
+        "zh": "碰撞：从占用区间算出来",
+        "en": "Derive the overlap"
+      },
+      "say": {
+        "zh": "先找出仍限制包围盒的那一块。",
+        "en": "Identify the block that still limits the bounding box."
+      },
+      "seconds": 8,
+      "start": 192.94,
+      "delivery": "voice",
+      "end": 201.316,
+      "question": {
+        "prompt": "只收紧 B、C、D 仍为27，谁还决定盒宽？",
+        "choices": [
+          "E 的右边缘",
+          "模块面积和23",
+          "固定外框80"
+        ],
+        "answer": 0,
+        "replies": [
+          "A仍在原点，E的右边缘9仍决定宽度。",
+          "面积和给下界，不能直接给当前盒宽。",
+          "外框是容量，当前包围盒由实际边缘决定。"
+        ]
+      }
+    },
+    {
+      "key": "bottle-edge",
+      "view": "bottleneck",
+      "state": "repacked",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 4,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "当前 A 仍在原点，E 把最右边撑到九；只收紧其余模块，盒宽仍是九。",
+        "en": "With A still at the origin, E keeps the right boundary at nine; tightening other blocks leaves the width unchanged."
+      },
+      "title": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapter": {
+        "zh": "重摆：找出谁还撑着边界",
+        "en": "Find the active boundary"
+      },
+      "chapterIndex": 6,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 201.316,
+      "delivery": "voice",
+      "end": 207.07
+    },
+    {
+      "key": "space-D",
+      "view": "space-D",
+      "state": "lifted",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "先把 D 移到零、三，腾出 C 上方的二乘二区域。",
+        "en": "First move D to zero, three, freeing a two-by-two destination above C."
+      },
+      "title": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapter": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapterIndex": 7,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 207.07,
+      "delivery": "voice",
+      "end": 218.338
+    },
+    {
+      "key": "space-E",
+      "view": "space-E",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "再把 E 放进空位，右边界退到六、高度为四，得到合法面积二十四。",
+        "en": "Move E into that space. Width becomes six and height four, giving a legal area of twenty-four."
+      },
+      "title": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapter": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapterIndex": 7,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 218.338,
+      "delivery": "voice",
+      "end": 238.408
+    },
+    {
+      "key": "space-swap",
+      "view": "swap-space",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "这条编辑序列先腾位、再压紧，中间面积暂时变大；不能把中间动作当最终结果。",
+        "en": "This editing sequence first frees space and then compacts it. Its temporary increase is not the final result."
+      },
+      "title": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapter": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapterIndex": 7,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 238.408,
+      "delivery": "reading",
+      "end": 245.408
+    },
+    {
+      "key": "space-path",
+      "view": "scope",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "动画说明每次编辑的端点，不保证搬动途中的每一帧都是无碰撞路径。",
+        "en": "The animation explains edit endpoints; it does not certify a collision-free physical transport path."
+      },
+      "title": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapter": {
+        "zh": "空间交换：比较落定后的布局",
+        "en": "Exchange space and check endpoints"
+      },
+      "chapterIndex": 7,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 245.408,
+      "delivery": "reading",
+      "end": 252.408
+    },
+    {
+      "key": "metric-fixed",
+      "view": "metrics",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "对这些合法布局，模块总面积和外框都没变，外框密度仍是二十三除以八十，不能证明压紧有效。",
+        "en": "Across legal placements, block area and outline stay fixed. Their unchanged density, twenty-three over eighty, cannot demonstrate compaction."
+      },
+      "title": {
+        "zh": "指标：分母决定你在评价什么",
+        "en": "Choose the correct denominator"
+      },
+      "chapter": {
+        "zh": "指标：分母决定你在评价什么",
+        "en": "Choose the correct denominator"
+      },
+      "chapterIndex": 8,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 252.408,
+      "delivery": "voice",
+      "end": 261.114
+    },
+    {
+      "key": "metric-box",
+      "view": "metrics",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "包围盒密度则从约百分之八十五点二，提高到九十五点八，因为分母从二十七降到二十四。",
+        "en": "Packing density rises from about eighty-five point two to ninety-five point eight percent because its denominator falls from twenty-seven to twenty-four."
+      },
+      "title": {
+        "zh": "指标：分母决定你在评价什么",
+        "en": "Choose the correct denominator"
+      },
+      "chapter": {
+        "zh": "指标：分母决定你在评价什么",
+        "en": "Choose the correct denominator"
+      },
+      "chapterIndex": 8,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 261.114,
+      "delivery": "voice",
+      "end": 275.19
+    },
+    {
+      "key": "proof-area",
+      "view": "lower-bound",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "合法布局的包围盒，至少包含二十三的模块面积；这是任何摆法都不能突破的下界。",
+        "en": "A legal bounding box must contain total block area twenty-three. That gives a lower bound for every placement."
+      },
+      "title": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapter": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapterIndex": 9,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 275.19,
+      "delivery": "reading",
+      "end": 282.19
+    },
+    {
+      "key": "proof-integer",
+      "view": "prime",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "整数尺寸加整数坐标，使包围盒宽高也是整数。接下来只需排除面积二十三。",
+        "en": "Integer dimensions and coordinates give integer box dimensions. It remains to rule out area twenty-three."
+      },
+      "title": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapter": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapterIndex": 9,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 7,
+      "start": 282.19,
+      "delivery": "reading",
+      "end": 289.19
+    },
+    {
+      "key": "proof-prime",
+      "view": "prime",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "二十三除了一和自己，没有别的整数因数；盒子只能是一乘二十三，或二十三乘一。",
+        "en": "Twenty-three has no positive integer factors except one and itself, leaving only one-by-twenty-three or twenty-three-by-one boxes."
+      },
+      "title": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapter": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapterIndex": 9,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 289.19,
+      "delivery": "reading",
+      "end": 297.19,
+      "question": {
+        "prompt": "在整数网格模型里，为什么面积23不可能？",
+        "choices": [
+          "整数边长只能1×23或23×1，放不下C",
+          "因为当前只找到24",
+          "因为固定外框密度不变"
+        ],
+        "answer": 0,
+        "replies": [
+          "23是质数，两种长条短边为1，容不下固定2×2的C。",
+          "找到24只给上界，尚需排除更小的解。",
+          "固定外框密度对这些合法摆法都相同，不给最优证明。"
+        ]
+      }
+    },
+    {
+      "key": "proof-exclude",
+      "view": "exclude",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "这两种长条都放不下二乘二的 C，所以二十三不可能，下一档至少是二十四。",
+        "en": "Neither strip can contain the two-by-two C block. Area twenty-three is impossible, so the next integer area is twenty-four."
+      },
+      "title": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapter": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapterIndex": 9,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 297.19,
+      "delivery": "reading",
+      "end": 305.19
+    },
+    {
+      "key": "proof-witness",
+      "view": "certificate",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "我们已经有合法的六乘四布局。下界与见证都是二十四，因此这个整数模型的最优值就是二十四。",
+        "en": "A legal six-by-four witness attains twenty-four. Matching the lower bound proves the integer model’s optimum is twenty-four."
+      },
+      "title": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapter": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapterIndex": 9,
+      "within": 5,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 305.19,
+      "delivery": "reading",
+      "end": 313.19
+    },
+    {
+      "key": "proof-continuous",
+      "view": "limits",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "允许小数后，盒面积不必逐个整数跳变，刚才排除二十三的证明就不能直接沿用。",
+        "en": "With fractional dimensions, box area need not advance by integers. The same exclusion proof no longer establishes twenty-four."
+      },
+      "title": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapter": {
+        "zh": "最优证书：下界与合法见证对上",
+        "en": "Prove optimality in the integer model"
+      },
+      "chapterIndex": 9,
+      "within": 6,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 313.19,
+      "delivery": "reading",
+      "end": 321.19
+    },
+    {
+      "key": "multi-shapes",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "现在A和B都是软模块：A面积六、B面积十二，各有两个整数形状；C固定三乘一。",
+        "en": "Now A and B are soft: areas six and twelve, two integer shapes each; C is fixed three-by-one."
+      },
+      "title": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapter": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapterIndex": 10,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 9,
+      "start": 321.19,
+      "delivery": "reading",
+      "end": 330.19
+    },
+    {
+      "key": "frontier-keep",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "四个组合给出(6,4)、(5,5)、(7,4)、(6,5)。(6,5)与(7,4)被(6,4)支配；前沿留下(6,4)与(5,5)。",
+        "en": "Four combos give six-four, five-five, seven-four, six-five. Two are dominated; the frontier keeps six-four and five-five."
+      },
+      "title": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapter": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapterIndex": 10,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 330.19,
+      "delivery": "reading",
+      "end": 340.19
+    },
+    {
+      "key": "outline-filter",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "放进五乘五外框：面积最小的24、宽6放不下；(5,5)放得进。只留最小面积的贪心会失败。",
+        "en": "In the five-by-five outline the smallest 24 (six-four) is too wide; five-five fits. Greedy-by-area fails."
+      },
+      "title": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapter": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapterIndex": 10,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 340.19,
+      "delivery": "reading",
+      "end": 350.19
+    },
+    {
+      "key": "backtrace",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "前沿候选要能回溯：每个子树选了哪个形状、坐标落在哪里，再交给Lab2检查。",
+        "en": "Each frontier candidate must backtrace: which shape each subtree took, where blocks land, then Lab2 checks."
+      },
+      "title": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapter": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapterIndex": 10,
+      "within": 4,
+      "pause": 0.25,
+      "seconds": 9,
+      "start": 350.19,
+      "delivery": "reading",
+      "end": 359.19
+    },
+    {
+      "key": "joint-search",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "接上一课：邻居可以是换序列对，也可以改某软模块形状。三配置同种子同预算对照。",
+        "en": "From the last lesson: a neighbor may swap the pair or reshape one soft module. Three configs, same seeds and budget."
+      },
+      "title": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapter": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapterIndex": 10,
+      "within": 5,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 359.19,
+      "delivery": "reading",
+      "end": 369.19
+    },
+    {
+      "key": "three-config",
+      "view": "contract",
+      "state": "baseline",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 3,
+          "h": 2
+        },
+        "B": {
+          "x": 3,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 5,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 7,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "冻结基线只评一次；只搜形状找到25；形状加拓扑也找到25。收益归因只针对这组数据。",
+        "en": "The frozen baseline evaluates once; shapes-only finds 25; shapes plus topology also finds 25. Attribution is for this data only."
+      },
+      "title": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapter": {
+        "zh": "多软模块：形状前沿与联合优化",
+        "en": "Multi-soft shape frontier and joint search"
+      },
+      "chapterIndex": 10,
+      "within": 6,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 369.19,
+      "delivery": "reading",
+      "end": 379.19
+    },
+    {
+      "key": "proof-limit",
+      "view": "limits",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "而且 A 保持原形状也能达到二十四，不能把相对原布局的改进，全归给软模块变形。",
+        "en": "A can retain its original shape and also attain twenty-four. Improvement over the baseline is not proof of a reshaping advantage."
+      },
+      "title": {
+        "zh": "结论边界与独立迁移",
+        "en": "Interpret the result and transfer it"
+      },
+      "chapter": {
+        "zh": "结论边界与独立迁移",
+        "en": "Interpret the result and transfer it"
+      },
+      "chapterIndex": 11,
+      "within": 1,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 379.19,
+      "delivery": "reading",
+      "end": 387.19
+    },
+    {
+      "key": "transfer",
+      "view": "transfer",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "面积改为八，连续宽度在二到四；宽三虽在区间内，高八除以三却不是整数，不能入选。",
+        "en": "For area eight, continuous widths span two to four; width three gives fractional height eight-thirds, excluding it from integer candidates."
+      },
+      "title": {
+        "zh": "结论边界与独立迁移",
+        "en": "Interpret the result and transfer it"
+      },
+      "chapter": {
+        "zh": "结论边界与独立迁移",
+        "en": "Interpret the result and transfer it"
+      },
+      "chapterIndex": 11,
+      "within": 2,
+      "pause": 0.25,
+      "seconds": 10,
+      "start": 387.19,
+      "delivery": "voice",
+      "end": 400.45
+    },
+    {
+      "key": "finish",
+      "view": "transfer",
+      "state": "compact",
+      "pack": {
+        "A": {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "B": {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 3
+        },
+        "C": {
+          "x": 4,
+          "y": 0,
+          "w": 2,
+          "h": 2
+        },
+        "D": {
+          "x": 0,
+          "y": 3,
+          "w": 3,
+          "h": 1
+        },
+        "E": {
+          "x": 4,
+          "y": 2,
+          "w": 2,
+          "h": 2
+        }
+      },
+      "say": {
+        "zh": "独立练习要解释三件事：哪条约束卡住选择，谁撑住盒边界，以及你的最优结论靠什么证明。",
+        "en": "In the lab, identify the binding constraint, the block setting the box boundary, and the evidence supporting any optimality claim."
+      },
+      "title": {
+        "zh": "结论边界与独立迁移",
+        "en": "Interpret the result and transfer it"
+      },
+      "chapter": {
+        "zh": "结论边界与独立迁移",
+        "en": "Interpret the result and transfer it"
+      },
+      "chapterIndex": 11,
+      "within": 3,
+      "pause": 0.25,
+      "seconds": 8,
+      "start": 400.45,
+      "delivery": "voice",
+      "end": 408.172
+    }
+  ],
+  "states": {
+    "baseline": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 3,
+        "h": 2
+      },
+      "B": {
+        "x": 3,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 5,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 0,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "bad": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 3,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 5,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 0,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "sideways": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 3,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 5,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 2,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "repaired": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 3,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 5,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 2,
+        "y": 3,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "moveB": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 2,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 5,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 2,
+        "y": 3,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "moveC": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 2,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 4,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 2,
+        "y": 3,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "repacked": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 2,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 4,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 4,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "lifted": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 2,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 4,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 0,
+        "y": 3,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 7,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "compact": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "B": {
+        "x": 2,
+        "y": 0,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 4,
+        "y": 0,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 0,
+        "y": 3,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 4,
+        "y": 2,
+        "w": 2,
+        "h": 2
+      }
+    },
+    "hardBest": {
+      "A": {
+        "x": 0,
+        "y": 0,
+        "w": 3,
+        "h": 2
+      },
+      "B": {
+        "x": 4,
+        "y": 1,
+        "w": 2,
+        "h": 3
+      },
+      "C": {
+        "x": 0,
+        "y": 2,
+        "w": 2,
+        "h": 2
+      },
+      "D": {
+        "x": 3,
+        "y": 0,
+        "w": 3,
+        "h": 1
+      },
+      "E": {
+        "x": 2,
+        "y": 2,
+        "w": 2,
+        "h": 2
+      }
+    }
+  },
+  "captions": [
+    {
+      "start": 0,
+      "end": 9,
+      "zh": "真实芯片里不少模块面积固定、宽高可选。形状一变，邻居就要跟着挪；摆法也会反过来限制形状。",
+      "en": "Many real modules have fixed area but selectable aspect ratio. Reshaping moves neighbors; placement also constrains shape.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 9,
+      "end": 17,
+      "zh": "这是本课程的最后一课。前几课的检查、评分、解码和搜索，在这一课要一起用上。",
+      "en": "This is the final lesson. Checking, scoring, decoding and searching from earlier labs come together here.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 17,
+      "end": 26,
+      "zh": "本课要回答三个问题：形状候选怎么列？哪个组合能进固定外框？结论的适用范围到哪里？",
+      "en": "Three questions: how to list shape candidates, which combination fits the outline, and how far each conclusion holds.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 26,
+      "end": 36,
+      "zh": "先看一个贯穿全课的例子：A面积为六。把它变窄，会先碰到谁？怎样重摆，又怎样证明不能更好？",
+      "en": "A running example: A has area six. Narrow it, who collides first? How to repack, and how to prove no better layout?",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 36,
+      "end": 44.489999999999995,
+      "zh": "早期规划把一些逻辑区域抽象成面积固定、形状可调的矩形，这就是这里的软模块。",
+      "en": "Early planning models some logic regions as rectangles with fixed area and adjustable shape: soft blocks.",
+      "sourceKey": "opening-contract",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "早期",
+          "start": 36.1,
+          "end": 36.487500000000004
+        },
+        {
+          "text": "规划",
+          "start": 36.5,
+          "end": 37.025000000000006
+        },
+        {
+          "text": "把",
+          "start": 37.125,
+          "end": 37.275000000000006
+        },
+        {
+          "text": "一些",
+          "start": 37.2875,
+          "end": 37.6
+        },
+        {
+          "text": "逻辑",
+          "start": 37.625,
+          "end": 37.95
+        },
+        {
+          "text": "区域",
+          "start": 37.962500000000006,
+          "end": 38.45
+        },
+        {
+          "text": "抽象",
+          "start": 38.550000000000004,
+          "end": 38.975
+        },
+        {
+          "text": "成",
+          "start": 38.975,
+          "end": 39.150000000000006
+        },
+        {
+          "text": "面积",
+          "start": 39.175000000000004,
+          "end": 39.487500000000004
+        },
+        {
+          "text": "固定",
+          "start": 39.5,
+          "end": 39.95
+        },
+        {
+          "text": "形状",
+          "start": 40.175000000000004,
+          "end": 40.575
+        },
+        {
+          "text": "可",
+          "start": 40.587500000000006,
+          "end": 40.7625
+        },
+        {
+          "text": "调",
+          "start": 40.7625,
+          "end": 40.975
+        },
+        {
+          "text": "的",
+          "start": 40.975,
+          "end": 41.087500000000006
+        },
+        {
+          "text": "矩形",
+          "start": 41.1,
+          "end": 41.587500000000006
+        },
+        {
+          "text": "这",
+          "start": 41.95,
+          "end": 42.125
+        },
+        {
+          "text": "就",
+          "start": 42.125,
+          "end": 42.25
+        },
+        {
+          "text": "是",
+          "start": 42.25,
+          "end": 42.362500000000004
+        },
+        {
+          "text": "这里",
+          "start": 42.375,
+          "end": 42.650000000000006
+        },
+        {
+          "text": "的",
+          "start": 42.650000000000006,
+          "end": 42.737500000000004
+        },
+        {
+          "text": "软模",
+          "start": 42.7625,
+          "end": 43.1375
+        },
+        {
+          "text": "块",
+          "start": 43.1375,
+          "end": 43.462500000000006
+        }
+      ]
+    },
+    {
+      "start": 44.489999999999995,
+      "end": 51.324,
+      "zh": "固定尺寸的存储器宏单元不能随意拉伸；本例只有 A 能改形状。",
+      "en": "Fixed memory macros cannot stretch arbitrarily; only A may reshape in this example.",
+      "sourceKey": "use-hard",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "固定",
+          "start": 44.589999999999996,
+          "end": 44.95249999999999
+        },
+        {
+          "text": "尺寸",
+          "start": 44.964999999999996,
+          "end": 45.339999999999996
+        },
+        {
+          "text": "的",
+          "start": 45.339999999999996,
+          "end": 45.427499999999995
+        },
+        {
+          "text": "存储",
+          "start": 45.45249999999999,
+          "end": 45.839999999999996
+        },
+        {
+          "text": "器宏",
+          "start": 45.8525,
+          "end": 46.20249999999999
+        },
+        {
+          "text": "单元",
+          "start": 46.214999999999996,
+          "end": 46.739999999999995
+        },
+        {
+          "text": "不能",
+          "start": 46.839999999999996,
+          "end": 47.114999999999995
+        },
+        {
+          "text": "随意",
+          "start": 47.12749999999999,
+          "end": 47.45249999999999
+        },
+        {
+          "text": "拉伸",
+          "start": 47.464999999999996,
+          "end": 47.964999999999996
+        },
+        {
+          "text": "本例",
+          "start": 48.339999999999996,
+          "end": 48.665
+        },
+        {
+          "text": "只有",
+          "start": 48.677499999999995,
+          "end": 49.114999999999995
+        },
+        {
+          "text": "A",
+          "start": 49.214999999999996,
+          "end": 49.415
+        },
+        {
+          "text": "能",
+          "start": 49.415,
+          "end": 49.589999999999996
+        },
+        {
+          "text": "改",
+          "start": 49.6025,
+          "end": 49.777499999999996
+        },
+        {
+          "text": "形状",
+          "start": 49.777499999999996,
+          "end": 50.3025
+        }
+      ]
+    },
+    {
+      "start": 51.324,
+      "end": 61.324,
+      "zh": "本例宽高取正整数，坐标落在整数网格；后面的最优证明同时依赖这两条。",
+      "en": "Dimensions are positive integers; coordinates lie on the integer grid. The optimality proof depends on both conditions.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 61.324,
+      "end": 66.238,
+      "zh": "A 的宽和高必须为正，而且乘积始终为六。",
+      "en": "A’s width and height must be positive, and their product must remain six.",
+      "sourceKey": "contract-area",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "A",
+          "start": 61.42400000000001,
+          "end": 61.599000000000004
+        },
+        {
+          "text": "的",
+          "start": 61.599000000000004,
+          "end": 61.699
+        },
+        {
+          "text": "宽和",
+          "start": 61.7115,
+          "end": 62.11150000000001
+        },
+        {
+          "text": "高",
+          "start": 62.11150000000001,
+          "end": 62.399
+        },
+        {
+          "text": "必须",
+          "start": 62.498999999999995,
+          "end": 62.849000000000004
+        },
+        {
+          "text": "为",
+          "start": 62.86150000000001,
+          "end": 63.061499999999995
+        },
+        {
+          "text": "正",
+          "start": 63.061499999999995,
+          "end": 63.29900000000001
+        },
+        {
+          "text": "而且",
+          "start": 63.599000000000004,
+          "end": 63.974000000000004
+        },
+        {
+          "text": "乘",
+          "start": 63.98650000000001,
+          "end": 64.2115
+        },
+        {
+          "text": "积始",
+          "start": 64.2115,
+          "end": 64.549
+        },
+        {
+          "text": "终",
+          "start": 64.5615,
+          "end": 64.7365
+        },
+        {
+          "text": "为",
+          "start": 64.7365,
+          "end": 64.9115
+        },
+        {
+          "text": "六",
+          "start": 64.924,
+          "end": 65.199
+        }
+      ]
+    },
+    {
+      "start": 66.238,
+      "end": 70.816,
+      "zh": "宽高比定义为宽除以高，不是高除以宽。",
+      "en": "Aspect ratio means width divided by height, not the reverse.",
+      "sourceKey": "contract-ratio",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "宽高",
+          "start": 66.33800000000001,
+          "end": 66.7505
+        },
+        {
+          "text": "比",
+          "start": 66.763,
+          "end": 66.9255
+        },
+        {
+          "text": "定义",
+          "start": 66.938,
+          "end": 67.238
+        },
+        {
+          "text": "为",
+          "start": 67.238,
+          "end": 67.5505
+        },
+        {
+          "text": "宽除",
+          "start": 67.638,
+          "end": 68.013
+        },
+        {
+          "text": "以",
+          "start": 68.02550000000001,
+          "end": 68.188
+        },
+        {
+          "text": "高",
+          "start": 68.188,
+          "end": 68.46300000000001
+        },
+        {
+          "text": "不是",
+          "start": 68.688,
+          "end": 68.96300000000001
+        },
+        {
+          "text": "高除",
+          "start": 68.9755,
+          "end": 69.3255
+        },
+        {
+          "text": "以",
+          "start": 69.3505,
+          "end": 69.488
+        },
+        {
+          "text": "宽",
+          "start": 69.488,
+          "end": 69.788
+        }
+      ]
+    },
+    {
+      "start": 70.816,
+      "end": 76.09,
+      "zh": "我们要求宽高比在零点五到二之间，边界也允许。",
+      "en": "The allowed aspect ratio is from one half to two, including both endpoints.",
+      "sourceKey": "contract-bounds",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "我们",
+          "start": 70.91600000000001,
+          "end": 71.116
+        },
+        {
+          "text": "要求",
+          "start": 71.1285,
+          "end": 71.691
+        },
+        {
+          "text": "宽高",
+          "start": 71.7785,
+          "end": 72.191
+        },
+        {
+          "text": "比",
+          "start": 72.216,
+          "end": 72.35350000000001
+        },
+        {
+          "text": "在",
+          "start": 72.35350000000001,
+          "end": 72.516
+        },
+        {
+          "text": "零点五",
+          "start": 72.5285,
+          "end": 73.0035
+        },
+        {
+          "text": "到",
+          "start": 73.016,
+          "end": 73.1535
+        },
+        {
+          "text": "二",
+          "start": 73.1535,
+          "end": 73.316
+        },
+        {
+          "text": "之间",
+          "start": 73.3285,
+          "end": 73.766
+        },
+        {
+          "text": "边界",
+          "start": 74.0035,
+          "end": 74.391
+        },
+        {
+          "text": "也",
+          "start": 74.4035,
+          "end": 74.5535
+        },
+        {
+          "text": "允许",
+          "start": 74.5535,
+          "end": 75.0785
+        }
+      ]
+    },
+    {
+      "start": 76.09,
+      "end": 83.23599999999999,
+      "zh": "一乘六太高，六乘一太宽；两者面积正确，却都超出了宽高比范围。",
+      "en": "One by six is too tall; six by one is too wide, so both fail the aspect-ratio limits.",
+      "sourceKey": "factors-tall",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "一",
+          "start": 76.19000000000001,
+          "end": 76.365
+        },
+        {
+          "text": "乘",
+          "start": 76.365,
+          "end": 76.56500000000001
+        },
+        {
+          "text": "六太",
+          "start": 76.59000000000002,
+          "end": 76.94000000000001
+        },
+        {
+          "text": "高",
+          "start": 76.94000000000001,
+          "end": 77.24
+        },
+        {
+          "text": "六",
+          "start": 77.49,
+          "end": 77.65250000000002
+        },
+        {
+          "text": "乘",
+          "start": 77.65250000000002,
+          "end": 77.8275
+        },
+        {
+          "text": "一",
+          "start": 77.8525,
+          "end": 77.96500000000002
+        },
+        {
+          "text": "太",
+          "start": 77.96500000000002,
+          "end": 78.165
+        },
+        {
+          "text": "宽",
+          "start": 78.165,
+          "end": 78.49
+        },
+        {
+          "text": "两者",
+          "start": 78.865,
+          "end": 79.2025
+        },
+        {
+          "text": "面积",
+          "start": 79.2275,
+          "end": 79.52750000000002
+        },
+        {
+          "text": "正确",
+          "start": 79.54,
+          "end": 80.06500000000001
+        },
+        {
+          "text": "却",
+          "start": 80.3025,
+          "end": 80.4775
+        },
+        {
+          "text": "都",
+          "start": 80.4775,
+          "end": 80.615
+        },
+        {
+          "text": "超出",
+          "start": 80.62750000000001,
+          "end": 81.02750000000002
+        },
+        {
+          "text": "了",
+          "start": 81.02750000000002,
+          "end": 81.14
+        },
+        {
+          "text": "宽",
+          "start": 81.165,
+          "end": 81.365
+        },
+        {
+          "text": "高",
+          "start": 81.365,
+          "end": 81.54
+        },
+        {
+          "text": "比",
+          "start": 81.54,
+          "end": 81.7025
+        },
+        {
+          "text": "范围",
+          "start": 81.71500000000002,
+          "end": 82.19000000000001
+        }
+      ]
+    },
+    {
+      "start": 83.23599999999999,
+      "end": 89.566,
+      "zh": "筛掉这两个极端形状，整数实验中只剩二乘三和三乘二。",
+      "en": "Removing those extremes leaves two by three and three by two for this integer experiment.",
+      "sourceKey": "factors-survive",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "筛",
+          "start": 83.33599999999998,
+          "end": 83.61099999999999
+        },
+        {
+          "text": "掉",
+          "start": 83.61099999999999,
+          "end": 83.78599999999997
+        },
+        {
+          "text": "这",
+          "start": 83.81099999999998,
+          "end": 83.93599999999998
+        },
+        {
+          "text": "两",
+          "start": 83.93599999999998,
+          "end": 84.09849999999997
+        },
+        {
+          "text": "个",
+          "start": 84.09849999999997,
+          "end": 84.17349999999999
+        },
+        {
+          "text": "极端",
+          "start": 84.19849999999997,
+          "end": 84.53599999999997
+        },
+        {
+          "text": "形状",
+          "start": 84.54849999999999,
+          "end": 85.02349999999998
+        },
+        {
+          "text": "整数",
+          "start": 85.33599999999998,
+          "end": 85.71099999999998
+        },
+        {
+          "text": "实验",
+          "start": 85.7235,
+          "end": 86.07349999999997
+        },
+        {
+          "text": "中",
+          "start": 86.07349999999997,
+          "end": 86.36099999999999
+        },
+        {
+          "text": "只",
+          "start": 86.46099999999998,
+          "end": 86.661
+        },
+        {
+          "text": "剩",
+          "start": 86.661,
+          "end": 86.88599999999997
+        },
+        {
+          "text": "二乘三",
+          "start": 86.911,
+          "end": 87.5985
+        },
+        {
+          "text": "和",
+          "start": 87.69849999999997,
+          "end": 87.86099999999999
+        },
+        {
+          "text": "三乘二",
+          "start": 87.87349999999998,
+          "end": 88.536
+        }
+      ]
+    },
+    {
+      "start": 89.566,
+      "end": 97.24,
+      "zh": "连续模型不只允许整数；选定正的宽度后，可以用六除以宽度计算高度。",
+      "en": "A continuous model also allows noninteger dimensions; choose a positive width and calculate height as six divided by width.",
+      "sourceKey": "factors-continuous",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "连续",
+          "start": 89.66599999999998,
+          "end": 90.04099999999998
+        },
+        {
+          "text": "模型",
+          "start": 90.0535,
+          "end": 90.616
+        },
+        {
+          "text": "不只",
+          "start": 90.716,
+          "end": 91.0285
+        },
+        {
+          "text": "允许",
+          "start": 91.04099999999998,
+          "end": 91.391
+        },
+        {
+          "text": "整数",
+          "start": 91.4035,
+          "end": 91.9035
+        },
+        {
+          "text": "选定",
+          "start": 92.266,
+          "end": 92.641
+        },
+        {
+          "text": "正",
+          "start": 92.66599999999998,
+          "end": 92.79099999999998
+        },
+        {
+          "text": "的",
+          "start": 92.79099999999998,
+          "end": 92.866
+        },
+        {
+          "text": "宽度",
+          "start": 92.87850000000002,
+          "end": 93.2785
+        },
+        {
+          "text": "后",
+          "start": 93.2785,
+          "end": 93.56600000000002
+        },
+        {
+          "text": "可以",
+          "start": 93.766,
+          "end": 94.016
+        },
+        {
+          "text": "用",
+          "start": 94.0285,
+          "end": 94.19100000000002
+        },
+        {
+          "text": "六除",
+          "start": 94.19100000000002,
+          "end": 94.741
+        },
+        {
+          "text": "以",
+          "start": 94.841,
+          "end": 94.97849999999998
+        },
+        {
+          "text": "宽度",
+          "start": 94.991,
+          "end": 95.41599999999998
+        },
+        {
+          "text": "计算",
+          "start": 95.44100000000002,
+          "end": 95.75350000000002
+        },
+        {
+          "text": "高度",
+          "start": 95.766,
+          "end": 96.216
+        }
+      ]
+    },
+    {
+      "start": 97.24,
+      "end": 105.32199999999999,
+      "zh": "A 在原点，尺寸三乘二；D 在零、二，尺寸三乘一，正好贴住 A 上边缘。",
+      "en": "A starts at the origin, three by two; D starts at zero, two, three by one, touching A’s top edge.",
+      "sourceKey": "baseline-D",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "A",
+          "start": 97.33999999999999,
+          "end": 97.52749999999999
+        },
+        {
+          "text": "在",
+          "start": 97.52749999999999,
+          "end": 97.7025
+        },
+        {
+          "text": "原点",
+          "start": 97.71499999999999,
+          "end": 98.2025
+        },
+        {
+          "text": "尺寸",
+          "start": 98.415,
+          "end": 98.83999999999999
+        },
+        {
+          "text": "三乘二",
+          "start": 98.865,
+          "end": 99.4525
+        },
+        {
+          "text": "D",
+          "start": 99.81499999999998,
+          "end": 99.99
+        },
+        {
+          "text": "在",
+          "start": 100.00249999999998,
+          "end": 100.2025
+        },
+        {
+          "text": "零",
+          "start": 100.2025,
+          "end": 100.50249999999998
+        },
+        {
+          "text": "二",
+          "start": 100.665,
+          "end": 100.9275
+        },
+        {
+          "text": "尺寸",
+          "start": 101.21499999999999,
+          "end": 101.64
+        },
+        {
+          "text": "三乘一",
+          "start": 101.665,
+          "end": 102.31499999999998
+        },
+        {
+          "text": "正好",
+          "start": 102.5775,
+          "end": 102.9775
+        },
+        {
+          "text": "贴住",
+          "start": 102.99,
+          "end": 103.415
+        },
+        {
+          "text": "A",
+          "start": 103.415,
+          "end": 103.56499999999998
+        },
+        {
+          "text": "上",
+          "start": 103.56499999999998,
+          "end": 103.77749999999999
+        },
+        {
+          "text": "边缘",
+          "start": 103.79,
+          "end": 104.27749999999999
+        }
+      ]
+    },
+    {
+      "start": 105.32199999999999,
+      "end": 113.54799999999999,
+      "zh": "原布局合法，包围盒九乘三等于二十七，减去模块面积和二十三，盒内空余四。",
+      "en": "The legal box is nine by three: area twenty-seven, minus block area twenty-three, leaves four empty units.",
+      "sourceKey": "baseline-box",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "原",
+          "start": 105.42199999999998,
+          "end": 105.64699999999998
+        },
+        {
+          "text": "布局",
+          "start": 105.64699999999998,
+          "end": 105.9095
+        },
+        {
+          "text": "合法",
+          "start": 105.92199999999998,
+          "end": 106.44699999999999
+        },
+        {
+          "text": "包",
+          "start": 106.75949999999999,
+          "end": 106.94699999999999
+        },
+        {
+          "text": "围盒",
+          "start": 106.94699999999999,
+          "end": 107.29699999999998
+        },
+        {
+          "text": "九乘三",
+          "start": 107.3095,
+          "end": 107.98449999999998
+        },
+        {
+          "text": "等于",
+          "start": 108.08449999999998,
+          "end": 108.347
+        },
+        {
+          "text": "二十七",
+          "start": 108.35949999999998,
+          "end": 108.98449999999998
+        },
+        {
+          "text": "减去",
+          "start": 109.3095,
+          "end": 109.6595
+        },
+        {
+          "text": "模块",
+          "start": 109.6845,
+          "end": 109.997
+        },
+        {
+          "text": "面积",
+          "start": 110.00949999999999,
+          "end": 110.472
+        },
+        {
+          "text": "和",
+          "start": 110.497,
+          "end": 110.64699999999998
+        },
+        {
+          "text": "二十三",
+          "start": 110.6595,
+          "end": 111.222
+        },
+        {
+          "text": "盒",
+          "start": 111.472,
+          "end": 111.6595
+        },
+        {
+          "text": "内",
+          "start": 111.6595,
+          "end": 111.85949999999998
+        },
+        {
+          "text": "空余四",
+          "start": 111.88449999999999,
+          "end": 112.5345
+        }
+      ]
+    },
+    {
+      "start": 113.54799999999999,
+      "end": 118.89399999999999,
+      "zh": "现在只把 A 改成二乘三，其余模块先保持原位。",
+      "en": "Now change only A to two by three, while leaving every other block in place.",
+      "sourceKey": "predict-setup",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "现在",
+          "start": 113.64799999999998,
+          "end": 114.0605
+        },
+        {
+          "text": "只",
+          "start": 114.073,
+          "end": 114.22299999999997
+        },
+        {
+          "text": "把",
+          "start": 114.22299999999997,
+          "end": 114.4355
+        },
+        {
+          "text": "A",
+          "start": 114.4355,
+          "end": 114.623
+        },
+        {
+          "text": "改成",
+          "start": 114.6355,
+          "end": 114.998
+        },
+        {
+          "text": "二乘三",
+          "start": 115.02299999999998,
+          "end": 115.6855
+        },
+        {
+          "text": "其余",
+          "start": 115.98549999999999,
+          "end": 116.27299999999998
+        },
+        {
+          "text": "模块",
+          "start": 116.28549999999997,
+          "end": 116.78549999999997
+        },
+        {
+          "text": "先",
+          "start": 116.8105,
+          "end": 117.03549999999997
+        },
+        {
+          "text": "保持",
+          "start": 117.04799999999999,
+          "end": 117.36049999999999
+        },
+        {
+          "text": "原位",
+          "start": 117.373,
+          "end": 117.84799999999997
+        }
+      ]
+    },
+    {
+      "start": 118.89399999999999,
+      "end": 127.50999999999999,
+      "zh": "A 变窄之后，布局还合法吗？先看它的顶部会到哪里。",
+      "en": "Will the placement remain legal after A narrows? First predict where its top edge will end.",
+      "sourceKey": "predict",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "A",
+          "start": 118.99399999999999,
+          "end": 119.19399999999997
+        },
+        {
+          "text": "变窄",
+          "start": 119.19399999999997,
+          "end": 119.55649999999999
+        },
+        {
+          "text": "之后",
+          "start": 119.56899999999997,
+          "end": 120.03150000000001
+        },
+        {
+          "text": "布局",
+          "start": 120.21900000000001,
+          "end": 120.55649999999999
+        },
+        {
+          "text": "还",
+          "start": 120.58149999999999,
+          "end": 120.71900000000001
+        },
+        {
+          "text": "合法",
+          "start": 120.7315,
+          "end": 121.169
+        },
+        {
+          "text": "吗",
+          "start": 121.169,
+          "end": 121.419
+        },
+        {
+          "text": "先",
+          "start": 121.9815,
+          "end": 122.25649999999997
+        },
+        {
+          "text": "看",
+          "start": 122.25649999999997,
+          "end": 122.44399999999997
+        },
+        {
+          "text": "它",
+          "start": 122.46900000000001,
+          "end": 122.59400000000001
+        },
+        {
+          "text": "的",
+          "start": 122.59400000000001,
+          "end": 122.69399999999997
+        },
+        {
+          "text": "顶部",
+          "start": 122.70649999999999,
+          "end": 123.13149999999997
+        },
+        {
+          "text": "会",
+          "start": 123.15650000000001,
+          "end": 123.30649999999999
+        },
+        {
+          "text": "到",
+          "start": 123.30649999999999,
+          "end": 123.45649999999999
+        },
+        {
+          "text": "哪里",
+          "start": 123.46900000000001,
+          "end": 123.93149999999999
+        }
+      ]
+    },
+    {
+      "start": 127.50999999999999,
+      "end": 132.928,
+      "zh": "看 A 的右边缘向左退，同时顶部从二升到三。",
+      "en": "Watch A’s right edge retreat while its top rises from two to three.",
+      "sourceKey": "reshape",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "看",
+          "start": 127.60999999999999,
+          "end": 127.88499999999999
+        },
+        {
+          "text": "A",
+          "start": 127.88499999999999,
+          "end": 128.035
+        },
+        {
+          "text": "的",
+          "start": 128.035,
+          "end": 128.1225
+        },
+        {
+          "text": "右边",
+          "start": 128.135,
+          "end": 128.635
+        },
+        {
+          "text": "缘向",
+          "start": 128.7225,
+          "end": 129.10999999999999
+        },
+        {
+          "text": "左退",
+          "start": 129.10999999999999,
+          "end": 129.5725
+        },
+        {
+          "text": "同时",
+          "start": 129.85999999999999,
+          "end": 130.20999999999998
+        },
+        {
+          "text": "顶",
+          "start": 130.2225,
+          "end": 130.4475
+        },
+        {
+          "text": "部",
+          "start": 130.4475,
+          "end": 130.70999999999998
+        },
+        {
+          "text": "从",
+          "start": 130.81,
+          "end": 131.02249999999998
+        },
+        {
+          "text": "二升",
+          "start": 131.035,
+          "end": 131.39749999999998
+        },
+        {
+          "text": "到",
+          "start": 131.41,
+          "end": 131.5725
+        },
+        {
+          "text": "三",
+          "start": 131.5725,
+          "end": 131.91
+        }
+      ]
+    },
+    {
+      "start": 132.928,
+      "end": 139.30599999999998,
+      "zh": "新的 A 占横坐标零到二，D 占零到三，两者在横向相交。",
+      "en": "The new A spans x from zero to two; D spans zero to three, so their horizontal intervals overlap.",
+      "sourceKey": "reshape-x",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "新",
+          "start": 133.02800000000002,
+          "end": 133.3155
+        },
+        {
+          "text": "的",
+          "start": 133.3155,
+          "end": 133.46550000000002
+        },
+        {
+          "text": "A",
+          "start": 133.4905,
+          "end": 133.65300000000002
+        },
+        {
+          "text": "占",
+          "start": 133.65300000000002,
+          "end": 133.853
+        },
+        {
+          "text": "横坐标",
+          "start": 133.8655,
+          "end": 134.4405
+        },
+        {
+          "text": "零",
+          "start": 134.46550000000002,
+          "end": 134.628
+        },
+        {
+          "text": "到",
+          "start": 134.628,
+          "end": 134.803
+        },
+        {
+          "text": "二",
+          "start": 134.803,
+          "end": 135.02800000000002
+        },
+        {
+          "text": "D",
+          "start": 135.378,
+          "end": 135.57799999999997
+        },
+        {
+          "text": "占",
+          "start": 135.59050000000002,
+          "end": 135.77800000000002
+        },
+        {
+          "text": "零",
+          "start": 135.7905,
+          "end": 135.9405
+        },
+        {
+          "text": "到",
+          "start": 135.9405,
+          "end": 136.09050000000002
+        },
+        {
+          "text": "三",
+          "start": 136.09050000000002,
+          "end": 136.4405
+        },
+        {
+          "text": "两",
+          "start": 136.728,
+          "end": 136.96550000000002
+        },
+        {
+          "text": "者",
+          "start": 136.96550000000002,
+          "end": 137.20299999999997
+        },
+        {
+          "text": "在",
+          "start": 137.21550000000002,
+          "end": 137.3655
+        },
+        {
+          "text": "横向",
+          "start": 137.39049999999997,
+          "end": 137.77800000000002
+        },
+        {
+          "text": "相交",
+          "start": 137.7905,
+          "end": 138.27800000000002
+        }
+      ]
+    },
+    {
+      "start": 139.30599999999998,
+      "end": 146.04399999999998,
+      "zh": "纵向共同部分是二到三，因此交叠高度为一，重叠面积为二。",
+      "en": "Their shared vertical interval is two to three, giving overlap height one and overlap area two.",
+      "sourceKey": "reshape-y",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "纵向",
+          "start": 139.406,
+          "end": 139.83099999999996
+        },
+        {
+          "text": "共同",
+          "start": 139.856,
+          "end": 140.20599999999996
+        },
+        {
+          "text": "部分",
+          "start": 140.2185,
+          "end": 140.5935
+        },
+        {
+          "text": "是",
+          "start": 140.61849999999998,
+          "end": 140.76849999999996
+        },
+        {
+          "text": "二到三",
+          "start": 140.781,
+          "end": 141.4185
+        },
+        {
+          "text": "因此",
+          "start": 141.76849999999996,
+          "end": 142.281
+        },
+        {
+          "text": "交叠",
+          "start": 142.38099999999997,
+          "end": 142.731
+        },
+        {
+          "text": "高度",
+          "start": 142.74349999999998,
+          "end": 143.08099999999996
+        },
+        {
+          "text": "为",
+          "start": 143.0935,
+          "end": 143.31849999999997
+        },
+        {
+          "text": "一",
+          "start": 143.31849999999997,
+          "end": 143.56849999999997
+        },
+        {
+          "text": "重叠",
+          "start": 143.80599999999998,
+          "end": 144.20599999999996
+        },
+        {
+          "text": "面积",
+          "start": 144.2185,
+          "end": 144.55599999999998
+        },
+        {
+          "text": "为",
+          "start": 144.56849999999997,
+          "end": 144.76849999999996
+        },
+        {
+          "text": "二",
+          "start": 144.76849999999996,
+          "end": 145.031
+        }
+      ]
+    },
+    {
+      "start": 146.04399999999998,
+      "end": 152.95,
+      "zh": "两个矩形只共用边界时，交叠宽度或高度为零，因此允许贴边。",
+      "en": "When rectangles only share a boundary, an overlap dimension is zero, so touching is allowed.",
+      "sourceKey": "check-touch",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "两",
+          "start": 146.144,
+          "end": 146.35649999999998
+        },
+        {
+          "text": "个",
+          "start": 146.35649999999998,
+          "end": 146.4565
+        },
+        {
+          "text": "矩形",
+          "start": 146.469,
+          "end": 147.00649999999996
+        },
+        {
+          "text": "只",
+          "start": 147.0315,
+          "end": 147.18149999999997
+        },
+        {
+          "text": "共",
+          "start": 147.19399999999996,
+          "end": 147.35649999999998
+        },
+        {
+          "text": "用",
+          "start": 147.35649999999998,
+          "end": 147.50649999999996
+        },
+        {
+          "text": "边界",
+          "start": 147.519,
+          "end": 147.91899999999998
+        },
+        {
+          "text": "时",
+          "start": 147.91899999999998,
+          "end": 148.23149999999998
+        },
+        {
+          "text": "交叠",
+          "start": 148.48149999999998,
+          "end": 148.80649999999997
+        },
+        {
+          "text": "宽度",
+          "start": 148.81899999999996,
+          "end": 149.3315
+        },
+        {
+          "text": "或",
+          "start": 149.35649999999998,
+          "end": 149.54399999999998
+        },
+        {
+          "text": "高度",
+          "start": 149.55649999999997,
+          "end": 149.88149999999996
+        },
+        {
+          "text": "为",
+          "start": 149.894,
+          "end": 150.10649999999998
+        },
+        {
+          "text": "零",
+          "start": 150.10649999999998,
+          "end": 150.4065
+        },
+        {
+          "text": "因此",
+          "start": 150.644,
+          "end": 151.05649999999997
+        },
+        {
+          "text": "允许",
+          "start": 151.0815,
+          "end": 151.44399999999996
+        },
+        {
+          "text": "贴边",
+          "start": 151.4565,
+          "end": 151.93149999999997
+        }
+      ]
+    },
+    {
+      "start": 152.95,
+      "end": 157.67199999999997,
+      "zh": "先试一个局部修法：把 D 向右移动两格。",
+      "en": "Try a local repair by moving D two grid units to the right.",
+      "sourceKey": "repair-choice",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "先",
+          "start": 153.05,
+          "end": 153.33749999999998
+        },
+        {
+          "text": "试",
+          "start": 153.33749999999998,
+          "end": 153.46249999999998
+        },
+        {
+          "text": "一个",
+          "start": 153.47499999999997,
+          "end": 153.675
+        },
+        {
+          "text": "局部",
+          "start": 153.7,
+          "end": 153.97499999999997
+        },
+        {
+          "text": "修法",
+          "start": 153.9875,
+          "end": 154.4875
+        },
+        {
+          "text": "把",
+          "start": 154.78749999999997,
+          "end": 154.95
+        },
+        {
+          "text": "D",
+          "start": 154.95,
+          "end": 155.08749999999998
+        },
+        {
+          "text": "向右",
+          "start": 155.09999999999997,
+          "end": 155.625
+        },
+        {
+          "text": "移动",
+          "start": 155.72499999999997,
+          "end": 156.0625
+        },
+        {
+          "text": "两格",
+          "start": 156.075,
+          "end": 156.6375
+        }
+      ]
+    },
+    {
+      "start": 157.67199999999997,
+      "end": 163.16199999999998,
+      "zh": "D 不再覆盖 A，却进入了 B 的区域，所以还没有修好。",
+      "en": "D no longer covers A, but it now enters B’s space, so the repair is incomplete.",
+      "sourceKey": "repair-second-conflict",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "D",
+          "start": 157.772,
+          "end": 157.94699999999995
+        },
+        {
+          "text": "不再",
+          "start": 157.9595,
+          "end": 158.23449999999997
+        },
+        {
+          "text": "覆盖",
+          "start": 158.24699999999996,
+          "end": 158.69699999999995
+        },
+        {
+          "text": "A",
+          "start": 158.78449999999998,
+          "end": 158.99699999999996
+        },
+        {
+          "text": "却",
+          "start": 159.272,
+          "end": 159.44699999999995
+        },
+        {
+          "text": "进入",
+          "start": 159.4595,
+          "end": 159.74699999999996
+        },
+        {
+          "text": "了",
+          "start": 159.74699999999996,
+          "end": 159.84699999999998
+        },
+        {
+          "text": "B",
+          "start": 159.87199999999996,
+          "end": 160.03449999999998
+        },
+        {
+          "text": "的",
+          "start": 160.03449999999998,
+          "end": 160.13449999999995
+        },
+        {
+          "text": "区域",
+          "start": 160.147,
+          "end": 160.63449999999995
+        },
+        {
+          "text": "所以",
+          "start": 160.897,
+          "end": 161.18449999999996
+        },
+        {
+          "text": "还",
+          "start": 161.2095,
+          "end": 161.32199999999995
+        },
+        {
+          "text": "没有",
+          "start": 161.3345,
+          "end": 161.53449999999998
+        },
+        {
+          "text": "修好",
+          "start": 161.54699999999997,
+          "end": 162.12199999999996
+        }
+      ]
+    },
+    {
+      "start": 163.16199999999998,
+      "end": 169.22799999999998,
+      "zh": "再把 D 上移一格，底边到三，与 B 贴边，布局恢复合法。",
+      "en": "Move D up one unit to y equals three, touching B without overlapping A or B.",
+      "sourceKey": "repair-up",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "再",
+          "start": 163.262,
+          "end": 163.42449999999997
+        },
+        {
+          "text": "把",
+          "start": 163.42449999999997,
+          "end": 163.56199999999995
+        },
+        {
+          "text": "D",
+          "start": 163.5745,
+          "end": 163.73699999999997
+        },
+        {
+          "text": "上",
+          "start": 163.73699999999997,
+          "end": 163.92449999999997
+        },
+        {
+          "text": "移",
+          "start": 163.93699999999995,
+          "end": 164.09949999999998
+        },
+        {
+          "text": "一",
+          "start": 164.11199999999997,
+          "end": 164.28699999999998
+        },
+        {
+          "text": "格",
+          "start": 164.28699999999998,
+          "end": 164.587
+        },
+        {
+          "text": "底边",
+          "start": 164.78699999999998,
+          "end": 165.12449999999995
+        },
+        {
+          "text": "到",
+          "start": 165.137,
+          "end": 165.31199999999995
+        },
+        {
+          "text": "三",
+          "start": 165.31199999999995,
+          "end": 165.62449999999995
+        },
+        {
+          "text": "与",
+          "start": 165.887,
+          "end": 166.03699999999998
+        },
+        {
+          "text": "B",
+          "start": 166.04949999999997,
+          "end": 166.212
+        },
+        {
+          "text": "贴边",
+          "start": 166.22449999999998,
+          "end": 166.6995
+        },
+        {
+          "text": "布局",
+          "start": 166.93699999999995,
+          "end": 167.29949999999997
+        },
+        {
+          "text": "恢复",
+          "start": 167.3245,
+          "end": 167.67449999999997
+        },
+        {
+          "text": "合法",
+          "start": 167.68699999999995,
+          "end": 168.18699999999995
+        }
+      ]
+    },
+    {
+      "start": 169.22799999999998,
+      "end": 176.302,
+      "zh": "但最高处变成四，最右边仍是九，包围盒面积反而增加到三十六。",
+      "en": "However, the top reaches four while the right edge stays nine, so bounding-box area increases to thirty-six.",
+      "sourceKey": "repair-worse",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "但",
+          "start": 169.32799999999995,
+          "end": 169.54049999999998
+        },
+        {
+          "text": "最高",
+          "start": 169.56550000000001,
+          "end": 169.903
+        },
+        {
+          "text": "处",
+          "start": 169.903,
+          "end": 170.11549999999997
+        },
+        {
+          "text": "变成",
+          "start": 170.14049999999995,
+          "end": 170.49049999999997
+        },
+        {
+          "text": "四",
+          "start": 170.50300000000001,
+          "end": 170.80299999999997
+        },
+        {
+          "text": "最右",
+          "start": 171.10299999999998,
+          "end": 171.47799999999998
+        },
+        {
+          "text": "边",
+          "start": 171.47799999999998,
+          "end": 171.66549999999998
+        },
+        {
+          "text": "仍是",
+          "start": 171.69050000000001,
+          "end": 172.05299999999997
+        },
+        {
+          "text": "九",
+          "start": 172.05299999999997,
+          "end": 172.3405
+        },
+        {
+          "text": "包围",
+          "start": 172.653,
+          "end": 172.94050000000001
+        },
+        {
+          "text": "盒",
+          "start": 172.95299999999995,
+          "end": 173.11549999999997
+        },
+        {
+          "text": "面积",
+          "start": 173.11549999999997,
+          "end": 173.66549999999998
+        },
+        {
+          "text": "反而",
+          "start": 173.75300000000001,
+          "end": 174.06550000000001
+        },
+        {
+          "text": "增加",
+          "start": 174.07799999999995,
+          "end": 174.45299999999995
+        },
+        {
+          "text": "到",
+          "start": 174.45299999999995,
+          "end": 174.61549999999997
+        },
+        {
+          "text": "三十六",
+          "start": 174.64049999999995,
+          "end": 175.26549999999995
+        }
+      ]
+    },
+    {
+      "start": 176.302,
+      "end": 182.272,
+      "zh": "保留 A 的二乘三形状，把 B 左移一格，贴住 A 的右边缘。",
+      "en": "Keep A at two by three and move B left one unit until it touches A’s right edge.",
+      "sourceKey": "repack-B",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "保留",
+          "start": 176.40199999999996,
+          "end": 176.81449999999998
+        },
+        {
+          "text": "A",
+          "start": 176.82700000000003,
+          "end": 176.9895
+        },
+        {
+          "text": "的",
+          "start": 176.9895,
+          "end": 177.08949999999996
+        },
+        {
+          "text": "二乘三",
+          "start": 177.1145,
+          "end": 177.63950000000003
+        },
+        {
+          "text": "形状",
+          "start": 177.65199999999996,
+          "end": 178.13950000000003
+        },
+        {
+          "text": "把",
+          "start": 178.37699999999998,
+          "end": 178.552
+        },
+        {
+          "text": "B",
+          "start": 178.57700000000003,
+          "end": 178.76450000000003
+        },
+        {
+          "text": "左",
+          "start": 178.77699999999996,
+          "end": 178.96449999999996
+        },
+        {
+          "text": "移",
+          "start": 178.96449999999996,
+          "end": 179.102
+        },
+        {
+          "text": "一",
+          "start": 179.1145,
+          "end": 179.2895
+        },
+        {
+          "text": "格",
+          "start": 179.2895,
+          "end": 179.602
+        },
+        {
+          "text": "贴住",
+          "start": 179.81449999999998,
+          "end": 180.26450000000003
+        },
+        {
+          "text": "A",
+          "start": 180.26450000000003,
+          "end": 180.427
+        },
+        {
+          "text": "的",
+          "start": 180.427,
+          "end": 180.51450000000003
+        },
+        {
+          "text": "右",
+          "start": 180.52699999999996,
+          "end": 180.70200000000003
+        },
+        {
+          "text": "边缘",
+          "start": 180.70200000000003,
+          "end": 181.2395
+        }
+      ]
+    },
+    {
+      "start": 182.272,
+      "end": 186.17799999999997,
+      "zh": "接着把 C 左移一格，贴到 B 右边。",
+      "en": "Next, move C left one unit to touch B’s right edge.",
+      "sourceKey": "repack-C",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "接着",
+          "start": 182.372,
+          "end": 182.67199999999997
+        },
+        {
+          "text": "把",
+          "start": 182.6845,
+          "end": 182.8345
+        },
+        {
+          "text": "C",
+          "start": 182.8345,
+          "end": 183.09699999999998
+        },
+        {
+          "text": "左",
+          "start": 183.10949999999997,
+          "end": 183.3095
+        },
+        {
+          "text": "移",
+          "start": 183.3095,
+          "end": 183.447
+        },
+        {
+          "text": "一",
+          "start": 183.4595,
+          "end": 183.6345
+        },
+        {
+          "text": "格",
+          "start": 183.6345,
+          "end": 183.9345
+        },
+        {
+          "text": "贴到",
+          "start": 184.1345,
+          "end": 184.47199999999998
+        },
+        {
+          "text": "B",
+          "start": 184.47199999999998,
+          "end": 184.6345
+        },
+        {
+          "text": "右边",
+          "start": 184.647,
+          "end": 185.1345
+        }
+      ]
+    },
+    {
+      "start": 186.17799999999997,
+      "end": 192.93999999999997,
+      "zh": "把 D 移到四、二，底边贴住 C 的顶部，左边缘贴住 B 的右边缘。",
+      "en": "Move D to four, two: its bottom touches C, and its left edge touches B.",
+      "sourceKey": "repack-D",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "把",
+          "start": 186.27799999999993,
+          "end": 186.47799999999998
+        },
+        {
+          "text": "D",
+          "start": 186.47799999999998,
+          "end": 186.6405
+        },
+        {
+          "text": "移",
+          "start": 186.65299999999993,
+          "end": 186.7655
+        },
+        {
+          "text": "到",
+          "start": 186.7655,
+          "end": 186.953
+        },
+        {
+          "text": "四",
+          "start": 186.97799999999998,
+          "end": 187.31549999999996
+        },
+        {
+          "text": "二",
+          "start": 187.5155,
+          "end": 187.7655
+        },
+        {
+          "text": "底边",
+          "start": 188.11549999999997,
+          "end": 188.46549999999993
+        },
+        {
+          "text": "贴住",
+          "start": 188.47799999999998,
+          "end": 188.84049999999993
+        },
+        {
+          "text": "C",
+          "start": 188.84049999999993,
+          "end": 189.05299999999997
+        },
+        {
+          "text": "的",
+          "start": 189.05299999999997,
+          "end": 189.1405
+        },
+        {
+          "text": "顶部",
+          "start": 189.15299999999993,
+          "end": 189.62799999999996
+        },
+        {
+          "text": "左",
+          "start": 189.90299999999993,
+          "end": 190.10299999999998
+        },
+        {
+          "text": "边缘",
+          "start": 190.10299999999998,
+          "end": 190.54049999999998
+        },
+        {
+          "text": "贴住",
+          "start": 190.56549999999996,
+          "end": 190.92799999999997
+        },
+        {
+          "text": "B",
+          "start": 190.92799999999997,
+          "end": 191.09049999999993
+        },
+        {
+          "text": "的",
+          "start": 191.09049999999993,
+          "end": 191.17799999999997
+        },
+        {
+          "text": "右",
+          "start": 191.203,
+          "end": 191.37799999999996
+        },
+        {
+          "text": "边缘",
+          "start": 191.37799999999996,
+          "end": 191.92799999999997
+        }
+      ]
+    },
+    {
+      "start": 192.93999999999997,
+      "end": 201.31599999999997,
+      "zh": "如果还想压小包围盒，应该关注仍然伸到最右侧的哪一块？",
+      "en": "To shrink the box further, which block still determines the rightmost edge?",
+      "sourceKey": "repack-predict",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "如果",
+          "start": 193.03999999999994,
+          "end": 193.28999999999994
+        },
+        {
+          "text": "还",
+          "start": 193.31499999999997,
+          "end": 193.47749999999994
+        },
+        {
+          "text": "想",
+          "start": 193.47749999999994,
+          "end": 193.6525
+        },
+        {
+          "text": "压",
+          "start": 193.6525,
+          "end": 193.78999999999994
+        },
+        {
+          "text": "小",
+          "start": 193.80249999999998,
+          "end": 193.97749999999994
+        },
+        {
+          "text": "包",
+          "start": 193.97749999999994,
+          "end": 194.13999999999996
+        },
+        {
+          "text": "围盒",
+          "start": 194.13999999999996,
+          "end": 194.67749999999998
+        },
+        {
+          "text": "应该",
+          "start": 194.91499999999994,
+          "end": 195.18999999999997
+        },
+        {
+          "text": "关注",
+          "start": 195.20249999999996,
+          "end": 195.73999999999998
+        },
+        {
+          "text": "仍然",
+          "start": 195.84,
+          "end": 196.18999999999997
+        },
+        {
+          "text": "伸",
+          "start": 196.20249999999996,
+          "end": 196.37749999999997
+        },
+        {
+          "text": "到",
+          "start": 196.37749999999997,
+          "end": 196.5275
+        },
+        {
+          "text": "最",
+          "start": 196.55249999999998,
+          "end": 196.75249999999997
+        },
+        {
+          "text": "右侧",
+          "start": 196.75249999999997,
+          "end": 197.09
+        },
+        {
+          "text": "的",
+          "start": 197.09,
+          "end": 197.16499999999994
+        },
+        {
+          "text": "哪",
+          "start": 197.17749999999998,
+          "end": 197.36499999999998
+        },
+        {
+          "text": "一块",
+          "start": 197.36499999999998,
+          "end": 197.73999999999998
+        }
+      ]
+    },
+    {
+      "start": 201.31599999999997,
+      "end": 207.07,
+      "zh": "新布局再次得到九乘三，面积二十七，和原来一样。",
+      "en": "The new placement again has a nine-by-three box with area twenty-seven, matching the baseline.",
+      "sourceKey": "repack-same",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "新",
+          "start": 201.41599999999997,
+          "end": 201.691
+        },
+        {
+          "text": "布局",
+          "start": 201.691,
+          "end": 202.17849999999996
+        },
+        {
+          "text": "再次",
+          "start": 202.20349999999993,
+          "end": 202.57849999999993
+        },
+        {
+          "text": "得到",
+          "start": 202.59099999999998,
+          "end": 202.90349999999998
+        },
+        {
+          "text": "九乘三",
+          "start": 202.92849999999996,
+          "end": 203.566
+        },
+        {
+          "text": "面积",
+          "start": 203.92849999999996,
+          "end": 204.21599999999998
+        },
+        {
+          "text": "二十七",
+          "start": 204.24099999999996,
+          "end": 204.89099999999993
+        },
+        {
+          "text": "和",
+          "start": 205.09099999999998,
+          "end": 205.22849999999997
+        },
+        {
+          "text": "原来",
+          "start": 205.24099999999996,
+          "end": 205.59099999999998
+        },
+        {
+          "text": "一样",
+          "start": 205.60349999999997,
+          "end": 206.02849999999998
+        }
+      ]
+    },
+    {
+      "start": 207.07,
+      "end": 211.79199999999997,
+      "zh": "先把 D 移到零、三，腾出 C 上方的空间。",
+      "en": "First move D to zero, three, freeing the space above C.",
+      "sourceKey": "compact-space",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "先",
+          "start": 207.17000000000002,
+          "end": 207.42000000000002
+        },
+        {
+          "text": "把",
+          "start": 207.42000000000002,
+          "end": 207.58249999999998
+        },
+        {
+          "text": "D",
+          "start": 207.60750000000002,
+          "end": 207.7575
+        },
+        {
+          "text": "移",
+          "start": 207.7575,
+          "end": 207.85750000000002
+        },
+        {
+          "text": "到",
+          "start": 207.85750000000002,
+          "end": 208.0575
+        },
+        {
+          "text": "零",
+          "start": 208.07,
+          "end": 208.39499999999998
+        },
+        {
+          "text": "三",
+          "start": 208.60750000000002,
+          "end": 208.92000000000002
+        },
+        {
+          "text": "腾",
+          "start": 209.20749999999998,
+          "end": 209.42000000000002
+        },
+        {
+          "text": "出",
+          "start": 209.42000000000002,
+          "end": 209.58249999999998
+        },
+        {
+          "text": "C",
+          "start": 209.60750000000002,
+          "end": 209.83249999999998
+        },
+        {
+          "text": "上方",
+          "start": 209.83249999999998,
+          "end": 210.1825
+        },
+        {
+          "text": "的",
+          "start": 210.1825,
+          "end": 210.2575
+        },
+        {
+          "text": "空间",
+          "start": 210.26999999999998,
+          "end": 210.7575
+        }
+      ]
+    },
+    {
+      "start": 211.79199999999997,
+      "end": 218.338,
+      "zh": "这时包围盒暂时变大，不必把每个中间动作都当成最终结果。",
+      "en": "The box temporarily grows at this intermediate step; do not confuse an intermediate move with the final result.",
+      "sourceKey": "compact-temporary",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "这时",
+          "start": 211.892,
+          "end": 212.25449999999995
+        },
+        {
+          "text": "包",
+          "start": 212.25449999999995,
+          "end": 212.44199999999995
+        },
+        {
+          "text": "围盒",
+          "start": 212.44199999999995,
+          "end": 212.86699999999996
+        },
+        {
+          "text": "暂时",
+          "start": 212.892,
+          "end": 213.25449999999995
+        },
+        {
+          "text": "变",
+          "start": 213.267,
+          "end": 213.47949999999997
+        },
+        {
+          "text": "大",
+          "start": 213.47949999999997,
+          "end": 213.71699999999998
+        },
+        {
+          "text": "不必",
+          "start": 214.06699999999995,
+          "end": 214.36699999999996
+        },
+        {
+          "text": "把",
+          "start": 214.37949999999995,
+          "end": 214.52949999999998
+        },
+        {
+          "text": "每个",
+          "start": 214.55449999999996,
+          "end": 214.81699999999995
+        },
+        {
+          "text": "中间",
+          "start": 214.8295,
+          "end": 215.2045
+        },
+        {
+          "text": "动作",
+          "start": 215.21699999999998,
+          "end": 215.7045
+        },
+        {
+          "text": "都",
+          "start": 215.80449999999996,
+          "end": 215.96699999999998
+        },
+        {
+          "text": "当成",
+          "start": 215.96699999999998,
+          "end": 216.36699999999996
+        },
+        {
+          "text": "最终",
+          "start": 216.392,
+          "end": 216.75449999999995
+        },
+        {
+          "text": "结果",
+          "start": 216.767,
+          "end": 217.30449999999996
+        }
+      ]
+    },
+    {
+      "start": 218.338,
+      "end": 224.45199999999997,
+      "zh": "把 E 移到四、二，贴住 C 上方和 B 右侧，同时避开 D。",
+      "en": "Move E to four, two, above C and right of B, without covering D.",
+      "sourceKey": "compact-E",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "把",
+          "start": 218.43799999999996,
+          "end": 218.638
+        },
+        {
+          "text": "E",
+          "start": 218.638,
+          "end": 218.81299999999996
+        },
+        {
+          "text": "移",
+          "start": 218.8255,
+          "end": 218.93799999999996
+        },
+        {
+          "text": "到",
+          "start": 218.93799999999996,
+          "end": 219.11300000000003
+        },
+        {
+          "text": "四",
+          "start": 219.138,
+          "end": 219.463
+        },
+        {
+          "text": "二",
+          "start": 219.66299999999998,
+          "end": 219.91299999999998
+        },
+        {
+          "text": "贴",
+          "start": 220.263,
+          "end": 220.47549999999998
+        },
+        {
+          "text": "住",
+          "start": 220.47549999999998,
+          "end": 220.67550000000003
+        },
+        {
+          "text": "C",
+          "start": 220.7005,
+          "end": 220.9005
+        },
+        {
+          "text": "上方",
+          "start": 220.9005,
+          "end": 221.36300000000003
+        },
+        {
+          "text": "和",
+          "start": 221.388,
+          "end": 221.513
+        },
+        {
+          "text": "B",
+          "start": 221.5255,
+          "end": 221.67550000000003
+        },
+        {
+          "text": "右侧",
+          "start": 221.67550000000003,
+          "end": 222.17550000000003
+        },
+        {
+          "text": "同时",
+          "start": 222.388,
+          "end": 222.78799999999998
+        },
+        {
+          "text": "避开",
+          "start": 222.80050000000003,
+          "end": 223.17550000000003
+        },
+        {
+          "text": "D",
+          "start": 223.17550000000003,
+          "end": 223.42550000000003
+        }
+      ]
+    },
+    {
+      "start": 224.45199999999997,
+      "end": 231.694,
+      "zh": "最右边现在是六，最高处是四，所以包围盒为六乘四，面积二十四。",
+      "en": "The rightmost edge is now six and the top is four, giving a six-by-four box with area twenty-four.",
+      "sourceKey": "compact-box",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "最右",
+          "start": 224.55199999999994,
+          "end": 224.9145
+        },
+        {
+          "text": "边",
+          "start": 224.9145,
+          "end": 225.1645
+        },
+        {
+          "text": "现在",
+          "start": 225.18949999999998,
+          "end": 225.52699999999996
+        },
+        {
+          "text": "是",
+          "start": 225.52699999999996,
+          "end": 225.67699999999994
+        },
+        {
+          "text": "六",
+          "start": 225.68949999999998,
+          "end": 225.95199999999997
+        },
+        {
+          "text": "最高",
+          "start": 226.227,
+          "end": 226.58949999999996
+        },
+        {
+          "text": "处",
+          "start": 226.58949999999996,
+          "end": 226.76449999999997
+        },
+        {
+          "text": "是",
+          "start": 226.77699999999996,
+          "end": 226.92699999999994
+        },
+        {
+          "text": "四",
+          "start": 226.92699999999994,
+          "end": 227.25199999999998
+        },
+        {
+          "text": "所以",
+          "start": 227.602,
+          "end": 227.9145
+        },
+        {
+          "text": "包",
+          "start": 227.93949999999998,
+          "end": 228.11449999999994
+        },
+        {
+          "text": "围盒",
+          "start": 228.11449999999994,
+          "end": 228.52699999999996
+        },
+        {
+          "text": "为",
+          "start": 228.55199999999994,
+          "end": 228.70199999999997
+        },
+        {
+          "text": "六乘四",
+          "start": 228.71449999999996,
+          "end": 229.37699999999998
+        },
+        {
+          "text": "面积",
+          "start": 229.6645,
+          "end": 230.01449999999997
+        },
+        {
+          "text": "二十四",
+          "start": 230.0395,
+          "end": 230.6645
+        }
+      ]
+    },
+    {
+      "start": 231.694,
+      "end": 238.408,
+      "zh": "模块面积和仍为二十三，因此合法包围盒内部只空余一个单位。",
+      "en": "Total block area remains twenty-three, leaving only one unoccupied unit inside this legal bounding box.",
+      "sourceKey": "compact-empty",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "模块",
+          "start": 231.79399999999995,
+          "end": 232.1315
+        },
+        {
+          "text": "面积",
+          "start": 232.14399999999998,
+          "end": 232.66899999999995
+        },
+        {
+          "text": "和",
+          "start": 232.694,
+          "end": 232.85649999999995
+        },
+        {
+          "text": "仍",
+          "start": 232.869,
+          "end": 233.03150000000002
+        },
+        {
+          "text": "为",
+          "start": 233.03150000000002,
+          "end": 233.194
+        },
+        {
+          "text": "二十三",
+          "start": 233.21900000000002,
+          "end": 233.8065
+        },
+        {
+          "text": "因此",
+          "start": 234.16899999999995,
+          "end": 234.619
+        },
+        {
+          "text": "合法",
+          "start": 234.64399999999998,
+          "end": 235.01899999999998
+        },
+        {
+          "text": "包围",
+          "start": 235.03150000000002,
+          "end": 235.34400000000002
+        },
+        {
+          "text": "盒",
+          "start": 235.35649999999995,
+          "end": 235.5065
+        },
+        {
+          "text": "内部",
+          "start": 235.5065,
+          "end": 235.994
+        },
+        {
+          "text": "只",
+          "start": 236.09400000000002,
+          "end": 236.28150000000002
+        },
+        {
+          "text": "空余",
+          "start": 236.28150000000002,
+          "end": 236.64399999999998
+        },
+        {
+          "text": "一个",
+          "start": 236.65650000000002,
+          "end": 236.9315
+        },
+        {
+          "text": "单位",
+          "start": 236.944,
+          "end": 237.39399999999998
+        }
+      ]
+    },
+    {
+      "start": 238.408,
+      "end": 245.408,
+      "zh": "这条编辑序列先腾位、再压紧，中间面积暂时变大；不能把中间动作当最终结果。",
+      "en": "This editing sequence first frees space and then compacts it. Its temporary increase is not the final result.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 245.408,
+      "end": 252.408,
+      "zh": "动画说明每次编辑的端点，不保证搬动途中的每一帧都是无碰撞路径。",
+      "en": "The animation explains edit endpoints; it does not certify a collision-free physical transport path.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 252.408,
+      "end": 261.114,
+      "zh": "外框仍为八十，所以固定外框密度仍是二十三除以八十，也就是百分之二十八点七五。",
+      "en": "The outline stays eighty, so fixed-outline density remains twenty-three over eighty, or twenty-eight point seven five percent.",
+      "sourceKey": "metrics-outline",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "外框",
+          "start": 252.50799999999995,
+          "end": 252.93300000000002
+        },
+        {
+          "text": "仍",
+          "start": 252.958,
+          "end": 253.0955
+        },
+        {
+          "text": "为",
+          "start": 253.0955,
+          "end": 253.23299999999998
+        },
+        {
+          "text": "八十",
+          "start": 253.24550000000002,
+          "end": 253.79549999999998
+        },
+        {
+          "text": "所以",
+          "start": 254.13299999999995,
+          "end": 254.48299999999998
+        },
+        {
+          "text": "固定",
+          "start": 254.50799999999995,
+          "end": 254.783
+        },
+        {
+          "text": "外框",
+          "start": 254.79549999999998,
+          "end": 255.17049999999998
+        },
+        {
+          "text": "密度",
+          "start": 255.18300000000002,
+          "end": 255.658
+        },
+        {
+          "text": "仍",
+          "start": 255.75799999999995,
+          "end": 255.958
+        },
+        {
+          "text": "是",
+          "start": 255.958,
+          "end": 256.1205
+        },
+        {
+          "text": "二十三",
+          "start": 256.14549999999997,
+          "end": 256.64549999999997
+        },
+        {
+          "text": "除",
+          "start": 256.64549999999997,
+          "end": 256.95799999999997
+        },
+        {
+          "text": "以",
+          "start": 257.058,
+          "end": 257.183
+        },
+        {
+          "text": "八十",
+          "start": 257.1954999999999,
+          "end": 257.7579999999999
+        },
+        {
+          "text": "也",
+          "start": 258.02049999999997,
+          "end": 258.17049999999995
+        },
+        {
+          "text": "就",
+          "start": 258.17049999999995,
+          "end": 258.308
+        },
+        {
+          "text": "是",
+          "start": 258.308,
+          "end": 258.4454999999999
+        },
+        {
+          "text": "百分之二十",
+          "start": 258.4705,
+          "end": 259.183
+        },
+        {
+          "text": "八点七五",
+          "start": 259.183,
+          "end": 260.0704999999999
+        }
+      ]
+    },
+    {
+      "start": 261.114,
+      "end": 268.308,
+      "zh": "包围盒密度换了分母，原来是二十三除以二十七，约百分之八十五点二。",
+      "en": "Packing density uses a different denominator; the baseline is twenty-three over twenty-seven, about eighty-five point two percent.",
+      "sourceKey": "metrics-box",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "包围",
+          "start": 261.214,
+          "end": 261.5515
+        },
+        {
+          "text": "盒",
+          "start": 261.56399999999996,
+          "end": 261.75149999999996
+        },
+        {
+          "text": "密度",
+          "start": 261.75149999999996,
+          "end": 262.18899999999996
+        },
+        {
+          "text": "换",
+          "start": 262.214,
+          "end": 262.38899999999995
+        },
+        {
+          "text": "了",
+          "start": 262.38899999999995,
+          "end": 262.4765
+        },
+        {
+          "text": "分母",
+          "start": 262.489,
+          "end": 262.95149999999995
+        },
+        {
+          "text": "原来",
+          "start": 263.2765,
+          "end": 263.57649999999995
+        },
+        {
+          "text": "是",
+          "start": 263.589,
+          "end": 263.789
+        },
+        {
+          "text": "二十三",
+          "start": 263.81399999999996,
+          "end": 264.31399999999996
+        },
+        {
+          "text": "除",
+          "start": 264.31399999999996,
+          "end": 264.6515
+        },
+        {
+          "text": "以",
+          "start": 264.75149999999996,
+          "end": 264.88899999999995
+        },
+        {
+          "text": "二十七",
+          "start": 264.88899999999995,
+          "end": 265.489
+        },
+        {
+          "text": "约",
+          "start": 265.789,
+          "end": 265.93899999999996
+        },
+        {
+          "text": "百分之八十五点二",
+          "start": 265.95149999999995,
+          "end": 267.2765
+        }
+      ]
+    },
+    {
+      "start": 268.308,
+      "end": 275.19,
+      "zh": "压紧后的包围盒密度是二十三除以二十四，约百分之九十五点八。",
+      "en": "After compaction, packing density becomes twenty-three over twenty-four, about ninety-five point eight percent.",
+      "sourceKey": "metrics-compact",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "压",
+          "start": 268.408,
+          "end": 268.6205
+        },
+        {
+          "text": "紧",
+          "start": 268.6205,
+          "end": 268.808
+        },
+        {
+          "text": "后",
+          "start": 268.808,
+          "end": 268.98299999999995
+        },
+        {
+          "text": "的",
+          "start": 268.98299999999995,
+          "end": 269.07050000000004
+        },
+        {
+          "text": "包围",
+          "start": 269.08299999999997,
+          "end": 269.48299999999995
+        },
+        {
+          "text": "盒",
+          "start": 269.4955,
+          "end": 269.683
+        },
+        {
+          "text": "密度",
+          "start": 269.683,
+          "end": 270.04549999999995
+        },
+        {
+          "text": "是",
+          "start": 270.058,
+          "end": 270.38300000000004
+        },
+        {
+          "text": "二十三",
+          "start": 270.4705,
+          "end": 270.9955
+        },
+        {
+          "text": "除",
+          "start": 270.9955,
+          "end": 271.32050000000004
+        },
+        {
+          "text": "以",
+          "start": 271.42049999999995,
+          "end": 271.558
+        },
+        {
+          "text": "二十四",
+          "start": 271.57050000000004,
+          "end": 272.17049999999995
+        },
+        {
+          "text": "约",
+          "start": 272.533,
+          "end": 272.683
+        },
+        {
+          "text": "百分之九十五点八",
+          "start": 272.69550000000004,
+          "end": 274.14549999999997
+        }
+      ]
+    },
+    {
+      "start": 275.19,
+      "end": 282.19,
+      "zh": "合法布局的包围盒，至少包含二十三的模块面积；这是任何摆法都不能突破的下界。",
+      "en": "A legal bounding box must contain total block area twenty-three. That gives a lower bound for every placement.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 282.19,
+      "end": 289.19,
+      "zh": "整数尺寸加整数坐标，使包围盒宽高也是整数。接下来只需排除面积二十三。",
+      "en": "Integer dimensions and coordinates give integer box dimensions. It remains to rule out area twenty-three.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 289.19,
+      "end": 297.19,
+      "zh": "二十三除了一和自己，没有别的整数因数；盒子只能是一乘二十三，或二十三乘一。",
+      "en": "Twenty-three has no positive integer factors except one and itself, leaving only one-by-twenty-three or twenty-three-by-one boxes.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 297.19,
+      "end": 305.19,
+      "zh": "这两种长条都放不下二乘二的 C，所以二十三不可能，下一档至少是二十四。",
+      "en": "Neither strip can contain the two-by-two C block. Area twenty-three is impossible, so the next integer area is twenty-four.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 305.19,
+      "end": 313.19,
+      "zh": "我们已经有合法的六乘四布局。下界与见证都是二十四，因此这个整数模型的最优值就是二十四。",
+      "en": "A legal six-by-four witness attains twenty-four. Matching the lower bound proves the integer model’s optimum is twenty-four.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 313.19,
+      "end": 321.19,
+      "zh": "允许小数后，盒面积不必逐个整数跳变，刚才排除二十三的证明就不能直接沿用。",
+      "en": "With fractional dimensions, box area need not advance by integers. The same exclusion proof no longer establishes twenty-four.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 321.19,
+      "end": 330.19,
+      "zh": "现在A和B都是软模块：A面积六、B面积十二，各有两个整数形状；C固定三乘一。",
+      "en": "Now A and B are soft: areas six and twelve, two integer shapes each; C is fixed three-by-one.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 330.19,
+      "end": 340.19,
+      "zh": "四个组合给出(6,4)、(5,5)、(7,4)、(6,5)。(6,5)与(7,4)被(6,4)支配；前沿留下(6,4)与(5,5)。",
+      "en": "Four combos give six-four, five-five, seven-four, six-five. Two are dominated; the frontier keeps six-four and five-five.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 340.19,
+      "end": 350.19,
+      "zh": "放进五乘五外框：面积最小的24、宽6放不下；(5,5)放得进。只留最小面积的贪心会失败。",
+      "en": "In the five-by-five outline the smallest 24 (six-four) is too wide; five-five fits. Greedy-by-area fails.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 350.19,
+      "end": 359.19,
+      "zh": "前沿候选要能回溯：每个子树选了哪个形状、坐标落在哪里，再交给Lab2检查。",
+      "en": "Each frontier candidate must backtrace: which shape each subtree took, where blocks land, then Lab2 checks.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 359.19,
+      "end": 369.19,
+      "zh": "接上一课：邻居可以是换序列对，也可以改某软模块形状。三配置同种子同预算对照。",
+      "en": "From the last lesson: a neighbor may swap the pair or reshape one soft module. Three configs, same seeds and budget.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 369.19,
+      "end": 379.19,
+      "zh": "冻结基线只评一次；只搜形状找到25；形状加拓扑也找到25。收益归因只针对这组数据。",
+      "en": "The frozen baseline evaluates once; shapes-only finds 25; shapes plus topology also finds 25. Attribution is for this data only.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 379.19,
+      "end": 387.19,
+      "zh": "而且 A 保持原形状也能达到二十四，不能把相对原布局的改进，全归给软模块变形。",
+      "en": "A can retain its original shape and also attain twenty-four. Improvement over the baseline is not proof of a reshaping advantage.",
+      "sourceKey": null,
+      "words": [],
+      "delivery": "reading"
+    },
+    {
+      "start": 387.19,
+      "end": 392.896,
+      "zh": "换一个面积为八的模块，宽高比范围仍为零点五到二。",
+      "en": "Consider a new block of area eight, with the same aspect-ratio bounds from one half to two.",
+      "sourceKey": "transfer-eight",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "换",
+          "start": 387.29,
+          "end": 387.55249999999995
+        },
+        {
+          "text": "一个",
+          "start": 387.55249999999995,
+          "end": 387.7275
+        },
+        {
+          "text": "面积",
+          "start": 387.7525,
+          "end": 388.07750000000004
+        },
+        {
+          "text": "为",
+          "start": 388.07750000000004,
+          "end": 388.23999999999995
+        },
+        {
+          "text": "八",
+          "start": 388.2525,
+          "end": 388.465
+        },
+        {
+          "text": "的",
+          "start": 388.465,
+          "end": 388.55249999999995
+        },
+        {
+          "text": "模块",
+          "start": 388.565,
+          "end": 389.0275
+        },
+        {
+          "text": "宽高",
+          "start": 389.3525,
+          "end": 389.7275
+        },
+        {
+          "text": "比",
+          "start": 389.73999999999995,
+          "end": 389.8775
+        },
+        {
+          "text": "范围",
+          "start": 389.89000000000004,
+          "end": 390.42749999999995
+        },
+        {
+          "text": "仍",
+          "start": 390.5275,
+          "end": 390.70250000000004
+        },
+        {
+          "text": "为",
+          "start": 390.70250000000004,
+          "end": 390.8775
+        },
+        {
+          "text": "零点五",
+          "start": 390.9025,
+          "end": 391.4025
+        },
+        {
+          "text": "到",
+          "start": 391.415,
+          "end": 391.61499999999995
+        },
+        {
+          "text": "二",
+          "start": 391.61499999999995,
+          "end": 391.8775
+        }
+      ]
+    },
+    {
+      "start": 392.896,
+      "end": 400.45000000000005,
+      "zh": "两种形状都允许，因为面积都为八，宽高比分别落在允许范围的两个端点。",
+      "en": "Both shapes are allowed: each has area eight, and their aspect ratios equal the two permitted endpoints.",
+      "sourceKey": "transfer-answer",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "两种",
+          "start": 392.996,
+          "end": 393.371
+        },
+        {
+          "text": "形状",
+          "start": 393.3835,
+          "end": 393.7835
+        },
+        {
+          "text": "都",
+          "start": 393.8085,
+          "end": 393.946
+        },
+        {
+          "text": "允许",
+          "start": 393.9585000000001,
+          "end": 394.496
+        },
+        {
+          "text": "因为",
+          "start": 394.79599999999994,
+          "end": 395.0585
+        },
+        {
+          "text": "面积",
+          "start": 395.071,
+          "end": 395.4085
+        },
+        {
+          "text": "都",
+          "start": 395.42099999999994,
+          "end": 395.571
+        },
+        {
+          "text": "为",
+          "start": 395.571,
+          "end": 395.746
+        },
+        {
+          "text": "八",
+          "start": 395.7585,
+          "end": 396.0210000000001
+        },
+        {
+          "text": "宽高",
+          "start": 396.35849999999994,
+          "end": 396.8085
+        },
+        {
+          "text": "比",
+          "start": 396.821,
+          "end": 397.0585
+        },
+        {
+          "text": "分别",
+          "start": 397.0835000000001,
+          "end": 397.446
+        },
+        {
+          "text": "落",
+          "start": 397.446,
+          "end": 397.596
+        },
+        {
+          "text": "在",
+          "start": 397.596,
+          "end": 397.79599999999994
+        },
+        {
+          "text": "允许",
+          "start": 397.821,
+          "end": 398.196
+        },
+        {
+          "text": "范围",
+          "start": 398.2085000000001,
+          "end": 398.5335
+        },
+        {
+          "text": "的",
+          "start": 398.5335,
+          "end": 398.60849999999994
+        },
+        {
+          "text": "两个",
+          "start": 398.6335,
+          "end": 398.8960000000001
+        },
+        {
+          "text": "端点",
+          "start": 398.9085,
+          "end": 399.4085
+        }
+      ]
+    },
+    {
+      "start": 400.45000000000005,
+      "end": 408.172,
+      "zh": "记住完整过程：选形状、重摆邻居、检查合法性，最后比较明确的目标。",
+      "en": "Keep the complete process: choose a shape, repack neighbors, check legality, and then compare the stated objective.",
+      "sourceKey": "transfer-summary",
+      "delivery": "voice",
+      "words": [
+        {
+          "text": "记住",
+          "start": 400.55000000000007,
+          "end": 400.875
+        },
+        {
+          "text": "完整",
+          "start": 400.9000000000001,
+          "end": 401.23750000000007
+        },
+        {
+          "text": "过程",
+          "start": 401.25,
+          "end": 401.76250000000005
+        },
+        {
+          "text": "选",
+          "start": 402.0250000000001,
+          "end": 402.26250000000005
+        },
+        {
+          "text": "形状",
+          "start": 402.26250000000005,
+          "end": 402.76250000000005
+        },
+        {
+          "text": "重",
+          "start": 402.9375,
+          "end": 403.1500000000001
+        },
+        {
+          "text": "摆",
+          "start": 403.1500000000001,
+          "end": 403.32500000000005
+        },
+        {
+          "text": "邻居",
+          "start": 403.3375000000001,
+          "end": 403.8375000000001
+        },
+        {
+          "text": "检查",
+          "start": 404.0250000000001,
+          "end": 404.4125
+        },
+        {
+          "text": "合法性",
+          "start": 404.4375,
+          "end": 405.1
+        },
+        {
+          "text": "最后",
+          "start": 405.4125,
+          "end": 405.875
+        },
+        {
+          "text": "比较",
+          "start": 405.9000000000001,
+          "end": 406.20000000000005
+        },
+        {
+          "text": "明确",
+          "start": 406.2125000000001,
+          "end": 406.6
+        },
+        {
+          "text": "的",
+          "start": 406.6,
+          "end": 406.67500000000007
+        },
+        {
+          "text": "目标",
+          "start": 406.6875,
+          "end": 407.13750000000005
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "scene": "scope",
+      "key": "opening-contract",
+      "sourceStart": 5.562,
+      "sourceEnd": 14.052,
+      "start": 36,
+      "end": 44.489999999999995
+    },
+    {
+      "scene": "scope",
+      "key": "use-hard",
+      "sourceStart": 14.052,
+      "sourceEnd": 20.886,
+      "start": 44.489999999999995,
+      "end": 51.324
+    },
+    {
+      "scene": "couple-height",
+      "key": "contract-area",
+      "sourceStart": 20.886,
+      "sourceEnd": 25.8,
+      "start": 61.324,
+      "end": 66.238
+    },
+    {
+      "scene": "couple-bound",
+      "key": "contract-ratio",
+      "sourceStart": 25.8,
+      "sourceEnd": 30.378,
+      "start": 66.238,
+      "end": 70.816
+    },
+    {
+      "scene": "couple-bound",
+      "key": "contract-bounds",
+      "sourceStart": 30.378,
+      "sourceEnd": 35.652,
+      "start": 70.816,
+      "end": 76.09
+    },
+    {
+      "scene": "couple-filter",
+      "key": "factors-tall",
+      "sourceStart": 54.45,
+      "sourceEnd": 61.596,
+      "start": 76.09,
+      "end": 83.23599999999999
+    },
+    {
+      "scene": "couple-filter",
+      "key": "factors-survive",
+      "sourceStart": 61.596,
+      "sourceEnd": 67.926,
+      "start": 83.23599999999999,
+      "end": 89.566
+    },
+    {
+      "scene": "couple-model",
+      "key": "factors-continuous",
+      "sourceStart": 67.926,
+      "sourceEnd": 75.6,
+      "start": 89.566,
+      "end": 97.24
+    },
+    {
+      "scene": "baseline-read",
+      "key": "baseline-D",
+      "sourceStart": 82.89,
+      "sourceEnd": 90.972,
+      "start": 97.24,
+      "end": 105.32199999999999
+    },
+    {
+      "scene": "baseline-read",
+      "key": "baseline-box",
+      "sourceStart": 90.972,
+      "sourceEnd": 99.198,
+      "start": 105.32199999999999,
+      "end": 113.54799999999999
+    },
+    {
+      "scene": "overlap-predict",
+      "key": "predict-setup",
+      "sourceStart": 105.288,
+      "sourceEnd": 110.634,
+      "start": 113.54799999999999,
+      "end": 118.89399999999999
+    },
+    {
+      "scene": "overlap-predict",
+      "key": "predict",
+      "sourceStart": 110.634,
+      "sourceEnd": 119.25,
+      "start": 118.89399999999999,
+      "end": 127.50999999999999
+    },
+    {
+      "scene": "overlap-change",
+      "key": "reshape",
+      "sourceStart": 119.25,
+      "sourceEnd": 124.668,
+      "start": 127.50999999999999,
+      "end": 132.928
+    },
+    {
+      "scene": "overlap-area",
+      "key": "reshape-x",
+      "sourceStart": 124.668,
+      "sourceEnd": 131.046,
+      "start": 132.928,
+      "end": 139.30599999999998
+    },
+    {
+      "scene": "overlap-area",
+      "key": "reshape-y",
+      "sourceStart": 131.046,
+      "sourceEnd": 137.784,
+      "start": 139.30599999999998,
+      "end": 146.04399999999998
+    },
+    {
+      "scene": "overlap-contact",
+      "key": "check-touch",
+      "sourceStart": 137.784,
+      "sourceEnd": 144.69,
+      "start": 146.04399999999998,
+      "end": 152.95
+    },
+    {
+      "scene": "repair-side",
+      "key": "repair-choice",
+      "sourceStart": 150.228,
+      "sourceEnd": 154.95,
+      "start": 152.95,
+      "end": 157.67199999999997
+    },
+    {
+      "scene": "repair-side",
+      "key": "repair-second-conflict",
+      "sourceStart": 154.95,
+      "sourceEnd": 160.44,
+      "start": 157.67199999999997,
+      "end": 163.16199999999998
+    },
+    {
+      "scene": "repair-up",
+      "key": "repair-up",
+      "sourceStart": 160.44,
+      "sourceEnd": 166.506,
+      "start": 163.16199999999998,
+      "end": 169.22799999999998
+    },
+    {
+      "scene": "repair-score",
+      "key": "repair-worse",
+      "sourceStart": 166.506,
+      "sourceEnd": 173.58,
+      "start": 169.22799999999998,
+      "end": 176.302
+    },
+    {
+      "scene": "repack-B",
+      "key": "repack-B",
+      "sourceStart": 173.58,
+      "sourceEnd": 179.55,
+      "start": 176.302,
+      "end": 182.272
+    },
+    {
+      "scene": "repack-C",
+      "key": "repack-C",
+      "sourceStart": 179.55,
+      "sourceEnd": 183.456,
+      "start": 182.272,
+      "end": 186.17799999999997
+    },
+    {
+      "scene": "repack-D",
+      "key": "repack-D",
+      "sourceStart": 183.456,
+      "sourceEnd": 190.218,
+      "start": 186.17799999999997,
+      "end": 192.93999999999997
+    },
+    {
+      "scene": "bottle-predict",
+      "key": "repack-predict",
+      "sourceStart": 195.972,
+      "sourceEnd": 204.348,
+      "start": 192.93999999999997,
+      "end": 201.31599999999997
+    },
+    {
+      "scene": "bottle-edge",
+      "key": "repack-same",
+      "sourceStart": 190.218,
+      "sourceEnd": 195.972,
+      "start": 201.31599999999997,
+      "end": 207.07
+    },
+    {
+      "scene": "space-D",
+      "key": "compact-space",
+      "sourceStart": 204.348,
+      "sourceEnd": 209.07,
+      "start": 207.07,
+      "end": 211.79199999999997
+    },
+    {
+      "scene": "space-D",
+      "key": "compact-temporary",
+      "sourceStart": 209.07,
+      "sourceEnd": 215.616,
+      "start": 211.79199999999997,
+      "end": 218.338
+    },
+    {
+      "scene": "space-E",
+      "key": "compact-E",
+      "sourceStart": 215.616,
+      "sourceEnd": 221.73,
+      "start": 218.338,
+      "end": 224.45199999999997
+    },
+    {
+      "scene": "space-E",
+      "key": "compact-box",
+      "sourceStart": 221.73,
+      "sourceEnd": 228.972,
+      "start": 224.45199999999997,
+      "end": 231.694
+    },
+    {
+      "scene": "space-E",
+      "key": "compact-empty",
+      "sourceStart": 228.972,
+      "sourceEnd": 235.686,
+      "start": 231.694,
+      "end": 238.408
+    },
+    {
+      "scene": "metric-fixed",
+      "key": "metrics-outline",
+      "sourceStart": 235.686,
+      "sourceEnd": 244.392,
+      "start": 252.408,
+      "end": 261.114
+    },
+    {
+      "scene": "metric-box",
+      "key": "metrics-box",
+      "sourceStart": 244.392,
+      "sourceEnd": 251.586,
+      "start": 261.114,
+      "end": 268.308
+    },
+    {
+      "scene": "metric-box",
+      "key": "metrics-compact",
+      "sourceStart": 251.586,
+      "sourceEnd": 258.468,
+      "start": 268.308,
+      "end": 275.19
+    },
+    {
+      "scene": "transfer",
+      "key": "transfer-eight",
+      "sourceStart": 274.638,
+      "sourceEnd": 280.344,
+      "start": 387.19,
+      "end": 392.896
+    },
+    {
+      "scene": "transfer",
+      "key": "transfer-answer",
+      "sourceStart": 290.256,
+      "sourceEnd": 297.81,
+      "start": 392.896,
+      "end": 400.45000000000005
+    },
+    {
+      "scene": "finish",
+      "key": "transfer-summary",
+      "sourceStart": 313.326,
+      "sourceEnd": 321.048,
+      "start": 400.45000000000005,
+      "end": 408.172
+    }
+  ],
+  "sourceHashes": {
+    "dist/media/08/zh.m4a": "052f9c841182f1558a0ee89a45304030c465d253d68319489936501d4ffe8deb",
+    "dist/media/08/zh.json": "756443cd5f3e5432fe0373522dcdfbfd78b1f52bfbf38dfe025006fdc7fa6d3a",
+    "dist/data/stories.json": "32842089299ffbbbefab758e8181c93392c85230a003cc34ca4cd0369b31be03",
+    "content/v3-08-draft.mjs": "bfe130eb53f8601965a0e7cb248b270cdb2ab88fef25a8b3cf4f3799193c8fa9"
+  },
+  "audioSha256": "f0cca02868a989ccf17a3b15a2c26e1f6e56e08a59a1d5ae29345fc5b9e0cc2c"
+}

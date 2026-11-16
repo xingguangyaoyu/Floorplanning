@@ -1,0 +1,16 @@
+{
+  "verdict": "PASS",
+  "kind": "complete-live-lesson",
+  "duration": 408.172,
+  "scenes": 44,
+  "chapters": 11,
+  "voiceClips": 36,
+  "readingSeconds": 172,
+  "newSpeech": false,
+  "questions": 3,
+  "pythonChecks": 22,
+  "provenance": "PASS",
+  "decode": "PASS",
+  "learnerMp4": "removed",
+  "audioSha256": "f0cca02868a989ccf17a3b15a2c26e1f6e56e08a59a1d5ae29345fc5b9e0cc2c"
+}

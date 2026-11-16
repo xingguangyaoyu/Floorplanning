@@ -1,0 +1,94 @@
+import {clone,GOLDEN,inspect,OUTLINE,MODULES} from '../dist/assets/core.mjs';
+const bi=(zh,en)=>({zh,en});
+const bad={...clone(GOLDEN),A:{x:0,y:0,w:2,h:3}};
+const sideways={...clone(bad),D:{x:2,y:2,w:3,h:1}};
+const repaired={...clone(sideways),D:{x:2,y:3,w:3,h:1}};
+const moveB={...clone(repaired),B:{x:2,y:0,w:2,h:3}};
+const moveC={...clone(moveB),C:{x:4,y:0,w:2,h:2}};
+const repacked={...clone(moveC),D:{x:4,y:2,w:3,h:1}};
+const lifted={...clone(repacked),D:{x:0,y:3,w:3,h:1}};
+const compact={...clone(lifted),E:{x:4,y:2,w:2,h:2}};
+export const SOFT_STATES={baseline:clone(GOLDEN),bad,sideways,repaired,moveB,moveC,repacked,lifted,compact};
+export const FULL08=[];
+let chapter=0,within=0,heading;
+function section(zh,en){chapter++;within=0;heading=bi(zh,en);}
+function line(key,zh,en,pack=GOLDEN,extra={}){
+ within++;FULL08.push({key,title:extra.title||heading,chapter:heading,chapterIndex:chapter,within,full:true,say:bi(zh,en),pack:clone(pack),focus:[],panel:{heading,lines:[]},pause:.45,animateDuration:2.2,...extra});
+}
+const panel=(zh,en,rows)=>({heading:bi(zh,en),lines:rows.map(r=>bi(...r))});
+const question=(zh,en,choices,answer,z,e)=>({text:bi(zh,en),options:choices.map(c=>bi(...c)),answer,explain:bi(z,e)});
+
+section('软模块：哪些量可以改变？','Soft blocks: what may change?');
+line('opening','A 的面积固定为六。把它变窄，布局一定更好吗？','A has fixed area six. Does making it narrower necessarily improve the placement?',GOLDEN,{focus:['A'],panel:panel('先想一个问题','A question to test',[['更窄，就一定更好吗？','Does narrower always mean better?']])});
+line('opening-contract','早期规划把一些逻辑区域抽象成面积固定、形状可调的矩形，这就是这里的软模块。','Early planning models some logic regions as rectangles with fixed area and adjustable shape: soft blocks.',GOLDEN,{focus:['A'],panel:panel('软模块','Soft block',[['面积固定','Fixed area'],['宽、高可以在约束内调整','Dimensions vary within constraints']])});
+
+
+line('use-hard','固定尺寸的存储器宏单元不能随意拉伸；本例只有 A 能改形状。','Fixed memory macros cannot stretch arbitrarily; only A may reshape in this example.',GOLDEN,{focus:['B','C','D','E'],panel:panel('硬模块','Hard block',[['尺寸由已有实现规定。','Dimensions come from its implementation.'],['不能为了排版随意拉伸。','Do not stretch it just to make room.']])});
+
+section('先把规则写成算式','Write the shape contract');
+line('contract-area','A 的宽和高必须为正，而且乘积始终为六。','A’s width and height must be positive, and their product must remain six.',GOLDEN,{focus:['A'],formula:'w × h = 6',panel:panel('面积约束','Area constraint',[['w 是宽，h 是高。','w is width; h is height.'],['改宽时，高必须一起算。','Changing width requires recalculating height.']])});
+line('contract-ratio','宽高比定义为宽除以高，不是高除以宽。','Aspect ratio means width divided by height, not the reverse.',GOLDEN,{focus:['A'],formula:'r = w / h',panel:panel('宽高比','Aspect ratio',[['同一个定义贯穿全课。','Use this convention throughout.']])});
+line('contract-bounds','我们要求宽高比在零点五到二之间，边界也允许。','The allowed aspect ratio is from one half to two, including both endpoints.',GOLDEN,{formula:'0.5 ≤ w / h ≤ 2',panel:panel('形状范围','Shape bounds',[['过高或过宽都不允许。','Excessively tall or wide shapes fail.']])});
+line('contract-three-two','原来的三乘二，面积为六，宽高比为一点五，因此是允许的形状。','The original three-by-two shape has area six and aspect ratio one point five, so it is allowed.',GOLDEN,{focus:['A'],formula:'3 × 2 = 6     3 / 2 = 1.5',panel:panel('先检查原形状','Check the baseline shape',[['面积和比例都通过。','Area and ratio both pass.']])});
+line('contract-two-three','二乘三的面积也为六，宽高比约为零点六七，它也通过形状检查。','Two by three also has area six; its aspect ratio is about zero point six seven, within the bounds.',bad,{focus:['A'],check:'shape',formula:'2 × 3 = 6     2 / 3 ≈ 0.67',panel:panel('只通过形状检查','Shape check only',[['还没有检查邻居。','Neighbors have not been checked yet.']])});
+
+
+line('factors-list','在整数网格上，先列出面积六的正整数因数对。','On an integer grid, first list every positive integer factor pair of six.',GOLDEN,{factors:true,check:'none',panel:panel('先保面积','First preserve area',[['1×6、2×3、3×2、6×1','1×6, 2×3, 3×2, 6×1']])});
+line('factors-tall','一乘六太高，六乘一太宽；两者面积正确，却都超出了宽高比范围。','One by six is too tall; six by one is too wide, so both fail the aspect-ratio limits.',GOLDEN,{shapeExamples:{area:6,pairs:[[1,6],[6,1]],reveal:true},cut:true,check:'none',formula:'1 / 6 < 0.5; 6 / 1 > 2',panel:panel('面积对，比例错','Correct area, wrong ratio',[['不能只检查乘积。','The product alone is insufficient.']])});
+line('factors-survive','筛掉这两个极端形状，整数实验中只剩二乘三和三乘二。','Removing those extremes leaves two by three and three by two for this integer experiment.',GOLDEN,{factors:true,check:'none',panel:panel('整数候选','Integer candidates',[['2×3：允许','2×3: allowed'],['3×2：允许','3×2: allowed']])});
+line('factors-continuous','连续模型不只允许整数；选定正的宽度后，可以用六除以宽度计算高度。','A continuous model also allows noninteger dimensions; choose a positive width and calculate height as six divided by width.',GOLDEN,{formula:'h = 6 / w',panel:panel('连续与整数分开','Continuous versus integer',[['动画中间帧也保持面积。','Intermediate animation frames preserve area.'],['比例限制仍然需要检查。','The ratio limits still apply.']])});
+
+section('算清楚原来的布局','Measure the baseline placement');
+line('baseline-origin','坐标原点在外框左下角，向右是横坐标增加，向上是纵坐标增加。','The origin is the lower-left corner; x increases rightward and y increases upward.',GOLDEN,{panel:panel('坐标与尺寸','Coordinates and dimensions',[['位置写成 (x,y)。','A position is written as (x,y).'],['尺寸写成 宽×高。','Dimensions are width×height.']])});
+line('baseline-D','A 在原点，尺寸三乘二；D 在零、二，尺寸三乘一，正好贴住 A 上边缘。','A starts at the origin, three by two; D starts at zero, two, three by one, touching A’s top edge.',GOLDEN,{focus:['A','D'],panel:panel('D 与 A 贴边','D touches A',[['D：x 0…3，y 2…3','D: x 0…3, y 2…3'],['只有共同边，没有重叠面积。','Shared boundary, no overlap area.']])});
+line('baseline-box','原布局合法，包围盒九乘三等于二十七，减去模块面积和二十三，盒内空余四。','The legal box is nine by three: area twenty-seven, minus block area twenty-three, leaves four empty units.',GOLDEN,{bbox:true,metrics:true,formula:'27 − 23 = 4',panel:panel('包围盒','Bounding box',[['刚好围住所有模块的矩形。','The smallest enclosing axis-aligned rectangle.'],['9 × 3 = 27','9 × 3 = 27']])});
+line('baseline-outline','外框是十乘八，面积八十；它与包围盒不是同一个矩形。','The fixed outline is ten by eight, with area eighty; it is different from the bounding box.',GOLDEN,{bbox:true,metrics:true,panel:panel('两个矩形别混用','Two different rectangles',[['外框：固定的容量','Outline: fixed available capacity'],['包围盒：当前摆放占用范围','Bounding box: current placement extent']])});
+
+section('变形、碰撞与贴边','Reshaping, overlap, and boundary contact');
+line('predict-setup','现在只把 A 改成二乘三，其余模块先保持原位。','Now change only A to two by three, while leaving every other block in place.',GOLDEN,{focus:['A','D'],panel:panel('这一步只改形状','Change shape only',[['A 保持在 (0,0)。','Keep A at (0,0).'],['D 仍在 (0,2)。','D stays at (0,2).']])});
+line('predict','A 变窄之后，布局还合法吗？先看它的顶部会到哪里。','Will the placement remain legal after A narrows? First predict where its top edge will end.',GOLDEN,{focus:['A','D'],pause:3,question:question('A 改为2×3，其余不动，会怎样？','A becomes 2×3; neighbors stay fixed. What happens?',[['仍然合法，因为变窄了','Still legal because it is narrower'],['与 D 出现正面积重叠','Positive-area overlap with D'],['面积从6变成5','Its area changes from 6 to 5']],1,'新占用区间x=0…2、y=2…3与D相交，面积2。','The new x=0…2, y=2…3 strip intersects D with area 2.'),panel:panel('暂停预测','Pause and predict',[['同时追踪宽与高。','Track width and height together.']])});
+line('reshape','看 A 的右边缘向左退，同时顶部从二升到三。','Watch A’s right edge retreat while its top rises from two to three.',bad,{focus:['A','D'],anchor:'Watch',animateDuration:3,overlapRegion:{x:0,y:2,w:2,h:1},panel:panel('面积保持六','Area stays six',[['宽度少一，高度多一。','One less width unit, one more height unit.'],['邻居还没有移动。','Neighbors have not moved.']])});
+line('reshape-x','新的 A 占横坐标零到二，D 占零到三，两者在横向相交。','The new A spans x from zero to two; D spans zero to three, so their horizontal intervals overlap.',bad,{focus:['A','D'],overlapRegion:{x:0,y:2,w:2,h:1},formula:'overlap width = 2 − 0 = 2',panel:panel('先看横向','Check the horizontal overlap',[['共同部分：x 0…2','Shared interval: x 0…2']])});
+line('reshape-y','纵向共同部分是二到三，因此交叠高度为一，重叠面积为二。','Their shared vertical interval is two to three, giving overlap height one and overlap area two.',bad,{focus:['A','D'],overlapRegion:{x:0,y:2,w:2,h:1},formula:'overlap area = 2 × 1 = 2',panel:panel('再看纵向','Then check the vertical overlap',[['正面积重叠，布局非法。','Positive-area overlap makes placement illegal.']])});
+
+line('check-touch','两个矩形只共用边界时，交叠宽度或高度为零，因此允许贴边。','When rectangles only share a boundary, an overlap dimension is zero, so touching is allowed.',GOLDEN,{cut:true,stateLabel:bi('贴边对照','Boundary-contact comparison'),focus:['A','D'],panel:panel('贴边与重叠不同','Contact versus overlap',[['面积为0的接触可以通过。','Zero-area contact is allowed.']])});
+line('check-order','因此先修复冲突，确认合法之后，再比较包围盒。','Repair the conflict first; compare bounding boxes only after confirming legality.',bad,{cut:true,stateLabel:bi('回到待修复布局','Return to the collision'),focus:['D'],panel:panel('检查的顺序','Order of evaluation',[['形状 → 完整 → 边界 → 重叠','Shape → completeness → boundary → overlap'],['全部通过后，比较目标。','Then compare the objective.']])});
+
+section('先修碰撞，不急着求最优','Repair first; optimize afterward');
+line('repair-choice','先试一个局部修法：把 D 向右移动两格。','Try a local repair by moving D two grid units to the right.',sideways,{focus:['D'],animateDuration:3,overlapRegion:{x:3,y:2,w:2,h:1},panel:panel('第一次尝试','First attempt',[['D：(0,2) → (2,2)','D: (0,2) → (2,2)']])});
+line('repair-second-conflict','D 不再覆盖 A，却进入了 B 的区域，所以还没有修好。','D no longer covers A, but it now enters B’s space, so the repair is incomplete.',sideways,{focus:['B','D'],overlapRegion:{x:3,y:2,w:2,h:1},panel:panel('不能只复查旧邻居','Recheck every affected neighbor',[['A/D 冲突消失。','A/D conflict is gone.'],['B/D 新冲突出现。','A new B/D conflict appears.']])});
+line('repair-up','再把 D 上移一格，底边到三，与 B 贴边，布局恢复合法。','Move D up one unit to y equals three, touching B without overlapping A or B.',repaired,{focus:['B','D'],animateDuration:2.6,panel:panel('第二次尝试','Second attempt',[['D：(2,2) → (2,3)','D: (2,2) → (2,3)'],['B 的顶部也是3。','B’s top is also 3.']])});
+line('repair-worse','但最高处变成四，最右边仍是九，包围盒面积反而增加到三十六。','However, the top reaches four while the right edge stays nine, so bounding-box area increases to thirty-six.',repaired,{bbox:true,metrics:true,formula:'9 × 4 = 36 > 27',panel:panel('合法，但更松散','Legal, but less compact',[['修好碰撞，不代表完成优化。','Repairing a collision is not optimization.']])});
+
+section('逐块重摆，回到原来面积','Repack one block at a time');
+line('repack-B','保留 A 的二乘三形状，把 B 左移一格，贴住 A 的右边缘。','Keep A at two by three and move B left one unit until it touches A’s right edge.',moveB,{focus:['A','B'],animateDuration:2.6,panel:panel('先收紧 B','First bring B closer',[['B：(3,0) → (2,0)','B: (3,0) → (2,0)'],['与A贴边，不重叠。','Touch A without overlap.']])});
+line('repack-C','接着把 C 左移一格，贴到 B 右边。','Next, move C left one unit to touch B’s right edge.',moveC,{focus:['B','C'],animateDuration:2.6,panel:panel('再收紧 C','Then bring C closer',[['C：(5,0) → (4,0)','C: (5,0) → (4,0)']])});
+line('repack-D','把 D 移到四、二，底边贴住 C 的顶部，左边缘贴住 B 的右边缘。','Move D to four, two: its bottom touches C, and its left edge touches B.',repacked,{focus:['B','C','D'],animateDuration:3,panel:panel('为 D 找到较低位置','Find a lower resting position for D',[['D：(2,3) → (4,2)','D: (2,3) → (4,2)'],['与C、B、E都重新检查。','Recheck C, B, and E.']])});
+line('repack-same','新布局再次得到九乘三，面积二十七，和原来一样。','The new placement again has a nine-by-three box with area twenty-seven, matching the baseline.',repacked,{bbox:true,metrics:true,formula:'new box 27 = baseline box 27',panel:panel('变形本身没有带来收益','Reshaping alone brought no gain',[['合法，而且回到了原面积。','Legal, with baseline box area restored.']])});
+line('repack-predict','如果还想压小包围盒，应该关注仍然伸到最右侧的哪一块？','To shrink the box further, which block still determines the rightmost edge?',repacked,{focus:['E'],bbox:true,pause:3,question:question('哪块仍把右边界撑到x=9？','Which block still extends the right boundary to x=9?',[['A','A'],['D','D'],['E','E']],2,'E在(7,0)，宽2，右边缘是9。','E starts at (7,0) with width 2, so its right edge is 9.'),panel:panel('寻找真正的瓶颈','Find the limiting edge',[['看边界由谁决定。','Identify which block sets the boundary.']])});
+
+section('再压紧一次，解释每次移动','Compact again, explaining each move');
+line('compact-space','先把 D 移到零、三，腾出 C 上方的空间。','First move D to zero, three, freeing the space above C.',lifted,{focus:['D'],animateDuration:3,panel:panel('先腾出目标区域','Free the destination first',[['D：(4,2) → (0,3)','D: (4,2) → (0,3)']])});
+line('compact-temporary','这时包围盒暂时变大，不必把每个中间动作都当成最终结果。','The box temporarily grows at this intermediate step; do not confuse an intermediate move with the final result.',lifted,{bbox:true,metrics:true,panel:panel('中间状态不是最终答案','An intermediate state is not the answer',[['E还没移入腾出的空位。','E has not entered the freed space yet.']])});
+line('compact-E','把 E 移到四、二，贴住 C 上方和 B 右侧，同时避开 D。','Move E to four, two, above C and right of B, without covering D.',compact,{focus:['C','E'],anchor:'Move',animateDuration:3,panel:panel('E 移入空位','Move E into the free space',[['E：(7,0) → (4,2)','E: (7,0) → (4,2)']])});
+line('compact-box','最右边现在是六，最高处是四，所以包围盒为六乘四，面积二十四。','The rightmost edge is now six and the top is four, giving a six-by-four box with area twenty-four.',compact,{bbox:true,metrics:true,formula:'6 × 4 = 24',panel:panel('改进来自整组重摆','The gain comes from repacking',[['不是A单独变窄的功劳。','Narrowing A alone did not achieve this.']])});
+line('compact-empty','模块面积和仍为二十三，因此合法包围盒内部只空余一个单位。','Total block area remains twenty-three, leaving only one unoccupied unit inside this legal bounding box.',compact,{bbox:true,metrics:true,emptyRegion:{x:3,y:3,w:1,h:1},formula:'24 − 23 = 1',panel:panel('把空余位置指出来','Locate the empty space',[['x 3…4，y 3…4','x 3…4, y 3…4']])});
+
+section('两个密度，回答两个问题','Two densities, two questions');
+line('metrics-outline','外框仍为八十，所以固定外框密度仍是二十三除以八十，也就是百分之二十八点七五。','The outline stays eighty, so fixed-outline density remains twenty-three over eighty, or twenty-eight point seven five percent.',compact,{metrics:true,formula:'outline density = 23 / 80 = 28.75%',panel:panel('分母是固定外框','Denominator: fixed outline',[['外框没有跟着包围盒缩小。','The outline does not shrink with the box.']])});
+line('metrics-box','包围盒密度换了分母，原来是二十三除以二十七，约百分之八十五点二。','Packing density uses a different denominator; the baseline is twenty-three over twenty-seven, about eighty-five point two percent.',GOLDEN,{stateLabel:bi('原始布局','BASELINE'),bbox:true,metrics:true,formula:'packing density = 23 / 27 ≈ 85.2%',panel:panel('分母是当前包围盒','Denominator: current bounding box',[['先确认布局合法。','Confirm legality first.']])});
+line('metrics-compact','压紧后的包围盒密度是二十三除以二十四，约百分之九十五点八。','After compaction, packing density becomes twenty-three over twenty-four, about ninety-five point eight percent.',compact,{stateLabel:bi('压紧之后','AFTER COMPACTION'),bbox:true,metrics:true,formula:'packing density = 23 / 24 ≈ 95.8%',panel:panel('这个比例反映压紧程度','This ratio reflects compactness',[['同样的模块，用更小的盒。','The same blocks occupy a smaller box.']])});
+line('metrics-question','所以报告密度时，必须同时说清楚分母是哪一个矩形。','Whenever you report a density, state which rectangle supplies the denominator.',compact,{pause:3,question:question('这次压紧后，哪个比例提高了？','Which density increased after compaction?',[['固定外框密度','Fixed-outline density'],['包围盒密度','Packing density'],['两个都提高','Both densities']],1,'面积和23、外框80不变；包围盒从27缩到24。','Block area 23 and outline 80 stay fixed; the box shrinks from 27 to 24.'),panel:panel('用分母解释结果','Explain the denominator',[['不只背百分数。','Do not just memorize percentages.']])});
+line('metrics-limit','二十四是这里给出的一份合法见证，不代表所有软模块问题都能达到这个结果。','Twenty-four is a verified legal witness here, not a universal result for soft-block problems.',compact,{bbox:true,metrics:true,panel:panel('不超出证据的结论','Keep conclusions within the evidence',[['特定算例、特定目标。','A particular instance and objective.'],['没有证明连续全局最优。','No continuous global-optimum claim.']])});
+
+section('换个数字，自己检验','Transfer the method to a new case');
+line('transfer-eight','换一个面积为八的模块，宽高比范围仍为零点五到二。','Consider a new block of area eight, with the same aspect-ratio bounds from one half to two.',compact,{check:'none',shapeExamples:{area:8,pairs:[[2,4],[4,2]],reveal:false},panel:panel('迁移练习，不改公共算例','Transfer exercise; a separate block',[['面积8，比例0.5…2。','Area 8, ratio 0.5…2.']])});
+line('transfer-question','二乘四和四乘二，哪些能通过形状检查？先分别算面积与宽高比。','Do two by four and four by two pass the shape check? Calculate both area and aspect ratio.',compact,{check:'none',shapeExamples:{area:8,pairs:[[2,4],[4,2]],reveal:false},pause:3,question:question('面积8、比例范围含端点，哪个形状允许？','For area 8 with inclusive ratio bounds, which shapes are allowed?',[['只有2×4','Only 2×4'],['只有4×2','Only 4×2'],['2×4和4×2都允许','Both 2×4 and 4×2']],2,'两者面积都是8，宽高比分别0.5与2，正好位于允许边界。','Both have area 8; their ratios 0.5 and 2 are the included endpoints.'),panel:panel('边界也要检查','Check the endpoints too',[['不要把小于等于写成小于。','Do not replace inclusive bounds with strict ones.']])});
+line('transfer-answer','两种形状都允许，因为面积都为八，宽高比分别落在允许范围的两个端点。','Both shapes are allowed: each has area eight, and their aspect ratios equal the two permitted endpoints.',compact,{check:'none',shapeExamples:{area:8,pairs:[[2,4],[4,2]],reveal:true},formula:'2×4: r=0.5     4×2: r=2',panel:panel('形状通过之后','After the shape passes',[['仍然必须检查放置位置。','The placement still requires checking.']])});
+line('transfer-lab','回到五模块实验，保持 A 为二乘三，先消除重叠，再尝试把包围盒压到二十四。','Return to the five-block lab: keep A at two by three, repair overlaps, then try reaching box area twenty-four.',bad,{focus:['A','D'],panel:panel('由你完成的两级目标','Your two-stage task',[['第一关：合法。','Stage one: make it legal.'],['第二关：合法且包围盒≤24。','Stage two: legal with box area ≤24.']])});
+line('transfer-code','代码先检查正尺寸，再检查面积误差和宽高比，最后调用布局检查。','In code, check positive dimensions, area tolerance, and aspect ratio before running the placement checks.',bad,{panel:panel('把推理变成检查顺序','Translate reasoning into checks',[['形状检查不读取邻居坐标。','Shape checks do not inspect neighbors.'],['布局检查必须读取坐标。','Placement checks require coordinates.']])});
+line('transfer-summary','记住完整过程：选形状、重摆邻居、检查合法性，最后比较明确的目标。','Keep the complete process: choose a shape, repack neighbors, check legality, and then compare the stated objective.',compact,{bbox:true,metrics:true,panel:panel('你应当能复述','You should be able to explain',[['为什么撞、怎样修、是否变好。','Why it collided, how to repair it, and whether it improved.']])});
+
+for(const name of ['baseline','repaired','moveB','moveC','repacked','lifted','compact'])if(!inspect(SOFT_STATES[name],OUTLINE,MODULES,{soft:true}).legal)throw Error('Invalid full-lesson state '+name);
+if(inspect(compact,OUTLINE,MODULES,{soft:true}).bbox.area!==24)throw Error('Wrong compact witness');
+export const FULL08_OUTLINE={id:'08',title:bi('软模块：从形状约束到逐步重摆','Soft blocks: from shape constraints to stepwise repacking'),chapters:9,scenes:FULL08.length,goals:[bi('独立筛选满足面积和宽高比的形状。','Filter shapes by area and aspect-ratio constraints.'),bi('用坐标计算一次正面积重叠。','Calculate positive-area overlap from coordinates.'),bi('解释每次重摆及合法性与优化的区别。','Explain each move and distinguish legality from improvement.'),bi('正确选择密度分母，并迁移到新的面积。','Choose the correct density denominator and transfer to a new area.') ]};

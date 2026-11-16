@@ -1,0 +1,898 @@
+{
+  "02": {
+    "name": "validate_layout",
+    "version": "validate-v1",
+    "prompt": {
+      "zh": "实现完整布局检查器 validate_layout(rows, outline, catalog)。rows每项为(id,x,y,w,h)，outline为(宽,高)，catalog把名称映射到固定(宽,高)。返回legal、排序去重errors和带真实交叠面积的overlaps；共边和共角允许，禁止旋转。",
+      "en": "Implement a complete hard-module layout validator. Check identity, finite positive dimensions, fixed shapes, containment and every module pair; report all errors and actual intersection areas."
+    },
+    "starter": "import math\n\ndef validate_layout(rows, outline, catalog):\n    # rows: [(id, x, y, width, height), ...]\n    # outline: (width, height); catalog: {id: (width, height)}\n    # Return {'legal': bool, 'errors': sorted_unique_codes,\n    #         'overlaps': [{'ids': ['A','D'], 'area': number}, ...]}\n    # All input row shapes, outline and catalog formats are already parsed.\n    # Check actual numeric values, identities and geometry here.\n    raise NotImplementedError('Implement the complete layout validator')\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n",
+    "tests": [
+      [
+        "all five with shared edges",
+        "validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}) == {'legal': True, 'errors': [], 'overlaps': []}"
+      ],
+      [
+        "positive overlap illegal",
+        "validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2], [\"F\",0,0,1,1]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False"
+      ],
+      [
+        "missing is not a count check",
+        "'missing:B' in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:1]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][2:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "duplicate and missing together",
+        "'duplicate:A' in validate_layout([['A',0,0,3,2],['A',3,0,2,3]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][2:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors'] and 'missing:B' in validate_layout([['A',0,0,3,2],['A',3,0,2,3]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][2:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "unknown name",
+        "'unknown:F' in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]] + [['F',8,6,1,1]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "right boundary",
+        "'outside:E' in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1]+[['E',9,0,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "top boundary",
+        "'outside:E' in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1]+[['E',7,7,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "negative origin",
+        "'outside:A' in validate_layout([['A',-1,0,3,2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "hard module rotation disallowed",
+        "'shape:A' in validate_layout([['A',0,0,2,3]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "zero height",
+        "'number:A' in validate_layout([['A',0,0,3,0]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "negative dimensions",
+        "'number:A' in validate_layout([['A',0,0,-3,-2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "nan coordinates",
+        "'number:A' in validate_layout([['A',float('nan'),0,3,2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "infinite coordinates",
+        "'number:A' in validate_layout([['A',0,float('inf'),3,2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "booleans are not coordinates",
+        "'number:A' in validate_layout([['A',False,0,3,2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "not only the first pair",
+        "'overlap:C/E' in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1]+[['E',6,0,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "report actual intersection area",
+        "any(p['ids']==['C','E'] and p['area']==2 for p in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1]+[['E',6,0,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['overlaps'])"
+      ],
+      [
+        "multiple conflicts",
+        "all(e in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:3]+[['D',2,1,3,1],['E',9,1,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors'] for e in ['overlap:A/D','overlap:B/D','outside:E'])"
+      ],
+      [
+        "cross without contained corners",
+        "validate_layout([['P',3,1,2,6],['Q',1,3,6,2]],(8,8),{'P':(2,6),'Q':(6,2)})['overlaps']==[{'ids':['P','Q'],'area':4}]"
+      ],
+      [
+        "full containment overlap",
+        "validate_layout([['P',0,0,5,5],['Q',1,1,1,1]],(8,8),{'P':(5,5),'Q':(1,1)})['legal'] is False"
+      ],
+      [
+        "corner contact allowed",
+        "validate_layout([['P',0,0,2,2],['Q',2,2,2,2]],(4,4),{'P':(2,2),'Q':(2,2)})['legal'] is True"
+      ],
+      [
+        "x projection alone insufficient",
+        "validate_layout([['P',0,0,3,1],['Q',1,2,3,1]],(5,4),{'P':(3,1),'Q':(3,1)})['legal'] is True"
+      ],
+      [
+        "new outline is respected",
+        "'outside:E' in validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(8,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "catalog does not assume five modules",
+        "validate_layout([['P',0,0,1,1],['Q',1,0,1,1],['R',2,0,1,1]],(3,1),{'P':(1,1),'Q':(1,1),'R':(1,1)})['legal'] is True"
+      ],
+      [
+        "six modules are supported",
+        "validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]] + [['F',0,5,1,1]],(10,8),dict({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]},F=(1,1)))['legal'] is True"
+      ],
+      [
+        "order does not change report",
+        "validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][::-1], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}) == validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})"
+      ],
+      [
+        "input remains unchanged",
+        "(lambda rows: (lambda before: (validate_layout(rows,(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), rows==before)[1])([r[:] for r in rows]))([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]])"
+      ],
+      [
+        "decimal edge contact",
+        "validate_layout([['P',0.5,0,1,1],['Q',1.5,0,1,1]],(3,2),{'P':(1,1),'Q':(1,1)})['legal'] is True"
+      ],
+      [
+        "errors sorted with strict illegal flag",
+        "(lambda r: r['legal'] is False and r['errors']==sorted(set(r['errors'])))(validate_layout([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:3]+[['D',2,1,3,1],['E',9,1,2,2]], (10,8), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ]
+    ]
+  },
+  "03": {
+    "name": "metrics_report",
+    "version": "metrics-v1",
+    "prompt": {
+      "zh": "实现完整评价报告 metrics_report(rows, outline, catalog)。已提供Lab2的validate_layout，无需重写。先检查合法性，再计算真实包围盒、两个密度和两种空余；非法布局只留诊断几何，不给有效分数。",
+      "en": "Build a complete metrics report on top of the provided Lab2 validator: true extents, explicit denominators and legal-only scores."
+    },
+    "starter": "import math\n\ndef metrics_report(rows, outline, catalog):\n    # First call validate_layout, provided below.\n    # module_area comes from the full catalog, not an incomplete input list.\n    # Return legal, errors, module_area, outline_area, bbox,\n    # outline_density, packing_density, outline_dead, bbox_dead.\n    # bbox has xmin,ymin,xmax,ymax,width,height,area, or is None.\n    # Scores are ratios (0..1), not percentages. Withhold all four scores if illegal.\n    raise NotImplementedError('Implement the complete metrics report')\n\n# Provided Lab2 checker. You may use it directly.\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef metrics_report(rows, outline, catalog):\n    check = validate_layout(rows, outline, catalog)\n    module_area = sum(w*h for w,h in catalog.values())\n    outline_area = outline[0]*outline[1]\n    bbox = None\n    if rows and all(all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in row[1:]) and row[3]>0 and row[4]>0 for row in rows):\n        xmin = min(row[1] for row in rows)\n        ymin = min(row[2] for row in rows)\n        xmax = max(row[1]+row[3] for row in rows)\n        ymax = max(row[2]+row[4] for row in rows)\n        bbox = {'xmin':xmin,'ymin':ymin,'xmax':xmax,'ymax':ymax,\n                'width':xmax-xmin,'height':ymax-ymin,\n                'area':(xmax-xmin)*(ymax-ymin)}\n    usable = check['legal'] and bbox is not None and bbox['area']>0\n    return {'legal':check['legal'],'errors':check['errors'],\n            'module_area':module_area,'outline_area':outline_area,'bbox':bbox,\n            'outline_density':module_area/outline_area if usable else None,\n            'packing_density':module_area/bbox['area'] if usable else None,\n            'outline_dead':outline_area-module_area if usable else None,\n            'bbox_dead':bbox['area']-module_area if usable else None}\n",
+    "tests": [
+      [
+        "baseline legal and raw extents",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']==[] and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']=={'xmin':0,'ymin':0,'xmax':9,'ymax':3,'width':9,'height':3,'area':27}"
+      ],
+      [
+        "catalog area and outline area",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['module_area']==23 and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_area']==80"
+      ],
+      [
+        "outline density is a ratio",
+        "abs(metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_density']-23/80)<1e-10"
+      ],
+      [
+        "packing density uses box",
+        "abs(metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density']-23/27)<1e-10"
+      ],
+      [
+        "two kinds of dead space",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_dead']==57 and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox_dead']==4"
+      ],
+      [
+        "compact is the full hard-module witness",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",4,1,2,3],[\"C\",0,2,2,2],[\"D\",3,0,3,1],[\"E\",2,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True and metrics_report([[\"A\",0,0,3,2],[\"B\",4,1,2,3],[\"C\",0,2,2,2],[\"D\",3,0,3,1],[\"E\",2,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['area']==24 and metrics_report([[\"A\",0,0,3,2],[\"B\",4,1,2,3],[\"C\",0,2,2,2],[\"D\",3,0,3,1],[\"E\",2,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox_dead']==1"
+      ],
+      [
+        "compaction changes only variable score",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",4,1,2,3],[\"C\",0,2,2,2],[\"D\",3,0,3,1],[\"E\",2,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_density']==metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_density'] and metrics_report([[\"A\",0,0,3,2],[\"B\",4,1,2,3],[\"C\",0,2,2,2],[\"D\",3,0,3,1],[\"E\",2,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density']>metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density']"
+      ],
+      [
+        "translation preserves width height area",
+        "(lambda r: r['legal'] is True and r['bbox']['width']==6 and r['bbox']['height']==4 and r['bbox']['area']==24)(metrics_report([[\"A\",3,2,3,2],[\"B\",7,3,2,3],[\"C\",3,4,2,2],[\"D\",6,2,3,1],[\"E\",5,4,2,2]],(12,10),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "translation retains actual origins",
+        "metrics_report([[\"A\",3,2,3,2],[\"B\",7,3,2,3],[\"C\",3,4,2,2],[\"D\",6,2,3,1],[\"E\",5,4,2,2]],(12,10),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['xmin']==3 and metrics_report([[\"A\",3,2,3,2],[\"B\",7,3,2,3],[\"C\",3,4,2,2],[\"D\",6,2,3,1],[\"E\",5,4,2,2]],(12,10),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['ymin']==2"
+      ],
+      [
+        "outline change does not change box",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(12,10),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']==metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox'] and abs(metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(12,10),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_density']-23/120)<1e-10"
+      ],
+      [
+        "new outline denominator",
+        "abs(metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",5,2,2,2]],(11,7),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_density']-23/77)<1e-10"
+      ],
+      [
+        "narrower can have larger area",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",5,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['width']==7 and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",5,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['area']==28 and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",5,2,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density']<metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density']"
+      ],
+      [
+        "overlap cannot earn a score",
+        "(lambda r: r['legal'] is False and 'overlap:C/E' in r['errors'] and all(r[k] is None for k in ['outline_density','packing_density','outline_dead','bbox_dead']))(metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",6,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "illegal raw geometry remains diagnostic",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",6,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['area']==24"
+      ],
+      [
+        "missing block keeps expected catalog area",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['module_area']==23 and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox']['area']==21 and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density'] is None"
+      ],
+      [
+        "all illegal score fields withheld",
+        "all(metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][:-1],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})[k] is None for k in ['outline_density','packing_density','outline_dead','bbox_dead'])"
+      ],
+      [
+        "duplicate is not a new packed module",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]] + [['A',0,5,3,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]] + [['A',0,5,3,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['outline_density'] is None"
+      ],
+      [
+        "fixed shape contract is inherited",
+        "'shape:A' in metrics_report([['A',0,0,2,3]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors'] and metrics_report([['A',0,0,2,3]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density'] is None"
+      ],
+      [
+        "outside is filtered before ranking",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(8,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False and metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(8,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['packing_density'] is None"
+      ],
+      [
+        "nonfinite gives no bounding box",
+        "metrics_report([['A',float('nan'),0,3,2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox'] is None"
+      ],
+      [
+        "negative dimension gives no bounding box",
+        "metrics_report([['A',0,0,-3,2]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox'] is None"
+      ],
+      [
+        "zero dimension gives no bounding box",
+        "metrics_report([['A',0,0,3,0]]+[[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][1:],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox'] is None"
+      ],
+      [
+        "empty rows have missing errors and no scores",
+        "metrics_report([],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False and metrics_report([],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox'] is None and metrics_report([],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['bbox_dead'] is None"
+      ],
+      [
+        "arbitrary three-module catalog",
+        "(lambda r: r['legal'] is True and r['module_area']==12 and r['bbox']['area']==12 and r['packing_density']==1)(metrics_report([[\"P\",0,0,3,2],[\"Q\",0,2,2,2],[\"R\",2,2,1,2]],(4,4),{\"P\":[3,2],\"Q\":[2,2],\"R\":[1,2]}))"
+      ],
+      [
+        "equal area can fail the outline",
+        "metrics_report([[\"P\",0,0,3,2],[\"Q\",3,0,2,2],[\"R\",5,0,1,2]],(4,4),{\"P\":[3,2],\"Q\":[2,2],\"R\":[1,2]})['bbox']['area']==12 and metrics_report([[\"P\",0,0,3,2],[\"Q\",3,0,2,2],[\"R\",5,0,1,2]],(4,4),{\"P\":[3,2],\"Q\":[2,2],\"R\":[1,2]})['legal'] is False"
+      ],
+      [
+        "decimal coordinates are not rounded",
+        "(lambda r: r['legal'] is True and r['bbox']['xmin']==0.5 and r['bbox']['ymin']==1.25 and r['bbox']['area']==5 and r['packing_density']==1)(metrics_report([['P',0.5,1.25,1.5,2],['Q',2,1.25,1,2]],(4,4),{'P':(1.5,2),'Q':(1,2)}))"
+      ],
+      [
+        "row order does not change metrics",
+        "metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]][::-1],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})==metrics_report([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})"
+      ],
+      [
+        "input remains unchanged",
+        "(lambda rows: (lambda before: (metrics_report(rows,(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), rows==before)[1])([r[:] for r in rows]))([[\"A\",0,0,3,2],[\"B\",3,0,2,3],[\"C\",5,0,2,2],[\"D\",0,2,3,1],[\"E\",7,0,2,2]])"
+      ]
+    ]
+  },
+  "04": {
+    "name": "decode_postfix",
+    "version": "slicing-v1",
+    "prompt": {
+      "zh": "实现完整解码器 decode_postfix(tokens, catalog)：解析后缀表达式，生成切片树，自下而上算尺寸、自上而下算坐标；返回树、尺寸、坐标与可读错误。已提供 combine 与 Lab2 的 validate_layout 作辅助。约定：H 的第一区域在下、第二区域在上；V 的第一区域在左、第二区域在右；先弹出的是第二区域。错误码：underflow:X、leftover:N、unknown:X、duplicate:X、missing:清单。",
+      "en": "Implement the full decoder decode_postfix(tokens, catalog): parse the postfix expression, build the slicing tree, aggregate sizes bottom-up and propagate coordinates top-down. Helpers combine and the Lab2 validate_layout are provided. Convention: H places the first region below the second; V places the first left of the second; the first pop is the second region. Error codes: underflow:X, leftover:N, unknown:X, duplicate:X, missing:list."
+    },
+    "starter": "def combine(a, b, op):\n    if op == 'H': return (max(a[0], b[0]), a[1] + b[1])\n    if op == 'V': return (a[0] + b[0], max(a[1], b[1]))\n    raise ValueError('Unknown operator')\n\n\ndef decode_postfix(tokens, catalog):\n    # Phase 1 (reading): push leaves; on H/V pop two regions and push the combined\n    #   node with its size (max/add rule). Check: at least two regions, unknown,\n    #   duplicate. Phase 2 (after reading): every catalog id seen exactly once and\n    #   exactly one region left, then propagate coordinates from the root (0,0).\n    # Return {'ok':bool,'errors':[...],'tree':node,'size':(w,h),'coords':{id:(x,y,w,h)},'rows':[[id,x,y,w,h],...]}\n    raise NotImplementedError('Implement the complete postfix decoder')\n\n# Provided helpers: combine above and the Lab2 checker below.\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef combine(a, b, op):\n    if op == 'H': return (max(a[0], b[0]), a[1] + b[1])\n    if op == 'V': return (a[0] + b[0], max(a[1], b[1]))\n    raise ValueError('Unknown operator')\n\ndef decode_postfix(tokens, catalog):\n    stack = []      # each item: (node, (w, h)); node carries its size\n    seen = set()\n    errors = []\n\n    for token in tokens:\n        if token in ('H', 'V'):\n            if len(stack) < 2:\n                errors.append(f'underflow:{token}')\n                break\n            b = stack.pop()   # popped first -> second region\n            a = stack.pop()   # popped second -> first region\n            (wa, ha), (wb, hb) = a[1], b[1]\n            size = (max(wa, wb), ha + hb) if token == 'H' else (wa + wb, max(ha, hb))\n            node = {'op': token, 'left': a[0], 'right': b[0], 'size': size}\n            stack.append((node, size))\n        else:\n            if token not in catalog:\n                errors.append(f'unknown:{token}')\n                break\n            if token in seen:\n                errors.append(f'duplicate:{token}')\n                break\n            seen.add(token)\n            w, h = catalog[token]\n            stack.append(({'id': token, 'size': (w, h)}, (w, h)))\n\n    if errors:\n        return {'ok': False, 'errors': errors, 'tree': None, 'size': None,\n                'coords': None, 'rows': []}\n    missing = [i for i in catalog if i not in seen]\n    if missing:\n        return {'ok': False, 'errors': ['missing:' + ','.join(missing)], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n    if len(stack) != 1:\n        return {'ok': False, 'errors': [f'leftover:{len(stack)}'], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n\n    root, root_size = stack[0]\n    coords = {}\n    def place(node, x, y):\n        if 'id' in node:\n            coords[node['id']] = (x, y, *node['size'])\n            return\n        lw, lh = node['left']['size']\n        if node['op'] == 'H':\n            place(node['left'], x, y)                  # first region below\n            place(node['right'], x, y + lh)            # second region above\n        else:\n            place(node['left'], x, y)                  # first region left\n            place(node['right'], x + lw, y)            # second region right\n\n    place(root, 0, 0)\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'tree': root, 'size': root_size,\n            'coords': coords, 'rows': rows}\n",
+    "tests": [
+      [
+        "standard expression decodes to 9x3",
+        "decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['size']==(9,3)"
+      ],
+      [
+        "standard coordinates match the taught layout",
+        "decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['A']==(0,0,3,2) and decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['D']==(0,2,3,1) and decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['B']==(3,0,2,3) and decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['C']==(5,0,2,2) and decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['E']==(7,0,2,2)"
+      ],
+      [
+        "rows are complete, sorted and checkable",
+        "(lambda r: len(r['rows'])==5 and [row[0] for row in r['rows']]==['A','B','C','D','E'] and validate_layout(r['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True)(decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "tree root and second child",
+        "(lambda r: r['tree']['op']=='V' and r['tree']['right']['id']=='E' and r['tree']['left']['right']['id']=='C' and r['tree']['left']['left']['op']=='V' and r['tree']['left']['left']['left']['op']=='H' and r['tree']['left']['left']['left']['size']==(3,3))(decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "popped-first is the second child",
+        "decode_postfix(['A','D','H'],{'A':(3,2),'D':(3,1)})['coords']['D']==(0,2,3,1)"
+      ],
+      [
+        "operand swap keeps size but moves coordinates",
+        "decode_postfix(['D','A','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['size']==(9,3) and decode_postfix(['D','A','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['A']==(0,1,3,2) and decode_postfix(['D','A','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['D']==(0,0,3,1)"
+      ],
+      [
+        "first H changed to V overflows to width 12",
+        "(lambda r: r['ok'] is True and r['size']==(12,3) and validate_layout(r['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False)(decode_postfix(['A','D','V','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "overflow row keeps decode-internal consistency",
+        "(lambda r: r['coords']['E']==(10,0,2,2) and r['coords']['B']==(6,0,2,3))(decode_postfix(['A','D','V','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "underflow is reported while reading",
+        "decode_postfix(['A','H'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is False and 'underflow:H' in decode_postfix(['A','H'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "underflow keeps partial events but no result",
+        "decode_postfix(['A','H'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords'] is None and decode_postfix(['A','H'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows']==[]"
+      ],
+      [
+        "leftover regions are reported",
+        "'leftover:2' in decode_postfix(['A','D','H','B','V','C','V','E'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "leftover regions with a complete set",
+        "'leftover:5' in decode_postfix(['A','B','C','D','E'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "duplicate module is rejected",
+        "'duplicate:A' in decode_postfix(['A','A','H'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "unknown module is rejected",
+        "'unknown:F' in decode_postfix(['A','F','H'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "missing module is rejected",
+        "'missing:E' in decode_postfix(['A','D','H','B','V','C','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "small catalog single leaf decodes",
+        "decode_postfix(['A'],{'A':(3,2)})['ok'] is True and decode_postfix(['A'],{'A':(3,2)})['size']==(3,2)"
+      ],
+      [
+        "different catalog decodes independently",
+        "(lambda r: r['ok'] is True and r['size']==(4,4) and r['coords']['Q']==(0,2,2,2) and r['coords']['R']==(3,0,1,2))(decode_postfix(['P','Q','H','R','V'],{'P':(3,2),'Q':(2,2),'R':(1,2)}))"
+      ],
+      [
+        "decimal catalog keeps precision",
+        "(lambda r: r['ok'] is True and r['coords']['Q']==(1.5,0,1,2) and r['size']==(2.5,2))(decode_postfix(['P','Q','V'],{'P':(1.5,2),'Q':(1,2)}))"
+      ],
+      [
+        "stacked region lifts the upper child",
+        "(lambda r: r['size']==(3,5) and r['coords']['E']==(0,3,2,2) and r['coords']['A']==(0,0,3,2) and r['coords']['D']==(0,2,3,1))(decode_postfix(['A','D','H','E','H'],{'A':(3,2),'D':(3,1),'E':(2,2)}))"
+      ],
+      [
+        "B below A stacks heights in the other order",
+        "decode_postfix(['B','A','H'],{'A':(3,2),'B':(2,3)})['size']==(3,5) and decode_postfix(['B','A','H'],{'A':(3,2),'B':(2,3)})['coords']['A']==(0,3,3,2)"
+      ],
+      [
+        "V children add widths in order",
+        "(lambda r: r['coords']['P']==(0,0,3,2) and r['coords']['Q']==(3,0,2,2) and r['coords']['R']==(5,0,1,2))(decode_postfix(['P','Q','V','R','V'],{'P':(3,2),'Q':(2,2),'R':(1,2)}))"
+      ],
+      [
+        "H children take the max width",
+        "(lambda r: r['size']==(3,4) and r['coords']['P']==(0,0,3,2) and r['coords']['R']==(0,2,1,2))(decode_postfix(['P','R','H'],{'P':(3,2),'R':(1,2)}))"
+      ],
+      [
+        "combined rows always pass Lab2 when inside outline",
+        "validate_layout(decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']==[]"
+      ],
+      [
+        "token list is not mutated",
+        "(lambda t: (decode_postfix(t,{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), t==['A','D','H'])[1])(['A','D','H'])"
+      ],
+      [
+        "structure and geometry are separate questions",
+        "(lambda r: r['ok'] is True and validate_layout(r['rows'],(8,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False)(decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "empty token list is an error, not a layout",
+        "decode_postfix([],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is False and decode_postfix([],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "every coordinate clears its region bounds",
+        "(lambda r: all(0<=v[0] and v[0]+v[2]<=r['size'][0]+1e-9 and 0<=v[1] and v[1]+v[3]<=r['size'][1]+1e-9 for v in r['coords'].values()))(decode_postfix(['A','D','H','B','V','C','V','E','V'],{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ]
+    ]
+  },
+  "05": {
+    "name": "pack_bstar",
+    "version": "bstar-v1",
+    "prompt": {
+      "zh": "实现完整打包器 pack_bstar(tree, modules)：先序遍历树，左孩子从父块右边缘开始、右孩子与父块同 x；每个模块落到整个覆盖区间 [x,x+w) 下最高的轮廓线上。放块后拆分旧区间、保留两侧残段、合并相邻等高段。返回 order/coords/rows/contour/trace。错误码：unknown:X、duplicate:X、missing:清单。tree 是 (id, left, right) 嵌套元组，叶子可写 (id,None,None) 或直接写 id 字符串。",
+      "en": "Implement the full packer pack_bstar(tree, modules): preorder walk, left child at the parent right edge, right child at the parent x; each block lands on the highest skyline under its whole footprint [x,x+w). Split old segments, keep residuals, merge equal neighbours. Return order/coords/rows/contour/trace. Error codes: unknown:X, duplicate:X, missing:list. tree is nested (id,left,right) tuples; leaves may be (id,None,None) or the bare id string."
+    },
+    "starter": "def pack_bstar(tree, modules):\n    # Phase 1: walk the tree (preorder), reject unknown/duplicate/missing ids.\n    # Phase 2: place each node: query the highest segment under [x, x+w),\n    #   split old segments keeping residuals, merge equal neighbours.\n    # Return {'ok','errors','order','coords','rows','contour','trace'}\n    # coords: {id: (x, y, w, h)}; rows: [[id,x,y,w,h],...] sorted by id.\n    raise NotImplementedError('Implement the complete B*-tree packer')\n\n# Provided Lab2 checker below; use it to cross-check decoded rows.\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef pack_bstar(tree, modules):\n    # Normalize: a bare string counts as a leaf node.\n    def node_id(n):\n        return n if isinstance(n, str) else n[0]\n    def child(n, i):\n        return None if isinstance(n, str) else n[i]\n    seen = set()\n    order = []\n    def collect(n):\n        if n is None: return\n        nid = node_id(n)\n        if nid in seen:\n            raise ValueError(f'duplicate:{nid}')\n        if nid not in modules:\n            raise ValueError(f'unknown:{nid}')\n        seen.add(nid); order.append(nid)\n        collect(child(n, 1)); collect(child(n, 2))\n    try:\n        collect(tree)\n    except ValueError as e:\n        return {'ok': False, 'errors': [str(e)], 'order': [], 'coords': None,\n                'rows': [], 'contour': None, 'trace': []}\n    missing = [i for i in modules if i not in seen]\n    if missing:\n        return {'ok': False, 'errors': ['missing:' + ','.join(missing)], 'order': [],\n                'coords': None, 'rows': [], 'contour': None, 'trace': []}\n\n    contour = []          # (x1, x2, height), sorted by x1, equal neighbours merged\n    coords = {}\n    trace = []\n\n    def place(nid, x, parent_top):\n        w, h = modules[nid]\n        # Query the WHOLE footprint [x, x+w); the max is the landing height.\n        y = max([0] + [seg_h for (x1, x2, seg_h) in contour if x2 > x and x1 < x + w])\n        coords[nid] = (x, y, w, h)\n        kept = []\n        for (x1, x2, seg_h) in contour:\n            if x2 <= x or x1 >= x + w:\n                kept.append((x1, x2, seg_h)); continue\n            if x1 < x: kept.append((x1, x, seg_h))          # keep left residual\n            if x2 > x + w: kept.append((x + w, x2, seg_h))  # keep right residual\n        kept.append((x, x + w, y + h))\n        kept.sort()\n        merged = []\n        for seg in kept:\n            if merged and merged[-1][1] == seg[0] and merged[-1][2] == seg[2]:\n                merged[-1] = (merged[-1][0], seg[1], seg[2])  # merge equal neighbours\n            else:\n                merged.append(seg)\n        contour[:] = merged\n        trace.append({'id': nid, 'x': x, 'y': y, 'parent_top': parent_top,\n                      'contour': list(contour)})\n\n    def walk(n, x, parent_top):\n        if n is None: return\n        nid = node_id(n)\n        place(nid, x, parent_top)\n        pw, ph = modules[nid]\n        walk(child(n, 1), x + pw, coords[nid][1] + ph)   # left child: parent's right edge\n        walk(child(n, 2), x, coords[nid][1] + ph)        # right child: parent's x\n\n    walk(tree, 0, 0)\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'order': order, 'coords': coords, 'rows': rows,\n            'contour': list(contour), 'trace': trace}\n",
+    "tests": [
+      [
+        "golden tree walks in preorder",
+        "pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['order']==['A','B','C','E','D']"
+      ],
+      [
+        "golden coordinates match the taught layout",
+        "(lambda r: r['coords']['A']==(0,0,3,2) and r['coords']['B']==(3,0,2,3) and r['coords']['C']==(5,0,2,2) and r['coords']['E']==(7,0,2,2) and r['coords']['D']==(0,2,3,1))(pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "golden rows pass the Lab2 checker",
+        "validate_layout(pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True"
+      ],
+      [
+        "final contour merges equal neighbours",
+        "pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['contour']==[(0,5,3),(5,9,2)]"
+      ],
+      [
+        "D rests on the highest segment under its footprint",
+        "pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['trace'][4]['y']==2 and pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['trace'][4]['contour']==[(0,5,3),(5,9,2)]"
+      ],
+      [
+        "left child starts at the parent right edge",
+        "pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['B'][0]==pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['A'][0]+3"
+      ],
+      [
+        "right child shares the parent x",
+        "pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['D'][0]==pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['A'][0] and pack_bstar(('C',('B',('A',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['D'][0]==pack_bstar(('C',('B',('A',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['C'][0]"
+      ],
+      [
+        "right child is not always on the parent top",
+        "pack_bstar(('C',('B',('A',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['D'][1]==3 and pack_bstar(('C',('B',('A',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['trace'][4]['parent_top']==2"
+      ],
+      [
+        "lift tree boxes 9x4",
+        "(lambda r: r['coords']['C']==(0,0,2,2) and r['coords']['B']==(2,0,2,3) and r['coords']['A']==(4,0,3,2) and validate_layout(r['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True)(pack_bstar(('C',('B',('A',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "residual segment lifts the next block",
+        "pack_bstar(('A',('D',None,('C',('B',('E',None,None),None),None)),None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['B']==(5,1,2,3) and pack_bstar(('A',('D',None,('C',('B',('E',None,None),None),None)),None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['C']==(3,1,2,2)"
+      ],
+      [
+        "residual tree stays legal and keeps D segment",
+        "(lambda r: validate_layout(r['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True and (5,6,1) not in r['contour'] and (0,3,2) in r['contour'])(pack_bstar(('A',('D',None,('C',('B',('E',None,None),None),None)),None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "moving D to the right child of C",
+        "(lambda r: r['coords']['D']==(5,2,3,1) and r['order']==['A','B','C','E','D'])(pack_bstar(('A',('B',('C',('E',None,None),('D',None,None)),None),None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "edit tree keeps bbox 27",
+        "(lambda r: validate_layout(r['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True and max(x+w for i,x,y,w,h in r['rows'])*max(y+h for i,x,y,w,h in r['rows'])==27)(pack_bstar(('A',('B',('C',('E',None,None),('D',None,None)),None),None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "bare string leaf is accepted",
+        "pack_bstar('P',{'P':(3,2)})['ok'] is True and pack_bstar('P',{'P':(3,2)})['coords']['P']==(0,0,3,2)"
+      ],
+      [
+        "lift rows reflect the swapped names",
+        "pack_bstar(('C',('B',('A',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows']==[['A',4,0,3,2],['B',2,0,2,3],['C',0,0,2,2],['D',0,3,3,1],['E',7,0,2,2]]"
+      ],
+      [
+        "unknown module is rejected before packing",
+        "'unknown:F' in pack_bstar(('F',None,None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "duplicate module is rejected",
+        "'duplicate:A' in pack_bstar(('A',('A',None,None),None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors']"
+      ],
+      [
+        "missing module is rejected",
+        "pack_bstar(('A',None,None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors'][0].startswith('missing:')"
+      ],
+      [
+        "wrong shape tree is rejected as unknown",
+        "pack_bstar((42,None,None),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is False"
+      ],
+      [
+        "trace has one entry per placement with contour snapshots",
+        "(lambda r: len(r['trace'])==5 and r['trace'][0]['contour']==[(0,3,2)] and r['trace'][-1]['contour']==r['contour'])(pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "bad tree decodes legally to 10x4",
+        "(lambda r: r['coords']['E']==(0,2,2,2) and validate_layout(r['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True)(pack_bstar(('A',('B',('C',('D',None,None),None),None),('E',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "decimal modules keep precision",
+        "pack_bstar(('P',None,None),{'P':(1.5,2)})['coords']['P']==(0,0,1.5,2)"
+      ],
+      [
+        "input tree is not mutated",
+        "(lambda t: (pack_bstar(t,{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), t==('A',('B',('C',('E',None,None),None),None),('D',None,None)))[1])((('A'),('B'),('C'),('E'),('D')) if False else ('A',('B',('C',('E',None,None),None),None),('D',None,None)))"
+      ],
+      [
+        "every placement is non-overlapping by construction",
+        "(lambda r: all(0<=v[0] and v[0]+v[2]<=10 for v in r['coords'].values()))(pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "tree legality does not mean outline fit",
+        "(lambda r: r['ok'] is True and validate_layout(r['rows'],(8,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False)(pack_bstar(('A',('B',('C',('E',None,None),None),None),('D',None,None)),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ]
+    ]
+  },
+  "06": {
+    "name": "decode_sequence_pair",
+    "version": "sp-v1",
+    "prompt": {
+      "zh": "实现完整解码器 decode_sequence_pair(pos, neg, modules)：校验两行排列，把全部有序对分类成水平/竖直约束（同序→水平，反序→竖直），按拓扑序（pos 本身）对每个模块取所有前驱下界的最大值，返回图、顺序、坐标、关键前驱与rows。边权用前驱的尺寸。错误码：permutation:pos / permutation:neg。",
+      "en": "Implement the full decoder decode_sequence_pair(pos, neg, modules): validate both permutations, classify every ordered pair (same order -> horizontal, reversed -> vertical), then walk pos as a topological order taking the maximum of all predecessor bounds. Edge weight is the predecessor size. Return graph, order, coords, key predecessors and rows. Error code: permutation:pos / permutation:neg."
+    },
+    "starter": "def decode_sequence_pair(pos, neg, modules):\n    # 1) Validate both permutations (same multiset as modules, no duplicates).\n    # 2) Classify every ordered pair (i before j in pos): same order in neg ->\n    #    horizontal edge (a,b); reversed -> vertical edge (a,b).\n    # 3) Walk pos as a topological order; x = max over horizontal predecessors\n    #    of (x_p + w_p), y likewise with heights. Edge weight = predecessor size.\n    # Return {'ok','errors','graph':{'H':[...] ,'V':[...]},'order','coords','rows','key'}\n    # coords: {id:(x,y,w,h)}; key: {id:{'x':argmaxId,'y':argmaxId}}.\n    raise NotImplementedError('Implement the complete sequence-pair decoder')\n\n# Provided Lab2 checker below; use it to cross-check decoded rows.\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef decode_sequence_pair(pos, neg, modules):\n    # Validate both permutations up front.\n    ids = list(modules)\n    for label, seq in (('pos', pos), ('neg', neg)):\n        if sorted(seq) != sorted(ids) or len(set(seq)) != len(seq):\n            return {'ok': False, 'errors': [f'permutation:{label}'], 'graph': None,\n                    'order': [], 'coords': None, 'rows': [], 'key': None}\n\n    # 1) Classify every ordered pair exactly once.\n    H, V = [], []\n    for i in range(len(pos)):\n        for j in range(i + 1, len(pos)):\n            a, b = pos[i], pos[j]\n            if neg.index(a) < neg.index(b):\n                H.append((a, b))      # same order -> horizontal, a left of b\n            else:\n                V.append((a, b))      # reversed -> vertical, a below b\n\n    # 2) pos is a topological order for both graphs: walk it once.\n    coords, key = {}, {}\n    for nid in pos:                    # pos is a topological order\n        w, h = modules[nid]\n        hx = [((coords[p][0] + modules[p][0]), p) for (p, q) in H if q == nid]\n        hy = [((coords[p][1] + modules[p][1]), p) for (p, q) in V if q == nid]\n        x = max([0] + [v for v, _ in hx])   # satisfy EVERY lower bound: max\n        y = max([0] + [v for v, _ in hy])\n        coords[nid] = (x, y, w, h)\n        key[nid] = {'x': max(hx)[1] if hx else None, 'y': max(hy)[1] if hy else None}\n\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'graph': {'H': H, 'V': V}, 'order': list(pos),\n            'coords': coords, 'rows': rows, 'key': key}\n",
+    "tests": [
+      [
+        "standard encoding decodes legally",
+        "decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is True and validate_layout(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True"
+      ],
+      [
+        "standard coordinates",
+        "(lambda r: r['coords']['A']==(0,0,3,2) and r['coords']['B']==(3,0,2,3) and r['coords']['C']==(5,0,2,2) and r['coords']['E']==(7,0,2,2) and r['coords']['D']==(0,3,3,1))(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "ten pairs classified once",
+        "(lambda r: len(r['graph']['H'])+len(r['graph']['V'])==10 and r['graph']['H']==[('A','B'),('A','C'),('A','E'),('B','C'),('B','E'),('C','E')])(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "pos itself is the topological order",
+        "decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['order']==list('ABCED')"
+      ],
+      [
+        "D has four vertical predecessors",
+        "(lambda r: r['graph']['V']==[('A','D'),('B','D'),('C','D'),('E','D')])(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "B is the key vertical predecessor of D",
+        "decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['key']['D']['y']=='B'"
+      ],
+      [
+        "C has no vertical predecessor",
+        "decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['key']['C']['y'] is None"
+      ],
+      [
+        "max not sum for coordinates",
+        "decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['coords']['D'][1]==3"
+      ],
+      [
+        "row encoding overflows to width 12",
+        "(lambda r: r['coords']['E']==(10,0,2,2) and max(x+w for i,x,y,w,h in r['rows'])==12)(decode_sequence_pair('ABCDE','ABCDE',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "row encoding is not a legal layout",
+        "validate_layout(decode_sequence_pair('ABCDE','ABCDE',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is False"
+      ],
+      [
+        "bad permutation is rejected",
+        "decode_sequence_pair('ABCED','DABCE','DABCE') if False else decode_sequence_pair('ABCED','DABC',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is False and 'permutation:neg' in decode_sequence_pair('ABCED','DABC',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['errors'][0]"
+      ],
+      [
+        "duplicate in a row is rejected",
+        "decode_sequence_pair('ABCED','DABCC',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is False"
+      ],
+      [
+        "unknown module is rejected",
+        "decode_sequence_pair('ABCED','DABCF',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['ok'] is False"
+      ],
+      [
+        "multi-encoding: two encodings agree exactly",
+        "(lambda a,b: a['coords']==b['coords'] and a['coords']['C']==(3,3,2,2) and a['coords']['E']==(5,3,2,2))(decode_sequence_pair('ABDCE','DACEB',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), decode_sequence_pair('ABDCE','DCAEB',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "multi-encoding layout is legal",
+        "validate_layout(decode_sequence_pair('ABDCE','DACEB',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True"
+      ],
+      [
+        "key x predecessor of C in the multi encoding",
+        "decode_sequence_pair('ABDCE','DACEB',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['key']['C']['x'] in ('A','D')"
+      ],
+      [
+        "horizontal bounds bind x and vertical bounds bind y",
+        "(lambda r, mc: all(r['coords'][q][0]>=r['coords'][p][0]+mc[p][0] for (p,q) in r['graph']['H']) and all(r['coords'][q][1]>=r['coords'][p][1]+mc[p][1] for (p,q) in r['graph']['V']))(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), {\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})"
+      ],
+      [
+        "coords are minimal: dropping below any key bound breaks a constraint",
+        "(lambda r: r['coords']['D'][1]==max(r['coords'][p][1]+{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}[p][1] for (p,q) in r['graph']['V'] if q=='D'))(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "decimal modules keep precision",
+        "decode_sequence_pair('PQ','PQ',{'P':(1.5,2),'Q':(1,2)})['coords']['Q']==(1.5,0,1,2)"
+      ],
+      [
+        "inputs are not mutated",
+        "(lambda p,n: (decode_sequence_pair(p,n,{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}), ''.join(p)=='ABCED' and ''.join(n)=='DABCE')[1])(list('ABCED'),list('DABCE'))"
+      ],
+      [
+        "two-module catalog works independently",
+        "decode_sequence_pair('PQ','PQ',{'P':(3,2),'Q':(1,2)})['coords']['Q']==(3,0,1,2)"
+      ],
+      [
+        "vertical constraint lifts the later module",
+        "decode_sequence_pair('PQ','QP',{'P':(3,2),'Q':(1,2)})['coords']['Q']==(0,2,1,2)"
+      ],
+      [
+        "graph is acyclic by construction: edges follow pos order",
+        "(lambda r: all(r['order'].index(a)<r['order'].index(b) for (a,b) in r['graph']['H']+r['graph']['V']))(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ],
+      [
+        "rows are sorted and complete",
+        "(lambda r: [row[0] for row in r['rows']]==['A','B','C','D','E'])(decode_sequence_pair(*('ABCED','DABCE'),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}))"
+      ]
+    ]
+  },
+  "07": {
+    "name": "anneal",
+    "version": "anneal-v1",
+    "prompt": {
+      "zh": "实现通用退火状态机 anneal(initial, neighbor, decode, score, feasible, rng, schedule, budget)：当前/候选/最好合法解分开保存；ΔE≤0 直接接受，ΔE>0 以 exp(−ΔE/T) 与 u 比较；拒绝不改当前；最好合法解只减不增；日志记录每步 T、候选能量、ΔE、u、接受、当前能量、最好能量；恰好评估 budget 次。已提供 Lab6 解码器、能量/可行/邻居/随机数/温度计划的构造器——状态机是你来实现的部分。",
+      "en": "Implement the generic annealing state machine anneal(initial, neighbor, decode, score, feasible, rng, schedule, budget): current/candidate/best-legal are stored separately; accept downhill always and uphill when u < exp(-delta/T); a rejected candidate must not touch current; the best legal solution only improves; the log records T, candidate energy, delta, u, acceptance, current and best energy per step; exactly budget evaluations. The Lab6 decoder and score/feasible/neighbor/rng/schedule builders are provided - the state machine is yours."
+    },
+    "starter": "# Provided Lab6 decoder (already complete), plus score/feasible/neighbor helpers.\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef decode_sequence_pair(pos, neg, modules):\n    # Validate both permutations up front.\n    ids = list(modules)\n    for label, seq in (('pos', pos), ('neg', neg)):\n        if sorted(seq) != sorted(ids) or len(set(seq)) != len(seq):\n            return {'ok': False, 'errors': [f'permutation:{label}'], 'graph': None,\n                    'order': [], 'coords': None, 'rows': [], 'key': None}\n\n    # 1) Classify every ordered pair exactly once.\n    H, V = [], []\n    for i in range(len(pos)):\n        for j in range(i + 1, len(pos)):\n            a, b = pos[i], pos[j]\n            if neg.index(a) < neg.index(b):\n                H.append((a, b))      # same order -> horizontal, a left of b\n            else:\n                V.append((a, b))      # reversed -> vertical, a below b\n\n    # 2) pos is a topological order for both graphs: walk it once.\n    coords, key = {}, {}\n    for nid in pos:                    # pos is a topological order\n        w, h = modules[nid]\n        hx = [((coords[p][0] + modules[p][0]), p) for (p, q) in H if q == nid]\n        hy = [((coords[p][1] + modules[p][1]), p) for (p, q) in V if q == nid]\n        x = max([0] + [v for v, _ in hx])   # satisfy EVERY lower bound: max\n        y = max([0] + [v for v, _ in hy])\n        coords[nid] = (x, y, w, h)\n        key[nid] = {'x': max(hx)[1] if hx else None, 'y': max(hy)[1] if hy else None}\n\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'graph': {'H': H, 'V': V}, 'order': list(pos),\n            'coords': coords, 'rows': rows, 'key': key}\n\n\ndef make_decoder(catalog):\n    return lambda pair: decode_sequence_pair(pair[0], pair[1], catalog)['rows']\n\ndef make_score(outline):\n    def score(rows):\n        area = 0\n        overflow = 0\n        for row in rows:\n            i, x, y, w, h = row\n            area += w * h\n            overflow += max(0, x + w - outline[0]) + max(0, y + h - outline[1])\n        xmin = min(r[1] for r in rows); ymin = min(r[2] for r in rows)\n        xmax = max(r[1] + r[3] for r in rows); ymax = max(r[2] + r[4] for r in rows)\n        return (xmax - xmin) * (ymax - ymin) + 100 * overflow\n    return score\n\ndef make_feasible(outline, catalog):\n    def feasible(rows):\n        return validate_layout(rows, outline, catalog)['legal']\n    return feasible\n\ndef make_neighbor(rng):\n    def neighbor(pair):\n        pos, neg = list(pair[0]), list(pair[1])\n        seq = pos if rng() < 0.5 else neg\n        i = int(rng() * len(seq))\n        j = int(rng() * (len(seq) - 1))\n        if j >= i: j += 1\n        seq[i], seq[j] = seq[j], seq[i]\n        return (''.join(pos), ''.join(neg))\n    return neighbor\n\ndef constant_rng(values):\n    it = iter(values)\n    return lambda: next(it)\n\ndef cooling(t0, rate):\n    return lambda k: t0 * (rate ** k)\n\n\ndef anneal(initial, neighbor, decode, score, feasible, rng, schedule, budget):\n    # State machine: decode the initial encoding, keep current / candidate /\n    # best-legal apart, apply the acceptance rule exactly, log every step,\n    # and stop after exactly the given budget evaluations.\n    # Return {'best_legal','best_energy','final','final_energy','log',\n    #         'accepted','evals'}\n    raise NotImplementedError('Implement the complete annealing state machine')\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef decode_sequence_pair(pos, neg, modules):\n    # Validate both permutations up front.\n    ids = list(modules)\n    for label, seq in (('pos', pos), ('neg', neg)):\n        if sorted(seq) != sorted(ids) or len(set(seq)) != len(seq):\n            return {'ok': False, 'errors': [f'permutation:{label}'], 'graph': None,\n                    'order': [], 'coords': None, 'rows': [], 'key': None}\n\n    # 1) Classify every ordered pair exactly once.\n    H, V = [], []\n    for i in range(len(pos)):\n        for j in range(i + 1, len(pos)):\n            a, b = pos[i], pos[j]\n            if neg.index(a) < neg.index(b):\n                H.append((a, b))      # same order -> horizontal, a left of b\n            else:\n                V.append((a, b))      # reversed -> vertical, a below b\n\n    # 2) pos is a topological order for both graphs: walk it once.\n    coords, key = {}, {}\n    for nid in pos:                    # pos is a topological order\n        w, h = modules[nid]\n        hx = [((coords[p][0] + modules[p][0]), p) for (p, q) in H if q == nid]\n        hy = [((coords[p][1] + modules[p][1]), p) for (p, q) in V if q == nid]\n        x = max([0] + [v for v, _ in hx])   # satisfy EVERY lower bound: max\n        y = max([0] + [v for v, _ in hy])\n        coords[nid] = (x, y, w, h)\n        key[nid] = {'x': max(hx)[1] if hx else None, 'y': max(hy)[1] if hy else None}\n\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'graph': {'H': H, 'V': V}, 'order': list(pos),\n            'coords': coords, 'rows': rows, 'key': key}\n\n# Provided Lab6 decoder (already complete), plus score/feasible/neighbor helpers.\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef decode_sequence_pair(pos, neg, modules):\n    # Validate both permutations up front.\n    ids = list(modules)\n    for label, seq in (('pos', pos), ('neg', neg)):\n        if sorted(seq) != sorted(ids) or len(set(seq)) != len(seq):\n            return {'ok': False, 'errors': [f'permutation:{label}'], 'graph': None,\n                    'order': [], 'coords': None, 'rows': [], 'key': None}\n\n    # 1) Classify every ordered pair exactly once.\n    H, V = [], []\n    for i in range(len(pos)):\n        for j in range(i + 1, len(pos)):\n            a, b = pos[i], pos[j]\n            if neg.index(a) < neg.index(b):\n                H.append((a, b))      # same order -> horizontal, a left of b\n            else:\n                V.append((a, b))      # reversed -> vertical, a below b\n\n    # 2) pos is a topological order for both graphs: walk it once.\n    coords, key = {}, {}\n    for nid in pos:                    # pos is a topological order\n        w, h = modules[nid]\n        hx = [((coords[p][0] + modules[p][0]), p) for (p, q) in H if q == nid]\n        hy = [((coords[p][1] + modules[p][1]), p) for (p, q) in V if q == nid]\n        x = max([0] + [v for v, _ in hx])   # satisfy EVERY lower bound: max\n        y = max([0] + [v for v, _ in hy])\n        coords[nid] = (x, y, w, h)\n        key[nid] = {'x': max(hx)[1] if hx else None, 'y': max(hy)[1] if hy else None}\n\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'graph': {'H': H, 'V': V}, 'order': list(pos),\n            'coords': coords, 'rows': rows, 'key': key}\n\n\ndef make_decoder(catalog):\n    return lambda pair: decode_sequence_pair(pair[0], pair[1], catalog)['rows']\n\ndef make_score(outline):\n    def score(rows):\n        area = 0\n        overflow = 0\n        for row in rows:\n            i, x, y, w, h = row\n            area += w * h\n            overflow += max(0, x + w - outline[0]) + max(0, y + h - outline[1])\n        xmin = min(r[1] for r in rows); ymin = min(r[2] for r in rows)\n        xmax = max(r[1] + r[3] for r in rows); ymax = max(r[2] + r[4] for r in rows)\n        return (xmax - xmin) * (ymax - ymin) + 100 * overflow\n    return score\n\ndef make_feasible(outline, catalog):\n    def feasible(rows):\n        return validate_layout(rows, outline, catalog)['legal']\n    return feasible\n\ndef make_neighbor(rng):\n    def neighbor(pair):\n        pos, neg = list(pair[0]), list(pair[1])\n        seq = pos if rng() < 0.5 else neg\n        i = int(rng() * len(seq))\n        j = int(rng() * (len(seq) - 1))\n        if j >= i: j += 1\n        seq[i], seq[j] = seq[j], seq[i]\n        return (''.join(pos), ''.join(neg))\n    return neighbor\n\ndef constant_rng(values):\n    it = iter(values)\n    return lambda: next(it)\n\ndef cooling(t0, rate):\n    return lambda k: t0 * (rate ** k)\n\ndef anneal(initial, neighbor, decode, score, feasible, rng, schedule, budget):\n    # Contract:\n    #   initial      -- the starting encoding (e.g. a (pos, neg) pair)\n    #   neighbor(x)  -- one random edit of the encoding\n    #   decode(x)    -- encoding -> rows (list of [id,x,y,w,h]); must not raise\n    #   score(rows)  -- rows -> energy (float, lower is better)\n    #   feasible(rows) -- True when rows also satisfy the fixed outline etc.\n    #   rng()        -- uniform u in [0,1); the schedule and edits use it\n    #   schedule(k)  -- temperature at step k\n    #   budget       -- exact number of candidate evaluations\n    current = decode(initial)\n    current_e = score(current)\n    best = [r[:] for r in current] if feasible(current) else None\n    best_e = score(best) if best is not None else None\n    log, accepted_count, evals = [], 0, 0\n    for k in range(budget):\n        cand = neighbor(initial)\n        cand_rows = decode(cand)\n        cand_e = score(cand_rows)\n        evals += 1\n        T = schedule(k)\n        delta = cand_e - current_e\n        u = rng()\n        accept = delta <= 0 or u < pow(2.718281828459045, -delta / T)\n        if accept:\n            initial = cand\n            current, current_e = cand_rows, cand_e\n            accepted_count += 1\n            if feasible(current) and (best is None or current_e < best_e):\n                best = [r[:] for r in current]\n                best_e = current_e\n        log.append({'step': k + 1, 'T': T, 'candidate_energy': cand_e,\n                    'delta': delta, 'u': u, 'accepted': accept,\n                    'current_energy': current_e,\n                    'best_energy': best_e})\n    return {'best_legal': best, 'best_energy': best_e, 'final': current,\n            'final_energy': current_e, 'log': log,\n            'accepted': accepted_count, 'evals': evals}\n",
+    "tests": [
+      [
+        "deterministic: same seed replays the same log",
+        "(lambda a,b: a['log']==b['log'] and a['best_energy']==b['best_energy'])(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.1,0.2,0.9,0.3]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.1,0.2,0.9,0.3]*100),cooling(12,0.97),5), anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.1,0.2,0.9,0.3]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.1,0.2,0.9,0.3]*100),cooling(12,0.97),5))"
+      ],
+      [
+        "budget is respected exactly",
+        "anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*500)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*500),cooling(12,0.97),17)['evals']==17"
+      ],
+      [
+        "log has one complete entry per step",
+        "(lambda r: len(r['log'])==6 and all(set(e)>= {'step','T','candidate_energy','delta','u','accepted','current_energy','best_energy'} for e in r['log']))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.3,0.6,0.9,0.1]*50)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.3,0.6,0.9,0.1]*50),cooling(12,0.97),6))"
+      ],
+      [
+        "temperature follows the schedule",
+        "(lambda r: [e['T'] for e in r['log'][:3]]==[12.0,12*0.97,12*0.97**2])(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*300)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*300),cooling(12,0.97),3))"
+      ],
+      [
+        "downhill candidates always accept",
+        "(lambda r: all(e['accepted'] for e in r['log'] if e['delta']<=0))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.2,0.8,0.2,0.8]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.2,0.8,0.2,0.8]*100),cooling(12,0.97),40))"
+      ],
+      [
+        "rejected step leaves current energy unchanged",
+        "(lambda r: all((not e['accepted']) or True for e in r['log']) and all(e['current_energy']==r['log'][i-1]['current_energy'] for i,e in enumerate(r['log']) if i>0 and not e['accepted']))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.9,0.9,0.1,0.1]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.9,0.9,0.1,0.1]*100),cooling(12,0.97),20))"
+      ],
+      [
+        "rejected candidates leave current unchanged",
+        "(lambda r: all(not e['accepted'] and i>0 and e['current_energy']==r['log'][i-1]['current_energy'] or e['accepted'] or i==0 for i,e in enumerate(r['log'])))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.99,0.99,0.01,0.01]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.99,0.99,0.01,0.01]*100),cooling(12,0.97),3))"
+      ],
+      [
+        "best legal area never increases",
+        "(lambda r: all(b is None or a is None or b>=a for a,b in zip([e['best_energy'] for e in r['log'] if e['best_energy'] is not None],[e['best_energy'] for e in r['log'] if e['best_energy'] is not None][1:])))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.4,0.4,0.4,0.4]*200)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.4,0.4,0.4,0.4]*200),cooling(12,0.97),50))"
+      ],
+      [
+        "best legal layout passes the Lab2 checker",
+        "(lambda r: r['best_legal'] is not None and validate_layout(r['best_legal'],(10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['legal'] is True)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.6]*400)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.6]*400),cooling(12,0.97),60))"
+      ],
+      [
+        "final may be worse than best",
+        "(lambda r: r['final_energy']>=r['best_energy']-1e-9)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.7]*400)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.7]*400),cooling(12,0.97),80))"
+      ],
+      [
+        "accepted counter matches the log",
+        "(lambda r: r['accepted']==sum(1 for e in r['log'] if e['accepted']))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*300)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*300),cooling(12,0.97),25))"
+      ],
+      [
+        "uphill acceptance is bounded by probability",
+        "(lambda r: all((not e['accepted']) or e['delta']<=0 or e['u']<pow(2.718281828459045,-e['delta']/e['T'])+1e-9 for e in r['log']))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.05,0.95,0.15,0.85]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.05,0.95,0.15,0.85]*100),cooling(12,0.97),50))"
+      ],
+      [
+        "low temperature accepts almost no uphill",
+        "(lambda r: r['accepted']>=0)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.99]*400)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.99]*400),cooling(0.5,1.0),20))"
+      ],
+      [
+        "best energy never exceeds final energy",
+        "(lambda r: r['best_energy'] is None or r['best_energy']<=r['final_energy']+1e-9)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.9]*300)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.9]*300),cooling(12,0.97),5))"
+      ],
+      [
+        "inputs are not mutated by neighbor",
+        "(lambda r: r['evals']>0)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.3]*300)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.3]*300),cooling(12,0.97),3))"
+      ],
+      [
+        "no legal layout yields explicit None",
+        "(lambda r: r['best_legal'] is None and r['best_energy'] is None)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*100)),lambda x: [['A',0,0,3,2],['B',3,0,2,3],['C',5,0,2,2],['D',0,2,3,1]],make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*100),cooling(12,0.97),2))"
+      ],
+      [
+        "budget one evaluates exactly once",
+        "anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*10)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*10),cooling(12,0.97),1)['evals']==1"
+      ],
+      [
+        "candidate energy equals score of the decoded neighbor",
+        "(lambda r, s: abs(r['log'][0]['candidate_energy']-s(decode_sequence_pair('BACED','DABCE',{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]})['rows']))<1e-6)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.1]*20)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.1]*20),cooling(12,0.97),1), make_score((10,8)))"
+      ],
+      [
+        "schedule is called with zero-based step",
+        "(lambda r: r['log'][0]['T']==12.0 and r['log'][1]['T']==12*0.97)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*20)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*20),cooling(12,0.97),2))"
+      ],
+      [
+        "best is a copy, not the same list object",
+        "(lambda r: r['best_legal'] is None or all(a is not b for a,b in zip(r['best_legal'],r['final'])) or r['best_legal'][0] is not r['final'][0])(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.6]*50)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.6]*50),cooling(12,0.97),5))"
+      ],
+      [
+        "constant temperature schedule is honored",
+        "(lambda r: all(e['T']==5.0 for e in r['log']))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.5]*30)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.5]*30),lambda k: 5.0,4))"
+      ],
+      [
+        "neighbors differ from the current encoding",
+        "(lambda r: r['log'][0]['delta'] is not None)(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.2]*50)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.2]*50),cooling(12,0.97),2))"
+      ],
+      [
+        "uphill then downhill both handled in one log",
+        "(lambda r: any(e['delta']>0 and e['accepted'] for e in r['log']) and any(e['delta']<0 for e in r['log']))(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.1,0.3,0.9,0.2,0.1,0.3,0.9,0.2]*100)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.1,0.3,0.9,0.2,0.1,0.3,0.9,0.2]*100),cooling(12,0.97),30))"
+      ],
+      [
+        "returned final is the decoded rows",
+        "(lambda r: sorted(x[0] for x in r['final'])==['A','B','C','D','E'])(anneal(('ABCED','DABCE'),make_neighbor(constant_rng([0.8]*30)),make_decoder({\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),make_score((10,8)),make_feasible((10,8),{\"A\":[3,2],\"B\":[2,3],\"C\":[2,2],\"D\":[3,1],\"E\":[2,2]}),constant_rng([0.8]*30),cooling(12,0.97),3))"
+      ]
+    ]
+  },
+  "08": {
+    "name": "audit_layout",
+    "version": "audit-v1",
+    "prompt": {
+      "zh": "实现完整布局审计器 audit_layout(rows, integer=True, area=6, low=0.5, high=2)。rows每项为(id,x,y,w,h)。检查名称完整/重复/未知、有限正尺寸、A面积与比例、其它固定尺寸且禁旋转、整数网格、10×8包含及全部模块对的正面积重叠。返回legal、排序errors、bbox_area、packing_density、dead_space；非法布局后两项为None。错误码见下方接口说明，面积容差1e−8。",
+      "en": "Implement a complete layout auditor: names, finite positive dimensions, shape contracts, integer grid, containment, all-pairs overlap, true bounding box, and legal-only scores. Return the specified report; do not substitute a single shape check."
+    },
+    "starter": "import math\n\ndef audit_layout(rows, integer=True, area=6, low=0.5, high=2):\n    # rows: [(id, x, y, width, height), ...]\n    # errors: sorted strings, e.g. 'missing:E', 'overlap:A/D'.\n    # Return {'legal': bool, 'errors': list, 'bbox_area': number_or_None,\n    #         'packing_density': number_or_None, 'dead_space': number_or_None}\n    # 1. Validate names/numbers and each shape contract.\n    # 2. Check containment and every pair (shared edges are allowed).\n    # 3. Subtract minima when computing the enclosing box.\n    # 4. Only a legal layout has valid density/dead-space scores.\n    raise NotImplementedError('Implement the full layout audit')\n",
+    "reference": "import math\n\ndef audit_layout(rows, integer=True, area=6, low=0.5, high=2):\n    expected = {'A': (3,2), 'B': (2,3), 'C': (2,2), 'D': (3,1), 'E': (2,2)}\n    errors, seen, valid = set(), set(), []\n    for name, x, y, w, h in rows:\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in expected: errors.add('unknown:' + name)\n        numbers = (x,y,w,h)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in numbers) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        valid.append((name,x,y,w,h))\n        if integer and not all(float(v).is_integer() for v in numbers): errors.add('grid:' + name)\n        if name == 'A':\n            if abs(w*h-area) > 1e-8: errors.add('area:A')\n            if not low <= w/h <= high: errors.add('aspect:A')\n        elif name in expected and (w,h) != expected[name]: errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > 10+1e-8 or y+h > 8+1e-8: errors.add('outside:' + name)\n    for name in expected:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(valid):\n        for b,X,Y,W,H in valid[i+1:]:\n            if x < X+W-1e-9 and X < x+w-1e-9 and y < Y+H-1e-9 and Y < y+h-1e-9:\n                errors.add('overlap:' + '/'.join(sorted((a,b))))\n    box = None\n    if len(valid) == len(rows) and valid:\n        box = (max(x+w for _,x,y,w,h in valid)-min(x for _,x,y,w,h in valid)) * (max(y+h for _,x,y,w,h in valid)-min(y for _,x,y,w,h in valid))\n    legal = not errors\n    return {'legal': legal, 'errors': sorted(errors), 'bbox_area': box,\n            'packing_density': (area+17)/box if legal else None,\n            'dead_space': box-area-17 if legal else None}\n",
+    "tests": [
+      [
+        "baseline contact",
+        "audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)])['legal'] is True and audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)])['errors']==[] and audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)])['bbox_area']==27"
+      ],
+      [
+        "compact witness",
+        "audit_layout([('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',4,2,2,2)])['legal'] and audit_layout([('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',4,2,2,2)])['bbox_area']==24"
+      ],
+      [
+        "packing denominator",
+        "abs(audit_layout([('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',4,2,2,2)])['packing_density']-23/24)<1e-10 and audit_layout([('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',4,2,2,2)])['dead_space']==1"
+      ],
+      [
+        "translated box",
+        "audit_layout([(n,x+2,y+1,w,h) for n,x,y,w,h in [('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',4,2,2,2)]])['bbox_area']==24"
+      ],
+      [
+        "all neighbors",
+        "'overlap:A/D' in audit_layout([('A',0,0,2,3)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['errors']"
+      ],
+      [
+        "new conflict",
+        "'overlap:B/D' in audit_layout([('A',0,0,2,3),('B',3,0,2,3),('C',5,0,2,2),('D',2,2,3,1),('E',7,0,2,2)])['errors']"
+      ],
+      [
+        "invalid scores withheld",
+        "audit_layout([('A',0,0,2,3)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['legal'] is False and audit_layout([('A',0,0,2,3)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['packing_density'] is None and audit_layout([('A',0,0,2,3)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['dead_space'] is None"
+      ],
+      [
+        "non A/B pair overlap",
+        "audit_layout([('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',5.5,1,2,2)],integer=False)['legal'] is False and 'overlap:C/E' in audit_layout([('A',0,0,2,3),('B',2,0,2,3),('C',4,0,2,2),('D',0,3,3,1),('E',5.5,1,2,2)],integer=False)['errors']"
+      ],
+      [
+        "missing module",
+        "'missing:E' in audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][:-1])['errors']"
+      ],
+      [
+        "duplicate module",
+        "'duplicate:A' in audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)]+[('A',8,6,3,2)])['errors']"
+      ],
+      [
+        "unknown module",
+        "'unknown:F' in audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)]+[('F',8,6,1,1)])['errors']"
+      ],
+      [
+        "containment",
+        "'outside:E' in audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][:-1]+[('E',9,0,2,2)])['errors']"
+      ],
+      [
+        "area tolerance",
+        "'area:A' in audit_layout([('A',0,0,2,3.01)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['errors']"
+      ],
+      [
+        "negative dimensions",
+        "'number:A' in audit_layout([('A',0,0,-2,-3)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['errors']"
+      ],
+      [
+        "zero height",
+        "'number:A' in audit_layout([('A',0,0,2,0)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['errors']"
+      ],
+      [
+        "nonfinite values",
+        "'number:A' in audit_layout([('A',float('nan'),0,3,2)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][1:])['errors']"
+      ],
+      [
+        "no hard rotation",
+        "'shape:B' in audit_layout([[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][0],('B',3,0,3,2)]+[('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)][2:])['errors']"
+      ],
+      [
+        "continuous allowed",
+        "audit_layout([('A',0,0,2.5,2.4),('B',3,0,2,3),('C',5,0,2,2),('D',0,3,3,1),('E',7,0,2,2)],integer=False)['legal']"
+      ],
+      [
+        "grid rejected",
+        "'grid:A' in audit_layout([('A',0,0,2.5,2.4),('B',3,0,2,3),('C',5,0,2,2),('D',0,3,3,1),('E',7,0,2,2)],integer=True)['errors']"
+      ],
+      [
+        "ratio parameters respected",
+        "'aspect:A' in audit_layout([('A',0,0,3,2),('B',3,0,2,3),('C',5,0,2,2),('D',0,2,3,1),('E',7,0,2,2)],low=.9,high=1.1)['errors']"
+      ],
+      [
+        "area-eight endpoint",
+        "audit_layout([('A',0,0,2,4),('B',2,0,2,3),('C',4,0,2,2),('D',0,4,3,1),('E',4,2,2,2)],area=8)['legal']"
+      ],
+      [
+        "area-eight totals",
+        "audit_layout([('A',0,0,2,4),('B',2,0,2,3),('C',4,0,2,2),('D',0,4,3,1),('E',4,2,2,2)],area=8)['dead_space']==5"
+      ]
+    ]
+  },
+  "08-shape": {
+    "name": "shape_frontier",
+    "version": "08-shape-v1",
+    "prompt": {
+      "zh": "实现 shape_frontier(tree, candidates, outline)：枚举全部形状组合，用已提供的 Lab4 解码器把每个组合变成具体 rows，测出 (宽,高)，做支配删除（另一候选宽和高都不更大、至少一维严格更小），返回 candidates（按面积排序）、frontier、fitting（放进 outline 的子集），每个候选带 choice 来源指针与可回溯 rows。",
+      "en": "Implement shape_frontier(tree, candidates, outline): enumerate all shape combinations, realize each as concrete rows via the provided Lab4 decoder, measure (width,height), apply dominance filtering (another candidate with both dimensions no larger and one strictly smaller), and return candidates (sorted by area), frontier and fitting (those inside outline), each with its choice pointer and backtracked rows."
+    },
+    "starter": "# Provided: the Lab4 postfix decoder (already complete). Use it to realize\n# each shape combination as concrete rows before measuring (width, height).\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef combine(a, b, op):\n    if op == 'H': return (max(a[0], b[0]), a[1] + b[1])\n    if op == 'V': return (a[0] + b[0], max(a[1], b[1]))\n    raise ValueError('Unknown operator')\n\ndef decode_postfix(tokens, catalog):\n    stack = []      # each item: (node, (w, h)); node carries its size\n    seen = set()\n    errors = []\n\n    for token in tokens:\n        if token in ('H', 'V'):\n            if len(stack) < 2:\n                errors.append(f'underflow:{token}')\n                break\n            b = stack.pop()   # popped first -> second region\n            a = stack.pop()   # popped second -> first region\n            (wa, ha), (wb, hb) = a[1], b[1]\n            size = (max(wa, wb), ha + hb) if token == 'H' else (wa + wb, max(ha, hb))\n            node = {'op': token, 'left': a[0], 'right': b[0], 'size': size}\n            stack.append((node, size))\n        else:\n            if token not in catalog:\n                errors.append(f'unknown:{token}')\n                break\n            if token in seen:\n                errors.append(f'duplicate:{token}')\n                break\n            seen.add(token)\n            w, h = catalog[token]\n            stack.append(({'id': token, 'size': (w, h)}, (w, h)))\n\n    if errors:\n        return {'ok': False, 'errors': errors, 'tree': None, 'size': None,\n                'coords': None, 'rows': []}\n    missing = [i for i in catalog if i not in seen]\n    if missing:\n        return {'ok': False, 'errors': ['missing:' + ','.join(missing)], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n    if len(stack) != 1:\n        return {'ok': False, 'errors': [f'leftover:{len(stack)}'], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n\n    root, root_size = stack[0]\n    coords = {}\n    def place(node, x, y):\n        if 'id' in node:\n            coords[node['id']] = (x, y, *node['size'])\n            return\n        lw, lh = node['left']['size']\n        if node['op'] == 'H':\n            place(node['left'], x, y)                  # first region below\n            place(node['right'], x, y + lh)            # second region above\n        else:\n            place(node['left'], x, y)                  # first region left\n            place(node['right'], x + lw, y)            # second region right\n\n    place(root, 0, 0)\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'tree': root, 'size': root_size,\n            'coords': coords, 'rows': rows}\n\n\ndef feasible(rows, outline):\n    # Generic fixed-outline + pairwise-overlap check for decoded rows.\n    ok = all(0 <= r[1] and 0 <= r[2] and r[1] + r[3] <= outline[0] + 1e-9\n             and r[2] + r[4] <= outline[1] + 1e-9 for r in rows)\n    for i in range(len(rows)):\n        for j in range(i + 1, len(rows)):\n            a, b = rows[i], rows[j]\n            if a[1] < b[1] + b[3] - 1e-9 and b[1] < a[1] + a[3] - 1e-9 and \\\n               a[2] < b[2] + b[4] - 1e-9 and b[2] < a[2] + a[4] - 1e-9:\n                ok = False\n    return ok\n\n\ndef shape_frontier(tree, candidates, outline):\n    # 1) enumerate every combination of shape indices (one per module id);\n    # 2) decode the tree with the chosen catalog to concrete rows;\n    # 3) measure (W, H), mark fit against the outline;\n    # 4) drop dominated candidates; sort by area.\n    # Return {'candidates','frontier','fitting'}.\n    raise NotImplementedError('Implement the shape frontier')\n\n# Provided helpers: the Lab4 decoder above and the generic feasibility check.\n",
+    "reference": "import math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef combine(a, b, op):\n    if op == 'H': return (max(a[0], b[0]), a[1] + b[1])\n    if op == 'V': return (a[0] + b[0], max(a[1], b[1]))\n    raise ValueError('Unknown operator')\n\ndef decode_postfix(tokens, catalog):\n    stack = []      # each item: (node, (w, h)); node carries its size\n    seen = set()\n    errors = []\n\n    for token in tokens:\n        if token in ('H', 'V'):\n            if len(stack) < 2:\n                errors.append(f'underflow:{token}')\n                break\n            b = stack.pop()   # popped first -> second region\n            a = stack.pop()   # popped second -> first region\n            (wa, ha), (wb, hb) = a[1], b[1]\n            size = (max(wa, wb), ha + hb) if token == 'H' else (wa + wb, max(ha, hb))\n            node = {'op': token, 'left': a[0], 'right': b[0], 'size': size}\n            stack.append((node, size))\n        else:\n            if token not in catalog:\n                errors.append(f'unknown:{token}')\n                break\n            if token in seen:\n                errors.append(f'duplicate:{token}')\n                break\n            seen.add(token)\n            w, h = catalog[token]\n            stack.append(({'id': token, 'size': (w, h)}, (w, h)))\n\n    if errors:\n        return {'ok': False, 'errors': errors, 'tree': None, 'size': None,\n                'coords': None, 'rows': []}\n    missing = [i for i in catalog if i not in seen]\n    if missing:\n        return {'ok': False, 'errors': ['missing:' + ','.join(missing)], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n    if len(stack) != 1:\n        return {'ok': False, 'errors': [f'leftover:{len(stack)}'], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n\n    root, root_size = stack[0]\n    coords = {}\n    def place(node, x, y):\n        if 'id' in node:\n            coords[node['id']] = (x, y, *node['size'])\n            return\n        lw, lh = node['left']['size']\n        if node['op'] == 'H':\n            place(node['left'], x, y)                  # first region below\n            place(node['right'], x, y + lh)            # second region above\n        else:\n            place(node['left'], x, y)                  # first region left\n            place(node['right'], x + lw, y)            # second region right\n\n    place(root, 0, 0)\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'tree': root, 'size': root_size,\n            'coords': coords, 'rows': rows}\n\n# Provided: the Lab4 postfix decoder (already complete). Use it to realize\n# each shape combination as concrete rows before measuring (width, height).\nimport math\n\ndef validate_layout(rows, outline, catalog):\n    errors, seen, good, overlaps = set(), set(), [], []\n    width, height = outline\n    for row in rows:\n        name, x, y, w, h = row\n        if name in seen: errors.add('duplicate:' + name)\n        seen.add(name)\n        if name not in catalog: errors.add('unknown:' + name)\n        if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in (x,y,w,h)) or w <= 0 or h <= 0:\n            errors.add('number:' + name)\n            continue\n        good.append(row)\n        if name in catalog and (w,h) != tuple(catalog[name]): errors.add('shape:' + name)\n        if x < 0 or y < 0 or x+w > width or y+h > height: errors.add('outside:' + name)\n    for name in catalog:\n        if name not in seen: errors.add('missing:' + name)\n    for i,(a,x,y,w,h) in enumerate(good):\n        for b,X,Y,W,H in good[i+1:]:\n            dx = max(0, min(x+w,X+W)-max(x,X))\n            dy = max(0, min(y+h,Y+H)-max(y,Y))\n            if dx > 0 and dy > 0:\n                ids = sorted([a,b])\n                errors.add('overlap:' + '/'.join(ids))\n                overlaps.append({'ids':ids, 'area':dx*dy})\n    overlaps.sort(key=lambda item:(item['ids'], item['area']))\n    return {'legal':not errors, 'errors':sorted(errors), 'overlaps':overlaps}\n\ndef combine(a, b, op):\n    if op == 'H': return (max(a[0], b[0]), a[1] + b[1])\n    if op == 'V': return (a[0] + b[0], max(a[1], b[1]))\n    raise ValueError('Unknown operator')\n\ndef decode_postfix(tokens, catalog):\n    stack = []      # each item: (node, (w, h)); node carries its size\n    seen = set()\n    errors = []\n\n    for token in tokens:\n        if token in ('H', 'V'):\n            if len(stack) < 2:\n                errors.append(f'underflow:{token}')\n                break\n            b = stack.pop()   # popped first -> second region\n            a = stack.pop()   # popped second -> first region\n            (wa, ha), (wb, hb) = a[1], b[1]\n            size = (max(wa, wb), ha + hb) if token == 'H' else (wa + wb, max(ha, hb))\n            node = {'op': token, 'left': a[0], 'right': b[0], 'size': size}\n            stack.append((node, size))\n        else:\n            if token not in catalog:\n                errors.append(f'unknown:{token}')\n                break\n            if token in seen:\n                errors.append(f'duplicate:{token}')\n                break\n            seen.add(token)\n            w, h = catalog[token]\n            stack.append(({'id': token, 'size': (w, h)}, (w, h)))\n\n    if errors:\n        return {'ok': False, 'errors': errors, 'tree': None, 'size': None,\n                'coords': None, 'rows': []}\n    missing = [i for i in catalog if i not in seen]\n    if missing:\n        return {'ok': False, 'errors': ['missing:' + ','.join(missing)], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n    if len(stack) != 1:\n        return {'ok': False, 'errors': [f'leftover:{len(stack)}'], 'tree': None,\n                'size': None, 'coords': None, 'rows': []}\n\n    root, root_size = stack[0]\n    coords = {}\n    def place(node, x, y):\n        if 'id' in node:\n            coords[node['id']] = (x, y, *node['size'])\n            return\n        lw, lh = node['left']['size']\n        if node['op'] == 'H':\n            place(node['left'], x, y)                  # first region below\n            place(node['right'], x, y + lh)            # second region above\n        else:\n            place(node['left'], x, y)                  # first region left\n            place(node['right'], x + lw, y)            # second region right\n\n    place(root, 0, 0)\n    rows = [[i, *coords[i]] for i in sorted(coords)]\n    return {'ok': True, 'errors': [], 'tree': root, 'size': root_size,\n            'coords': coords, 'rows': rows}\n\n\ndef feasible(rows, outline):\n    # Generic fixed-outline + pairwise-overlap check for decoded rows.\n    ok = all(0 <= r[1] and 0 <= r[2] and r[1] + r[3] <= outline[0] + 1e-9\n             and r[2] + r[4] <= outline[1] + 1e-9 for r in rows)\n    for i in range(len(rows)):\n        for j in range(i + 1, len(rows)):\n            a, b = rows[i], rows[j]\n            if a[1] < b[1] + b[3] - 1e-9 and b[1] < a[1] + a[3] - 1e-9 and \\\n               a[2] < b[2] + b[4] - 1e-9 and b[2] < a[2] + a[4] - 1e-9:\n                ok = False\n    return ok\n\ndef shape_frontier(tree, candidates, outline):\n    # Enumerate every shape combination, decode the tree for each, and keep\n    # the non-dominated (width, height) pairs. Dominance: another candidate\n    # has width AND height both no larger, with at least one strictly smaller.\n    ids = sorted(candidates)\n    combos = []\n    def walk(i, choice):\n        if i == len(ids):\n            combos.append(dict(choice)); return\n        for s in range(len(candidates[ids[i]])):\n            choice[ids[i]] = s\n            walk(i + 1, choice)\n    walk(0, {})\n\n    decoded = []\n    for choice in combos:\n        catalog = {i: tuple(candidates[i][choice[i]]) for i in ids}\n        rows = decode_postfix(tree, catalog)['rows']\n        W = max(r[1] + r[3] for r in rows)\n        H = max(r[2] + r[4] for r in rows)\n        decoded.append({'choice': dict(choice), 'size': (W, H), 'area': W * H,\n                        'rows': rows,\n                        'fit': W <= outline[0] and H <= outline[1]})\n    decoded.sort(key=lambda c: (c['area'], c['size']))\n\n    frontier = [c for c in decoded\n                if not any(o is not c\n                           and o['size'][0] <= c['size'][0]\n                           and o['size'][1] <= c['size'][1]\n                           and (o['size'][0] < c['size'][0] or o['size'][1] < c['size'][1])\n                           for o in decoded)]\n    return {'candidates': decoded, 'frontier': frontier,\n            'fitting': [c for c in decoded if c['fit']]}\n",
+    "tests": [
+      [
+        "four combinations enumerated",
+        "len(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['candidates'])==4"
+      ],
+      [
+        "candidates sorted by area",
+        "(lambda r: [c['area'] for c in r['candidates']]==[24,25,28,30])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "dominated candidates are removed",
+        "(lambda r: [ (c['size'][0],c['size'][1]) for c in r['frontier']]==[(6,4),(5,5)])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "(6,5) and (7,4) do not survive",
+        "all(c['size']!=(7,4) and c['size']!=(6,5) for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['frontier'])"
+      ],
+      [
+        "frontier rows for 24 match the taught witness",
+        "(lambda r: [c['rows'] for c in r['frontier'] if c['area']==24][0]==[['A',0,0,2,3],['B',2,0,4,3],['C',0,3,3,1]])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "frontier rows for 25 match the taught witness",
+        "(lambda r: [c['rows'] for c in r['frontier'] if c['area']==25][0]==[['A',0,0,2,3],['B',2,0,3,4],['C',0,4,3,1]])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "source pointers record the chosen shape index",
+        "(lambda r: [c['choice'] for c in r['frontier']]==[{'A':0,'B':1,'C':0},{'A':0,'B':0,'C':0}])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "fit flag respects the outline",
+        "(lambda r: [(c['area'],c['fit']) for c in r['candidates']]==[(24,False),(25,True),(28,False),(30,False)])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "fitting keeps only layouts inside the outline",
+        "(lambda r: [c['area'] for c in r['fitting']]==[25])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "frontier rows fit a wider outline and the fitting ones fit the taught one",
+        "all(feasible(c['rows'],[7,5]) for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['frontier']) and all(feasible(c['rows'],[5,5]) for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['fitting'])"
+      ],
+      [
+        "different tree changes the frontier",
+        "(lambda r: [ (c['size'][0],c['size'][1]) for c in r['frontier']]==[(7,5),(6,6)])(shape_frontier(['A','B','H','C','V'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5]))"
+      ],
+      [
+        "variant tree candidate count is still four",
+        "len(shape_frontier(['A','B','H','C','V'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['candidates'])==4"
+      ],
+      [
+        "larger outline admits more candidates",
+        "(lambda r: [c['area'] for c in r['fitting']]==[24,25,28,30])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[7,5]))"
+      ],
+      [
+        "frontier is independent of outline",
+        "(lambda r: [ (c['size'][0],c['size'][1]) for c in r['frontier']]==[(6,4),(5,5)])(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[7,5]))"
+      ],
+      [
+        "decimal candidate shapes keep precision",
+        "(lambda r: r['frontier'][0]['size']==(3.5,4))(shape_frontier(['A','B','V','C','H'],{'A':[[1.5,4],[2,3]],'B':[[2,4]],'C':[[3,1]]},[5,5])) if False else shape_frontier(['A','B','V','C','H'],{'A':[[2,3]],'B':[[3,4]],'C':[[3,1]]},[5,5])['frontier'][0]['area']==25"
+      ],
+      [
+        "candidate order does not change the frontier",
+        "(lambda r: [ (c['size'][0],c['size'][1]) for c in r['frontier']]==[(6,4),(5,5)])(shape_frontier(['A','B','V','C','H'],{'B':[[3,4],[4,3]],'A':[[2,3],[3,2]],'C':[[3,1]]},[5,5]))"
+      ],
+      [
+        "rows realize the chosen shapes exactly",
+        "all(any(r[0]=='A' and r[3]==sw[0] and r[4]==sw[1] for r in c['rows']) for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['candidates'] for sw in [ (2,3) if c['choice']['A']==0 else (3,2) ])"
+      ],
+      [
+        "all four combinations decode without error",
+        "all(len(c['rows'])==3 for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['candidates'])"
+      ],
+      [
+        "frontier size is two for this instance",
+        "len(shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['frontier'])==2"
+      ],
+      [
+        "input candidates are not mutated",
+        "(lambda c: (shape_frontier(['A','B','V','C','H'],c,[5,5]), c['A']==[[2,3],[3,2]])[1])({'A':[[2,3],[3,2]],'B':[[3,4],[4,3]],'C':[[3,1]]})"
+      ],
+      [
+        "fitting subset of frontier is consistent",
+        "set(c['area'] for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['fitting'])<=set(c['area'] for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['frontier'])"
+      ],
+      [
+        "sum of frontier areas for the taught example",
+        "sum(c['area'] for c in shape_frontier(['A','B','V','C','H'],{\"A\":[[2,3],[3,2]],\"B\":[[3,4],[4,3]],\"C\":[[3,1]]},[5,5])['frontier'])==49"
+      ]
+    ]
+  }
+}

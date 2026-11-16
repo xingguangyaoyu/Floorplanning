@@ -1,0 +1,4 @@
+import fs from'node:fs';import{LESSON02,CHAPTERS02}from'../content/interactive02.mjs';
+fs.mkdirSync('build/lab02',{recursive:true});fs.writeFileSync('build/lab02/authoring.json',JSON.stringify({...LESSON02,chapters:CHAPTERS02},null,2));
+const old=JSON.parse(fs.readFileSync('dist/data/stories.json','utf8'))['02'];
+fs.writeFileSync('docs/lab02/transcript.md','# Lab2讲解稿与分镜\n\n2026-11-14。当前播放文字与后续未录音的自然稿分开记录。voice段沿用已有本地声音与对应原文；reading段是作者安排的文字与动画，没有新语音或伪造词时间。\n\n'+LESSON02.scenes.map((s,i)=>`## ${i+1}. ${s.title}\n\nkey: ${s.key} · 章节${s.chapter} · 视图${s.view} · ${s.voice?'既有语音':'文字推导'}\n\n当前播放文字：${s.voice?old.find(o=>o.key===s.voice).say.zh:s.say}\n${s.voice&&s.say?'\n后续自然口播草稿（未录音）：'+s.say+'\n':''}\n画面短句：${s.note}\n`).join('\n'));console.log('Prepared '+LESSON02.scenes.length+' Lab2 scenes.');

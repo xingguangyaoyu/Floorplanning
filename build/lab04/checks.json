@@ -1,0 +1,46 @@
+{
+  "verdict": "PASS",
+  "scenes": 25,
+  "chapters": 8,
+  "duration": 368.152,
+  "voiceSeconds": 58.322,
+  "readingSeconds": 309.83,
+  "newSpeech": false,
+  "pythonChecks": 27,
+  "rejectedMutations": [
+    {
+      "name": "pops in reverse order",
+      "failedChecks": 11
+    },
+    {
+      "name": "forgets the child offset",
+      "failedChecks": 12
+    },
+    {
+      "name": "skips the underflow guard",
+      "failedChecks": 2
+    },
+    {
+      "name": "ignores duplicate letters",
+      "failedChecks": 1
+    },
+    {
+      "name": "accepts leftover regions",
+      "failedChecks": 2
+    },
+    {
+      "name": "hardcodes the standard answer",
+      "failedChecks": 1
+    },
+    {
+      "name": "swaps H and V conventions",
+      "failedChecks": 15
+    },
+    {
+      "name": "rounds decimal coordinates",
+      "failedChecks": 1
+    }
+  ],
+  "audioDecode": "PASS",
+  "provenance": "PASS"
+}

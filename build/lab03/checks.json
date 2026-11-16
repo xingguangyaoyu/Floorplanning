@@ -1,0 +1,46 @@
+{
+  "verdict": "PASS",
+  "scenes": 24,
+  "chapters": 8,
+  "duration": 303.292,
+  "voiceSeconds": 64.442,
+  "readingSeconds": 238.85,
+  "newSpeech": false,
+  "pythonChecks": 28,
+  "rejectedMutations": [
+    {
+      "name": "origin anchored box",
+      "failedChecks": 3
+    },
+    {
+      "name": "incomplete rows replace catalog area",
+      "failedChecks": 1
+    },
+    {
+      "name": "illegal layouts receive scores",
+      "failedChecks": 6
+    },
+    {
+      "name": "two densities share outline denominator",
+      "failedChecks": 5
+    },
+    {
+      "name": "ratios become percentages",
+      "failedChecks": 6
+    },
+    {
+      "name": "hardcoded outline area",
+      "failedChecks": 2
+    },
+    {
+      "name": "drops illegal diagnostic box",
+      "failedChecks": 3
+    },
+    {
+      "name": "rounds away decimal geometry",
+      "failedChecks": 1
+    }
+  ],
+  "audioDecode": "PASS",
+  "provenance": "PASS"
+}

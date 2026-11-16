@@ -1,0 +1,110 @@
+{
+  "model": "A3x2 B2x3 C2x2 D3x1 E2x2; no rotation; integer axis-aligned; outline 10x8",
+  "slicing": {
+    "encodingsChecked": 26880,
+    "minArea": 25,
+    "countAtMin": 144,
+    "witness": {
+      "expression": "A C V B D E H V H",
+      "width": 5,
+      "height": 5,
+      "area": 25
+    }
+  },
+  "bstar": {
+    "treesChecked": 5040,
+    "minArea": 24,
+    "countAtMin": 8,
+    "witness": "A(D,C(E(B,-),-))"
+  },
+  "sequencePair": {
+    "encodingsChecked": 14400,
+    "minArea": 24,
+    "countAtMin": 16,
+    "witness": {
+      "pos": "ACDEB",
+      "neg": "CEABD"
+    },
+    "rows": [
+      [
+        "A",
+        0,
+        0,
+        3,
+        2
+      ],
+      [
+        "B",
+        4,
+        1,
+        2,
+        3
+      ],
+      [
+        "C",
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        "D",
+        3,
+        0,
+        3,
+        1
+      ],
+      [
+        "E",
+        2,
+        2,
+        2,
+        2
+      ]
+    ]
+  },
+  "twentyFourLayout": {
+    "rows": [
+      [
+        "A",
+        0,
+        0,
+        3,
+        2
+      ],
+      [
+        "B",
+        4,
+        1,
+        2,
+        3
+      ],
+      [
+        "C",
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        "D",
+        3,
+        0,
+        3,
+        1
+      ],
+      [
+        "E",
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "area": 24,
+    "hasGuillotineFirstCut": false,
+    "candidateVerticalCuts": [],
+    "candidateHorizontalCuts": []
+  },
+  "conclusion": "For this fixed instance the slicing encoding space bottoms out at area 25 (no 24), while both the B*-tree packing space and the sequence-pair encoding space contain an area-24 layout. The 24 layout has no guillotine first cut, which is exactly why slicing cannot reach it."
+}

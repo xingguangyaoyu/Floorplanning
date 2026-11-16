@@ -1,0 +1,1140 @@
+{
+  "base": "http://127.0.0.1:8830/",
+  "assetCount": 241,
+  "assets": [
+    {
+      "path": ".nojekyll",
+      "status": 200
+    },
+    {
+      "path": "404.html",
+      "status": 200
+    },
+    {
+      "path": "assets/advanced08.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/anneal07.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/app.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/bstar05.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/core.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/draw.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200
+    },
+    {
+      "path": "assets/finale08.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/coverage.json",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono-400.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono-500.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/newsreader-400.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/newsreader-400i.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/newsreader-500.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-sans-400.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-sans-400i.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-sans-600.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-sans-sc-400.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-sans-sc-700.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-serif-sc-400.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/noto-serif-sc-600.woff2",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/OFL-jetbrains-mono.txt",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/OFL-newsreader.txt",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/OFL-noto-sans-sc.txt",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/OFL-noto-sans.txt",
+      "status": 200
+    },
+    {
+      "path": "assets/fonts/OFL-noto-serif-sc.txt",
+      "status": 200
+    },
+    {
+      "path": "assets/interactive-player.css",
+      "status": 200
+    },
+    {
+      "path": "assets/interactive-player.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/interactive-state.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lab02-page.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lab03-page.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lab04-page.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lab05-page.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lab06-page.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lab07-page.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/legality02.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/lesson-extras.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/metrics03.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/python-worker.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/question-clock.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/slicing04.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/soft08.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/sp06.mjs",
+      "status": 200
+    },
+    {
+      "path": "assets/style.css",
+      "status": 200
+    },
+    {
+      "path": "assets/video-display.mjs",
+      "status": 200
+    },
+    {
+      "path": "compare/index.html",
+      "status": 200
+    },
+    {
+      "path": "data/course.json",
+      "status": 200
+    },
+    {
+      "path": "data/python.json",
+      "status": 200
+    },
+    {
+      "path": "data/stories.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/course-notes-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/course-notes-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lab7-source-review.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-02-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-02-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-02-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-03-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-03-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-03-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-04-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-04-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-04-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-05-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-05-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-05-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-06-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-06-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-06-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-07-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-07-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-07-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-08-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-08-storyboard.json",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-08-transcript-en.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-08-transcript-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/lesson-08-zh.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/python-exercises.zip",
+      "status": 200
+    },
+    {
+      "path": "downloads/source-audit.md",
+      "status": 200
+    },
+    {
+      "path": "downloads/THIRD_PARTY_NOTICES.md",
+      "status": 200
+    },
+    {
+      "path": "glossary/index.html",
+      "status": 200
+    },
+    {
+      "path": "index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/teaching/player.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/02/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/teaching/player.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/03/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/teaching/player.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/04/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/teaching/player.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/05/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/teaching/player.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/06/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/teaching/player.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/07/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/index.html",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/learner-copy.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/lesson-data.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/pilot-model.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/pilot.css",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/pilot.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/question-clock.mjs",
+      "status": 200
+    },
+    {
+      "path": "lessons/08/teaching/visuals.mjs",
+      "status": 200
+    },
+    {
+      "path": "media/02/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/02/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/02/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/02/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/02/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/02/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/02/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/02/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/02/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/02/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/02/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/02/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/03/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/03/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/03/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/03/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/03/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/03/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/03/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/03/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/03/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/03/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/03/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/03/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/04/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/04/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/04/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/04/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/04/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/04/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/04/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/04/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/04/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/04/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/04/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/04/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/05/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/05/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/05/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/05/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/05/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/05/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/05/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/05/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/05/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/05/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/05/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/05/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/06/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/06/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/06/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/06/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/06/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/06/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/06/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/06/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/06/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/06/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/06/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/06/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/07/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/07/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/07/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/07/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/07/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/07/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/07/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/07/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/07/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/07/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/07/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/07/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/08/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/08/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/08/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/08/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/08/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/08/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/08/poster-en.png",
+      "status": 200
+    },
+    {
+      "path": "media/08/poster-zh.png",
+      "status": 200
+    },
+    {
+      "path": "media/08/poster.png",
+      "status": 200
+    },
+    {
+      "path": "media/08/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/08/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/08/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/08/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/08/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/08/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/en-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/en-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/en.json",
+      "status": 200
+    },
+    {
+      "path": "media/intro/en.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/intro/en.srt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/en.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/zh-translation.srt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/zh-translation.vtt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/zh.json",
+      "status": 200
+    },
+    {
+      "path": "media/intro/zh.m4a",
+      "status": 200
+    },
+    {
+      "path": "media/intro/zh.srt",
+      "status": 200
+    },
+    {
+      "path": "media/intro/zh.vtt",
+      "status": 200
+    },
+    {
+      "path": "notes/index.html",
+      "status": 200
+    },
+    {
+      "path": "previews/interactive-lab08/index.html",
+      "status": 200
+    },
+    {
+      "path": "previews/lab08-v3/full/index.html",
+      "status": 200
+    },
+    {
+      "path": "previews/lab08-v3/index.html",
+      "status": 200
+    },
+    {
+      "path": "progress/index.html",
+      "status": 200
+    },
+    {
+      "path": "sources/index.html",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/LICENSE",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/LICENSE-CPython.txt",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/package.json",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/pyodide-lock.json",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/pyodide.asm.js",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/pyodide.asm.wasm",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/pyodide.mjs",
+      "status": 200
+    },
+    {
+      "path": "vendor/pyodide/python_stdlib.zip",
+      "status": 200
+    }
+  ],
+  "ranges": [
+    {
+      "path": "media/08/en.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 4094159
+    },
+    {
+      "path": "media/08/en.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 4094159
+    },
+    {
+      "path": "media/08/en.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 4094159
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 2767955
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 2767955
+    },
+    {
+      "path": "lessons/08/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 2767955
+    },
+    {
+      "path": "lessons/02/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 580839
+    },
+    {
+      "path": "lessons/02/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 580839
+    },
+    {
+      "path": "lessons/02/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 580839
+    },
+    {
+      "path": "lessons/03/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 650658
+    },
+    {
+      "path": "lessons/03/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 650658
+    },
+    {
+      "path": "lessons/03/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 650658
+    },
+    {
+      "path": "lessons/04/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 600551
+    },
+    {
+      "path": "lessons/04/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 600551
+    },
+    {
+      "path": "lessons/04/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 600551
+    },
+    {
+      "path": "lessons/05/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 603601
+    },
+    {
+      "path": "lessons/05/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 603601
+    },
+    {
+      "path": "lessons/05/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 603601
+    },
+    {
+      "path": "lessons/06/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 606264
+    },
+    {
+      "path": "lessons/06/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 606264
+    },
+    {
+      "path": "lessons/06/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 606264
+    },
+    {
+      "path": "lessons/07/teaching/narration.m4a",
+      "probe": "head",
+      "status": 206,
+      "bytes": 128,
+      "total": 596864
+    },
+    {
+      "path": "lessons/07/teaching/narration.m4a",
+      "probe": "mid",
+      "status": 206,
+      "bytes": 128,
+      "total": 596864
+    },
+    {
+      "path": "lessons/07/teaching/narration.m4a",
+      "probe": "tail",
+      "status": 206,
+      "bytes": 128,
+      "total": 596864
+    }
+  ]
+}

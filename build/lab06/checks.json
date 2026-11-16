@@ -1,0 +1,46 @@
+{
+  "verdict": "PASS",
+  "scenes": 18,
+  "chapters": 8,
+  "duration": 261.426,
+  "voiceSeconds": 60.266,
+  "readingSeconds": 201.16,
+  "newSpeech": false,
+  "pythonChecks": 24,
+  "rejectedMutations": [
+    {
+      "name": "connects only adjacent pairs",
+      "failedChecks": 7
+    },
+    {
+      "name": "sums lower bounds instead of taking max",
+      "failedChecks": 5
+    },
+    {
+      "name": "uses successor size as edge weight",
+      "failedChecks": 8
+    },
+    {
+      "name": "swaps the vertical convention",
+      "failedChecks": 10
+    },
+    {
+      "name": "drops the horizontal branch",
+      "failedChecks": 13
+    },
+    {
+      "name": "walks in reverse topological order",
+      "failedChecks": 21
+    },
+    {
+      "name": "reports wrong key predecessor",
+      "failedChecks": 2
+    },
+    {
+      "name": "hardcodes the standard layout",
+      "failedChecks": 2
+    }
+  ],
+  "audioDecode": "PASS",
+  "provenance": "PASS"
+}

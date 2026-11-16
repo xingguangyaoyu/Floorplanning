@@ -1,0 +1,19 @@
+{
+  "verdict": "PASS",
+  "kind": "real binding with simulated Worker/timer events",
+  "pythonExecutionCovered": false,
+  "checks": [
+    "success preserves the newly written pass after cleanup",
+    "starting a new run revokes the previous pass",
+    "manual cancellation leaves no stale pass",
+    "passing again restores the pass",
+    "editing revokes the pass",
+    "reset revokes the pass",
+    "the real 20-second timeout callback revokes the pass",
+    "worker errors revoke the pass",
+    "worker error messages revoke the pass",
+    "late old-worker results cannot restore a pass",
+    "the current successful worker restores the pass"
+  ],
+  "saves": 15
+}

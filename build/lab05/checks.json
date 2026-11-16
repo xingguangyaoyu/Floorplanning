@@ -1,0 +1,46 @@
+{
+  "verdict": "PASS",
+  "scenes": 20,
+  "chapters": 8,
+  "duration": 277.104,
+  "voiceSeconds": 60.434,
+  "readingSeconds": 216.67,
+  "newSpeech": false,
+  "pythonChecks": 25,
+  "rejectedMutations": [
+    {
+      "name": "uses parent top instead of skyline query",
+      "failedChecks": 11
+    },
+    {
+      "name": "queries only the first unit of the footprint",
+      "failedChecks": 3
+    },
+    {
+      "name": "visits right child before the left subtree",
+      "failedChecks": 5
+    },
+    {
+      "name": "drops residual segments",
+      "failedChecks": 2
+    },
+    {
+      "name": "skips missing check",
+      "failedChecks": 1
+    },
+    {
+      "name": "ignores duplicates",
+      "failedChecks": 1
+    },
+    {
+      "name": "hardcodes the standard layout",
+      "failedChecks": 1
+    },
+    {
+      "name": "never merges equal neighbours",
+      "failedChecks": 2
+    }
+  ],
+  "audioDecode": "PASS",
+  "provenance": "PASS"
+}

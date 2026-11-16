@@ -1,0 +1,46 @@
+{
+  "verdict": "PASS",
+  "scenes": 18,
+  "chapters": 8,
+  "duration": 232.25,
+  "voiceSeconds": 61.25,
+  "readingSeconds": 171.0,
+  "newSpeech": false,
+  "pythonChecks": 24,
+  "rejectedMutations": [
+    {
+      "name": "modifies current on reject",
+      "failedChecks": 2
+    },
+    {
+      "name": "overwrites best with worse",
+      "failedChecks": 1
+    },
+    {
+      "name": "always accepts",
+      "failedChecks": 1
+    },
+    {
+      "name": "skips the feasibility gate on best",
+      "failedChecks": 1
+    },
+    {
+      "name": "miscounts evaluations",
+      "failedChecks": 2
+    },
+    {
+      "name": "logs an incomplete entry",
+      "failedChecks": 2
+    },
+    {
+      "name": "uses the wrong temperature index",
+      "failedChecks": 2
+    },
+    {
+      "name": "accepts uphill with the wrong comparison",
+      "failedChecks": 1
+    }
+  ],
+  "audioDecode": "PASS",
+  "provenance": "PASS"
+}

@@ -1,0 +1,3 @@
+import fs from'node:fs';import{LESSON04,CHAPTERS04}from'../content/interactive04.mjs';
+fs.mkdirSync('build/lab04',{recursive:true});fs.mkdirSync('docs/lab04',{recursive:true});fs.writeFileSync('build/lab04/authoring.json',JSON.stringify({...LESSON04,chapters:CHAPTERS04},null,2));
+fs.writeFileSync('docs/lab04/transcript.md','# Lab4讲解稿与分镜\n\n2026-11-14。voice段沿用已有本地声音与对应原文；reading段是作者安排的文字与动画，没有新语音或伪造词时间。\n\n'+LESSON04.scenes.map((s,i)=>`## ${i+1}. ${s.title}\n\nkey: ${s.key} · 章节${s.chapter} · 视图${s.view} · ${s.voice?'既有语音':'文字推导'}\n\n当前播放文字：${s.voice?'（沿用旧稿，见build/lab04/provenance.json cuts）':s.say}\n${s.voice?'\n后续自然口播草稿（未录音）：'+s.say+'\n':''}\n画面短句：${s.note}\n`).join('\n'));console.log('Prepared '+LESSON04.scenes.length+' Lab4 scenes.');

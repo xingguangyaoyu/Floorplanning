@@ -1,0 +1,38 @@
+{
+  "verdict": "PASS",
+  "scenes": 26,
+  "chapters": 8,
+  "duration": 300.196,
+  "voiceSeconds": 57.866,
+  "readingSeconds": 242.33,
+  "newSpeech": false,
+  "pythonChecks": 28,
+  "rejectedMutations": [
+    {
+      "name": "always legal",
+      "failedChecks": 3
+    },
+    {
+      "name": "ignores collisions",
+      "failedChecks": 5
+    },
+    {
+      "name": "counts boundary as collision",
+      "failedChecks": 6
+    },
+    {
+      "name": "skips non A/B pairs",
+      "failedChecks": 4
+    },
+    {
+      "name": "allows hard rotation",
+      "failedChecks": 1
+    },
+    {
+      "name": "hardcodes outline",
+      "failedChecks": 1
+    }
+  ],
+  "audioDecode": "PASS",
+  "provenance": "PASS"
+}
