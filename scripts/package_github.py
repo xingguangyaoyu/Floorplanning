@@ -22,7 +22,7 @@ for n in range(2,8):
 
 files=[ROOT/n for n in ROOT_FILES]+[ROOT/'scripts'/n for n in SCRIPTS]+[ROOT/'docs'/n for n in DOCS]+[ROOT/'build'/n for n in BUILD]
 files += [p for p in (ROOT/'build/voice-repair-2026-11-16/clips').rglob('*') if p.is_file() and p.suffix in ['.mp3','.json']]
-for folder in ['dist','content','tests']:
+for folder in ['dist','content','tests','skills']:
  files += [p for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ['.pyc','.log']]
 files=sorted(set(files));missing=[str(p.relative_to(ROOT))for p in files if not p.is_file()]
 if missing:raise SystemExit('Missing release files: '+', '.join(missing))

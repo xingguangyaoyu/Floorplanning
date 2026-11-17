@@ -57,3 +57,7 @@ python scripts/check_site.py
 项目代码采用 [MIT](LICENSE)。新教学文字与分镜按 [第三方及内容许可说明](THIRD_PARTY_NOTICES.md) 提供；原课程贡献者、字体、Pyodide 和其它组件保留各自权利与许可。
 
 原作者与课程材料链接见 [来源记录](docs/source-audit.md) 及网站来源页。当前发行包不包含原作视频、研究资料归档或语音服务缓存。
+
+## 复用课程与视频制作流程
+
+完整 skill 位于 [skills/course-lesson-pack/SKILL.md](skills/course-lesson-pack/SKILL.md)，包含自然口播、静态双语配音、音画同步、互动教学、实验与浏览器验收。复用时保留整个 `course-lesson-pack` 文件夹，包含 `references`、`assets` 和 `scripts`；不要只复制入口文件。项目专用约定与通用流程分开保存。

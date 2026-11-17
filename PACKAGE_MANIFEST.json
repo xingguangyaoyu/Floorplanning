@@ -5382,8 +5382,8 @@
   },
   {
    "path": "HANDOFF.md",
-   "bytes": 25214,
-   "sha256": "474250579c34be7645d91c8e1db7e764aee96a9de179a43edffac3628d2af56b"
+   "bytes": 25483,
+   "sha256": "f66bc377b6808db0017a1f91ebb2a2fe947281f7154d6995576b7e6bd2329b85"
   },
   {
    "path": "LICENSE",
@@ -5397,8 +5397,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 3430,
-   "sha256": "d752a02fe8c3d18b8eef5602ddc02bac57678731b59e61fef546bf37fe3036ce"
+   "bytes": 3848,
+   "sha256": "ffadbfe0f4514ef556f76cffb315c4ba10fd9530d311e3e6274f7cef6c361b75"
   },
   {
    "path": "requirements-dev.txt",
@@ -5502,8 +5502,8 @@
   },
   {
    "path": "scripts/package_github.py",
-   "bytes": 4793,
-   "sha256": "8f588e2ce28778980c0e10211cc1e3528c14bd00f66044c60bd3c06067168a38"
+   "bytes": 4802,
+   "sha256": "32afbad79151db463e0c43e5649307e769f9482b3ebb298ff0b20838e20d7455"
   },
   {
    "path": "scripts/package_python.py",
@@ -5559,6 +5559,51 @@
    "path": "scripts/voice_pipeline.py",
    "bytes": 11388,
    "sha256": "827a0692ab028dd225d371ae1389675f12af44784a0c8c63c91318862c42d151"
+  },
+  {
+   "path": "skills/course-lesson-pack/assets/seek-controller.mjs",
+   "bytes": 1183,
+   "sha256": "87b6e8fa80407f170d49cdb4c19f718d189881ce59e4989c7fa0c4a95d5490bb"
+  },
+  {
+   "path": "skills/course-lesson-pack/references/export-video.md",
+   "bytes": 2267,
+   "sha256": "d12b764ccc9f268bd6fadb4c590decfdbba6e14378f39a6406fa14b375d697cf"
+  },
+  {
+   "path": "skills/course-lesson-pack/references/floorplanning-profile.md",
+   "bytes": 2779,
+   "sha256": "103a1f835c8c60235f29c1e311e26a60b776140330fa6c6c9c64465a3c47e2ab"
+  },
+  {
+   "path": "skills/course-lesson-pack/references/interactive-workflow.md",
+   "bytes": 6130,
+   "sha256": "df585d396b0af1b10ca389b857951825666b756ea1ac51147319f2497b674bea"
+  },
+  {
+   "path": "skills/course-lesson-pack/references/learner-experience.md",
+   "bytes": 3068,
+   "sha256": "88031e02eec5b5d0776868b789d2eb3c3f3e788ae8a0908bc71799985bbb78f0"
+  },
+  {
+   "path": "skills/course-lesson-pack/references/narration-sync.md",
+   "bytes": 9395,
+   "sha256": "832c361db6f158f94c807a7d6d047c8b1e12b01c3fdeff9fd05a36bfc2d6fd5d"
+  },
+  {
+   "path": "skills/course-lesson-pack/references/review-handoff.md",
+   "bytes": 2585,
+   "sha256": "a7df62c81365911c92fed534e899e52569566371727833bd6be7bfbc703bd9f1"
+  },
+  {
+   "path": "skills/course-lesson-pack/scripts/test-seek-controller.mjs",
+   "bytes": 2445,
+   "sha256": "82f6ae2da32a0762bbda5be1515002f5a4913f23633003245d96569ed769eb74"
+  },
+  {
+   "path": "skills/course-lesson-pack/SKILL.md",
+   "bytes": 6235,
+   "sha256": "b1e0c0d9c6fad478d520bd88bbb3af0222eb4386969b9a7ab91538585da899ce"
   },
   {
    "path": "start-preview.ps1",
