@@ -1,6 +1,6 @@
 # 上传 GitHub
 
-1. 解压 `floorplanning-studio-github-2026-11-16.zip`。
+1. 使用本轮整理好的GitHub文件夹，无需解压。
 2. 打开解压后的 `floorplanning-studio` 文件夹。README、package.json、dist、content 应在这一层。
 3. 将这一层的内容提交到仓库根目录；不要只把 ZIP 文件传进仓库。
 
@@ -25,6 +25,6 @@ python scripts/serve.py --port 8830
 
 浏览器打开 `http://127.0.0.1:8830/`。网站入口是 `dist/index.html`，字体、音轨和本地 Python 运行文件已包含。
 
-`PACKAGE_MANIFEST.json` 记录发行文件大小与摘要，供核对完整性。内部交接、缓存、中间视频和浏览器验收截图仅留在本地备份，不进入 GitHub 源码包。
+`PACKAGE_MANIFEST.json` 记录发行文件大小与摘要，供核对完整性。中间视频和临时缓存不进入发行内容；保留选定验收截图与交接记录。
 
 上传源码不会自动得到在线课程地址。当前没有创建部署工作流、云端项目或 GitHub Pages 配置；需要发布网站时再单独安排。

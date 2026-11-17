@@ -13,7 +13,8 @@
     "worker errors revoke the pass",
     "worker error messages revoke the pass",
     "late old-worker results cannot restore a pass",
-    "the current successful worker restores the pass"
+    "the current successful worker restores the pass",
+    "disposed worker cannot write a late pass"
   ],
-  "saves": 15
+  "saves": 16
 }

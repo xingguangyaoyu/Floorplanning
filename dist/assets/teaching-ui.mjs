@@ -1,6 +1,7 @@
 import{language}from'./teaching-language.mjs';
 import labels from'./teaching-labels-en.mjs';
 const words={
+ '可直接操作的布图讲解':'Interactive floorplanning diagram','五模块布局':'Five-block layout','静音配音':'Mute narration','开启配音':'Unmute narration',
  '准备中':'Preparing','播放':'Play','暂停':'Pause','播放讲解':'Play lesson','暂停讲解':'Pause lesson','静音':'Mute','开启声音':'Unmute','文字':'Captions','全屏':'Fullscreen','速度':'Speed',
  '自己的尝试':'Your experiment','回到讲解':'Return to lesson','继续看解释':'Continue','留在本题':'Stay here','讲解进度':'Lesson progress','章节与尝试工具（可选）':'Chapters and experiment tools',
  '讲解路线':'Chapters','定位推演步骤':'Choose a step','查看本步结尾':'Show step end','点图里的模块试一试':'Try moving the blocks','当前模块':'Selected block','撤销':'Undo','重置本次尝试':'Reset experiment',

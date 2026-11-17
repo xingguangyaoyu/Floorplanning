@@ -161,7 +161,7 @@ Narrower does not mean less area. At fixed area, reduced width requires greater 
 
 ## Python exercise
 
-Implement a complete layout auditor: names, finite positive dimensions, shape contracts, integer grid, containment, all-pairs overlap, true bounding box, and legal-only scores. Return the specified report; do not substitute a single shape check.
+Implement the complete layout auditor audit_layout(rows, integer=True, area=6, low=0.5, high=2). Each row is (id,x,y,w,h). Check missing, duplicate and unknown names; finite positive dimensions; A's area and aspect ratio; the other fixed dimensions with rotation forbidden; the integer grid; containment in 10×8; and positive-area overlap for every module pair. Return legal, sorted errors, bbox_area, packing_density and dead_space. The last two fields must be None for an infeasible layout. Error codes are specified below; the area tolerance is 1e−8.
 
 ```python
 import math

@@ -1,3 +1,4 @@
+import{renderPythonReport,renderPythonError}from'./page-locale.mjs?v=4827901c9bde';
 // Lab8 finale section: shape frontier explorer, three-config comparison, tasks and exercises.
 import{FRONTIER08,TASKS08B,assess08B,checkExercise08B,EXERCISES08B,JOINT_TABLE08,shapeFrontier}from'./soft08.mjs';
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -16,7 +17,7 @@ export function bindFinale08({progress,save}){
  $('#finale-run').onclick=()=>{const tree=$('#finale-tree').value.trim(),W=Number($('#finale-w').value),H=Number($('#finale-h').value);
   if(tree!=='A B V C H'&&tree!=='A B H C V'){$('#finale-result').textContent='这里只提供两棵实例树：A B V C H（外框 5×5）与 A B H C V（外框 6×6）。';return;}
   const cat={A:{area:6,shapes:[[2,3],[3,2]]},B:{area:12,shapes:[[3,4],[4,3]]},C:{area:3,shapes:[[3,1]]}};
-  const out=(FRONTIER08.frontier.length&&W===5&&H===5)?FRONTIER08:shapeFrontier(tree,cat,[W,H]);
+  const out=(tree==='A B V C H'&&W===5&&H===5)?FRONTIER08:shapeFrontier(tree,cat,[W,H]);
   $('#finale-result').textContent=`候选 ${out.candidates.length} 份；前沿：${out.frontier.map(c=>c.size[0]+'×'+c.size[1]+'='+c.area).join('、')}；能进 ${W}×${H} 的：${out.fitting.map(c=>c.area).join('、')||'无'}`;
   $('#finale-frontier').innerHTML=`<table style="width:100%"><thead><tr><th>组合</th><th>尺寸</th><th>面积</th><th>进框</th><th>前沿</th></tr></thead><tbody>${out.candidates.map(c=>`<tr><td>${c.choice.A?'A=3×2':'A=2×3'} / ${c.choice.B?'B=4×3':'B=3×4'}</td><td>${c.size[0]}×${c.size[1]}</td><td>${c.area}</td><td>${c.fit?'是':'否'}</td><td>${out.frontier.includes(c)?'是':'否'}</td></tr>`).join('')}</tbody></table>`;
  };
@@ -46,10 +47,11 @@ export function bindShapePython({progress,save}){
  document.querySelector('#python-shape-stop').onclick=()=>stop('已停止，代码保留。旧通过状态已撤销，需重新运行才能恢复。');
  document.querySelector('#python-shape-run').onclick=()=>{stop();const submitted=source.value;document.querySelector('#python-shape-run').disabled=true;document.querySelector('#python-shape-stop').disabled=false;output.textContent='正在加载本地 Python 并运行…';
   const job=new Worker(BASE+'assets/python-worker.mjs',{type:'module'});worker=job;timer=setTimeout(()=>{if(worker===job)stop('运行超过20秒，已停止。旧通过状态已撤销。');},20000);
-  job.onmessage=({data})=>{if(worker!==job)return;if(data.type==='status')output.textContent='正在加载本地 Python…';if(data.type==='error'){stop(data.text+'（旧通过状态已撤销）');return;}if(data.type==='result'){const all=data.checks.length===shapeTaskRef.tests.length&&data.checks.every(c=>c.status==='PASS')&&source.value===submitted;output.textContent=data.checks.map(c=>`${c.status.padEnd(10)} ${c.name}${c.error?' — '+c.error:''}`).join('\n')+'\n\n'+(all?'当前代码通过全部检查。测试覆盖不等于完整正确性证明。':'尚未全部通过，请修改后重新检查。');if(all)progress.visited['python-08-shape-v1']=true;else delete progress.visited['python-08-shape-v1'];save();stop(undefined,{keepPass:all});}};
-  job.onerror=e=>{if(worker===job)stop(e.message+'（旧通过状态已撤销）');};
+  job.onmessage=({data})=>{if(worker!==job)return;if(data.type==='status')output.textContent='正在加载本地 Python…';if(data.type==='error'){stop();renderPythonError(output,data.text);return;}if(data.type==='result'){const all=data.checks.length===shapeTaskRef.tests.length&&data.checks.every(c=>c.status==='PASS')&&source.value===submitted;renderPythonReport(output,data,all?'当前代码通过全部检查。测试覆盖不等于完整正确性证明。':'尚未全部通过，请修改后重新检查。');if(all)progress.visited['python-08-shape-v1']=true;else delete progress.visited['python-08-shape-v1'];save();stop(undefined,{keepPass:all});}};
+  job.onerror=e=>{if(worker===job){stop();renderPythonError(output,e.message);}};
   job.postMessage({source:submitted,tests:shapeTaskRef.tests});
  };
+ return()=>{worker?.terminate();worker=null;clearTimeout(timer);};
 }
 let shapeTaskRef=null;
 export function setShapeTask(task){shapeTaskRef=task;}
